@@ -1,0 +1,10 @@
+$color_black: #1A191B;
+$color_shadow: #222123;
+$color_global: #FF9B3F;
+$color_gradient_start: #FF9B3F;
+$color_gradient_finish: #FFB943;
+$color_bg_window: #edeef0;
+
+@function pxtovh($pxsize) {
+    @return $pxsize / (1080 * 0.01)+vh;
+}

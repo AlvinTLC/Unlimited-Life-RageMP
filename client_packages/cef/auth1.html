@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unlimited Life - Auth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/noty.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/auth_without.css" />
+</head>
+
+<body>
+    <div class="switch-content authDiv">
+        <main class="gta-acount authorization auth-page show">
+           <div class="gta-acount__content">
+              <div class="authblock">
+                 <div class="authtopline"></div>
+                 <div class="authtext">Anmeldung</div>
+                 <div class="authline"></div>
+              </div>
+              <form id="auth-form" action="" method="POST">
+                 <div class="boxtext" style="top: 21vh;">
+                    <div class="linetext"></div>
+                    <div class="logpasstext">Benutzername</div>
+                 </div>
+                 <div class="input-cont" style="top: 24vh;"><input type="text" name="entry-login" id="entry-login-id" placeholder="Nutzernamen eingeben" required="required" class="entry-login"></div>
+                 <div class="boxtext" style="top: 31vh;">
+                    <div class="linetext"></div>
+                    <div class="logpasstext">Passwort</div>
+                 </div>
+                 <div class="input-cont" style="top: 34vh;"><input type="password" id="entry-password-id" name="entry-password" placeholder="Passwort eingeben" required="required"></div>
+                 <div class="checkbox-and-link" style="bottom: 22vh; position: absolute; right: 18vh; width: 10vh;"><a href="restorepass.html" class="restore-pw js-btn-restore">Passwort vergessen</a></div>
+                 <div class="btn-cont" style="position: absolute; bottom: 4vh; right: 3vh; width: 51.6vh;"><input type="submit" value="Anmelden" class="btn-enter js-btn-auth"> <a href="registration.html" class="btn-register  js-btn-register">Registrieren</a></div>
+              </form>
+           </div>
+        </main>
+        <main class="gta-acount restorepass rest-page">
+           <div class="gta-acount__content">
+              <form id="rest-form" action="" method="POST">
+                 <div class="authblock">
+                    <div class="authtopline"></div>
+                    <div class="authtext">Passwort Wiederherstellung</div>
+                    <div class="authline"></div>
+                    <div class="restconvert"></div>
+                 </div>
+                 <div class="input-cont" style="top: 38vh;"><input type="text" name="entry-login" id="entry-login-id" placeholder="Login" required="required" class="entry-login"></div>
+                 <div class="btn-cont"><a href="index.html" class="btn-back  js-btn-back">Zurück</a> <input type="submit" value="Erledigt!" class="btn-restore-end"></div>
+              </form>
+           </div>
+        </main>
+        <main class="gta-acount registration reg-page">
+           <div class="gta-acount__content">
+              <form id="reg-form" action="" method="POST">
+                 <div class="authblock">
+                    <div class="authtopline"></div>
+                    <div class="authtext">Registrierung</div>
+                    <div class="authline"></div>
+                 </div>
+                 <div class="boxtext" style="top: 15.7vh;">
+                    <div class="linetext"></div>
+                    <div class="logpasstext">e-mail</div>
+                 </div>
+                 <div class="input-cont" style="top: 18vh;"><input type="email" name="new-user__email" id="new-user__email-id" placeholder="E-mail" required="required"></div>
+                 <div class="boxtext" style="top: 22.7vh;">
+                    <div class="linetext"></div>
+                    <div class="logpasstext">Benutzername</div>
+                 </div>
+                 <div class="boxtext" style="top: 29.7vh;">
+                    <div class="linetext"></div>
+                    <div class="logpasstext">Passwort</div>
+                 </div>
+                 <div class="input-cont" style="top: 25vh;"><input type="text" name="new-user__login" id="new-user__login-id" required="required" placeholder="Login" class="new-user__login"></div>
+                 <div class="input-cont" style="top: 32vh;"><input type="password" name="new-user__pw" id="new-user__pw-id" placeholder="Passwort" required="required"></div>
+                 <div class="boxtext" style="top: 36.7vh;">
+                    <div class="linetext"></div>
+                    <div class="logpasstext">Passwort Wiederholen</div>
+                 </div>
+                 <div class="input-cont" style="top: 39vh;"><input type="password" name="new-user__pw-repeat" id="new-user__pw-repeat-id" placeholder="Passwort Wiederholen" required="required"></div>
+                 <div class="boxtext" style="top: 43.7vh;">
+                    <div class="linetext"></div>
+                    <div class="logpasstext">Promo Code</div>
+                 </div>
+                 <div class="input-cont" style="top: 46vh;"><input type="text" name="new-user__promo-code" id="new-user__promo-code" placeholder="Promo Code" class="promo-code"></div>
+                 <div class="btn-cont" style=""><a href="index.html" class="btn-back  js-btn-back">Zurück</a> <input type="submit" value="Erstellen!" class="btn-register-end"></div>
+              </form>
+           </div>
+        </main>
+        <main class="gta-acount  slots  slots-page">
+           <div class="slots__wrapper">
+              <header>
+                 <div class="lost-bucks">
+                    <span>Social: Username</span> 
+                    <div class="lost-bucks__total"><a href="#">Guthaben aufladen:</a> <b></b></div>
+                 </div>
+              </header>
+              <div class="slots__cols">
+                 <div class="slot-col col-l">
+                    <div class="ramka2"></div>
+                    <div class="ramka"></div>
+                    <div class="non-active__wrapper">
+                       <h2>Slot <b>№</b><span>1</span> nicht aktiviert</h2>
+                       <p>Beim Kauf wird der Slot für immer ausgegeben, darin können Sie einen neuen Charakter erstellen</p>
+                       <p class="price"><span class="gray">Kosten:</span> &nbsp;<b>$</b> <span class="value">1000</span> ulife
+                       </p>
+                       <p class="bonus">+ Bonus <span class="gold">VIP Gold</span> für 1 Monat.</p>
+                       <a href="#" class="btn  unlock-slot js-unlock-slot-1">Entsperren</a>
+                    </div>
+                    <div class="free__wrapper ">
+                       <h2><span class="free-title">Slot <b>№</b><span>1</span> Kostenlos</span> <span class="create-title">Einen neuen Charakter erstellen</span> <span class="transfer-title">alten Charakter übertragen</span> <span class="blocked-title">Gesperrt</span></h2>
+                       <p>Sie können einen neuen Charakter erstellen oder den alten übertragen&nbsp;dieses Konto</p>
+                       <a href="#" class="btn  create-new  js-create-new-1">Erstellen</a> 
+                       <form id="create-person-1" action="" method="POST">
+                          <div class="input-cont"><input type="text" name="new-person-1__name" id="new-person-1__name-id" placeholder="Имя (только на английском)" pattern="[A-Za-z]" required="required"></div>
+                          <div class="input-cont"><input id="new-person-1__sername-id" type="text" name="new-person-1__sername" placeholder="Фамилия (только на английском)" pattern="[A-Za-z]" required="required"></div>
+                          <input type="submit" value="Создать" class="js-create-person-submit-1">
+                       </form>
+                       <a href="#" class="cancel  js-create-cancel-1">Abbrechen</a> 
+                       <form id="transfer-person-1" action="" method="POST">
+                          <div class="input-cont"><input type="text" name="transfer-person-1__name" id="transfer-person-1__name-id" placeholder="Имя (только на английском)" pattern="[A-Za-z]" required="required"></div>
+                          <div class="input-cont"><input id="transfer-person-1__sername-id" type="text" name="transfer-person-1__sername" placeholder="Фамилия (только на английском)" pattern="[A-Za-z]" required="required"></div>
+                          <div class="input-cont"><input type="password" name="transfer-person-1__pw" id="transfer-person-1__pw-id" placeholder="Пароль от персонажа" required="required"></div>
+                          <input type="submit" value="Перенести персонажа" class="js-transfer-person-submit-1">
+                       </form>
+                       <a href="#" class="cancel  js-transfer-cancel-1">Abbrechen</a> 
+                       <div class="blocked-cont">
+                          <div class="blocked-cont__reason">
+                             <h4>Grund:</h4>
+                             <p>Der Staat braucht einen neuen Helden schau rein</p>
+                             <h4>Verstoß: &nbsp;<b>Future_day</b></h4>
+                          </div>
+                          <ul class="blocked-cont__dates">
+                             <li><span>Datum Versoßes:</span> <time>more me money</time></li>
+                             <li><span>Datum Entban:</span> <time class="green">cash in da house</time></li>
+                          </ul>
+                       </div>
+                    </div>
+                    <div class="active__wrapper">
+                       <div class="person-cont"></div>
+                       <h2>Charakter entfernen</h2>
+                       <h3><span class="name">TIMATI</span> <span class="sername">BlackStar</span></h3>
+                       <ul class="characteristics">
+                          <li>
+                             <b>Level</b> <span class="line"></span> 
+                             <div>7</div>
+                          </li>
+                          <li>
+                             <b>Exp</b> <span class="line"></span> 
+                             <div><b>10</b> / <span>36</span></div>
+                          </li>
+                          <li>
+                             <b>Fraktion</b> <span class="line"></span> 
+                             <div>ULife</div>
+                          </li>
+                          <li>
+                             <b>Geld Hand</b> <span class="line"></span> 
+                             <div><span>100398</span> $
+                             </div>
+                          </li>
+                          <li>
+                             <b>Geld auf dem Konto</b> <span class="line"></span> 
+                             <div><span>1600000</span> $
+                             </div>
+                          </li>
+                       </ul>
+                       <div class="cont"><a href="#" class="btn  btn-enter js-btn-enter-1">Spielen</a> <a href="delete-person.html" class="js-btn-delete-1  btn-delete">entfernen</a></div>
+                       <form id="delete-person-1" action="" method="POST">
+                          <div class="input-cont"><input type="text" name="delete-person-1__name" id="delete-person-1__name-id" placeholder="Имя" required="required"></div>
+                          <div class="input-cont"><input type="text" name="delete-person-1__sername" id="delete-person-1__sername-id" placeholder="Фамилия" required="required"></div>
+                          <div class="input-cont"><input type="password" name="delete-person-1__pw" id="delete-person-1__pw-id" placeholder="Пароль от аккаунта" required="required"></div>
+                          <input type="submit" value="Удалить персонажа навсегда" class="js-delete-person-submit-1">
+                       </form>
+                       <a href="#" class="js-delete-cancel-1  delete-cancel">Abbrechen</a>
+                    </div>
+                 </div>
+                 <div class="slot-col  col-m  ">
+                    <div class="ramka2"></div>
+                    <div class="ramka"></div>
+                    <div class="non-active__wrapper">
+                       <h2>Slot <b>№</b><span>2</span> nicht aktiviert</h2>
+                       <p>Beim Kauf wird der Slot für immer ausgegeben, darin können Sie einen neuen Charakter erstellen</p>
+                       <p class="price"><span class="gray">Kosten:</span> &nbsp;<b>$</b> <span class="value">1000</span> ulife
+                       </p>
+                       <p class="bonus">+ Bonus <span class="gold">VIP Gold</span> für 1 Monat.</p>
+                       <a href="#" class="btn  unlock-slot js-unlock-slot-2">Freischalten</a>
+                    </div>
+                    <div class="free__wrapper">
+                       <h2><span class="free-title">Slot <b>№</b><span>2</span> frei</span> <span class="create-title">Charakter erstellen</span> <span class="transfer-title">Charakter übertragen</span> <span class="blocked-title">Charakter Gesperrt</span></h2>
+                       <p>Sie können einen neuen Charakter erstellen oder den alten übertragen&nbsp;dieses Konto</p>
+                       <a href="#" class="btn  create-new  js-create-new-2">Erstellen</a> 
+                       <form id="create-person-2" action="" method="POST">
+                          <div class="input-cont"><input type="text" name="new-person-2__name" id="new-person-2__name-id" placeholder="Name" pattern="[A-Za-z]" required="required"></div>
+                          <div class="input-cont"><input type="text" name="new-person-2__sername" id="new-person-2__sername-id" placeholder="Nachname" pattern="[A-Za-z]" required="required"></div>
+                          <input type="submit" value="Erstellen" class="js-create-person-submit-2">
+                       </form>
+                       <a href="#" class="cancel  js-create-cancel-2">Abbrechen</a> 
+                       <form id="transfer-person-2" action="" method="POST">
+                          <div class="input-cont"><input type="text" name="transfer-person-2__name" id="transfer-person-2__name-id" placeholder="Name" pattern="[A-Za-z]" required="required"></div>
+                          <div class="input-cont"><input id="transfer-person-2__sername-id" type="text" name="transfer-person-2__sername" placeholder="Nachname" pattern="[A-Za-z]" required="required"></div>
+                          <div class="input-cont"><input type="password" name="transfer-person-2__pw" id="transfer-person-2__pw-id" placeholder="Passwort" required="required"></div>
+                          <input type="submit" value="übertragen" class="js-transfer-person-submit-2">
+                       </form>
+                       <a href="#" class="cancel  js-transfer-cancel-2">Abbrechen</a> 
+                       <div class="blocked-cont">
+                          <div class="blocked-cont__reason">
+                             <h4>Grund:</h4>
+                             <p>Der Staat braucht einen neuen Helden, schau rein</p>
+                             <h4>Versoß: &nbsp;<b>Future_day</b></h4>
+                          </div>
+                          <ul class="blocked-cont__dates">
+                             <li><span>Datum Versoßes:</span> <time>more me money</time></li>
+                             <li><span>Datum Entban:</span> <time class="green">cash in da house</time></li>
+                          </ul>
+                       </div>
+                    </div>
+                    <div class="active__wrapper">
+                       <div class="person-cont"></div>
+                       <h2>Entfernen Sie Ihren Charakter</h2>
+                       <h3><span class="name">Overlord</span> <span class="sername">Salvadoro</span></h3>
+                       <ul class="characteristics">
+                          <li>
+                             <b>Level</b> <span class="line"></span> 
+                             <div>7</div>
+                          </li>
+                          <li>
+                             <b>Exp</b> <span class="line"></span> 
+                             <div><b>10</b> / <span>36</span></div>
+                          </li>
+                          <li>
+                             <b>Fraktion</b> <span class="line"></span> 
+                             <div>LostCost</div>
+                          </li>
+                          <li>
+                             <b>Geld Hand</b> <span class="line"></span> 
+                             <div><span>100398</span> $
+                             </div>
+                          </li>
+                          <li>
+                             <b>Geld auf dem Konto</b> <span class="line"></span> 
+                             <div><span>1600000</span> $
+                             </div>
+                          </li>
+                       </ul>
+                       <div class="cont"><a href="#" class="btn  btn-enter js-btn-enter-2">Spielen</a> <a href="delete-person.html" class="js-btn-delete-2  btn-delete">entfernen</a></div>
+                       <form id="delete-person-2" action="" method="POST">
+                          <div class="input-cont"><input type="text" name="delete-person-2__name" id="delete-person-2__name-id" placeholder="Name" required="required"></div>
+                          <div class="input-cont"><input type="text" name="delete-person-2__sername" id="delete-person-2__sername-id" placeholder="Nachname" required="required"></div>
+                          <div class="input-cont"><input type="password" name="delete-person-2__pw" id="delete-person-2__pw-id" placeholder="Passwort" required="required"></div>
+                          <input type="submit" value="Charakter entfernen" class="js-delete-person-submit-2">
+                       </form>
+                       <a href="#" class="js-delete-cancel-2  delete-cancel">Stornierung</a>
+                    </div>
+                 </div>
+                 <div class="slot-col  col-r  ">
+                    <div class="ramka2"></div>
+                    <div class="ramka"></div>
+                    <div class="non-active__wrapper">
+                       <h2>Слот <b>№</b><span>3</span> не активирован</h2>
+                       <p>При покупке слота выдается навсегда, в нем можете создать нового персонажа</p>
+                       <p class="price"><span class="gray">Стоимость:</span> &nbsp;<b>$</b> <span class="value">1000</span> ulife
+                       </p>
+                       <p class="bonus">+ Бонус <span class="gold">VIP Gold</span> на срок 1 месяц.</p>
+                       <a href="#" class="btn  unlock-slot js-unlock-slot-3">Разблокировать</a>
+                    </div>
+                    <div class="free__wrapper">
+                       <h2><span class="free-title">Слот <b>№</b><span>3</span> свободен</span> <span class="create-title">Создание нового персонажа</span> <span class="transfer-title">Перенос старого персонажа</span> <span class="blocked-title">Персонаж заблокирован</span></h2>
+                       <p>Вы можете создать нового персонажа, либо перенести старого на&nbsp;этот aккаунт</p>
+                       <a href="#" class="btn  create-new  js-create-new-3">Создать</a> 
+                       <form id="create-person-3" action="" method="POST">
+                          <div class="input-cont"><input type="text" name="new-person-3__name" id="new-person-3__name-id" placeholder="Имя (только на английском)" pattern="[A-Za-z]" required="required"></div>
+                          <div class="input-cont"><input type="text" name="new-person-3__sername" id="new-person-3__sername-id" placeholder="Фамилия (только на английском)" pattern="[A-Za-z]" required="required"></div>
+                          <input type="submit" value="Создать" class="js-create-person-submit-3">
+                       </form>
+                       <a href="#" class="cancel  js-create-cancel-3">Отмена</a> 
+                       <form id="transfer-person-3" action="" method="POST">
+                          <div class="input-cont"><input type="text" name="transfer-person-3__name" id="transfer-person-3__name-id" placeholder="Имя (только на английском)" pattern="[A-Za-z]" required="required"></div>
+                          <div class="input-cont"><input id="transfer-person-3__sername-id" type="text" name="transfer-person-3__sername" placeholder="Фамилия (только на английском)" pattern="[A-Za-z]" required="required"></div>
+                          <div class="input-cont"><input type="password" name="transfer-person-3__pw" id="transfer-person-3__pw-id" placeholder="Пароль от персонажа" required="required"></div>
+                          <input type="submit" value="Перенести персонажа" class="js-transfer-person-submit-3">
+                       </form>
+                       <a href="#" class="cancel  js-transfer-cancel-3">Отмена</a> 
+                       <div class="blocked-cont">
+                          <div class="blocked-cont__reason">
+                             <h4>Причина:</h4>
+                             <p>Der Staat braucht einen neuen Helden, schau rein</p>
+                             <h4>Забанил: &nbsp;<b>Future_day</b></h4>
+                          </div>
+                          <ul class="blocked-cont__dates">
+                             <li><span>Дата бана:</span> <time>more me money</time></li>
+                             <li><span>Дата разбана:</span> <time class="green">cash in da house</time></li>
+                          </ul>
+                       </div>
+                    </div>
+                    <div class="active__wrapper">
+                       <div class="person-cont"></div>
+                       <h2>Удаление вашего персонажа</h2>
+                       <h3><span class="name">Rickardo</span> <span class="sername">Salvadoro</span></h3>
+                       <ul class="characteristics">
+                          <li>
+                             <b>Уровень</b> <span class="line"></span> 
+                             <div>7</div>
+                          </li>
+                          <li>
+                             <b>Exp</b> <span class="line"></span> 
+                             <div><b>10</b> / <span>36</span></div>
+                          </li>
+                          <li>
+                             <b>Фракция</b> <span class="line"></span> 
+                             <div>LostCost</div>
+                          </li>
+                          <li>
+                             <b>Денег на руках</b> <span class="line"></span> 
+                             <div><span>100398</span> $
+                             </div>
+                          </li>
+                          <li>
+                             <b>Денег на счету</b> <span class="line"></span> 
+                             <div><span>1600000</span> $
+                             </div>
+                          </li>
+                       </ul>
+                       <div class="cont"><a href="#" class="btn  btn-enter js-btn-enter-3">Начать играть</a> <a href="delete-person.html" class="js-btn-delete-3  btn-delete">Удалить</a></div>
+                       <form id="delete-person-3" action="" method="POST">
+                          <div class="input-cont"><input type="text" name="delete-person-3__name" id="delete-person-3__name-id" placeholder="Имя" required="required"></div>
+                          <div class="input-cont"><input id="delete-person-3__sername-id" type="text" name="delete-person-3__sername" placeholder="Фамилия" required="required"></div>
+                          <div class="input-cont"><input type="password" name="delete-person-3__pw" id="delete-person-3__pw-id" placeholder="Пароль от аккаунта" required="required"></div>
+                          <input type="submit" value="Удалить навсегда" class="js-delete-person-submit-3">
+                       </form>
+                       <a href="#" class="js-delete-cancel-3  delete-cancel">Отмена</a>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </main>
+        <main class="gta-acount  delete-person  delete-person-page ">
+           <div class="delete-person__alert">
+              <h2>
+                 Вы действительно хотите удалить персонажа: <br> <span class="js-person-name"></span> ?
+              </h2>
+              <p>Восстановить будет невозможно!</p>
+              <div class="btn-cont"><a href="#" class="btn-cancel  js-delete-cancel">Отмена</a> <a href="#" class="btn-confirm js-delete-confirm">Удалить</a></div>
+           </div>
+        </main>
+     </div>
+
+    <audio id="introSong" volume="0.5" autoplay>
+        <source type="audio/mp3" src="../res/intro.mp3"/>
+    </audio>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>       
+    <script src="js/notify.js"></script>
+    <script src="js/noty.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

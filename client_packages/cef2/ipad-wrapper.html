@@ -1,0 +1,739 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/ipad.css" />
+	<link rel="stylesheet" type="text/css" href="css/ipadHelpWork.css" />
+	<link rel="stylesheet" type="text/css" href="css/ipadAbout.css" />
+	<link rel="stylesheet" type="text/css" href="css/browser.css" />
+	<link rel="stylesheet" type="text/css" href="css/ipadchanger.css">
+    <script src="js/jquery-3.3.1.min.js">
+    </script>
+    <script src="js/vue.js">
+    </script>
+    <script src="js/moment.min.js">
+    </script>
+    <script src="js/browser.js">
+    </script>
+    <script src="js/main.js">
+    </script>
+    <script src="js/windows.js">
+    </script>
+    <script src="js/particles.min.js">
+    </script>
+    <script src="js/houseMenu.js">
+    </script>
+    <script src="js/selectMenu.js">
+    </script>
+    <script src="js/infoTable.js">
+    </script>
+    <script src="js/modal.js">
+    </script>
+    <script src="js/prompt.js">
+    </script>
+    <script src="js/choiceMenu.js">
+    </script>
+    <script src="js/hudController.js">
+    </script>
+    <script src="js/autoCar.js">
+    </script>
+    <script src="js/lockOpen.js">
+    </script>
+    <script src="js/playersOnline.js">
+    </script>
+    <script src="js/speed.js">
+    </script>
+
+    <script src="js/console.js">
+    </script>
+    <script src="js/chat.js">
+    </script>
+
+    <script src="js/vehProp.js">
+    </script>
+    <script src="js/bizLogs.js">
+    </script>
+    <script src="js/voice.js">
+    </script>
+    <script src="js/inventory.js">
+    </script>
+    <script src="js/trade.js">
+    </script>
+    <script src="js/interactionMenu.js">
+    </script>
+    <script src="js/enterAccount.js">
+    </script>
+    <script src="js/castom.js">
+    </script>
+    <script src="js/clothesMenu.js">
+    </script>
+    <script src="js/ipadMenu.js">
+    </script>
+	<script src="js/1checkbox.js">
+    </script>
+	<script>
+    var moskowUtc = 3;
+    var timerId = setInterval(function() {
+        let t = new Date(),
+            tt = t.getUTCHours() + moskowUtc;
+        document.getElementById('tik-tak').innerHTML = (tt > 24 ? "0" : "") + (tt > 24 ? tt - 24 : tt) + ":" + (t.getMinutes() < 10 ? '0' : '') + t.getMinutes() + ":" + (t.getSeconds() < 10 ? '0' : '') + t.getSeconds();
+        document.getElementById('tik-tak').classList.add("step");
+    }, 1000);
+    </script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ $("input#cb3").change(function(){
+
+  if ($(this).attr("checked")) {
+      $('#ipadVis').fadeIn(1).show();
+	  mp.trigger('donate2', 3);
+	  mp.trigger('board2', 4);
+      return;
+  } else {
+      $('#ipadVis').fadeOut(2); 
+	  mp.trigger('board2', 3);
+	  mp.trigger('donate2', 2);
+  }
+
+ });
+})
+</script>
+    <style>
+        #borwser {
+        width: 100%;
+        height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <ul class="tg-list">
+    <li class="tg-list-item">
+        <h4></h4><input class="tgl tgl-skewed" id="cb3" type="checkbox" onclick="myFunction()"/><label class="tgl-btn" data-tg-off="" data-tg-on="" for="cb3"></label></li>
+	</ul>
+    <div class="ipad-wrapper" id="ipadVis" style="display: none">
+        <div class="ipad" id="ipad">
+            <div class="container" v-if="!appMenu && !gettingCall">
+                <div class="screen">
+                    <div class="status-bar">
+                        <div class="left">
+                            <div class="network-wrapper">
+                                <div class="cellular" data-value="5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.879 4.246">
+                                        <path d="M0 2.118a2.123 2.123 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                        <path d="M5.409 2.118a2.121 2.121 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M10.818 2.118a2.126 2.126 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M16.228 2.118a2.122 2.122 0 1 1 2.124 2.128 2.117 2.117 0 0 1-2.124-2.128z" />
+                                        <path d="M21.63 2.118a2.124 2.124 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                    </svg>
+                                </div>
+                                <div class="wifi" data-value="3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 10.5">
+                                        <path d="M4.997 8.325l2.411 2.175 2.468-2.11a3.442 3.521 0 0 0-4.88-.065z" />
+                                        <path d="M2.636 5.845l1.415 1.207a4.797 4.908 0 0 1 6.795.086l1.457-1.16a6.824 6.981 0 0 0-9.667-.133z" />
+                                        <path d="M7.407 0a10.587 10.83 0 0 0-7.407 3.086l1.59 1.426a8.308 8.498 0 0 1 11.78.159l1.63-1.379a10.575 10.817 0 0 0-7.593-3.292z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div id="tik-tak" class="step" style="color: white;font-size: 12px;font-weight: 700;">00:00:00</div>
+                        </div>
+                        <div class="right">
+                            <div class="battery-wrapper">
+                                <div class="percent">100%</div>
+                                <div class="battery" data-value="100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 25">
+                                        <path class="indicator" d="M40.909 4.167v16.668h-36.364v-16.668z" />
+                                        <path d="M50 14.584v-4.167c0-2.083-3.416-2.083-3.416-2.146v8.396s3.416 0 3.416-2.083z" />
+                                        <path d="M40.67 0h-35.886c-4.745 0-4.784 4.546-4.784 4.546v15.909s0 4.546 4.784 4.546h35.886c4.784 0 4.784-4.546 4.784-4.546v-15.909s0-4.546-4.784-4.546zm2.511 20.603s0 2.315-2.406 2.315h-36.095c-2.406 0-2.406-2.315-2.406-2.315v-16.205s0-2.315 2.406-2.315h36.095c2.481 0 2.406 2.315 2.406 2.315z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-wrapper homescreen">
+                        <div class="app">
+                            <div class="apps">
+								<div class="app taxi" v-on:click="openApp(`ipad-appTaxi`)">
+                                    <div class="icon">
+                                        <img src="img/ipad/apps/taxi.svg" alt="" />
+                                    </div>
+                                    <div class="name">Такси</div>
+                                </div>
+								<div class="app meha" v-on:click="openApp(`ipad-appMeha`)">
+                                    <div class="icon">
+                                        <img src="img/ipad/apps/meha.svg" alt="" />
+                                    </div>
+                                    <div class="name">Механник</div>
+                                </div>
+								<div class="app spec" v-on:click="openApp(`ipad-appSpec`)">
+                                    <div class="icon">
+                                        <img src="img/ipad/apps/spec.png" alt="" />
+                                    </div>
+                                    <div class="name">Спец службы</div>
+                                </div>
+                                <div class="app character" v-on:click="callstats()">
+                                    <div class="icon">
+                                        <img src="img/ipad/apps/character.svg" alt="" />
+                                    </div>
+                                    <div class="name">Персонаж</div>
+                                </div>
+								<div class="app help" v-on:click="openApp(`ipad-appReport`)">
+                                    <div class="icon">
+                                        <img src="img/ipad/apps/report.svg" alt="" />
+                                    </div>
+                                    <div class="name">Помощь</div>
+                                </div>
+								<div class="app store" v-on:click="callstore()">
+                                    <div class="icon">
+                                        <img src="img/ipad/apps/store.svg" alt="" />
+                                    </div>
+                                    <div class="name">Магазин</div>
+                                </div>
+								<div class="app store" v-on:click="callnews()">
+                                    <div class="icon">
+                                        <img src="img/ipad/apps/news.svg" alt="" />
+                                    </div>
+                                    <div class="name">Объявления</div>
+                                </div>
+								<div class="app about" v-on:click="openApp(`ipad-appAbout`)">
+                                    <div class="icon">
+                                        <img src="img/ipad/apps/info.svg" alt="" />
+                                    </div>
+                                    <div class="name">О планшете</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-wrapper hovicon effect-8" v-on:click="backApp(`ipad-Home`)">
+                        <svg class="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43">
+                            <defs>
+                                <filter id="a" x="0" y="0" width="43" height="43" filterUnits="userSpaceOnUse">
+                                    <feOffset dy="3" />
+                                    <feGaussianBlur stdDeviation="3" result="b" />
+                                    <feFlood flood-opacity=".161" />
+                                    <feComposite operator="in" in2="b" />
+                                    <feComposite in="SourceGraphic" />
+                                </filter>
+                            </defs>
+                            <g transform="translate(9 6)" stroke-width="3" fill="none" filter="url(#a)">
+                                <circle cx="12.5" cy="12.5" r="12.5" stroke="none" />
+                                <circle cx="12.5" cy="12.5" r="11" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+			<div class="container" v-if="appMenu === 'ipad-appTaxi'">
+                <div class="screen">
+                    <div class="status-bar black">
+                        <div class="left">
+                            <div class="network-wrapper">
+                                <div class="cellular" data-value="5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.879 4.246">
+                                        <path d="M0 2.118a2.123 2.123 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                        <path d="M5.409 2.118a2.121 2.121 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M10.818 2.118a2.126 2.126 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M16.228 2.118a2.122 2.122 0 1 1 2.124 2.128 2.117 2.117 0 0 1-2.124-2.128z" />
+                                        <path d="M21.63 2.118a2.124 2.124 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                    </svg>
+                                </div>
+                                <div class="wifi" data-value="3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 10.5">
+                                        <path d="M4.997 8.325l2.411 2.175 2.468-2.11a3.442 3.521 0 0 0-4.88-.065z" />
+                                        <path d="M2.636 5.845l1.415 1.207a4.797 4.908 0 0 1 6.795.086l1.457-1.16a6.824 6.981 0 0 0-9.667-.133z" />
+                                        <path d="M7.407 0a10.587 10.83 0 0 0-7.407 3.086l1.59 1.426a8.308 8.498 0 0 1 11.78.159l1.63-1.379a10.575 10.817 0 0 0-7.593-3.292z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div class="time">{{ time }}</div>
+                        </div>
+                        <div class="right">
+                            <div class="battery-wrapper">
+                                <div class="percent">100%</div>
+                                <div class="battery" data-value="100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 25">
+                                        <path class="indicator" d="M40.909 4.167v16.668h-36.364v-16.668z" />
+                                        <path d="M50 14.584v-4.167c0-2.083-3.416-2.083-3.416-2.146v8.396s3.416 0 3.416-2.083z" />
+                                        <path d="M40.67 0h-35.886c-4.745 0-4.784 4.546-4.784 4.546v15.909s0 4.546 4.784 4.546h35.886c4.784 0 4.784-4.546 4.784-4.546v-15.909s0-4.546-4.784-4.546zm2.511 20.603s0 2.315-2.406 2.315h-36.095c-2.406 0-2.406-2.315-2.406-2.315v-16.205s0-2.315 2.406-2.315h36.095c2.481 0 2.406 2.315 2.406 2.315z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-wrapper taxi">
+                        <div class="app">
+                            <div class="title-row">
+                                <div class="title">Такси</div>
+                            </div>
+                            <div class="icon-wrapper">
+                                <div class="icon">
+                                    <img src="img/ipad/taxi_app/taxi_icon.svg" alt="" />
+                                </div>
+                            </div>
+                            <button class="button" v-on:click="callTaxi()">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="home-wrapper hovicon effect-8" v-on:click="backApp(`ipad-Home`)">
+                        <svg class="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43">
+                            <defs>
+                                <filter id="a" x="0" y="0" width="43" height="43" filterUnits="userSpaceOnUse">
+                                    <feOffset dy="3" />
+                                    <feGaussianBlur stdDeviation="3" result="b" />
+                                    <feFlood flood-opacity=".161" />
+                                    <feComposite operator="in" in2="b" />
+                                    <feComposite in="SourceGraphic" />
+                                </filter>
+                            </defs>
+                            <g transform="translate(9 6)" stroke-width="3" fill="none" filter="url(#a)">
+                                <circle cx="12.5" cy="12.5" r="12.5" stroke="none" />
+                                <circle cx="12.5" cy="12.5" r="11" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+			<div class="container" v-if="appMenu === 'ipad-appSpec'">
+                <div class="screen">
+                    <div class="status-bar">
+                        <div class="left">
+                            <div class="network-wrapper">
+                                <div class="cellular" data-value="5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.879 4.246">
+                                        <path d="M0 2.118a2.123 2.123 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                        <path d="M5.409 2.118a2.121 2.121 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M10.818 2.118a2.126 2.126 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M16.228 2.118a2.122 2.122 0 1 1 2.124 2.128 2.117 2.117 0 0 1-2.124-2.128z" />
+                                        <path d="M21.63 2.118a2.124 2.124 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                    </svg>
+                                </div>
+                                <div class="wifi" data-value="3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 10.5">
+                                        <path d="M4.997 8.325l2.411 2.175 2.468-2.11a3.442 3.521 0 0 0-4.88-.065z" />
+                                        <path d="M2.636 5.845l1.415 1.207a4.797 4.908 0 0 1 6.795.086l1.457-1.16a6.824 6.981 0 0 0-9.667-.133z" />
+                                        <path d="M7.407 0a10.587 10.83 0 0 0-7.407 3.086l1.59 1.426a8.308 8.498 0 0 1 11.78.159l1.63-1.379a10.575 10.817 0 0 0-7.593-3.292z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div class="time">{{ time }}</div>
+                        </div>
+                        <div class="right">
+                            <div class="battery-wrapper">
+                                <div class="percent">100%</div>
+                                <div class="battery" data-value="100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 25">
+                                        <path class="indicator" d="M40.909 4.167v16.668h-36.364v-16.668z" />
+                                        <path d="M50 14.584v-4.167c0-2.083-3.416-2.083-3.416-2.146v8.396s3.416 0 3.416-2.083z" />
+                                        <path d="M40.67 0h-35.886c-4.745 0-4.784 4.546-4.784 4.546v15.909s0 4.546 4.784 4.546h35.886c4.784 0 4.784-4.546 4.784-4.546v-15.909s0-4.546-4.784-4.546zm2.511 20.603s0 2.315-2.406 2.315h-36.095c-2.406 0-2.406-2.315-2.406-2.315v-16.205s0-2.315 2.406-2.315h36.095c2.481 0 2.406 2.315 2.406 2.315z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-wrapper spec">
+                        <div class="app">
+                            <div class="title-row">
+                                <div class="title">Спец службы</div>
+                            </div>
+							<div style="width: 100%; position: relative; height: 100%; display: flex; justify-content: center;">
+                            <div>
+							<div class="icon-wrapper">
+                                <div class="icon">
+                                    <img src="img/ipad/taxi_app/taxi_icon.svg" alt="" />
+                                </div>
+                            </div>
+                            <button class="button" v-on:click="callMent()">Вызвать<br>полицию</button>
+							</div>
+							<div>
+							<div class="icon-wrapper">
+                                <div class="icon">
+                                    <img src="img/ipad/taxi_app/taxi_icon.svg" alt="" />
+                                </div>
+                            </div>
+                            <button class="button" v-on:click="callMedic()">Вызвать<br>скорую</button>
+							</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-wrapper hovicon effect-8" v-on:click="backApp(`ipad-Home`)">
+                        <svg class="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43">
+                            <defs>
+                                <filter id="a" x="0" y="0" width="43" height="43" filterUnits="userSpaceOnUse">
+                                    <feOffset dy="3" />
+                                    <feGaussianBlur stdDeviation="3" result="b" />
+                                    <feFlood flood-opacity=".161" />
+                                    <feComposite operator="in" in2="b" />
+                                    <feComposite in="SourceGraphic" />
+                                </filter>
+                            </defs>
+                            <g transform="translate(9 6)" stroke-width="3" fill="none" filter="url(#a)">
+                                <circle cx="12.5" cy="12.5" r="12.5" stroke="none" />
+                                <circle cx="12.5" cy="12.5" r="11" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+			<div class="container" v-if="appMenu === 'ipad-appMeha'">
+                <div class="screen">
+                    <div class="status-bar black">
+                        <div class="left">
+                            <div class="network-wrapper">
+                                <div class="cellular" data-value="5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.879 4.246">
+                                        <path d="M0 2.118a2.123 2.123 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                        <path d="M5.409 2.118a2.121 2.121 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M10.818 2.118a2.126 2.126 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M16.228 2.118a2.122 2.122 0 1 1 2.124 2.128 2.117 2.117 0 0 1-2.124-2.128z" />
+                                        <path d="M21.63 2.118a2.124 2.124 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                    </svg>
+                                </div>
+                                <div class="wifi" data-value="3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 10.5">
+                                        <path d="M4.997 8.325l2.411 2.175 2.468-2.11a3.442 3.521 0 0 0-4.88-.065z" />
+                                        <path d="M2.636 5.845l1.415 1.207a4.797 4.908 0 0 1 6.795.086l1.457-1.16a6.824 6.981 0 0 0-9.667-.133z" />
+                                        <path d="M7.407 0a10.587 10.83 0 0 0-7.407 3.086l1.59 1.426a8.308 8.498 0 0 1 11.78.159l1.63-1.379a10.575 10.817 0 0 0-7.593-3.292z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div class="time">{{ time }}</div>
+                        </div>
+                        <div class="right">
+                            <div class="battery-wrapper">
+                                <div class="percent">100%</div>
+                                <div class="battery" data-value="100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 25">
+                                        <path class="indicator" d="M40.909 4.167v16.668h-36.364v-16.668z" />
+                                        <path d="M50 14.584v-4.167c0-2.083-3.416-2.083-3.416-2.146v8.396s3.416 0 3.416-2.083z" />
+                                        <path d="M40.67 0h-35.886c-4.745 0-4.784 4.546-4.784 4.546v15.909s0 4.546 4.784 4.546h35.886c4.784 0 4.784-4.546 4.784-4.546v-15.909s0-4.546-4.784-4.546zm2.511 20.603s0 2.315-2.406 2.315h-36.095c-2.406 0-2.406-2.315-2.406-2.315v-16.205s0-2.315 2.406-2.315h36.095c2.481 0 2.406 2.315 2.406 2.315z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-wrapper meha">
+                        <div class="app">
+                            <div class="title-row">
+                                <div class="title">Механник</div>
+                            </div>
+                            <div class="icon-wrapper">
+                                <div class="icon">
+                                    <img src="img/ipad/taxi_app/taxi_icon.svg" alt="" />
+                                </div>
+                            </div>
+                            <button class="button" v-on:click="callMeha()">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="home-wrapper hovicon effect-8" v-on:click="backApp(`ipad-Home`)">
+                        <svg class="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43">
+                            <defs>
+                                <filter id="a" x="0" y="0" width="43" height="43" filterUnits="userSpaceOnUse">
+                                    <feOffset dy="3" />
+                                    <feGaussianBlur stdDeviation="3" result="b" />
+                                    <feFlood flood-opacity=".161" />
+                                    <feComposite operator="in" in2="b" />
+                                    <feComposite in="SourceGraphic" />
+                                </filter>
+                            </defs>
+                            <g transform="translate(9 6)" stroke-width="3" fill="none" filter="url(#a)">
+                                <circle cx="12.5" cy="12.5" r="12.5" stroke="none" />
+                                <circle cx="12.5" cy="12.5" r="11" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="container" v-if="appMenu === 'ipad-appReport'">
+                <div class="screen">
+                    <div class="status-bar">
+                        <div class="left">
+                            <div class="network-wrapper">
+                                <div class="cellular" data-value="5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.879 4.246">
+                                        <path d="M0 2.118a2.123 2.123 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                        <path d="M5.409 2.118a2.121 2.121 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M10.818 2.118a2.126 2.126 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M16.228 2.118a2.122 2.122 0 1 1 2.124 2.128 2.117 2.117 0 0 1-2.124-2.128z" />
+                                        <path d="M21.63 2.118a2.124 2.124 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                    </svg>
+                                </div>
+                                <div class="wifi" data-value="3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 10.5">
+                                        <path d="M4.997 8.325l2.411 2.175 2.468-2.11a3.442 3.521 0 0 0-4.88-.065z" />
+                                        <path d="M2.636 5.845l1.415 1.207a4.797 4.908 0 0 1 6.795.086l1.457-1.16a6.824 6.981 0 0 0-9.667-.133z" />
+                                        <path d="M7.407 0a10.587 10.83 0 0 0-7.407 3.086l1.59 1.426a8.308 8.498 0 0 1 11.78.159l1.63-1.379a10.575 10.817 0 0 0-7.593-3.292z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div id="tik-tak" class="step" style="color: white;font-size: 12px;font-weight: 700;">00:00:00</div>
+                        </div>
+                        <div class="right">
+                            <div class="battery-wrapper">
+                                <div class="percent">100%</div>
+                                <div class="battery" data-value="100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 25">
+                                        <path class="indicator" d="M40.909 4.167v16.668h-36.364v-16.668z" />
+                                        <path d="M50 14.584v-4.167c0-2.083-3.416-2.083-3.416-2.146v8.396s3.416 0 3.416-2.083z" />
+                                        <path d="M40.67 0h-35.886c-4.745 0-4.784 4.546-4.784 4.546v15.909s0 4.546 4.784 4.546h35.886c4.784 0 4.784-4.546 4.784-4.546v-15.909s0-4.546-4.784-4.546zm2.511 20.603s0 2.315-2.406 2.315h-36.095c-2.406 0-2.406-2.315-2.406-2.315v-16.205s0-2.315 2.406-2.315h36.095c2.481 0 2.406 2.315 2.406 2.315z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-wrapper report">
+                    <<div class="app">
+                    <div class="warpper">
+                                <input class="radio" id="one" name="group" type="radio" checked>
+                                <input class="radio" id="two" name="group" type="radio">
+                                <input class="radio" id="three" name="group" type="radio">
+                                <input class="radio" id="t4" name="group" type="radio">
+                                <input class="radio" id="t5" name="group" type="radio">
+                                <input class="radio" id="t6" name="group" type="radio">
+                                <input class="radio" id="t7" name="group" type="radio">
+                                <input class="radio" id="t8" name="group" type="radio">
+                            <div class="tabs2">
+                                <label class="tab" id="one-tab" for="one">Газонокосильщик</label>
+                                <label class="tab" id="two-tab" for="two">Электрик</label>
+                                <label class="tab" id="three-tab" for="three">Почтальон</label>
+                                <label class="tab" id="t4-tab" for="t4">Таксист</label>
+                                <label class="tab" id="t5-tab" for="t5">Водитель автобуса</label>
+                                <label class="tab" id="t6-tab" for="t6">Автомеханик</label>
+                                <label class="tab" id="t7-tab" for="t7">Дальнобойщик</label>
+                                <label class="tab" id="t8-tab" for="t8">Инкассатор</label>
+                            </div>
+					<div class="panels">
+						<div class="panel" id="one-panel">
+							<div class="panel-title">Газонокосильщик</div>
+							<p><span class="color-yellow">Доступно:</span> 0 уровень.</p>
+							<span class="title-sp"></span>
+							<p><span class="color-yellow">О работе:</span>
+							Отличная возможность для хоть какого-то первоначального заработка
+							будучи приезжим, работа не из грязных, да и к тому же не требует лицензий 
+							или опыта, главное уметь нажать на газ и вовремя повернуть руль, косите 
+							траву сидя на месте, отдыхайте и зарабатывайте.</p>
+							<p><span class="color-yellow">Зарплата:</span> 2$ за контрольную точку.</p>
+							<div class="flex-end">
+								<img src="images\content\main-1.jpg" alt="preview-image" class="rounding">
+							</div>
+						</div>
+						<div class="panel" id="two-panel">
+							<div class="panel-title">Электрик</div>
+							<p><span class="color-yellow">Доступно:</span> 0 уровень.</p>
+							<span class="title-sp"></span>
+							<p><span class="color-yellow">О работе:</span> 
+							Сложная, но хорошо оплачиваемая работа, если вы крепки духом 
+							и здоровьем, подтянуты в физическом плане и не боитесь до ужаса
+							изнуряющих часовых пробежек от электрощита к щиту, для исправления вновь 
+							и вновь появляющихся неисправностей, эта работа создана для вас!</p> 
+							<p><span class="color-yellow">Зарплата:</span> 7$ за контрольную точку.</p>
+							<div class="flex-end">
+								<img src="images\content\main-2.jpg" alt="preview-image" class="rounding">
+							</div>
+						</div>
+						<div class="panel" id="three-panel">
+							<div class="panel-title">Почтальон</div>
+							<p><span class="color-yellow">Доступно:</span> 0 уровень.</p>
+							<p><span class="color-yellow">О работе:</span>
+							Одна из профессий прародителей всех последующих профессий связанных с вождением либо перевозками. Требует примерное знание местности, и наличие водительских прав категории В (легковое авто), в связи с тем что передвижение происходит по дорогам общего пользования, а это требует знаний правил дорожного движения.</p>	
+							<p><span class="color-yellow">Зарплата:</span> в районе 1.700$ за час работы.</p> 
+							<div class="flex-end">
+								<img src="images\content\main-3.jpg" alt="preview-image" class="rounding">
+							</div>
+						</div>
+						<div class="panel" id="t4-panel">
+							<div class="panel-title">Таксист</div>
+							<p><span class="color-yellow">Доступно:</span> 2 уровень.</p>
+							<span class="title-sp"></span>
+							<p><span class="color-yellow">О работе:</span> 
+							Работа мечты для тех - кто любит ездить на машине, и болтать с разными людьми. Требует примерное знание местности, наличие водительских прав категории B (легковые авто), в связи с тем что передвижение происходит по дорогам общего пользования, а это требует знаний правил дорожного движения.</p>
+							<p><span class="color-yellow">Зарплата:</span> цена одного заказа от 20$ до 200$.</p>
+							<span class="title-sp">Команды</span>
+							<p><span class="color-blue">/tprice [id] [цена]</span> - выписать пассажиру чек за проезд в такси.</p>
+							<p><span class="color-blue">/accept [id]</span> - принять вызов такси.</p>
+							<div class="flex-end">
+								<img src="images\content\taxi.png" alt="preview-image" class="rounding">
+							</div>
+						</div>
+						<div class="panel" id="t5-panel">
+							<div class="panel-title">Водитель автобуса</div>
+							<p><span class="color-yellow">Доступно:</span> 2 уровень.</p>
+							<span class="title-sp"></span>
+							<p><span class="color-yellow">О работе:</span> 
+							Это профессия, которая требует максимальной концентрации и хороших навыков вождения. Для работы вам необходимо права категории «С». Развозите людей по определенному маршруту - от остановки до остановки.</p>				
+							<p><span class="color-yellow">Зарплата:</span> в районе 2.000$ за час работы.</p>  
+							<div class="flex-end">
+								<img src="images\content\bus.png" alt="preview-image" class="rounding">
+							</div>
+						</div>
+						<div class="panel" id="t6-panel">
+							<div class="panel-title">Автомеханик</div>
+							<p><span class="color-yellow">Доступно:</span> 4 уровень.</p>
+							<span class="title-sp"></span>
+							<p><span class="color-yellow">О работе:</span> 
+							Если вы любите копаться в двигателях машин, разбираетесь в этом и делаете это быстро - то это работа определенно для вас. Чините и заправляйте машины, зарабатывая на этом!</p>
+							<p><span class="color-yellow">Зарплата:</span> цена одного заказа от 50$ до 300$.</p>
+							<span class="title-sp">Команды</span>
+							<p><span class="color-blue">/repair [id] [цена]</span> - выписать чек за починку авто.</p>
+							<p><span class="color-blue">/sellfuel [id] [литры] [цена/литр]</span> - выписать чек за заправку авто.</p>
+							<p><span class="color-blue">/buyfuel [id] [литры]</span> - приобрести топливо для дальнейшей заправки им.</p>  
+							<div class="flex-end">
+								<img src="images\content\mecha.png" alt="preview-image" class="rounding">
+							</div>
+						</div>
+						<div class="panel" id="t7-panel">
+							<div class="panel-title">Дальнобойщик</div>
+							<p><span class="color-yellow">Доступно:</span> 5 уровень.</p>
+							<span class="title-sp"></span>
+							<p><span class="color-yellow">О работе:</span> 
+							Если ваш организм привык к долгому отсутствию сна и вы также можете сохранять концентрацию и следить за дорогой, то вам определенно подойдет эта работа. Вам необходимо иметь права категории «С». Развозите товары по заказам и зарабатывайте!</p>				
+							<p><span class="color-yellow">Зарплата:</span> цена одного заказа от 500$ до 2000$.</p>
+							<span class="title-sp">Команды</span>
+							<p><span class="color-blue">/orders</span> - открыть меню заказов.</p>
+							<p><span class="color-blue">/t [сообщение]</span> - рация дальнобойщиков.</p>  
+							<div class="flex-end">
+								<img src="images\content\truck.png" alt="preview-image" class="rounding">
+							</div>
+						</div>
+						<div class="panel" id="t8-panel">
+							<div class="panel-title">Инкассатор</div>
+							<p><span class="color-yellow">Доступно:</span> 8 уровень.</p>
+							<span class="title-sp"></span>
+							<p><span class="color-yellow">О работе:</span> 
+							Если вы настоящий мужчина и не боитесь везти огромную кучу денег в машине, то работа определенно для вас. По пути вас могут попытаться ограбить бандиты, если их оказалось больше, то лучше не рисковать и отдать им что они требуют. Для данной работы вам необходимо иметь права категории «С». Развозите мешки с деньгами по банкоматам и зарабатывайте!</p>
+							<p><span class="color-yellow">Зарплата:</span> в районе 2.500$ за час работы.</p>  
+							<div class="flex-end">
+								<img src="images\content\inkas.png" alt="preview-image" class="rounding">
+							</div>
+						</div>
+					</div>  
+                    </div>
+                    </div>
+					</div>
+				</div>
+                <div class="home-wrapper hovicon effect-8" v-on:click="backApp(`ipad-Home`)">
+                    <svg class="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43">
+                        <defs>
+                            <filter id="a" x="0" y="0" width="43" height="43" filterUnits="userSpaceOnUse">
+                                <feOffset dy="3" />
+                                <feGaussianBlur stdDeviation="3" result="b" />
+                                <feFlood flood-opacity=".161" />
+                                <feComposite operator="in" in2="b" />
+                                <feComposite in="SourceGraphic" />
+                            </filter>
+                        </defs>
+                        <g transform="translate(9 6)" stroke-width="3" fill="none" filter="url(#a)">
+                            <circle cx="12.5" cy="12.5" r="12.5" stroke="none" />
+                            <circle cx="12.5" cy="12.5" r="11" />
+                        </g>
+                    </svg>
+                </div>            
+			</div>
+			<div class="container" v-if="appMenu === 'ipad-appAbout'">
+                <div class="screen">
+                    <div class="status-bar">
+                        <div class="left">
+                            <div class="network-wrapper">
+                                <div class="cellular" data-value="5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.879 4.246">
+                                        <path d="M0 2.118a2.123 2.123 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                        <path d="M5.409 2.118a2.121 2.121 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M10.818 2.118a2.126 2.126 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M16.228 2.118a2.122 2.122 0 1 1 2.124 2.128 2.117 2.117 0 0 1-2.124-2.128z" />
+                                        <path d="M21.63 2.118a2.124 2.124 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                    </svg>
+                                </div>
+                                <div class="wifi" data-value="3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 10.5">
+                                        <path d="M4.997 8.325l2.411 2.175 2.468-2.11a3.442 3.521 0 0 0-4.88-.065z" />
+                                        <path d="M2.636 5.845l1.415 1.207a4.797 4.908 0 0 1 6.795.086l1.457-1.16a6.824 6.981 0 0 0-9.667-.133z" />
+                                        <path d="M7.407 0a10.587 10.83 0 0 0-7.407 3.086l1.59 1.426a8.308 8.498 0 0 1 11.78.159l1.63-1.379a10.575 10.817 0 0 0-7.593-3.292z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div id="tik-tak" class="step" style="color: white;font-size: 12px;font-weight: 700;">00:00:00</div>
+                        </div>
+                        <div class="right">
+                            <div class="battery-wrapper">
+                                <div class="percent">100%</div>
+                                <div class="battery" data-value="100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 25">
+                                        <path class="indicator" d="M40.909 4.167v16.668h-36.364v-16.668z" />
+                                        <path d="M50 14.584v-4.167c0-2.083-3.416-2.083-3.416-2.146v8.396s3.416 0 3.416-2.083z" />
+                                        <path d="M40.67 0h-35.886c-4.745 0-4.784 4.546-4.784 4.546v15.909s0 4.546 4.784 4.546h35.886c4.784 0 4.784-4.546 4.784-4.546v-15.909s0-4.546-4.784-4.546zm2.511 20.603s0 2.315-2.406 2.315h-36.095c-2.406 0-2.406-2.315-2.406-2.315v-16.205s0-2.315 2.406-2.315h36.095c2.481 0 2.406 2.315 2.406 2.315z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-wrapper about">
+                        <div class="app">
+						<!--<iframe class="website" src="board2.html" style="opacity: 1;"></iframe>-->
+                            <div class="title-row">
+                                <div class="title">Связь с администрацией</div>
+                            </div>
+							<div class="card">
+							<div class="additional">
+							  <div class="user-card">
+								<div class="level center">
+								  Level 1337
+								</div>
+								<img src="./img/ipad/backgrounds/logo.jpg" alt="альтернативный текст" class="ava" style=" height: 145px;">
+								
+							  </div>
+							  <div class="more-info">
+								<h1>тут почта</h1>
+								<div class="coords">
+								  <span>Тех.Поддержка</span>
+								  <span>Сервера</span>
+								</div>
+								<div class="coords">
+								  <span>Должность</span>
+								  <span>Администратор</span>
+								</div>
+								<div class="stats">
+
+							  </div>
+							  </div>
+							</div>
+							<div class="general">
+							  <h1>Поддержка</h1>
+							  <p style="text-align: center;	font-size: 20px;">Помощь по серверу</p>
+							
+							</div>
+						  </div>
+						  
+                        </div>
+                    </div>
+                    <div class="home-wrapper hovicon effect-8" v-on:click="backApp(`ipad-Home`)">
+                        <svg class="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43">
+                            <defs>
+                                <filter id="a" x="0" y="0" width="43" height="43" filterUnits="userSpaceOnUse">
+                                    <feOffset dy="3" />
+                                    <feGaussianBlur stdDeviation="3" result="b" />
+                                    <feFlood flood-opacity=".161" />
+                                    <feComposite operator="in" in2="b" />
+                                    <feComposite in="SourceGraphic" />
+                                </filter>
+                            </defs>
+                            <g transform="translate(9 6)" stroke-width="3" fill="none" filter="url(#a)">
+                                <circle cx="12.5" cy="12.5" r="12.5" stroke="none" />
+                                <circle cx="12.5" cy="12.5" r="11" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+  </body>

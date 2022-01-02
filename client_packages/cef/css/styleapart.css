@@ -1,0 +1,24 @@
+html{height:100%}
+body{font-family:"TT Norms",sans-serif;margin:0;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.exit{font-weight:600;font-size: 3vh;position:absolute;color: white;margin:0;height:inherit;text-align:right;bottom:inherit;top:0;right:0;padding: 1.5vh;border-radius: 0;}
+.main h1{margin:0;font-size: 3vh;/* color: #000; */padding-top: 1;padding-bottom: 0;background: #19191F;margin-bottom: 0.7vh;/* border-radius: 10px; */padding: 2vh;color: white;}
+.main{width: 120vh;top:50%;transform:translateY(-50%);height:auto;right: 0;padding-bottom:0;display:table-cell;vertical-align:middle;position:absolute;left: 0;margin: 0 auto;/* border-radius: 10px; */background: #202026;}
+.exit:hover{color:#888}
+.blockkv{display:inline-block;color: white;margin-bottom: 1vh;padding: 2vh;width: 28.8%;background: #19191F;margin-left: 1vh;position:relative;height: 16vh;}
+.blockkv p{margin:0}
+.blockkv p.vl{margin:0;font-size: 1.7vh;/* margin-bottom: 0; */margin-bottom: 0.5vh;}
+.blockkv p.vlno{margin:0;font-size: 1.7vh;margin-bottom: 0.5vh;}
+.blockkv small{font-size: 1.7vh;}
+.blockkv p.name{font-size: 2.2vh;margin-bottom: 1vh;}
+.blockkv .gm p{padding:0}
+.btn{background: #d6285d;border-radius: 0;text-align:center;padding: 1vh;margin-top: 3vh;color: #fff;font-size: 2vh;/* margin-bottom: 0; */bottom: 0;/* margin: 0 0 0 0; */}
+.btn#act{background:#0092dea8}
+.btn:hover{background: #DD1552;}
+.btn:active{background: #DD1552;}
+.gm{font-size: 1.4vh;margin-bottom: 0.2vh;}
+.jil{font-size: 1.4vh;}
+.scr{overflow-y:scroll;max-height: 60vh;padding: 1vh;}
+::-webkit-scrollbar{width:2px;}
+::-webkit-scrollbar-track{background:#555}
+::-webkit-scrollbar-thumb{background:#000}
+.blockkv p.go,.blockkv p.enter{padding:0}

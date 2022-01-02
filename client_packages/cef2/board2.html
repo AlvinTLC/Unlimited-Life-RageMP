@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>redage.net - Board</title>
+    <link rel="stylesheet" href="css/grids-responsive-min.css">
+    <link rel="stylesheet" href="css/grids-min.css">
+    <link rel="stylesheet" href="css/board2.css">
+    <link rel="stylesheet" href="css/circle.css">
+	<link rel="stylesheet" href="css/ipadStat.css">
+	<script>
+    var moskowUtc = 3;
+    var timerId = setInterval(function() {
+        let t = new Date(),
+            tt = t.getUTCHours() + moskowUtc;
+        document.getElementById('tik-tak').innerHTML = (tt > 24 ? "0" : "") + (tt > 24 ? tt - 24 : tt) + ":" + (t.getMinutes() < 10 ? '0' : '') + t.getMinutes() + ":" + (t.getSeconds() < 10 ? '0' : '') + t.getSeconds();
+        document.getElementById('tik-tak').classList.add("step");
+    }, 1000);
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            font-family: "Ubuntu", sans-serif;
+        }
+    </style>
+</head>
+<body style="display: block">
+    <div class="board2"	v-if="active" v-bind:class="{'is-collapsed' : collapsed }" @click.right.prevent="context" @click="hide">
+	<div class="warn">
+	</div>
+	<div class="ipad-wrapper">
+        <div class="ipad" id="ipad">
+		<div class="container">
+                <div class="screen">
+                    <div class="status-bar">
+                        <div class="left">
+                            <div class="network-wrapper">
+                                <div class="cellular" data-value="5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.879 4.246">
+                                        <path d="M0 2.118a2.123 2.123 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                        <path d="M5.409 2.118a2.121 2.121 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M10.818 2.118a2.126 2.126 0 1 1 2.124 2.128 2.12 2.12 0 0 1-2.124-2.128z" />
+                                        <path d="M16.228 2.118a2.122 2.122 0 1 1 2.124 2.128 2.117 2.117 0 0 1-2.124-2.128z" />
+                                        <path d="M21.63 2.118a2.124 2.124 0 1 1 2.124 2.128 2.122 2.122 0 0 1-2.124-2.128z" />
+                                    </svg>
+                                </div>
+                                <div class="wifi" data-value="3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 10.5">
+                                        <path d="M4.997 8.325l2.411 2.175 2.468-2.11a3.442 3.521 0 0 0-4.88-.065z" />
+                                        <path d="M2.636 5.845l1.415 1.207a4.797 4.908 0 0 1 6.795.086l1.457-1.16a6.824 6.981 0 0 0-9.667-.133z" />
+                                        <path d="M7.407 0a10.587 10.83 0 0 0-7.407 3.086l1.59 1.426a8.308 8.498 0 0 1 11.78.159l1.63-1.379a10.575 10.817 0 0 0-7.593-3.292z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div id="tik-tak" class="step" style="color: white;font-size: 12px;font-weight: 700;">00:00:00</div>
+                        </div>
+                        <div class="right">
+                            <div class="battery-wrapper">
+                                <div class="percent">100%</div>
+                                <div class="battery" data-value="100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 25">
+                                        <path class="indicator" d="M40.909 4.167v16.668h-36.364v-16.668z" />
+                                        <path d="M50 14.584v-4.167c0-2.083-3.416-2.083-3.416-2.146v8.396s3.416 0 3.416-2.083z" />
+                                        <path d="M40.67 0h-35.886c-4.745 0-4.784 4.546-4.784 4.546v15.909s0 4.546 4.784 4.546h35.886c4.784 0 4.784-4.546 4.784-4.546v-15.909s0-4.546-4.784-4.546zm2.511 20.603s0 2.315-2.406 2.315h-36.095c-2.406 0-2.406-2.315-2.406-2.315v-16.205s0-2.315 2.406-2.315h36.095c2.481 0 2.406 2.315 2.406 2.315z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-wrapper character">
+					<div class="app">
+					<div class="title-row">
+                                <div class="title">Информация о персонаже</div>
+                            </div>
+                            <div class="info-wrapper">
+							<div class="photo">
+                                    <img src="img/ipad/logo.png" alt="" class="logo" />
+                                </div>
+								<div class="info">
+                                    <div class="row">
+                                        <div class="name">Дата создания:</div>
+                                        <div class="value light">{{stats[7]}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="name">Телефон:</div>
+                                        <div class="value bold colored">{{stats[2]}}</div>
+                                    </div>
+									<div class="row">
+                                        <div class="name">Уровень:</div>
+                                        <div class="value">{{stats[0]}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="name">Опыт:</div>
+                                        <div class="value">{{stats[1]}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="name">Баны:</div>
+                                        <div class="value light">{{stats[4]}}</div>
+                                    </div>
+									<div class="row">
+                                        <div class="name">Варны:</div>
+                                        <div class="value light">{{stats[5]}}</div>
+                                    </div>
+									<div class="row">
+                                        <div class="name">Работа:</div>
+                                        <div class="value">{{stats[10]}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="name">Организация:</div>
+                                        <div class="value bold colored">{{stats[11]}}</div>
+                                    </div>
+									<div class="row">
+                                        <div class="name">Ранг:</div>
+                                        <div class="value bold colored">{{stats[12]}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="name">Лицензии:</div>
+                                        <div class="value">{{stats[6]}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="name">Номер паспорта:</div>
+                                        <div class="value">{{stats[8]}}</div>
+                                    </div>
+									<div class="row">
+                                        <div class="name">Номер счета:</div>
+                                        <div class="value">{{stats[9]}}</div>
+                                    </div>
+									<div class="row">
+                                        <div class="name">Статус:</div>
+                                        <div class="value">{{stats[3]}}</div>
+                                    </div>
+								</div>
+					</div>
+					</div>
+					</div>
+                    <div class="home-wrapper hovicon effect-8" v-on:click="homebutton()">
+                        <svg class="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43">
+                            <defs>
+                                <filter id="a" x="0" y="0" width="43" height="43" filterUnits="userSpaceOnUse">
+                                    <feOffset dy="3" />
+                                    <feGaussianBlur stdDeviation="3" result="b" />
+                                    <feFlood flood-opacity=".161" />
+                                    <feComposite operator="in" in2="b" />
+                                    <feComposite in="SourceGraphic" />
+                                </filter>
+                            </defs>
+                            <g transform="translate(9 6)" stroke-width="3" fill="none" filter="url(#a)">
+                                <circle cx="12.5" cy="12.5" r="12.5" stroke="none" />
+                                <circle cx="12.5" cy="12.5" r="11" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+			</div>
+			</div>
+    </div>
+</body>
+<script src='js/vue.js'></script>
+<script src='js/board.js'></script>
+<script src="js/circle.js"></script>
+<script src="js/move.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/checkbox.js"></script>
+</html>

@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "Gilroy-Bold";
+  font-weight: 700;
+  font-style: bold;
+  src: local("Gilroy-Bold"),
+    url("../fonts/Gilroy-Bold/Gilroy-Bold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Bold/Gilroy-Bold.woff") format("woff");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.auto {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+/* Левое меню */
+.left__list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 38vh;
+  /* width: 23.5vw; */
+  height: 100%;
+  padding: 5vh 2vh;
+  background-color: #1a191b;
+}
+/* Header */
+.header_auto {
+  color: #fff;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+.header_auto h3,
+h1 {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: bold;
+}
+.header_auto h3 {
+  font-size: 1.8vh;
+  line-height: 2.1vh;
+  color: #ffb943;
+}
+.header_auto a {
+  float: right;
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8vh;
+  cursor: pointer;
+  margin-bottom: 1vh;
+  color: #ffb943;
+}
+/*  */
+
+/*  */
+.carList {
+  height: 76vh;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 0.5vh;
+}
+.car__block {
+  width: 100%;
+  height: 7vh;
+  background: #222123;
+  border-radius: 0.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5vh;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.car__block:hover {
+  background: #2d2c2e;
+}
+.car__block .carName {
+  width: 19vh;
+  font-family: "Gilroy-Bold";
+  font-size: 1.65vh;
+  line-height: 2.3vh;
+}
+.car__block .carPrice {
+  width: 120px;
+  font-family: "Gilroy-Bold";
+  font-size: 1.4vh;
+  line-height: 1.9vh;
+  color: #ffb943;
+}
+.car__block:not(.active) .carPrice {
+  color: rgba(255, 255, 255, 0.4);
+}
+.active {
+  color: #ffb943 !important;
+}
+.active::before {
+  content: "";
+  margin-left: 0;
+  width: 0.5vh;
+  height: 4vh;
+  background: linear-gradient(180deg, #ffb943 0%, #fab031 100%);
+  box-shadow: 0 0 1vh rgba(#ffb943, 0.6);
+  border-radius: 1vh;
+}
+.car__block:not(.active)::before {
+  content: "";
+  margin-left: -2vh;
+  width: 0.5vh;
+  height: 4vh;
+  margin-left: 1vh;
+  background: linear-gradient(180deg, #ffb943 0%, #fab031 100%);
+  box-shadow: 0 0 1vh rgba(255, 219, 61, 0.75);
+  border-radius: 1vh;
+  opacity: 0;
+}
+::-webkit-scrollbar {
+  width: 0.6vh;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #312f32;
+  border-radius: 1vh;
+  height: 40%;
+}
+/* ==== */
+
+/* Правое меню */
+.right__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 1vw;
+  top: 0;
+  width: auto;
+  height: 100vh;
+  color: #fff;
+}
+.card:nth-child(1) {
+  margin-top: 1.5vh;
+  margin-bottom: 2vh;
+}
+.card {
+  margin-bottom: 2vh;
+}
+.right__menu h1 {
+  width: 22vh;
+  font-family: "Gilroy-Heavy";
+  font-size: 3.2vh;
+  line-height: 3.7vh;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.carInfo h2 {
+  width: 20vh;
+  font-family: "Gilroy-Bold";
+  font-size: 2.4vh;
+  line-height: 2.8vh;
+}
+.carInfo h2 a {
+  float: right;
+  font-family: "Gilroy-Bold";
+  font-size: 1.4vh;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.buyMenu {
+  margin-top: 3vh;
+}
+.buyMenu div {
+  margin-bottom: 1vh;
+}
+.buyMenu h3 {
+  font-family: "Gilroy-Bold";
+  font-size: 1.5vh;
+  line-height: 1.8vh;
+}
+.buyMenu p {
+  font-family: "Gilroy-Bold";
+  font-size: 2vh;
+  line-height: 2.3vh;
+  margin-bottom: 1vh;
+}
+.buyMenu input {
+  width: 10.5vh;
+  height: 3.7vh;
+  margin-right: 0.5vh;
+  font-family: "Gilroy-Bold";
+  font-size: 1.4vh;
+  line-height: 2vh;
+  letter-spacing: 0.02em;
+  border-radius: 0.5vh;
+  border: none;
+  outline: none;
+  background: linear-gradient(253deg, #ffb943 13.89%, #fab031 102.17%);
+  box-shadow: 0 0 1vh -0.3vh rgba(0, 0, 0, 0.75);
+  transition: 0.1s;
+}
+.buyMenu input:hover {
+  transform: scale(1.02);
+}
+/* COlOR MENU */
+.colors-menu {
+  margin-top: 5vh;
+  display: inline-block;
+  flex-wrap: wrap;
+}
+.colors-menu h2 {
+  text-align: center;
+  margin: 1vh;
+  font-family: "Gilroy-Bold";
+  font-size: 2vh;
+  line-height: 2.3vh;
+}
+.color-item {
+  display: inline-block;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 50%;
+  margin: 0.2vh;
+  transition: 0.15s;
+}
+.color-item:hover {
+  transform: scale(1.1);
+}
+progress {
+  width: 20vh;
+  height: 2vh;
+  padding: 0.3vh 0.7vh;
+  background: rgba(34, 33, 35, 0.8);
+  border-radius: 2vh;
+}
+progress::-webkit-progress-bar {
+  background-color: transparent;
+  border-radius: 2vh;
+}
+progress::-webkit-progress-value {
+  background: linear-gradient(253deg, #ffb943 13.89%, #fab031 102.17%);
+  border-radius: 2vh;
+}
+
+.white {
+  background: #ffffff;
+  box-shadow: 0 0 1vh rgba(255, 255, 255, 0.75);
+}
+.black {
+  background: #161616;
+  box-shadow: 0 0 1vh rgba(22, 22, 22, 0.75);
+}
+.gray {
+  background: #cacaca;
+  box-shadow: 0 0 1vh rgba(202, 202, 202, 0.75);
+}
+.orange {
+  background: #ff9b3f;
+  box-shadow: 0 0 1vh rgba(255, 155, 63, 0.75);
+}
+.yellow {
+  background: #ffba43;
+  box-shadow: 0 0 1vh rgba(255, 186, 67, 0.75);
+}
+.malina {
+  background: #eb4747;
+  box-shadow: 0 0 1vh rgba(235, 71, 71, 0.75);
+}
+.sky {
+  background: #6ad0f0;
+  box-shadow: 0 0 1vh rgba(106, 208, 240, 0.75);
+}
+.blue {
+  background: #5288f0;
+  box-shadow: 0 0 1vh rgba(82, 136, 240, 0.75);
+}
+.purple {
+  background: #7e27ed;
+  box-shadow: 0 0 1vh rgba(126, 39, 237, 0.75);
+}
+.green {
+  background: #00bd90;
+  box-shadow: 0 0 1vh rgba(0, 189, 144, 0.75);
+}
+.pink {
+  background: #e72ad4;
+  box-shadow: 0 0 1vh rgba(231, 42, 212, 0.75);
+}
+.brown {
+  background: #2b0404;
+  box-shadow: 0 0 1vh rgba(43, 4, 4, 0.75);
+}
+
+.exit_btn {
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.exit_btn b {
+  font-family: "Gilroy-Bold";
+  color: #000;
+  font-size: 2.4vh;
+  padding: 0.8vh 1.7vh;
+  border-radius: 0.5vh;
+  margin-right: 1vh;
+  background: linear-gradient(253deg, #ffb943 13.89%, #fab031 102.17%);
+  box-shadow: 0 0 10 -0.3vh rgba(0, 0, 0, 0.75);
+}
+.exit_btn p {
+  font-family: "Gilroy-Bold";
+  font-size: 1.8vh;
+  line-height: 2.3vh;
+}

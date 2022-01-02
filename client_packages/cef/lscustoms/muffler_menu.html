@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="ls_castoms.css">
+	<link rel="stylesheet" href="muffler.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
+</head>
+<body>
+	<div class="info">
+		<div class="footer">
+			<div class="left_part">
+				<p>Geschwindigkeit</p>
+				<progress id="speed_bar" value="50" max="100"></progress>
+				<p>Bremsen</p>
+				<progress id="brakes_bar" value="50" max="100"></progress>
+				<p>Beschleunigung</p>
+				<progress id="boost_bar" value="50" max="100"></progress>
+				<p>Kupplung</p>
+				<progress id="clutch_bar" value="50" max="100"></progress>
+			</div>
+		</div>
+	</div>
+    <div class="box">
+        <div class="main">
+            <div class="categories">
+                <p>Auspuff</p>
+                <a id="home">
+                    <img src="images/back.png" alt="back" width="10px" height="15px">
+                    <p>Zurück</p>
+                </a>
+            </div>
+            <div class="content_box horizontal-scroll-wrapper1 squares">
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="tuning.js"></script>
+</body>
+</html>

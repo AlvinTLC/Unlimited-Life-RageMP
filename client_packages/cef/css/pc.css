@@ -1,0 +1,151 @@
+.pc a{
+    cursor: pointer;
+    list-style-type: none;
+    background-image: url('../res/homepc.svg'); /*Кнопка назад*/
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 63.87%;
+    margin-left: 42%;
+    border: 2px solid #0077ff2f;
+}
+.pc a:hover{ /*кнопка назад - анимка*/
+    border: 2px solid #0055ff7f;
+    background: #0077ff2f;
+}
+.pc span li{ /*Кнопка выход*/
+    cursor: pointer;
+    list-style-type: none;
+    display: block;
+    position: absolute;
+    border: 2px solid #0077ff2f;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: 63.87%;
+    margin-left: 47.3%;
+}
+.pc span li:hover{ /*кнопка выход - анимка*/
+    border: 2px solid #0055ff7f;
+    background: #0077ff2f;
+}
+/*------------- Планшет ------------------*/
+.pc{
+    background-image: url('../res/tabletlspd.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    position: absolute;
+    width: 51.2em;
+    height: 38em;
+    bottom: 0;
+    display: none;
+}
+.pc .screen{
+    background: linear-gradient(to bottom left, #183759, #0c1014);
+    background-position: center;
+    height: 76%;
+    width: 84%;
+    margin-left: 8.2%;
+    margin-top: 7%;
+    border-radius: 5px;
+    color: white; /*цвет текста*/
+}
+.pc .screen .left{ /*Левое меню*/
+    display: block;
+    float: left;
+    width: 45%;
+    height: 80%;
+    margin-top: 7%;
+}
+.pc .screen .right{ /*Подменю левого меню*/
+    display: inline-block;
+    float: right;
+    width: 100%;
+    height: 80%;
+    margin-top: 7%;
+    text-align: center;
+}
+.pc menu{
+    text-align: right;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 30px 0 30px 10px;
+    margin: 6%;
+    margin-top: 20%;
+    font-size: 14pt;
+}
+.pc menu li{
+    padding: 0 10px 0 0;
+    cursor: pointer;
+    list-style-type: none;
+    background-color: #062166;
+    border-bottom:2px solid #4a4a4a;
+
+}
+.pc menu li:hover{
+    background-color: #5068a3;
+}
+.pc .right h1{
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    font-size: 22pt;
+}
+.pc .elements{
+    height: 70%;
+    margin: 15px;
+}
+.pc .elements input{
+    display: inline-block;
+    width: 70%;
+    height: 15%;
+    background: #091120;
+    color: white;
+    text-align: center;
+    border: 0;
+    font-size: 14pt;
+}
+.pc .elements .button{
+    text-align: center;
+    padding: 5%;
+    background: #091120;
+    display: inline-block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.pc .elements .button:hover{background-color: #000000}
+.pc .elements ol{
+    margin: 0;
+    text-align: left;
+    background: #091120;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    max-height: 90%;
+    height: 90%;
+    list-style-type: none;
+    counter-reset: num;
+}
+.pc .elements ol li::before{
+    color: orange;
+    content: counter(num) '. ';
+    counter-increment: num;
+}
+.pc p{
+    margin: 0;
+    color: orange;
+    text-align: left;
+}
+.pc p span{color: white}
+
+@media screen and (max-device-width: 800px) {
+    .pc{
+        width: 45em;
+        height: 35em;
+    }
+}

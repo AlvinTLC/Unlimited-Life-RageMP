@@ -1,0 +1,38 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/changenplate.css" />
+    <style>
+        #borwser {
+        width: 100%;
+        height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="changeplate" v-if="active">
+	<div class="body">
+        <div class="borders">
+		<h1>{{oldnumber[0]}}</h1>
+		<div style="display: none" id="changer">
+		<input type="text" maxlength="6" placeholder="Новый номер" id="newnumber">
+		<div>
+		<img width="130px" v-if="money == 1" v-on:click="bank()" height="130px" src="https://cdn.discordapp.com/attachments/399987780203315210/721380926998839458/-1.png">
+		<img width="130px" v-if="money == 2" v-on:click="moneys()" height="130px" src="https://cdn.discordapp.com/attachments/399987780203315210/721380932367548486/-2.png">
+		</div>
+        <p v-on:click="finishchange()">Ändern</p>
+		</div>
+        <span id="text" style="display: block" v-on:click="startchange()">Nummernschild ändern</span>
+		<p v-on:click="closebutton()">Schließen</p>
+        </div>
+		
+    </div>
+	</div>
+	<script src="js/jquery-3.3.1.min.js">
+    </script>
+    <script src="js/vue.js">
+    </script>
+    <script src="js/changenplate.js">
+    </script>
+  </body>

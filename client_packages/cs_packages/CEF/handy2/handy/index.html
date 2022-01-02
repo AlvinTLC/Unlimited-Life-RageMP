@@ -1,0 +1,310 @@
+<link rel="stylesheet" href="style.css">
+<link href="../fonts.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<div class="smartphone">
+    <div class="smartphonein">
+
+        <img class="background" src="img/bg1.jpg">
+
+        <div class="header">
+            <span class="internet">FreewayNET</span>
+            <ul class="icons">
+                <li class="icon"><img class="icon4" src="img/icon4.png"></li>
+                <li class="icon"><img class="icon5" src="img/icon5.png"></li>
+                <li class="icon"><span class="akku">85 %</span></li>
+
+                <li class="icon">
+                    <div class="charge"></div>
+                </li>
+
+                <li class="icon"><span class="time" id="time">18:16</span></li>
+            </ul>
+        </div>
+        <img class="icon1" src="img/icon1.png">
+        <img class="icon2" onclick="switchSite('startClass')" src="img/icon2.png">
+        <img class="icon3" src="img/icon3.png">
+
+        <ul class="iconsdown">
+            <li class="icondown"><img class="icondownimg r" onclick="switchSite('callClass')" src="img/icon6.png"></li>
+            <li class="icondown"><img class="icondownimg p" onclick="switchSite('contactClass')" src="img/icon7.png">
+            </li>
+            <li class="icondown"><img class="icondownimg r" onclick="switchSite('smsClass')" src="img/icon8.png"></li>
+            <li class="icondown"><img class="icondownimg p" onclick="switchSite('settingsClass')" src="img/icon9.png">
+            </li>
+        </ul>
+
+        <!-- BLACK-BASICS -->
+        <div class="headerb">
+            <span class="internetb">FreewayNET</span>
+            <ul class="icons">
+                <li class="icon"><img class="icon4" src="img/icon4b.png"></li>
+                <li class="icon"><img class="icon5" src="img/icon5b.png"></li>
+                <li class="icon"><span class="akkub">85 %</span></li>
+
+                <li class="icon">
+                    <div class="chargeb"></div>
+                </li>
+
+                <li class="icon"><span class="timeb" id="timeb">18:16</span></li>
+            </ul>
+            <img class="icon1 g" src="img/icon1b.png">
+            <img class="icon2 g" onclick="switchSite('startClass')" src="img/icon2b.png">
+            <img class="icon3 g" src="img/icon3b.png">
+        </div>
+        <!-- BLACK-BASICS-END -->
+
+        <div id="startClass" name="startClass" class="start">
+            <img onclick="switchSite('mapClass')" class="gmaps" src="img/gmaps.png">
+        </div>
+
+        <div id="mapClass" name="mapClass" class="map">
+        </div>
+
+        <div id="callClass" name="callClass" class="call hidden">
+            <div class="callbackground">
+                <ul class="callnumbers3">
+                    <li class="callnumber3" onclick="handynumber(1);"></li>
+                    <li class="callnumber3" onclick="handynumber(2);"></li>
+                    <li class="callnumber3" onclick="handynumber(3);"></li>
+                    <li class="callnumber3" onclick="handynumber(4);"></li>
+                    <li class="callnumber3" onclick="handynumber(5);"></li>
+                    <li class="callnumber3" onclick="handynumber(6);"></li>
+                    <li class="callnumber3" onclick="handynumber(7);"></li>
+                    <li class="callnumber3" onclick="handynumber(8);"></li>
+                    <li class="callnumber3" onclick="handynumber(9);"></li>
+                    <li class="callnumber3" onclick="handynumber();"></li>
+                    <li class="callnumber3" onclick="handynumber(0);"></li>
+                    <li class="callnumber3" onclick="handynumber();"></li>
+                </ul>
+                <ul class="callnumbers">
+                    <li class="callnumber">1</li>
+                    <li class="callnumber">2</li>
+                    <li class="callnumber">3</li>
+                    <li class="callnumber">4</li>
+                    <li class="callnumber">5</li>
+                    <li class="callnumber">6</li>
+                    <li class="callnumber">7</li>
+                    <li class="callnumber">8</li>
+                    <li class="callnumber">9</li>
+                    <li class="callnumber">*</li>
+                    <li class="callnumber">0</li>
+                    <li class="callnumber">#</li>
+                </ul>
+                <ul class="callnumbers2">
+                    <li class="callnumber2">O_O</li>
+                    <li class="callnumber2">ABC</li>
+                    <li class="callnumber2">DEF</li>
+                    <li class="callnumber2" style="left: 0.8vw;">GHI</li>
+                    <li class="callnumber2" style="left: 1.05vw;">JKL</li>
+                    <li class="callnumber2" style="left: 1vw;">MNO</li>
+                    <li class="callnumber2" style="left: 0.6vw;">PQRS</li>
+                    <li class="callnumber2" style="left: 0.5vw;">TUV</li>
+                    <li class="callnumber2" style="left: 0.4vw;">WXYZ</li>
+                    <li class="callnumber2" style="left: 0.95vw;">(P)</li>
+                    <li class="callnumber2" style="left: 1.45vw;">+</li>
+                    <li class="callnumber2" style="left: 1.95vw;">(W)</li>
+                </ul>
+
+                <input class="outputnumbers" name="callingnumber" type="number" disabled="disabled">
+
+                <ul class="telkofav">
+                    <li class="telkofavs" onclick="switchSite('callClass')"
+                        style="border-bottom: 0.1vw solid #0c56ff; color: #0c56ff;">Telefon</li>
+                    <li class="telkofavs" onclick="switchSite('contactClass')">Kontakte</li>
+                    <li class="telkofavs" onclick="switchSite('favClass')">Favoriten</li>
+                </ul>
+
+                <div class="caller">
+                    <div class="c-time"><label id="minutes">00</label>:<label id="seconds">00</label></div>
+                    <img class="c-icon" src="img/contacticon.png">
+                    <div class="c-number"></div>
+                    <div class="c-ort">San Andreas</div>
+                    <img onclick="callBack()" class="c-cancel" src="img/icon6.png">
+                </div>
+
+                <img class="numpad" src="img/numpad.png">
+                <img onclick="call()" class="callicon2" src="img/icon6.png">
+                <img class="callsettings" src="img/pointsettings.png">
+                <img class="callback" src="img/back.png" onclick="clearonenumber(1)">
+
+
+            </div>
+        </div>
+
+        <div id="contactClass" name="contactClass" class="contact hidden">
+            <div class="callbackground">
+
+                <div class="newcontact">
+                    <img onclick="showContactAdd()" class="newcontactimg" src="img/plus.png">
+                    <img class="newcontactimg2" src="img/pointsettings.png">
+                    <div onclick="showContactAdd()" class="newcontactext">Neuer Kontakt</div>
+                    <div class="newcontactext3">Mehr</div>
+                </div>
+
+                <ul class="telkofav">
+                    <li class="telkofavs" onclick="switchSite('callClass')">Telefon</li>
+                    <li class="telkofavs" onclick="switchSite('contactClass')"
+                        style="border-bottom: 0.1vw solid #0c56ff; color: #0c56ff;">Kontakte</li>
+                    <li class="telkofavs" onclick="switchSite('favClass')">Favoriten</li>
+                </ul>
+
+                <input type="text" id="searchInput" onkeyup="searchFilter()" placeholder="Alle Kontakte durchsuchen">
+
+                <table id="searchTable">
+                    <tr onclick="showContact('LSPD','911')">
+                        <td class="contacttt"><img class="conPic" src="img/contacticon.png">
+                            <div class="conttext">LSPD
+                        </td>
+            </div>
+            </tr>
+            <tr>
+                <td onclick="showContact('LSMC','912')" class="contacttt"><img class="conPic" src="img/contacticon.png">
+                    <div class="conttext">LSMC
+                </td>
+        </div>
+        </tr>
+        <tr>
+            <td onclick="showContact('ACLS','913')" class="contacttt"><img class="conPic" src="img/contacticon.png">
+                <div class="conttext">ACLS
+            </td>
+    </div>
+    </tr>
+    <tr>
+        <td onclick="showContact('TIMATI','01337 00001')" class="contacttt"><img class="conPic" src="img/contacticon.png">
+            <div class="conttext">TIMATI
+        </td>
+</div>
+</tr>
+<tr>
+    <td onclick="showContact('Shawn Stein','01337 00002')" class="contacttt"><img class="conPic" src="img/contacticon.png">
+        <div class="conttext">Shawn Stein
+    </td>
+    </div>
+</tr>
+</table>
+
+<div class="showContact">
+    <div class="sc-background"></div>
+    <div class="sc-backicon" onclick="back3()"><i class="fas fa-arrow-left"></i></div>
+    <div class="sc-name"></div>
+    <div class="sc-details">Details</div>
+
+    <div class="sc-callicon"><i class="fas fa-phone"></i></div>
+    <div class="sc-messageicon"><i class="far fa-comment"></i></div>
+    <div class="sc-number"></div>
+    <div class="sc-numbername">Mobil</div>
+
+    <div class="sc-bell"><i class="far fa-bell"></i></div>
+    <div class="sc-tone">Standard</div>
+    <div class="sc-tonename">Klingelton</div>
+</div>
+
+<div class="addContact">
+    <div class="ac-title">Neuer Kontakt</div>
+    <div class="ac-text1">SIM-KONTAKT</div>
+    <div class="ac-text2">Mobil</div>
+    <div class="ac-text3"></div>
+    <img class="ac-icon1" src="img/phone.png">
+    <img class="ac-icon2" src="img/bell.png">
+    <img onclick="back2()" class="ac-accept" src="img/check.png">
+    <img onclick="back1()" class="ac-deny" src="img/delete.png">
+
+    <input type="text" id="ac-name" placeholder="Name" class="ac-name">
+    <input type="number" id="ac-number" placeholder="Telefonnummer" class="ac-number">
+
+    <div class="ac-tone">Klingelton Standard</div>
+</div>
+
+
+</div>
+</div>
+
+<div id="favClass" name="favClass" class="fav hidden">
+    <div class="favbackground">
+        <div class="favbackground2"></div>
+
+        <ul class="telkofav">
+            <li class="telkofavs" onclick="switchSite('callClass')">Telefon</li>
+            <li class="telkofavs" onclick="switchSite('contactClass')">Kontakte</li>
+            <li class="telkofavs" onclick="switchSite('favClass')"
+                style="border-bottom: 0.1vw solid #0c56ff; color: #0c56ff;">Favoriten</li>
+        </ul>
+
+        <div class="favbox">
+            <div class="favtitle">Achtung</div>
+            <div class="favsubtitle">Dieses Feature ist noch nicht für dieses Gerät zugelassen!</div>
+            <div class="favback" onclick="switchSite('contactClass')">Zurück</div>
+        </div>
+
+    </div>
+</div>
+
+<div id="smsClass" name="smsClass" class="sms hidden">
+        <input type="text" id="smssearch" onkeyup="smsSearch()" placeholder="Nach Nachrichten suchen" title="Tippe einen Namen ein">
+        <div class="smstitle">Nachrichten<div class="smscount">2</div></div>
+        <ul id="smslist">
+          <li><img onclick="showContact('Shawn Stein','01337 00001')" class="sms-pb" src="img/contacticon.png">
+            <a onclick="showSmsMessages('Shawn Stein', '01337 00001' ,'1')" href="#">
+              <div class="name">Shawn Stein</div>
+              <div class="message">Jo, kommst du heute zur Feier ?</div>
+            </a>
+          </li>
+
+          <li><img onclick="showContact('RageNation','Unbekannt')" class="sms-pb" src="img/contacticon.png">
+            <a onclick="showSmsMessages('RageNation', 'Unbekannt' ,'2')" href="#">
+              <div class="name">RageNation</div>
+              <div class="message">Lieber RageNation Kunde, Ihr Highspeed-Datenvolumen ist verbaucht.</div>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="sms-message">
+            <div onclick="hideSmsMessages()" class="sm-back"><i class="fas fa-arrow-left"></i></div>
+            <div class="sm-name"></div>
+            <div class="sm-number"></div>
+            <div class="sm-call"><i class="fas fa-phone"></i></div>
+            <div class="sm-settings"><i class="fas fa-ellipsis-v"></i></div>
+            <div class="sm-plus"><i class="fas fa-plus-circle"></i></div>
+            <input class="sm-message" placeholder="Textnachricht">
+            <div class="sm-smiley"><i class="far fa-smile"></i></div>
+            <div class="sm-arrow"><i class="far fa-paper-plane"></i></div>
+        </div>
+
+    
+    <ul class="sms-1" style="display: none;">
+        <li class="m1"><img class="pb1" src="img/contacticon.png"><div class="mess">Jo, kommst du heute zur Feier ?</div><div class="stime">17:27</div></li>
+        <li class="m2"><img class="pb2" src="img/contacticon.png"><div class="mess">Ne Junge, meine Wunde ist noch nicht zu -.-</div><div class="stime">17:28</div></li>
+        <li class="m2"><img class="pb2" src="img/contacticon.png"><div class="mess">Aber du kannst mir ein paar Drinks mitbringen</div><div class="stime">17:28</div></li>
+        <li class="m1"><img class="pb1" src="img/contacticon.png"><div class="mess">Okay, mache ich.</div><div class="stime">17:30</div></li>
+    </ul>
+
+    <ul class="sms-2" style="display: none;">
+        <li class="m1"><img class="pb1" src="img/contacticon.png"><div class="mess">Lieber RageNation Kunde, Ihr Highspeed-Datenvolumen ist verbaucht. Die Surgeschwindigkeit wird reduziert. Weiteres Volumen können Sie im Shop nachkaufen. Ihre Kundenbetreuung.</div><div class="stime">17:27</div></li>
+    </ul>
+
+</div>
+
+<div id="settingsClass" name="settingsClass" class="settings hidden">5
+</div>
+
+
+<div class="getCalled">
+        <img class="gc-pic" src="img/contacticon.png">
+        <div class="gc-name">TIAMTI</div>
+        <div class="gc-ort">San Andreas</div>
+        <div class="gc-icon1"><i class="far fa-comment"></i></div>
+        <div class="gc-text1">Nachricht</div>
+        <img onclick="cancelCall()" class="gc-cancel" src="img/icon6.png">
+        <img onclick="acceptCall()" class="gc-accept" src="img/icon6.png">
+    </div>
+
+
+</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script>

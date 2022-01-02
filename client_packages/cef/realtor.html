@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Immobilienagentur</title>
+  <link rel="stylesheet" href="css/realtor.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="container" v-if="active">
+      <header>
+        <i class="fa fa-briefcase" aria-hidden="true"></i>
+        <h1>Immobilienagentur</h1>
+        <i @click="cancel()" class="fa fa-times-circle-o" aria-hidden="true"></i>
+      </header>
+      <div class="main">
+        <div class="houseClass" v-if="pageNum == 0">
+          <div v-for="(hclass, index) in classes">
+            <h1>{{hclass.name}}</h1>
+            <p>
+              {{hclass.title}}
+            </p>
+            <a class="button" @click="selectClass(hclass.id)">Auswählen</a>
+          </div>
+        </div>
+        <div class="slct-class" v-if="pageNum == 1">
+          <div v-for="(house, index) in houses">
+            <h2>Immobilie #{{house[0]}}</h2>
+            <a class="button btnGreen" @click="info(house)">Info ${{priceInfo}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <transition name="modal">
+      <div class="modal-window" v-if="modalVisible">
+        <header>
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <h2>Immobilie #{{house[0]}}</h2>
+        </header>
+        <div>
+          <p>
+            <i class="fa fa-info-circle" aria-hidden="true"></i> {{classes[house[1] - 1].name}}
+          </p>
+          <p>
+            <i class="fa fa-map-marker" aria-hidden="true"></i> {{street}}
+          </p>
+          <p>
+            <i class="fa fa-road" aria-hidden="true"></i> {{crossingRoad}}
+          </p>
+          <p>
+            <i class="fa fa-car" aria-hidden="true"></i> {{house[4]}} makieren
+          </p>
+          <p>
+            <i class="fa fa-money" aria-hidden="true"></i> ${{ parseInt((house[2] / 100 * 0.013) * 24) }}/Tag
+          </p>
+          <p>
+            <i class="fa fa-usd" aria-hidden="true"></i> {{house[2]}}
+          </p>
+        </div>
+        <footer>
+          <a class="button btnGps" @click="setGPS">GPS-Setzen</a>
+          <a class="button btnCancel" @click="cancelmodal">Abbrechen</a>
+        </footer>
+      </div>
+    </transition>
+    <transition name="fade">
+      <div class="fade" v-if="modalVisible"></div>
+    </transition>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="js/realtor.js"></script>
+</body>
+
+</html>

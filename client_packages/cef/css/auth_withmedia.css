@@ -1,0 +1,3089 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    overflow-y: hidden;
+}
+
+a {
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 300;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/300/UniNeueLight.woff2') format('woff2'), url('../fonts/UniNeue/300/UniNeueLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 400;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/400/UniNeueRegular.woff2') format('woff2'), url('../fonts/UniNeue/400/UniNeueRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 700;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/700/UniNeueBold.woff2') format('woff2'), url('../fonts/UniNeue/700/UniNeueBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 800;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/800/UniNeueHeavy.woff2') format('woff2'), url('../fonts/UniNeue/800/UniNeueHeavy.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 900;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/900/UniNeueBlack.woff2') format('woff2'), url('../fonts/UniNeue/900/UniNeueBlack.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src: local('Roboto'), url('../fonts/Roboto/400/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto/400/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+    src: local('Roboto'), url('../fonts/Roboto/500/Roboto-Medium.woff2') format('woff2'), url('../fonts/Roboto/500/Roboto-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    src: local('Roboto'), url('../fonts/Roboto/700/Roboto-Bold.woff2') format('woff2'), url('../fonts/Roboto/700/Roboto-Bold.woff') format('woff');
+}
+.gta-acount .authtext{
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 1.5%;
+}
+.gta-acount .authline{
+    display: block;
+    min-width: 10%;
+    max-width: 122.86px;
+    height: 7.78px;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    background: #FFBA43;
+    box-shadow: 2px 2px 30px #FFBA43;
+    border-radius: 3px;
+}
+.gta-acount .authtopline{
+    display: block;
+    width: 232.39px;
+    height: 9.16px;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: #FFBA43;
+    box-shadow: 2px 2px 30px #FFBA43;
+}
+.gta-acount .boxtext {
+    position: absolute;
+    right: 18vh;
+    display: flex;
+    width: 28vh;
+    height: 20px;
+}
+.gta-acount .boxtext .logpasstext {
+    font: 12px;
+    margin-left: 5%;
+}
+.gta-acount .linetext {
+    display: block;
+    width: 28.36px;
+    height: 1.74px;
+    margin-top: 4.5%;
+    background: #FFBA43;
+    box-shadow: 1px 1px 100px #FFBA43;
+    border-radius: 10px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+.gta-acount .input-cont {
+    display: block;
+    /* min-width: 50%; */
+    /* max-width: 25vh; */
+    height: 4.5vh;
+    width: 28vh;
+    right: 18vh;
+    background: #ebeff5;
+    border-radius: 10px;
+    position: absolute;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.gta-acount input[type='text'],
+.gta-acount input[type='email'],
+.gta-acount input[type='date'],
+.gta-acount input[type='password'] {
+    text-align: center;
+    font-family: 'Uni Neue';
+    font-size: 16px;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 28vh; /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¨ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â° ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â´ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â° ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸*/
+    height: 4.5vh;
+    min-width: 50%;
+    margin-right: 8px;
+    /* margin-left: 60px; */
+    padding: 10px 25px;
+    padding-right: 30px;
+    -webkit-transition: all .33s;
+    -o-transition: all .33s;
+    transition: all .33s;
+    color: #331313;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    -webkit-background-size: 25px 25px;
+    background-size: 25px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+/*
+    .gta-acount input[type='text']:focus,
+    .gta-acount input[type='email']:focus,
+    .gta-acount input[type='date']:focus,
+    .gta-acount input[type='password']:focus {
+       border-bottom: 1px solid #FFBA43;
+    }*/
+
+        .gta-acount input[type='text']:focus::-webkit-input-placeholder,
+        .gta-acount input[type='email']:focus::-webkit-input-placeholder,
+        .gta-acount input[type='date']:focus::-webkit-input-placeholder,
+        .gta-acount input[type='password']:focus::-webkit-input-placeholder {
+            -webkit-transition: all .33s;
+            -o-transition: all .33s;
+            transition: all .33s;
+            color: rgb(0, 0, 0);
+        }
+
+        .gta-acount input[type='text']:focus::-moz-placeholder,
+        .gta-acount input[type='email']:focus::-moz-placeholder,
+        .gta-acount input[type='date']:focus::-moz-placeholder,
+        .gta-acount input[type='password']:focus::-moz-placeholder {
+            -webkit-transition: all .33s;
+            -o-transition: all .33s;
+            transition: all .33s;
+            color: rgb(0, 0, 0);
+        }
+
+        .gta-acount input[type='text']:focus:-moz-placeholder,
+        .gta-acount input[type='email']:focus:-moz-placeholder,
+        .gta-acount input[type='date']:focus:-moz-placeholder,
+        .gta-acount input[type='password']:focus:-moz-placeholder {
+            -webkit-transition: all .33s;
+            -o-transition: all .33s;
+            transition: all .33s;
+            color: rgb(0, 0, 0);
+        }
+
+        create-person-2
+        .gta-acount input[type='text']:focus:-ms-input-placeholder,
+        .gta-acount input[type='email']:focus:-ms-input-placeholder,
+        .gta-acount input[type='date']:focus:-ms-input-placeholder,
+        .gta-acount input[type='password']:focus:-ms-input-placeholder {
+            -webkit-transition: all .33s;
+            -o-transition: all .33s;
+            transition: all .33s;
+            color: rgb(0, 0, 0);
+        }
+
+    .gta-acount input[type='text'] ::-webkit-input-placeholder,
+    .gta-acount input[type='email'] ::-webkit-input-placeholder,
+    .gta-acount input[type='date'] ::-webkit-input-placeholder,
+    .gta-acount input[type='password'] ::-webkit-input-placeholder {
+        color: #a0a0a0;
+    }
+
+    .gta-acount input[type='text'] ::-moz-placeholder,
+    .gta-acount input[type='email'] ::-moz-placeholder,
+    .gta-acount input[type='date'] ::-moz-placeholder,
+    .gta-acount input[type='password'] ::-moz-placeholder {
+        color: #a0a0a0;
+    }
+
+    .gta-acount input[type='text'] :-moz-placeholder,
+    .gta-acount input[type='email'] :-moz-placeholder,
+    .gta-acount input[type='date'] :-moz-placeholder,
+    .gta-acount input[type='password'] :-moz-placeholder {
+        color: #a0a0a0;
+    }
+
+    .gta-acount input[type='text'] :-ms-input-placeholder,
+    .gta-acount input[type='email'] :-ms-input-placeholder,
+    .gta-acount input[type='date'] :-ms-input-placeholder,
+    .gta-acount input[type='password'] :-ms-input-placeholder {
+        color: #a0a0a0;
+    }
+
+    .gta-acount input[type='text']:-webkit-autofill,
+    .gta-acount input[type='email']:-webkit-autofill,
+    .gta-acount input[type='date']:-webkit-autofill,
+    .gta-acount input[type='password']:-webkit-autofill {
+        color: #fff !important;
+        background-color: transparent !important;
+    }
+
+        .gta-acount input[type='text'].new-user__login + .placeholder {
+            font-size: 16px;
+            position: absolute;
+            top: 18px;
+            left: 85px;
+            -webkit-transition: all .33s;
+            -o-transition: all .33s;
+            transition: all .33s;
+            pointer-events: none;
+            opacity: .15;
+            color: #a0a0a0;
+        }
+
+.gta-acount .checkbox-and-link {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /* margin-bottom: 35px; */
+    /* padding-top: 3px; */
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+    .gta-acount .checkbox-and-link input[type='checkbox'] {
+        display: none;
+    }
+
+        .gta-acount .checkbox-and-link input[type='checkbox'] + label {
+            font-size: 20px;
+            position: relative;
+            display: -webkit-inline-box;
+            display: -webkit-inline-flex;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            padding-left: 72px;
+            cursor: pointer;
+            -webkit-transition: all .33s;
+            -o-transition: all .33s;
+            transition: all .33s;
+        }
+
+            .gta-acount .checkbox-and-link input[type='checkbox'] + label:hover {
+                color: #247abf;
+            }
+
+            .gta-acount .checkbox-and-link input[type='checkbox'] + label::before,
+            .gta-acount .checkbox-and-link input[type='checkbox'] + label::after {
+                position: absolute;
+                display: block;
+                content: '';
+                -webkit-transition: all .33s;
+                -o-transition: all .33s;
+                transition: all .33s;
+            }
+
+            .gta-acount .checkbox-and-link input[type='checkbox'] + label::before {
+                top: 2px;
+                left: 12px;
+                width: 44px;
+                height: 24px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                background: #e5e5e5;
+            }
+
+            .gta-acount .checkbox-and-link input[type='checkbox'] + label::after {
+                top: 4px;
+                left: 12px;
+                width: 20px;
+                height: 20px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                background: #fff;
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD+SURBVHgBtZJNasJAGIbfmem2YNpV6aKlvUAP4MIaQdBVoXu9ifEGnkAUDyCu/QuI11DxAslGTDDJ+I2KGoI6QXxgYDL5npdvfoA7YUiJk8tluBAVEt3nbLaTKmBdKn14vm/T9POwNNAOWBWLb5sgmEjg+7goZcR1ZLdcNvwg6MfkPfbNDtSewfkYjP3Efki5QBT9sntkw7YXzMnn/6igqTqlYRnDYVtXVp/MMc05TqcKAVTDMOzpyIonGpnzmhBoQYgZTb9uyQoeSVlHEi15F/A6GjWoVQuXuCIrjrfgFAo1KrbSyLGARIiGnAhQuKb5Ty/uXXpe92U6XeLRbAGWCIv/Ks65mgAAAABJRU5ErkJggg==');
+                background-repeat: no-repeat;
+                background-position: center;
+                -webkit-background-size: 8px 8px;
+                background-size: 8px;
+                -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+                box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+            }
+
+        .gta-acount .checkbox-and-link input[type='checkbox']:checked + label::before {
+            background-color: #0f488a;
+        }
+
+        .gta-acount .checkbox-and-link input[type='checkbox']:checked + label::after {
+            left: 35px;
+        }
+
+    .gta-acount .checkbox-and-link .restore-pw {
+        font-size: 14px;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        height: 29px;
+        /* margin-left: 75%; */
+        width: 100%;
+    }
+
+        .gta-acount .checkbox-and-link .restore-pw:hover {
+            -webkit-transition: all .33s;
+            -o-transition: all .33s;
+            transition: all .33s;
+            color: #FFBA43;
+        }
+
+.gta-acount .btn-cont {
+    padding: 0 4vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: auto 40px 30px;
+}
+.gta-acount .restconvert{ /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â° ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂµÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âµ ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â*/
+    display: block;
+    width: 150px;
+    height: 100px;
+    margin: 0 auto;
+    background-size: 150px 100px;
+    background-image: url(../res/convert.png);
+    box-shadow: 2px 2px 30px #FFBA43;
+    border-radius: 15px;
+}
+.gta-acount .authblock{
+    margin-top: 4.2vh;
+    margin-bottom: 10px;
+    right: 18vh;
+    width: 28vh;
+    position: absolute;
+}
+.gta-acount .yellowbox{
+    width: 60px;
+    height: 100%;
+    background-color: #FFBA43;
+    border-radius: 10px;
+}
+.gta-acount .logpic{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    background-image: url(../res/logpic.svg);
+    margin-left: 18px;
+    margin-top: -40px;
+}
+.gta-acount .zamog{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    background-image: url(../res/zamog.svg);
+    margin-left: 18px;
+    margin-top: -40px;
+}
+.gta-acount .emails{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    background-image: url(../res/emails.svg);
+    margin-left: 18px;
+    margin-top: -40px;
+}
+.gta-acount .gifts{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    background-image: url(../res/gifts.svg);
+    margin-left: 18px;
+    margin-top: -40px;
+}
+    .gta-acount .btn-cont input,
+    .gta-acount .btn-cont a {
+        font-size: 20px;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        height: 35px; /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¹ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â° ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âº*/
+        cursor: pointer;
+        -webkit-transition: all .33s;
+        -o-transition: all .33s;
+        transition: all .33s;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, .5);
+        /*-webkit-border-radius: 10px;
+        border-radius: 10px;*/
+        background: none;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .gta-acount .btn-cont input { /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸*/
+        border: 1px solid rgba(255, 186, 67, 0);
+        background-image: -webkit-linear-gradient(193.14deg, #FFBA43 3.2%, #ffa742 95.93%);
+        background-image: -o-linear-gradient(193.14deg, #FFBA43 3.2%, #ffa742 95.93%);
+        background-image: linear-gradient(256.86deg, #FFBA43 3.2%, #ffa742 95.93%);
+    }
+
+        .gta-acount .btn-cont input:hover {
+            border: 1px solid rgba(252, 182, 101, .5);
+        }
+
+    .gta-acount .btn-cont a:hover {
+        color: #fcb665;
+        border: 1px solid #FFBA43;
+    }
+
+    .gta-acount .btn-cont input.btn-restore-end {
+        height: 50px;
+        width: 20vh;
+        /* padding: 0 25px 0 25px; */
+        /* margin: 1vh; */
+        box-shadow: 2px 2px 30px #FFBA43;
+        /* border-radius: 10px; */
+        font-size: 20px;
+        border-radius: 3vh;
+    }
+
+    .gta-acount .btn-cont a.btn-restore {
+        width: 230px;
+    }
+
+
+    .gta-acount .btn-cont input.btn-enter {
+        /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â° ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸*/
+        height: 50px;
+        width: 20vh;
+        /* padding: 0 25px 0 25px; */
+        margin: 1vh;
+        box-shadow: 2px 2px 30px #FFBA43;
+        /*border-radius: 10px;*/
+        font-size: 20px;
+        border-radius: 3vh;
+    }
+
+    .gta-acount .btn-cont input.btn-register-end {
+            height: 50px;
+            width: 20vh;
+            /* padding: 0 25px 0 25px; */
+            margin: 0vh;
+            box-shadow: 2px 2px 30px #FFBA43;
+            /* border-radius: 10px; */
+            font-size: 20px;
+            border-radius: 3vh;
+    }
+
+    .gta-acount .btn-cont a.btn-register {
+        /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â° ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂµÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸*/
+        height: 50px;
+        width: 20vh;
+        /* padding: 0 40px 0 40px; */
+        margin: 1vh;
+        box-shadow: 2px 2px 30px #FFBA43;
+        /*border-radius: 10px;*/
+        border: 3px solid #FFBA43;
+        border-radius: 3vh;
+    }
+
+    .gta-acount .btn-cont a.btn-back {
+        /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â° ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂµÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸*/
+        height: 50px;
+        width: 20vh;
+        /* padding: 0 40px 0 40px; */
+        margin: 0vh;
+        box-shadow: 2px 2px 30px #FFBA43;
+        /*border-radius: 10px;*/
+        border: 3px solid #FFBA43;
+        border-radius: 3vh;
+    }
+
+body {
+    /*background: rgba(255, 255, 255, .05); /*#fff - ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂµÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â·ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â´ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂµÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°*/
+    background-image: url("../res/BG.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.gta-acount { 
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    min-height: 100vh;
+    color: #fff;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right bottom, center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.gta-acount__content { /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¹Ã…â€œÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âº ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â·ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸*/
+    position: relative;
+    border-radius: 15px;
+    /*background: linear-gradient(221.33deg, #1E2124 2.34%, rgba(30, 33, 36, 0.95) 136.48%);*/
+    /*height: 100%;*/
+    background-image: url(../src/Panel_avtorizatsii_1.png);
+    background-repeat: round;
+    /* background-color: #1A191B; */
+    /* min-width: 28%; */
+    /* max-width: 520.65px; */
+    width: 115vh;
+    height: 65vh;
+    margin: 5px;
+    z-index: 1;
+}
+
+    .gta-acount__content img {
+        position: absolute;
+    }
+
+        .gta-acount__content img.logo {
+            top: -105px;
+            left: 10%;
+            width: 100%;
+        }
+
+    .gta-acount__content header {
+        margin-bottom: 27px;
+    }
+
+        .gta-acount__content header h2 {
+            font-size: 18px;
+            margin-bottom: 13px;
+            padding-left: 95px;
+            background-image: url('data:image/png;base64,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');
+            background-repeat: no-repeat;
+            background-position: 36px -2px;
+            -webkit-background-size: 40px 40px;
+            background-size: 40px;
+        }
+
+        .gta-acount__content header p {
+            font-size: 20px;
+            line-height: 32px;
+            padding-left: 38px;
+        }
+
+.js-person-name {
+    text-transform: capitalize;
+}
+
+.gta-acount.authorization {
+    font-family: 'Uni Neue';
+    background-color: transparent;
+    /*background-image: url(../img/person_basketball.png), url(../img/bg_auth.png); /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â° ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â·ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â´ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂµÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°*/
+    -webkit-background-size: 622px auto, cover;
+    background-size: 622px auto, cover;
+}
+
+.gta-acount.restorepass {
+    font-family: 'Uni Neue';
+    background: none;
+    /*background-image: url(../img/person_pilot2.png), url(../img/bg_auth.png);*/
+    -webkit-background-size: 665px auto, cover;
+    background-size: 665px auto, cover;
+}
+
+    /*.gta-acount.restorepass .gta-acount__content {
+        margin-top: 130px;
+    }*/
+
+        .gta-acount.restorepass .gta-acount__content form .btn-cont {
+            /* margin-top: 30px; */
+            /* margin-left: 10%; */
+            position: absolute;
+            right: 3vh;
+            width: 52vh;
+            bottom: 4vh;
+        }
+
+.gta-acount.registration {
+    font-family: 'Uni Neue';
+    background: none;
+    /*background-image: url(../img/person_pilot2.png), url(../img/bg_auth.png);*/
+    -webkit-background-size: 665px auto, cover;
+    background-size: 665px auto, cover;
+}
+
+    /*.gta-acount.registration .gta-acount__content {
+        margin-top: 1%;
+    }*/
+
+        .gta-acount.registration .gta-acount__content form .btn-cont {
+            position: absolute;
+            height: 5.2vh;
+            width: 52vh;
+            right: 3vh;
+            bottom: 4vh;
+        }
+
+.gta-acount.delete-person {
+    font-family: 'Roboto';
+    background-color: rgba(0, 0, 0, .94);
+    /*background-image: url(../img/person_carpet.png);*/
+    background-position: left bottom;
+    -webkit-background-size: 970px auto;
+    background-size: 970px auto;
+}
+
+    .gta-acount.delete-person .delete-person__alert {
+        width: 600px;
+        height: 462px;
+        padding: 57px 41px;
+        background-image: url(../img/Rectangle.svg);
+        background-color: #1A191B;
+        /*-webkit-border-radius: 6px;
+        border-radius: 6px;
+        background: #1f1f1f;
+        -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, .25);*/
+        box-shadow: 0 30px 50px rgba(0, 0, 0, .25);
+    }
+
+        .gta-acount.delete-person .delete-person__alert h2 {
+            font-size: 35px;
+            line-height: 45px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+            .gta-acount.delete-person .delete-person__alert h2 span {
+                color: #FFBA43;
+            }
+
+        .gta-acount.delete-person .delete-person__alert p {
+            font-size: 25px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        .gta-acount.delete-person .delete-person__alert .btn-cont {
+            margin-top: 48px;
+        }
+
+            .gta-acount.delete-person .delete-person__alert .btn-cont a {
+                font-size: 18px;
+                line-height: 25px;
+                margin: 0;
+            }
+
+            .gta-acount.delete-person .delete-person__alert .btn-cont .btn-cancel {
+                width: 185px;
+                height: 50px;
+                background: #FFBA43;
+                box-shadow: 2px 2px 30px #FFBA43;
+                /*border-radius: 10px;*/
+            }
+
+                .gta-acount.delete-person .delete-person__alert .btn-cont .btn-cancel:hover {
+                    color: #ee9b0d;
+                    border: 1px solid rgba(255, 255, 255, .5);
+                }
+
+            .gta-acount.delete-person .delete-person__alert .btn-cont .btn-confirm {
+                width: 50%;
+                height: 50px;
+                border: 4px solid #FFBA43;
+                box-sizing: border-box;
+                box-shadow: 2px 2px 30px #FFBA43;
+                /*border-radius: 10px;*/
+            }
+
+.gta-acount.rules {
+    font-family: 'Roboto';
+    background-color: rgba(22, 91, 140, .95);
+    background-image: url(../img/person_rules.png);
+    background-position: left bottom;
+    -webkit-background-size: 800px auto;
+    background-size: 800px auto;
+}
+
+    .gta-acount.rules .rules__content {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 1030px;
+        height: 800px;
+    }
+
+    .gta-acount.rules .rules__time {
+        padding-top: 61px;
+        padding-right: 5px;
+        padding-bottom: 61px;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 41%;
+        -ms-flex: 0 0 41%;
+        flex: 0 0 41%;
+    }
+
+        .gta-acount.rules .rules__time h2 {
+            font-size: 40px;
+            line-height: 51px;
+            margin-bottom: 22px;
+        }
+
+        .gta-acount.rules .rules__time p {
+            font-size: 30px;
+            line-height: 42px;
+            margin-bottom: 29px;
+        }
+
+        .gta-acount.rules .rules__time time {
+            font-size: 100px;
+            font-weight: bold;
+            line-height: 120px;
+        }
+
+    .gta-acount.rules .rules__text {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 50px 40px;
+        padding-right: 13px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        background: #1f1f1f;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 59%;
+        -ms-flex: 0 0 59%;
+        flex: 0 0 59%;
+    }
+
+        .gta-acount.rules .rules__text h2 {
+            font-size: 35px;
+            font-weight: 500;
+            line-height: 40px;
+            margin-top: 14px;
+            margin-bottom: 20px;
+            padding-right: 30px;
+            padding-left: 10px;
+        }
+
+        .gta-acount.rules .rules__text .rules__list {
+            overflow-y: scroll;
+            max-height: 500px;
+            padding-right: 70px;
+            padding-left: 10px;
+        }
+
+            .gta-acount.rules .rules__text .rules__list::-webkit-scrollbar {
+                width: 6px;
+                background-color: transparent !important;
+            }
+
+            .gta-acount.rules .rules__text .rules__list::-webkit-scrollbar-thumb {
+                -webkit-border-radius: 10px;
+                border-radius: 100px;
+                background-color: #515151 !important;
+            }
+
+            .gta-acount.rules .rules__text .rules__list p {
+                font-size: 18px;
+                line-height: 25px;
+                margin-bottom: 6px;
+            }
+
+        .gta-acount.rules .rules__text .btn-cont {
+            margin-top: auto;
+            padding-right: 24px;
+        }
+
+            .gta-acount.rules .rules__text .btn-cont a {
+                font-family: inherit;
+                font-size: 18px;
+                line-height: 26px;
+                height: 55px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+            }
+
+                .gta-acount.rules .rules__text .btn-cont a.btn-cancel {
+                    width: 149px;
+                    border: 1px solid #165b8c;
+                }
+
+                .gta-acount.rules .rules__text .btn-cont a.btn-confirm {
+                    width: 336px;
+                    border: 1px solid rgba(255, 255, 255, 0);
+                    background: #165b8c;
+                }
+
+                    .gta-acount.rules .rules__text .btn-cont a.btn-confirm:hover {
+                        color: #fff;
+                        border: 1px solid rgba(255, 255, 255, .5);
+                    }
+
+.gta-acount.slots {
+    font-family: 'Roboto';
+    /*background-image: url(../img/bg_auth.png);*/
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+    .gta-acount.slots .slots__wrapper {
+        width: 1420px;
+        height: 50%;
+    }
+
+        .gta-acount.slots .slots__wrapper header {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            width: 250px;
+            margin-bottom: 10px;
+            -webkit-box-align: start;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+
+            .gta-acount.slots .slots__wrapper header img {
+                width: 670px;
+                height: auto;
+                margin-top: 12px;
+                margin-left: 9px;
+            }
+
+            .gta-acount.slots .slots__wrapper header p {
+                font-size: 30px;
+                line-height: 32px;
+                width: 171px;
+                margin-top: 48px;
+                margin-left: 32px;
+            }
+
+                .gta-acount.slots .slots__wrapper header p span {
+                    font-family: 'Uni Neue';
+                }
+
+            .gta-acount.slots .slots__wrapper header .lost-bucks {
+                width: 450px;
+                /*background: rgba(255, 186, 67, 0.5);
+                height: 105px;*/
+                margin-top: 21px;
+                margin: 0 auto;
+                /*padding-top: 21px;
+                padding-left: 78px;
+                -webkit-border-radius: 6px;
+                border-radius: 6px;
+                background-image: url('data:image/png;base64,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');
+                background-repeat: no-repeat;
+                background-position: 29px 27px;
+                -webkit-background-size: 31px auto;
+                background-size: 31px auto;*/
+            }
+
+                .gta-acount.slots .slots__wrapper header .lost-bucks span {
+                    font-size: 18px;
+                }
+
+            .gta-acount.slots .slots__wrapper header .lost-bucks__total {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: baseline;
+                -webkit-align-items: baseline;
+                -ms-flex-align: baseline;
+                align-items: baseline;
+            }
+
+                .gta-acount.slots .slots__wrapper header .lost-bucks__total b {
+                    font-size: 18px;
+                    color: #FFBA43;
+                    display: -webkit-inline-box;
+                    display: -webkit-inline-flex;
+                    display: -ms-inline-flexbox;
+                    display: inline-flex;
+                    /*margin-right: 11px;*/
+                }
+
+                .gta-acount.slots .slots__wrapper header .lost-bucks__total a {
+                    font-size: 16px;
+                    display: -webkit-inline-box;
+                    display: -webkit-inline-flex;
+                    display: -ms-inline-flexbox;
+                    display: inline-flex;
+                    -webkit-transition: all .33s;
+                    -o-transition: all .33s;
+                    transition: all .33s;
+                    color: #FFF;
+                }
+
+                    .gta-acount.slots .slots__wrapper header .lost-bucks__total a:hover {
+                        text-decoration: underline;
+                    }
+
+    .gta-acount.slots .slots__cols {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+        .gta-acount.slots .slots__cols a.btn {
+            position: absolute;
+            background: #FFBA43;
+            box-shadow: 2px 2px 30px #FFBA43;
+            font-size: 100%;
+            color: black;
+            font-weight: bold;
+            display: -webkit-inline-box;
+            display: -webkit-inline-flex;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            width: 150px;
+            height: 45px;
+            -webkit-transition: all .33s;
+            -o-transition: all .33s;
+            transition: all .33s;
+            border: 2px solid rgba(255, 255, 255, .4);
+            /*-webkit-border-radius: 10px;
+            border-radius: 10px;*/
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+            .gta-acount.slots .slots__cols a.btn:hover {
+                border: 2px solid #ee9b0d;
+            }
+
+        .gta-acount.slots .slots__cols .non-active__wrapper,
+        .gta-acount.slots .slots__cols .free__wrapper,
+        .gta-acount.slots .slots__cols .create-new__wrapper,
+        .gta-acount.slots .slots__cols .transfer-person__wrapper,
+        .gta-acount.slots .slots__cols .active__wrapper {
+            display: none;
+        }
+
+        .gta-acount.slots .slots__cols > div {
+            position: relative;
+            min-width: 30%;
+            max-width: 400px;
+            /*height: 100%;*/
+            padding: 10% 2% 10% 2%;
+            /*-webkit-border-radius: 6px;
+            border-radius: 20px;*/
+        }
+
+            .gta-acount.slots .slots__cols > div h2 {
+                text-align: center;
+                font-size: 40px;
+                line-height: 47px;
+                margin-top: 11px;
+                margin-bottom: 17px;
+            }
+
+                .gta-acount.slots .slots__cols > div h2 b {
+                    font-family: 'Uni Neue';
+                }
+
+            .gta-acount.slots .slots__cols > div p {
+                text-align: center;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 32px;
+            }
+
+            .gta-acount.slots .slots__cols > div.active {    
+                background-image: url(../img/Rectangle.svg);
+                background-color: #1A191B;
+                /*background: linear-gradient(221.33deg, #1E2124 2.34%, rgba(30, 33, 36, 0.95) 136.48%);*/
+                opacity: 0.98;
+            }
+
+                .gta-acount.slots .slots__cols > div.active .non-active__wrapper,
+                .gta-acount.slots .slots__cols > div.active .free__wrapper {
+                    display: none;
+                }
+
+                .gta-acount.slots .slots__cols > div.active .active__wrapper {
+                    display: block;
+                }
+
+                    .gta-acount.slots .slots__cols > div.active .active__wrapper h2,
+                    .gta-acount.slots .slots__cols > div.active .active__wrapper form,
+                    .gta-acount.slots .slots__cols > div.active .active__wrapper .delete-cancel {
+                        display: none;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.active .active__wrapper .person-cont {
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        width: 100%;
+                        -webkit-border-radius: 6px 6px 0 0;
+                        border-radius: 6px 6px 0 0;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.active .active__wrapper .person-cont .active-persone {
+                            position: absolute;
+                            z-index: 10;
+                            bottom: 0;
+                            left: 50%;
+                            width: 300px;
+                            height: auto;
+                            margin-left: -150px;
+                        }
+
+                    .gta-acount.slots .slots__cols > div.active .active__wrapper h3 {
+                        font-size: 27px;
+                        border: 2px solid #FFBA43;
+                        background: #FFBA43;
+                        padding: 0 3px 3px 0;
+                        box-sizing: border-box;
+                        box-shadow: 2px 2px 30px #FFBA43;
+                        text-align: center;
+                        margin-top: 20px;
+                        margin-bottom: 21px;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.active .active__wrapper .characteristics {
+                        margin-bottom: 54px;
+                        list-style: none;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.active .active__wrapper .characteristics li {
+                            font-size: 18px;
+                            display: -webkit-box;
+                            display: -webkit-flex;
+                            display: -ms-flexbox;
+                            display: flex;
+                            margin-bottom: 18px;
+                            border-bottom: 1px dashed #FFBA43;
+                            -webkit-box-pack: justify;
+                            -webkit-justify-content: space-between;
+                            -ms-flex-pack: justify;
+                            justify-content: space-between;
+                        }
+
+                            .gta-acount.slots .slots__cols > div.active .active__wrapper .characteristics li .line {
+                                height: 1px;
+                                margin-right: 5px;
+                                margin-bottom: 5px;
+                                margin-left: 5px;
+                                background: #1f1f1f;
+                                -webkit-box-flex: 1;
+                                -webkit-flex-grow: 1;
+                                -ms-flex-positive: 1;
+                                flex-grow: 1;
+                                -webkit-align-self: flex-end;
+                                -ms-flex-item-align: end;
+                                align-self: flex-end;
+                            }
+
+                   /* .gta-acount.slots .slots__cols > div.active .active__wrapper .cont {
+                    }
+*/
+                    .gta-acount.slots .slots__cols > div.active .active__wrapper a.btn-enter {
+                        margin-bottom: 26px;
+                        border: none;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.active .active__wrapper a.btn-enter:hover {
+                            border: 2px solid white;
+                        }
+
+                    .gta-acount.slots .slots__cols > div.active .active__wrapper a.btn-delete {
+                        font-size: 100%;
+                        float: right;
+                        width: 150px;
+                        height: 45px;
+                        text-align: center;
+                        border: 5px solid #FFBA43;
+                        box-sizing: border-box;
+                        box-shadow: 2px 2px 30px #FFBA43;
+                        /*border-radius: 10px;*/
+                        display: -webkit-inline-box;
+                        display: -webkit-inline-flex;
+                        display: -ms-inline-flexbox;
+                        display: inline-flex;
+                        -webkit-transition: all .33s;
+                        -o-transition: all .33s;
+                        transition: all .33s;
+                        /*-webkit-background-size: 20px auto;*/
+                        -webkit-box-pack: center;
+                        -webkit-justify-content: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.active .active__wrapper a.btn-delete:hover {
+                            color: #ee9b0d;
+                        }
+
+                .gta-acount.slots .slots__cols > div.active.delete .active__wrapper {
+                    text-align: center;
+                }
+
+                    .gta-acount.slots .slots__cols > div.active.delete .active__wrapper h3,
+                    .gta-acount.slots .slots__cols > div.active.delete .active__wrapper .characteristics,
+                    .gta-acount.slots .slots__cols > div.active.delete .active__wrapper .cont {
+                        display: none;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.active.delete .active__wrapper .person-cont::after {
+                        position: absolute;
+                        z-index: 20;
+                        left: 50%;
+                        margin-left: -65px;
+                        content: '';
+                        -webkit-border-radius: 50%;
+                        border-radius: 50%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        -webkit-background-size: 54% auto;
+                        background-size: 54% auto;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.active.delete .active__wrapper h2 {
+                        display: block;
+                        margin-bottom: 31px;
+                        text-align: center;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form {
+                        font-family: 'Uni Neue';
+                        display: block;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form .input-cont {
+                            margin-bottom: 28px;
+                        }
+
+                        .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input {
+                            width: 100%;
+                            margin: 0;
+                            padding-right: 14px;
+                            padding-bottom: 11px;
+                            padding-left: 14px;
+                            background-image: none;
+                        }
+
+                            .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input[type='submit'] {
+                                font-family: 'Roboto';
+                                border: 4px solid #FFBA43;
+                                box-sizing: border-box;
+                                box-shadow: 2px 2px 30px #FFBA43;
+                                /*border-radius: 10px;*/
+                                font-size: 18px;
+                                display: -webkit-inline-box;
+                                display: -webkit-inline-flex;
+                                display: -ms-inline-flexbox;
+                                display: inline-flex;
+                                height: 50px;
+                                margin-top: 32px;
+                                padding: 0;
+                                cursor: pointer;
+                                -webkit-transition: all .33s;
+                                -o-transition: all .33s;
+                                transition: all .33s;
+                                color: #fff;
+                                /*-webkit-border-radius: 10px;*/
+                                outline: 0;
+                                background: transparent;
+                                -webkit-box-shadow: 0;
+                                box-shadow: 0;
+                                -webkit-box-pack: center;
+                                -webkit-justify-content: center;
+                                -ms-flex-pack: center;
+                                justify-content: center;
+                                -webkit-box-align: center;
+                                -webkit-align-items: center;
+                                -ms-flex-align: center;
+                                align-items: center;
+                            }
+
+                                .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input[type='submit']:hover {
+                                    color: #f39e0b;
+                                }
+
+                    .gta-acount.slots .slots__cols > div.active.delete .active__wrapper a.delete-cancel {
+                        display: -webkit-inline-box;
+                        display: -webkit-inline-flex;
+                        display: -ms-inline-flexbox;
+                        display: inline-flex;
+                        min-width: 50%;
+                        max-width: 150px;
+                        min-height: 50%;
+                        max-height: 50px;
+                        background: #FFBA43;
+                        box-shadow: 2px 2px 30px #FFBA43;
+                        /*border-radius: 10px;*/
+                        margin-top: 15px;
+                        padding: 10px;
+                        -webkit-transition: all .33s;
+                        -o-transition: all .33s;
+                        transition: all .33s;
+                        color: #000000;
+                        font-weight: bold;
+                        -webkit-box-pack: center;
+                        -webkit-justify-content: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.active.delete .active__wrapper a.delete-cancel:hover {
+                            font-weight: bold;
+                        }
+
+           /* .gta-acount.slots .slots__cols > div.free {
+            }*/
+
+                .gta-acount.slots .slots__cols > div.free .non-active__wrapper,
+                .gta-acount.slots .slots__cols > div.free .active__wrapper {
+                    display: none;
+                }
+
+                .gta-acount.slots .slots__cols > div.free::before {
+                    position: absolute;
+                    z-index: 10;
+                    top: 42px;
+                    left: 50%;
+                    display: block;
+                    margin-left: -65px;
+                    content: '';
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    -webkit-background-size: 74px auto;
+                    background-size: 74px auto;
+                }
+
+                .gta-acount.slots .slots__cols > div.free .free__wrapper {
+                    display: block;
+                }
+
+                    .gta-acount.slots .slots__cols > div.free .free__wrapper h2 .free-title {
+                        display: inline;
+                        border-bottom: double #FFBA43;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free .free__wrapper h2 .create-title,
+                    .gta-acount.slots .slots__cols > div.free .free__wrapper h2 .transfer-title,
+                    .gta-acount.slots .slots__cols > div.free .free__wrapper h2 .blocked-title {
+                        display: none;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free .free__wrapper form,
+                    .gta-acount.slots .slots__cols > div.free .free__wrapper .blocked-cont,
+                    .gta-acount.slots .slots__cols > div.free .free__wrapper .create-title,
+                    .gta-acount.slots .slots__cols > div.free .free__wrapper .transfer-title,
+                    .gta-acount.slots .slots__cols > div.free .free__wrapper a.cancel {
+                        display: none;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free .free__wrapper .some-persone {
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        width: 100%;
+                        min-height: 216px;
+                        -webkit-border-radius: 6px 6px 0 0;
+                        border-radius: 6px 6px 0 0;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                        -webkit-filter: grayscale(1);
+                        filter: grayscale(1);
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free .free__wrapper a.create-new {
+                        background-position: 29% 15px;
+                        -webkit-background-size: 28px auto;
+                        background-size: 28px auto;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.free .free__wrapper a.create-new:hover {
+                            color: #ecae39;
+                        }
+
+                .gta-acount.slots .slots__cols > div.free.create::before {
+                    display: none;
+                }
+
+                .gta-acount.slots .slots__cols > div.free.create .free__wrapper {
+                    text-align: center;
+                }
+
+                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper h2 {
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.free.create .free__wrapper h2 .create-title {
+                            display: inline;
+                        }
+
+                        .gta-acount.slots .slots__cols > div.free.create .free__wrapper h2 .free-title,
+                        .gta-acount.slots .slots__cols > div.free.create .free__wrapper h2 .blocked-title {
+                            display: none;
+                        }
+
+                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper .blocked-cont,
+                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper a,
+                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper p {
+                        display: none;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper .some-persone {
+                        -webkit-filter: none;
+                        filter: none;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper form {
+                        font-family: 'Uni Neue';
+                        display: block;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.free.create .free__wrapper form .input-cont {
+                            margin-bottom: 28px;
+                        }
+
+                        .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input {
+                            width: 80%;
+                            margin: 0;
+                            padding-right: 14px;
+                            padding-bottom: 11px;
+                            padding-left: 14px;
+                        }
+
+                            .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date'] {
+                                padding-top: 2px;
+                                padding-left: 160px;
+                                color: rgba(255, 255, 255, .35);
+                            }
+
+                                .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date'] + .placeholder {
+                                    font-size: 20px;
+                                    position: absolute;
+                                    top: 3px;
+                                    left: 15px;
+                                    -webkit-transition: all .33s;
+                                    -o-transition: all .33s;
+                                    transition: all .33s;
+                                    pointer-events: none;
+                                    color: rgba(255, 255, 255, .35);
+                                }
+
+                                .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date']:focus {
+                                    color: #fff;
+                                }
+
+                                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date']:focus + .placeholder {
+                                        color: #fff;
+                                    }
+
+                                .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date']::-webkit-datetime-edit-day-field,
+                                .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date']::-webkit-datetime-edit-month-field,
+                                .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date']::-webkit-datetime-edit-year-field {
+                                    padding-right: 5px;
+                                    padding-left: 5px;
+                                    cursor: pointer;
+                                }
+
+                                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date']::-webkit-datetime-edit-day-field:hover,
+                                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date']::-webkit-datetime-edit-month-field:hover,
+                                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date']::-webkit-datetime-edit-year-field:hover {
+                                        color: #247abf;
+                                    }
+
+                                .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date']::-webkit-calendar-picker-indicator {
+                                    opacity: .4;
+                                }
+
+                                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date']::-webkit-calendar-picker-indicator:hover {
+                                        cursor: pointer;
+                                        opacity: 1;
+                                        background: none;
+                                    }
+
+                            .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='submit'] {
+                                font-family: 'Roboto';
+                                background: #FFBA43;
+                                box-shadow: 2px 2px 30px #FFBA43;
+                                font-size: 16px;
+                                display: -webkit-inline-box;
+                                display: -webkit-inline-flex;
+                                display: -ms-inline-flexbox;
+                                display: inline-flex;
+                                height: 50px;
+                                margin-top: 28px;
+                                padding: 0;
+                                cursor: pointer;
+                                -webkit-transition: all .33s;
+                                -o-transition: all .33s;
+                                transition: all .33s;
+                                color: #fff;
+                                border: 0;
+                                outline: 0;
+                                -webkit-box-shadow: 0;
+                                box-shadow: 0;
+                                -webkit-box-pack: center;
+                                -webkit-justify-content: center;
+                                -ms-flex-pack: center;
+                                justify-content: center;
+                                -webkit-box-align: center;
+                                -webkit-align-items: center;
+                                -ms-flex-align: center;
+                                align-items: center;
+                            }
+
+                                .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='submit']:hover {
+                                    color: #ffffff;
+                                }
+
+                    .gta-acount.slots .slots__cols > div.free.create .free__wrapper a.cancel {
+                        display: -webkit-inline-box;
+                        display: -webkit-inline-flex;
+                        display: -ms-inline-flexbox;
+                        display: inline-flex;
+                        margin-top: 15px;
+                        border: 4px solid #FFBA43;
+                        box-sizing: border-box;
+                        box-shadow: 2px 2px 30px #FFBA43;
+                        min-width: 50%;
+                        max-width: 120px;
+                        min-height: 50%;
+                        max-height: 60px;
+                        padding: 5px;
+                        -webkit-transition: all .33s;
+                        -o-transition: all .33s;
+                        transition: all .33s;
+                        color: #ffffff;
+                        -webkit-box-pack: center;
+                        -webkit-justify-content: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.free.create .free__wrapper a.cancel:hover {
+                            font-weight: bold;
+                        }
+
+
+
+                .gta-acount.slots .slots__cols > div.free.transfer::before {
+                    display: none;
+                }
+
+                .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper {
+                    text-align: center;
+                }
+
+                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper h2 {
+                        margin-bottom: 30px;
+                        text-align: left;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper h2 .transfer-title {
+                            display: inline;
+                        }
+
+                        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper h2 .free-title,
+                        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper h2 .blocked-title {
+                            display: none;
+                        }
+
+                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper .blocked-cont,
+                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper a,
+                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper p {
+                        display: none;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper .some-persone {
+                        -webkit-filter: none;
+                        filter: none;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form {
+                        font-family: 'Uni Neue';
+                        display: block;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form .input-cont {
+                            margin-bottom: 28px;
+                        }
+
+                        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input {
+                            width: 100%;
+                            margin: 0;
+                            padding-top: 0;
+                            padding-right: 14px;
+                            padding-bottom: 11px;
+                            padding-left: 14px;
+                        }
+
+                            .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date'] {
+                                padding-top: 2px;
+                                padding-left: 160px;
+                                color: rgba(255, 255, 255, .35);
+                            }
+
+                                .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date'] + .placeholder {
+                                    font-size: 10px;
+                                    position: absolute;
+                                    top: 3px;
+                                    left: 15px;
+                                    -webkit-transition: all .33s;
+                                    -o-transition: all .33s;
+                                    transition: all .33s;
+                                    pointer-events: none;
+                                    color: rgba(255, 255, 255, .35);
+                                }
+
+                                .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date']:focus {
+                                    color: #fff;
+                                }
+
+                                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date']:focus + .placeholder {
+                                        color: #fff;
+                                    }
+
+                                .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date']::-webkit-datetime-edit-day-field,
+                                .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date']::-webkit-datetime-edit-month-field,
+                                .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date']::-webkit-datetime-edit-year-field {
+                                    padding-right: 5px;
+                                    padding-left: 5px;
+                                    cursor: pointer;
+                                }
+
+                                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date']::-webkit-datetime-edit-day-field:hover,
+                                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date']::-webkit-datetime-edit-month-field:hover,
+                                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date']::-webkit-datetime-edit-year-field:hover {
+                                        color: #247abf;
+                                    }
+
+                                .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date']::-webkit-calendar-picker-indicator {
+                                    opacity: .4;
+                                }
+
+                                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date']::-webkit-calendar-picker-indicator:hover {
+                                        cursor: pointer;
+                                        opacity: 1;
+                                        background: none;
+                                    }
+
+                            .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='submit'] {
+                                font-family: 'Roboto';
+                                font-size: 18px;
+                                display: -webkit-inline-box;
+                                display: -webkit-inline-flex;
+                                display: -ms-inline-flexbox;
+                                display: inline-flex;
+                                height: 60px;
+                                margin-top: 28px;
+                                padding: 0;
+                                cursor: pointer;
+                                -webkit-transition: all .33s;
+                                -o-transition: all .33s;
+                                transition: all .33s;
+                                color: #fff;
+                                border: 0;
+                                border: 2px solid #4ed71e;
+                                -webkit-border-radius: 10px;
+                                border-radius: 10px;
+                                outline: 0;
+                                background: transparent;
+                                -webkit-box-shadow: 0;
+                                box-shadow: 0;
+                                -webkit-box-pack: center;
+                                -webkit-justify-content: center;
+                                -ms-flex-pack: center;
+                                justify-content: center;
+                                -webkit-box-align: center;
+                                -webkit-align-items: center;
+                                -ms-flex-align: center;
+                                align-items: center;
+                            }
+
+                                .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='submit']:hover {
+                                    color: #4ed71e;
+                                }
+
+                    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper a.cancel {
+                        display: -webkit-inline-box;
+                        display: -webkit-inline-flex;
+                        display: -ms-inline-flexbox;
+                        display: inline-flex;
+                        margin-top: 15px;
+                        padding: 5px;
+                        -webkit-transition: all .33s;
+                        -o-transition: all .33s;
+                        transition: all .33s;
+                        color: #247abf;
+                        -webkit-box-pack: center;
+                        -webkit-justify-content: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper a.cancel:hover {
+                            font-weight: bold;
+                        }
+
+                .gta-acount.slots .slots__cols > div.free.blocked .free__wrapper a,
+                .gta-acount.slots .slots__cols > div.free.blocked .free__wrapper p {
+                    display: none;
+                }
+
+                .gta-acount.slots .slots__cols > div.free.blocked .free__wrapper .some-persone {
+                    -webkit-filter: grayscale(1);
+                    filter: grayscale(1);
+                }
+
+                .gta-acount.slots .slots__cols > div.free.blocked .free__wrapper h2 {
+                    margin-bottom: 19px;
+                }
+
+                    .gta-acount.slots .slots__cols > div.free.blocked .free__wrapper h2 .blocked-title {
+                        display: inline;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free.blocked .free__wrapper h2 .free-title,
+                    .gta-acount.slots .slots__cols > div.free.blocked .free__wrapper h2 .transfer-title,
+                    .gta-acount.slots .slots__cols > div.free.blocked .free__wrapper h2 .create-title {
+                        display: none;
+                    }
+
+                .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont {
+                    font-family: 'Roboto';
+                    display: block;
+                }
+
+                .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__reason {
+                    margin-bottom: 33px;
+                    padding-bottom: 16px;
+                    /*border-bottom: 1px solid #fff;*/
+                }
+
+                    .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__reason h4 {
+                        font-size: 20px;
+                        font-weight: normal;
+                        margin-bottom: 7px;
+                        color: #e5e5e5;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__reason p {
+                        font-size: 18px;
+                        font-weight: bold;
+                        line-height: 26px;
+                        display: block;
+                        margin-bottom: 12px;
+                        color: #247abf;
+                    }
+
+                .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__dates {
+                    list-style: none;
+                }
+
+                    .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__dates li {
+                        font-size: 20px;
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        margin-bottom: 19px;
+                        -webkit-box-pack: justify;
+                        -webkit-justify-content: space-between;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__dates time {
+                        font-weight: bold;
+                    }
+
+                    .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__dates .green {
+                        color: #4ece20;
+                    }
+
+            /*.gta-acount.slots .slots__cols > div.non-active {
+                background: rgba(0, 0, 0, .56);
+            }*/
+
+                .gta-acount.slots .slots__cols > div.non-active .free__wrapper,
+                .gta-acount.slots .slots__cols > div.non-active .active__wrapper {
+                    display: none;
+                }
+
+                .gta-acount.slots .slots__cols > div.non-active::before {
+                    position: absolute;
+                    z-index: 10;
+                    top: 35px;
+                    left: 50%;
+                    display: block !important;
+                    width: 190px;
+                    height: 190px;
+                    margin-left: -95px;
+                    content: '';
+                    /*border: 2px solid #555;
+                    -webkit-border-radius: 50%;
+                    border-radius: 50%;
+                    background-color: rgba(255, 255, 255, .05);
+                    background-image: url('data:image/png;base64,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') !important;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    -webkit-background-size: 67px auto;
+                    background-size: 67px auto;*/
+                }
+
+                .gta-acount.slots .slots__cols > div.non-active .non-active__wrapper {
+                    display: block;
+                }
+
+                    .gta-acount.slots .slots__cols > div.non-active .non-active__wrapper p.price {
+                        margin-top: 29px;
+                        margin-bottom: 10px;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.non-active .non-active__wrapper p.price .gray {
+                            color: #8a8a8a;
+                        }
+
+                        .gta-acount.slots .slots__cols > div.non-active .non-active__wrapper p.price b {
+                            font-weight: normal;
+                            color: #FFBA43;
+                        }
+
+                    .gta-acount.slots .slots__cols > div.non-active .non-active__wrapper p.bonus {
+                        margin-bottom: 48px;
+                    }
+
+                        .gta-acount.slots .slots__cols > div.non-active .non-active__wrapper p.bonus .gold {
+                            color:#FFBA43;
+                        }
+
+.switch-content .auth-page {
+    display: none;
+}
+
+    .switch-content .auth-page.show {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation-name: opacity, slide;
+        animation-name: opacity, slide;
+        -webkit-animation-duration: .5s, .5s;
+        animation-duration: .5s, .5s;
+        -webkit-animation-timing-function: ease, ease;
+        animation-timing-function: ease, ease;
+    }
+
+.switch-content .rest-page {
+    display: none;
+}
+
+    .switch-content .rest-page.show {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation-name: opacity, slide;
+        animation-name: opacity, slide;
+        -webkit-animation-duration: .5s, .5s;
+        animation-duration: .5s, .5s;
+        -webkit-animation-timing-function: ease, ease;
+        animation-timing-function: ease, ease;
+    }
+
+.switch-content .reg-page {
+    display: none;
+}
+
+    .switch-content .reg-page.show {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation-name: opacity, slide;
+        animation-name: opacity, slide;
+        -webkit-animation-duration: .5s, .5s;
+        animation-duration: .5s, .5s;
+        -webkit-animation-timing-function: ease, ease;
+        animation-timing-function: ease, ease;
+    }
+
+.switch-content .slots-page {
+    display: none;
+}
+
+    .switch-content .slots-page.show {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation-name: opacity;
+        animation-name: opacity;
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+        -webkit-animation-timing-function: ease;
+        animation-timing-function: ease;
+    }
+
+.switch-content .delete-person-page {
+    display: none;
+}
+
+    .switch-content .delete-person-page.show {
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+@-webkit-keyframes opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.opacity {
+    -webkit-animation-name: opacity;
+    animation-name: opacity;
+    animation-name: opacity;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+
+@-webkit-keyframes slide {
+    from {
+        background-position-y: -1000px;
+    }
+
+    to {
+        background-position-y: bottom;
+    }
+}
+
+@keyframes slide {
+    from {
+        background-position-y: -1000px;
+    }
+
+    to {
+        background-position-y: bottom;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    .gta-acount.authorization {
+        background-position: 95% bottom, center;
+    }
+
+    .gta-acount.restorepass {
+        background-position: 95% bottom, center;
+    }
+
+    .gta-acount.registration {
+        background-position: 95% bottom, center;
+    }
+}
+
+@media screen and (min-width: 2400px) {
+    .gta-acount.authorization {
+        background-position: 82% bottom, center;
+    }
+
+    .gta-acount.restorepass {
+        background-position: 82% bottom, center;
+    }
+
+    .gta-acount.registration {
+        background-position: 82% bottom, center;
+    }
+}
+
+@media screen and (min-width: 3500px) {
+    .gta-acount.authorization {
+        background-position: 70% bottom, center;
+    }
+
+    .gta-acount.restorepass {
+        background-position: 70% bottom, center;
+    }
+
+    .gta-acount.registration {
+        background-position: 70% bottom, center;
+    }
+}
+
+@media screen and (max-height: 950px) and (min-width: 1600px) {
+    .gta-acount.authorization {
+        -webkit-background-size: 550px auto, cover;
+        background-size: 550px auto, cover;
+    }
+
+    .gta-acount.restorepass {
+        -webkit-background-size: 550px auto, cover;
+        background-size: 550px auto, cover;
+    }
+
+    .gta-acount.registration {
+        -webkit-background-size: 550px auto, cover;
+        background-size: 550px auto, cover;
+    }
+}
+
+@media screen and (max-height: 850px) and (min-width: 1415px) {
+    .gta-acount.authorization {
+        -webkit-background-size: 450px auto, cover;
+        background-size: 450px auto, cover;
+    }
+
+    .gta-acount.restorepass {
+        -webkit-background-size: 450px auto, cover;
+        background-size: 450px auto, cover;
+    }
+
+    .gta-acount.registration {
+        -webkit-background-size: 450px auto, cover;
+        background-size: 450px auto, cover;
+    }
+}
+
+@media screen and (max-height: 706px) and (min-width: 1201px) {/*max-height: 706px) and (min-width: 1201px*/
+    .gta-acount.authorization {
+        -webkit-background-size: 380px auto, cover;
+        background-size: 380px auto, cover;
+    }
+
+    .gta-acount.restorepass {
+        -webkit-background-size: 380px auto, cover;
+        background-size: 380px auto, cover;
+    }
+
+    .gta-acount.registration {
+        -webkit-background-size: 380px auto, cover;
+        background-size: 380px auto, cover;
+    }
+}
+
+@media screen and (max-width: 1600px) and (min-height: 860px) {
+    .gta-acount.authorization {
+        -webkit-background-size: 450px auto, cover;
+        background-size: 450px auto, cover;
+    }
+
+    .gta-acount.restorepass {
+        -webkit-background-size: 450px auto, cover;
+        background-size: 450px auto, cover;
+    }
+
+    .gta-acount.registration {
+        -webkit-background-size: 450px auto, cover;
+        background-size: 450px auto, cover;
+    }
+}
+
+@media screen and (max-width: 1414px) and (min-height: 705px) {
+    .gta-acount.authorization {
+        -webkit-background-size: 350px auto, cover;
+        background-size: 350px auto, cover;
+    }
+
+    .gta-acount.restorepass {
+        -webkit-background-size: 350px auto, cover;
+        background-size: 350px auto, cover;
+    }
+
+    .gta-acount.registration {
+        -webkit-background-size: 350px auto, cover;
+        background-size: 350px auto, cover;
+    }
+    .gta-acount__content {
+         min-width: 42%;
+        }
+}
+
+@media screen and (max-width: 1200px) and (min-height: 500px) {/*max-width: 1200px) and (min-height: 500px*/
+    .gta-acount.authorization {
+        -webkit-background-size: 300px auto, cover;
+        background-size: 300px auto, cover;
+    }
+
+    .gta-acount.restorepass {
+        -webkit-background-size: 300px auto, cover;
+        background-size: 300px auto, cover;
+    }
+
+    .gta-acount.registration {
+        -webkit-background-size: 300px auto, cover;
+        background-size: 300px auto, cover;
+    }
+}
+/*
+@media screen and (max-width: 1200px), (max-height: 499px) {
+    .gta-acount.authorization {
+        /*background-image: none, url(../img/bg_auth.png);
+    }
+
+    .gta-acount.restorepass {
+        /*background-image: none, url(../img/bg_auth.png);
+    }
+
+    .gta-acount.registration {
+        /*background-image: none, url(../img/bg_auth.png);
+    }
+}*/
+
+@media screen and (max-height: 950px) {/*950px*/
+    .gta-acount.slots .slots__wrapper {
+        height: auto;
+        min-height: 600px;
+    }
+
+        .gta-acount.slots .slots__wrapper header {
+            margin-bottom: 15px;
+        }
+
+            .gta-acount.slots .slots__wrapper header img {
+                width: 330px;
+            }
+
+            .gta-acount.slots .slots__wrapper header p {
+                width: 300px;
+                margin-top: 32px;
+            }
+
+            .gta-acount.slots .slots__wrapper header .lost-bucks {
+                width: 450px;
+                height: 70px;
+                margin-top: 13px;
+                padding-top: 5px;
+                padding-left: 70px;
+                background-color: rgba(0, 0, 0, 0);
+                background-position: 29px center;
+                -webkit-background-size: 25px auto;
+                background-size: 25px auto;
+            }
+
+                .gta-acount.slots .slots__wrapper header .lost-bucks span {
+                    font-size: 18px;
+                }
+
+            .gta-acount.slots .slots__wrapper header .lost-bucks__total b {
+                font-size: 18px;
+                color: #FFBA43;
+                padding-left: 5px;
+            }
+
+            .gta-acount.slots .slots__wrapper header .lost-bucks__total a {
+                font-size: 18px;
+            }
+
+    .gta-acount.slots .slots__cols a.btn {
+        width: 100%;
+    }
+
+    .gta-acount.slots .slots__cols > div {
+        height: 480px;
+    }
+    .gta-acount.slots .slots__cols > div{
+        padding: 5% 2% 10% 2%;
+    }
+
+        .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input[type='submit'] {
+            margin-top: 0;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='submit'] {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .gta-acount.slots .slots__cols > div.free .free__wrapper a.create-new {
+            margin-top: 25px;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='submit'] {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .gta-acount.slots .slots__cols > div.free .free__wrapper a.transfer-person {
+            margin-top: 25px;
+        }
+}
+
+@media screen and (max-width: 1450px), (max-height: 950px) {/*max-width: 1450px), (max-height: 950px*/
+    .gta-acount.slots .slots__cols {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+
+        .gta-acount.slots .slots__cols > div {
+            width: 32%;
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+
+            .gta-acount.slots .slots__cols > div h2 {
+                font-size: 30px;
+                line-height: 39px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+
+            .gta-acount.slots .slots__cols > div p {
+                font-size: 16px;
+                line-height: 21px;
+            }
+
+            .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form .input-cont {
+                margin-bottom: 10px;
+            }
+
+            .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input {
+                font-size: 16px;
+                padding-bottom: 5px;
+            }
+
+                .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input[type='submit'] {
+                    width: 100%;
+                    margin-top: 15px;
+                }
+
+            .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='submit'] {
+                width: 100%;
+            }
+
+            .gta-acount.slots .slots__cols > div.free .free__wrapper a.create-new {
+                margin-top: 25px;
+                background-position: 25% 15px;
+            }
+
+            .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='submit'] {
+                width: 100%;
+            }
+
+            .gta-acount.slots .slots__cols > div.free .free__wrapper a.transfer-person {
+                margin-top: 25px;
+                background-position: 25% 15px;
+            }
+
+            .gta-acount.slots .slots__cols > div.non-active::before {
+                top: 40px;
+                width: 140px;
+                height: 140px;
+                margin-left: -70px;
+            }
+}
+
+@media screen and (max-height: 835px) {/*max-height: 835px*/
+    .gta-acount.slots .slots__cols a.btn {
+        height: 35px;
+    }
+    .gta-acount.slots .slots__cols > div.active .active__wrapper a.btn-delete{
+        height: 35px;
+        border: solid 2px #FFBA43;
+    }
+
+    .gta-acount.slots .slots__cols > div {
+        height: 480px;
+        max-width: 80px;
+        min-width: 30%;
+        padding-top: 80px;
+    }
+
+        .gta-acount.slots .slots__cols > div h2 {
+            font-size: 25px;
+            line-height: 33px;
+        }
+
+        .gta-acount.slots .slots__cols > div.active .active__wrapper .person-cont {
+            height: 150px;
+        }
+
+            .gta-acount.slots .slots__cols > div.active .active__wrapper .person-cont .active-persone {
+                width: 200px;
+                margin-left: -100px;
+            }
+
+        .gta-acount.slots .slots__cols > div.active.delete .active__wrapper .person-cont::after {
+            width: 80px;
+            height: 80px;
+            margin-left: -40px;
+        }
+
+        .gta-acount.slots .slots__cols > div.free::before {
+            top: 42px;
+            width: 80px;
+            height: 80px;
+            margin-left: -40px;
+            -webkit-background-size: 40px auto;
+            background-size: 40px auto;
+        }
+
+        .gta-acount.slots .slots__cols > div.free .free__wrapper .some-persone {
+            height: 150px;
+            min-height: auto;
+        }
+
+        .gta-acount.slots .slots__cols > div.free .free__wrapper a.create-new {
+            margin-top: 56px;
+            padding-left: 0;
+            background: #FFBA43;
+        }
+
+        .gta-acount.slots .slots__cols > div.free .free__wrapper a.transfer-person {
+            /* margin-top: 56px; */
+            padding-left: 0;
+            background: none;
+        }
+
+        .gta-acount.slots .slots__cols > div.non-active::before {
+            width: 80px;
+            height: 80px;
+            margin-left: -40px;
+            -webkit-background-size: 40px auto;
+            background-size: 40px auto;
+        }
+
+        .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input[type='submit'] {
+            height: 35px;
+            margin-top: 20px;
+        }
+
+        .gta-acount.slots .slots__cols > div.active.delete .active__wrapper a.delete-cancel {
+            margin-top: 20px;
+        }
+        .gta-acount.slots .slots__cols > div.active.delete .active__wrapper a.delete-cancel{
+            box-shadow: 2px 2px 10px #FFBA43;
+        }
+        .gta-acount.slots .slots__cols > div.active .active__wrapper h3 {
+            margin-top: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gta-acount.slots .slots__cols > div.active .active__wrapper .characteristics {
+            margin-bottom: 20px;
+        }
+
+            .gta-acount.slots .slots__cols > div.active .active__wrapper .characteristics li {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+            .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input[type='submit']{
+                box-shadow: 2px 2px 10px #FFBA43;
+            }
+        .gta-acount.slots .slots__cols > div.active .active__wrapper a.btn-enter {
+            margin-bottom: 5px;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.create .free__wrapper h2 {
+            margin-bottom: 31px;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.create .free__wrapper a.cancel {
+            margin-top: 20px;
+        }
+        .gta-acount.slots .slots__cols > div.free.create .free__wrapper a.cancel{
+            box-shadow: 2px 2px 10px #FFBA43;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input {
+            font-size: 16px;
+            padding-bottom: 5px;
+        }
+        .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='submit']{
+            box-shadow: 2px 2px 10px #FFBA43;
+        }
+
+            .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date'] + .placeholder {
+                font-size: 16px;
+                top: 2px;
+            }
+
+            .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date'] {
+                padding-top: 0;
+                padding-left: 130px;
+            }
+
+            .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='submit'] {
+                height: 35px;
+                margin-top: 17px;
+            }
+
+        .gta-acount.slots .slots__cols > div.free.create .free__wrapper form .input-cont {
+            margin-bottom: 10px;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper h2 {
+            margin-bottom: 31px;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper a.cancel {
+            margin-top: 0;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input {
+            font-size: 16px;
+            padding-bottom: 5px;
+        }
+
+            .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date'] + .placeholder {
+                font-size: 16px;
+                top: 2px;
+            }
+
+            .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date'] {
+                padding-top: 0;
+                padding-left: 130px;
+            }
+
+            .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='submit'] {
+                height: 35px;
+                margin-top: 17px;
+            }
+
+        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form .input-cont {
+            margin-bottom: 10px;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__reason {
+            margin-bottom: 10px;
+        }
+
+            .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__reason h4,
+            .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__reason p {
+                font-size: 16px;
+                line-height: 21px;
+            }
+
+        .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__dates {
+            margin-top: 20px;
+        }
+
+            .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__dates li {
+                font-size: 16px;
+                line-height: 21px;
+                margin-bottom: 10px;
+            }
+
+        .gta-acount.slots .slots__cols > div.non-active .non-active__wrapper p.bonus {
+            margin-bottom: 28px;
+        }
+}
+
+@media screen and (max-width: 1420px) {
+    .gta-acount.slots .slots__wrapper {
+        width: 100%;
+        min-width: 800px;
+    }
+}
+
+@media screen and (max-width: 1305px) {
+    .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input {
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+
+        .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date'] {
+            padding-left: 130px;
+        }
+
+            .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='date'] + .placeholder {
+                font-size: 16px;
+                top: 2px;
+            }
+
+    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input {
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+
+        .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date'] {
+            padding-left: 130px;
+        }
+
+            .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='date'] + .placeholder {
+                font-size: 16px;
+                top: 2px;
+            }
+
+    .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__reason h4,
+    .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__reason p {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__dates li {
+        font-size: 10px;
+        line-height: 21px;
+        margin-bottom: 10px;
+    }
+
+    .gta-acount.slots .slots__cols a.btn {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .gta-acount.slots .slots__wrapper header {
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+        .gta-acount.slots .slots__wrapper header p {
+            font-size: 16px;
+            line-height: 22px;
+            width: 200px;
+            margin-top: 42px;
+        }
+
+        .gta-acount.slots .slots__wrapper header .lost-bucks {
+            width: 250px;
+            margin-left: 0;
+            padding-left: 0;
+            background-image: none;
+        }
+
+    .gta-acount.slots .slots__cols a.btn {
+        font-size: 15px;
+        height: 35px;
+    }
+
+    .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input[type='submit'] {
+        font-size: 16px;
+        height: 35px;
+    }
+
+    .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input[type='submit'] {
+        font-size: 16px;
+        height: 35px;
+    }
+
+    .gta-acount.slots .slots__cols > div.free .free__wrapper a.create-new {
+        padding-left: 0;
+        background-image: none;
+    }
+
+    .gta-acount.slots .slots__cols > div.free.transfer .free__wrapper form input[type='submit'] {
+        font-size: 16px;
+        height: 35px;
+    }
+
+    .gta-acount.slots .slots__cols > div.free .free__wrapper a.transfer-person {
+        padding-left: 0;
+        background-image: none;
+    }
+}
+@media screen and (max-width:1050px) {
+    .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input[type='submit']{
+        font-size: 12px;
+    }
+    .gta-acount.slots .slots__cols > div.free.create .free__wrapper form input,
+    .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:1450px){
+    .gta-acount .input-cont{
+        height: 40px;
+    }
+    .gta-acount input[type='text'], .gta-acount input[type='email'], .gta-acount input[type='date'], .gta-acount input[type='password']{
+        padding: 10px 25px;
+    }
+    .gta-acount__content{
+        max-width: 800px;
+        min-width: 35%;
+    }
+    .gta-acount input[type='text'], .gta-acount input[type='email'], .gta-acount input[type='date'], .gta-acount input[type='password']{
+        padding: 13px 20px;
+    }
+    .gta-acount input[type='text'].new-user__login + .placeholder{
+        top:10px;
+    }
+}
+@media screen and (max-width:1370px){
+    .gta-acount .input-cont{
+        height: 40px;
+    }
+    .gta-acount .btn-cont input.btn-enter,
+    .gta-acount .btn-cont a.btn-register,
+    .gta-acount .btn-cont input.btn-register-end,
+    .gta-acount .btn-cont a.btn-back{
+        box-shadow: 2px 2px 20px #FFBA43;
+    }
+    .gta-acount .btn-cont input.btn-enter{
+        font-size: 18px;
+    }
+    .gta-acount input[type='text'], .gta-acount input[type='email'], .gta-acount input[type='date'], .gta-acount input[type='password']{
+        padding: 10px 25px;
+    }
+    .gta-acount__content{
+        max-width: 450px;
+        min-width: 35%;
+    }
+    .gta-acount input[type='text'], .gta-acount input[type='email'], .gta-acount input[type='date'], .gta-acount input[type='password']{
+        padding: 13px 20px;
+    }
+    .gta-acount input[type='text'].new-user__login + .placeholder{
+        top:10px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .gta-acount.slots .slots__cols > div {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+        .gta-acount.slots .slots__cols > div h2 {
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        .gta-acount.slots .slots__cols > div.active .active__wrapper .characteristics li {
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .gta-acount.slots .slots__cols > div.active.delete .active__wrapper .person-cont::after {
+            width: 80px;
+            height: 80px;
+            margin-left: -40px;
+        }
+
+        .gta-acount.slots .slots__cols > div.active .active__wrapper .person-cont .active-persone {
+            width: 250px;
+            margin-left: -125px;
+        }
+
+        .gta-acount.slots .slots__cols > div.free::before {
+            top: 42px;
+            width: 80px;
+            height: 80px;
+            margin-left: -40px;
+            -webkit-background-size: 40px auto;
+            background-size: 40px auto;
+        }
+
+        .gta-acount.slots .slots__cols > div.non-active::before {
+            width: 80px;
+            height: 80px;
+            margin-left: -40px;
+            -webkit-background-size: 40px auto;
+            background-size: 40px auto;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__dates li {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            text-align: center;
+            -webkit-box-align: start;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__reason {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__dates {
+            margin-top: 5px;
+        }
+
+        .gta-acount.slots .slots__cols > div.non-active .non-active__wrapper p.price {
+            margin-top: 10px;
+        }
+}
+
+@media screen and (max-width: 950px) {
+    .gta-acount__content img.logo {
+        top: -100px;
+        left: 50%;
+        width: 500px;
+        margin-left: -250px;
+    }
+}
+
+@media screen and (max-width: 801px) {
+    .gta-acount {
+        min-width: 800px;
+    }
+}
+
+@media screen and (max-height: 850px) {
+    .gta-acount__content img.logo {
+        top: -40px;
+        left: 50%;
+        width: 300px;
+        margin-left: -150px;
+    }
+
+    .gta-acount.registration .gta-acount__content {
+        margin-top: 50px;
+    }
+
+        .gta-acount.registration .gta-acount__content header {
+            margin-bottom: 15px;
+        }
+
+        .gta-acount.registration .gta-acount__content form .input-cont {
+            margin-bottom: 15px;
+        }
+
+        .gta-acount.registration .gta-acount__content form .btn-cont {
+            margin-bottom: 30px;
+        }
+
+        .gta-acount.registration .gta-acount__content form input.promo-code {
+            margin-top: 15px;
+        }
+
+    .gta-acount.delete-person {
+        -webkit-background-size: 680px auto;
+        background-size: 680px auto;
+    }
+
+        .gta-acount.delete-person .delete-person__alert {
+            opacity: .95;
+        }
+}
+
+@media screen and (max-height: 601px) {
+    body {
+        overflow: auto;
+    }
+
+    .gta-acount {
+        min-height: 600px;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .gta-acount.rules .rules__time {
+        padding-right: 30px;
+        padding-left: 30px;
+        background: rgba(0, 0, 0, .75);
+    }
+
+    .gta-acount.rules .rules__text {
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-height: 930px) {
+    .gta-acount.slots .slots__cols a.btn,
+    .gta-acount.slots .slots__cols > div.active .active__wrapper a.btn-delete{
+        width: 40%;
+    }
+
+    .gta-acount.rules {
+        -webkit-background-size: 500px auto;
+        background-size: 500px auto;
+    }
+}
+/*Адаптация под писюнские мониторы*/
+@media screen and (max-height: 600px) and (min-width: 800px){
+.gta-acount__content {
+    width: 60%;
+   }
+   .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form .input-cont{
+       margin-bottom: 1px;
+   }
+   .gta-acount.slots .slots__cols > div.active.delete .active__wrapper a.delete-cancel{
+       margin-top: 10px;
+   }
+   .gta-acount.slots .slots__cols > div.active.delete .active__wrapper form input[type='submit']{
+       font-size: 10px;
+   }
+   .gta-acount.slots .slots__cols > div h2{
+       font-size: 14px;
+   }
+}
+@media screen and (max-height: 768px) and (min-width: 800px){
+    
+    .gta-acount.registration .gta-acount__content form .btn-cont{
+        margin-top: 10px;
+    }
+    .gta-acount input[type='text'].new-user__login + .placeholder {
+        top: 8px;
+        left: 60px;
+    }
+.gta-acount input[type='text'],
+.gta-acount input[type='email'],
+.gta-acount input[type='date'],
+.gta-acount input[type='password']{
+    padding: 8px 0 10px 1px;
+    width: 327.7656px;
+}
+.gta-acount.registration .gta-acount__content{
+    margin: 0 auto;
+}
+    .gta-acount .authtext{
+        font-size: 24px;
+    }
+    .gta-acount .btn-cont input.btn-enter{
+    width: 45%;
+    }
+    .gta-acount .btn-cont a.btn-register{
+        width: 45%;
+    }
+    .gta-acount .btn-cont input.btn-register-end {
+        width: 45%;
+    }
+    .gta-acount__content{
+        width: 100%;
+    }
+    .gta-acount .authtopline{
+        margin-bottom: 1%;
+    }
+    .gta-acount .authline{
+        margin-bottom: 1%;
+    }
+    .gta-acount .input-cont{
+        height: 30%;
+        border-radius: 5px;
+        max-width: 80%;
+    }
+    .gta-acount .yellowbox{
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+    }
+    .gta-acount .emails{
+        margin: -35px auto;
+    }
+    .gta-acount .logpic{
+        margin: -35px auto;
+    }
+    .gta-acount .zamog{
+        margin: -35px auto;
+    }
+    .gta-acount .gifts{
+        margin: -35px auto;
+    }
+}
+@media screen and (max-height: 600px) and (min-width: 800px){
+    
+    .gta-acount.registration .gta-acount__content form .btn-cont{
+        margin-top: 10px;
+    }
+    .gta-acount input[type='text'].new-user__login + .placeholder {
+        top: 8px;
+        left: 60px;
+    }
+.gta-acount input[type='text'],
+.gta-acount input[type='email'],
+.gta-acount input[type='date'],
+.gta-acount input[type='password']{
+    padding: 8px 0 10px 1px;
+    width: 327.7656px;
+}
+.gta-acount.registration .gta-acount__content{
+    margin: 0 auto;
+}
+    .gta-acount .authtext{
+        font-size: 24px;
+    }
+    .gta-acount .btn-cont input.btn-enter{
+    width: 45%;
+    }
+    .gta-acount .btn-cont a.btn-register{
+        width: 45%;
+    }
+    .gta-acount .btn-cont input.btn-register-end {
+        width: 45%;
+    }
+    .gta-acount__content{
+        width: 100%;
+    }
+    .gta-acount .authtopline{
+        margin-bottom: 1%;
+    }
+    .gta-acount .authline{
+        margin-bottom: 1%;
+    }
+    .gta-acount .input-cont{
+        height: 30%;
+        border-radius: 5px;
+        max-width: 80%;
+    }
+    .gta-acount .yellowbox{
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+    }
+    .gta-acount .emails{
+        margin: -35px auto;
+    }
+    .gta-acount .logpic{
+        margin: -35px auto;
+    }
+    .gta-acount .zamog{
+        margin: -35px auto;
+    }
+    .gta-acount .gifts{
+        margin: -35px auto;
+    }
+}
+@media screen and (max-height: 600px) and (min-width: 800px){
+    .gta-acount.slots .slots__cols > div{
+        padding-top: 5%;
+    }
+    .gta-acount.slots .slots__wrapper header{
+        margin-bottom: 3%;
+    }
+    .gta-acount.slots .slots__cols > div{
+        height: 350px;
+    }
+    .gta-acount.slots .slots__cols a.btn,
+    .gta-acount.slots .slots__cols > div.active .active__wrapper a.btn-delete{
+        width: 45%;
+    }
+    .gta-acount.slots .slots__cols a.btn,
+    .gta-acount.slots .slots__cols > div.active,
+    .active__wrapper a.btn-delete{
+        font-size: 15px;
+    }
+    .gta-acount.slots .slots__cols > div p,
+    .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__reason h4, .gta-acount.slots .slots__cols > div.free.blocked .blocked-cont__reason p{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .gta-acount.slots .slots__cols a.btn, 
+    .gta-acount.slots .slots__cols > div.active,
+    .active__wrapper a.btn-delete{
+        font-size: 12px;
+    }
+}
+/*-------------- Конец адаптации ----------*/
+@media screen and (max-width: 1050px), (max-height: 930px) {
+    .gta-acount.rules .rules__content {
+        width: 800px;
+        height: 600px;
+    }
+
+    .gta-acount.rules .rules__time {
+        padding: 30px;
+    }
+
+        .gta-acount.rules .rules__time h2 {
+            font-size: 30px;
+            line-height: 40px;
+            margin-top: 14px;
+        }
+
+        .gta-acount.rules .rules__time p {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        .gta-acount.rules .rules__time time {
+            font-size: 60px;
+            line-height: 80px;
+        }
+
+    .gta-acount.rules .rules__text {
+        padding: 0;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        padding-left: 20px;
+    }
+
+        .gta-acount.rules .rules__text h2 {
+            font-size: 30px;
+            line-height: 40px;
+            padding: 0;
+            padding-right: 30px;
+        }
+
+        .gta-acount.rules .rules__text .rules__list {
+            max-height: 400px;
+            margin-bottom: 30px;
+            padding: 0;
+            padding-right: 30px;
+        }
+
+        .gta-acount.rules .rules__text .btn-cont {
+            padding: 0;
+            padding-right: 30px;
+        }
+
+            .gta-acount.rules .rules__text .btn-cont a {
+                height: 5px;
+                margin: 0;
+            }
+
+                .gta-acount.rules .rules__text .btn-cont a.btn-cancel {
+                    width: 25%;
+                }
+
+                .gta-acount.rules .rules__text .btn-cont a.btn-confirm {
+                    width: 70%;
+                }
+}
+
+
+/* FIXES 29-12-18 */
+.slot-col.free.create #transfer-person-1,
+.slot-col.free.create #transfer-person-2,
+.slot-col.free.create #transfer-person-3 {
+    display: none;
+}
+
+.slot-col.free.create .cancel.js-transfer-cancel-1,
+.slot-col.free.create .cancel.js-transfer-cancel-2,
+.slot-col.free.create .cancel.js-transfer-cancel-3 {
+    display: none !important;
+}
+
+.slot-col.free.transfer #create-person-1,
+.slot-col.free.transfer #create-person-2,
+.slot-col.free.transfer #create-person-3 {
+    display: none;
+}
+
+.slot-col.free.transfer .cancel.js-create-cancel-1,
+.slot-col.free.transfer .cancel.js-create-cancel-2,
+.slot-col.free.transfer .cancel.js-create-cancel-3 {
+    display: none !important;
+}
+
+#transfer-person-1__pw-id,
+#transfer-person-2__pw-id,
+#transfer-person-3__pw-id {
+    background-image: none;
+}
+/*Рамки уголки менюшек*/
+.ramka {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-color: #FFBA43;
+    border-style: solid;
+  }
+  .ramka:nth-child(2) {
+    top: 0;
+    right: 0;
+    border-width: 5px 5px 0 0;
+  }
+  .ramka2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-color: #FFBA43;
+    border-style: solid;
+  }
+  .ramka2:nth-child(1) {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 5px 5px;
+  }

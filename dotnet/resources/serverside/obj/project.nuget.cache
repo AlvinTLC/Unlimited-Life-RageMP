@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "z4+TQ8zevnS44yoeuk21OK2FXozi/J8uiZzcH3SfojFlGBmJrSOj/p2wjF0oZQ0Fd75uyOvWvWO/la659kA+Ng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\server1\\server\\dotnet\\resources\\serverside\\serverside.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\mysqlconnector\\0.65.0\\mysqlconnector.0.65.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.data.sqlite.core\\1.0.112.2\\system.data.sqlite.core.1.0.112.2.nupkg.sha512"
+  ],
+  "logs": []
+}

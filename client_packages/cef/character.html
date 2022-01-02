@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lcost.net - Character editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/character.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/phone.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
+    <style>
+        body {
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            font-family: "Ubuntu", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor">
+		<div class="ramka2"></div>
+    	<div class="ramka"></div>
+		<div class="container">
+			<h1>Charakter Editor</h1> 
+			<p class="text2">Bitte erstelle deinen Charakter wie du ihn möchtest, für fehler kommt die Verwaltung nicht auf.</p> 
+			<div class="tabs">
+				<div id="content-1">
+					<div class="element">
+						<label>Vater:</label>
+						<list id="father" num=""></list>
+					</div>
+					<div class="element">
+						<label>Mutter:</label>
+						<list id="mother" num=""></list>
+					</div>
+					<div class="element">
+						<label>Ähnlichkeit:</label>
+						<div class="slider">
+							<input id="similar" type="range" value="0.5" step="0.1" min="0" max="1.0">
+						</div>
+						<!--<output id="similar">0.5</output>-->
+					</div>
+					<div class="element">
+						<label>Hautfarbe:</label>
+						<div class="slider">
+							<input id="skin" type="range" value="0.5" step="0.1" min="0" max="1">
+						</div>
+						<!--<output id="skin">0.5</output>-->
+					</div>
+					<div class="element2">
+						<div class="switch">
+							<div id="gendermale" class="btn on">Männlich</div>
+							<p class="labelz">oder</p>
+							<div id="genderfemale" class="btn">Weiblich</div>
+						</div>
+					</div>
+				</div> 
+				<div id="content-2">
+					<div class="wrapper">
+						<div class="wrap-1">
+							<input type="radio" id="tab-1" name="tabs">
+							<label for="tab-1"><div>Nase</div><div class="cross"></div></label>
+							<div class="content">
+								<div class="element">
+									<label>Nasenbreite:</label>
+									<div class="slider">
+										<input id="noseWidth" type="range" value="0" step="0.1" min="-1" max="1">
+									</div>
+									<!--<output id="noseWidth">0</output>-->
+								</div>
+								<div class="element">
+									<label>Nasenlänge:</label>
+									<div class="slider">
+										<input id="noseHeight" type="range" value="0" step="0.1" min="-1" max="1">
+									</div>
+									<!--<output id="noseHeight">0</output>-->
+								</div>
+								<div class="element">
+									<label>Nasenspitze:</label>
+    			        			<div class="slider">
+     			           			<input id="noseTipLength" type="range" value="0" step="0.1" min="-1" max="1">
+									</div>
+     			       			<!--<output id="noseTipLength">0</output>-->
+								</div>
+								<div class="element">
+      			      			<label>Nasentiefe:</label>
+									<div class="slider">
+										<input id="noseDepth" type="range" value="0" step="0.1" min="-1" max="1">
+									</div>
+            						<!--<output id="noseDepth">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Nasenspitzelänge:</label>
+            						<div class="slider">
+            			    			<input id="noseTipHeight" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="noseTipHeight">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Gebrochene Nase:</label>
+            						<div class="slider">
+                						<input id="noseBroke" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="noseBroke">0</output>-->
+        						</div>
+							</div>
+						</div>
+
+						<div class="wrap-2">
+							<input type="radio" id="tab-2" name="tabs">
+							<label for="tab-2"><div>Augen und Wangen:</div><div class="cross"></div></label>
+							<div class="content">
+								<div class="element">
+									<label>Höhe der Augenbrauen:</label>
+            						<div class="slider">
+                						<input id="eyebrowHeight" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="eyebrowHeight">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Augenbrauen Tiefe:</label>
+            						<div class="slider">
+                						<input id="eyebrowDepth" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="eyebrowDepth">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Höhe der Wangenknochen:</label>
+            						<div class="slider">
+                						<input id="cheekboneHeight" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="cheekboneHeight">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Wangenknochenbreite:</label>
+            						<div class="slider">
+                						<input id="cheekboneWidth" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="cheekboneWidth">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Wangentiefe:</label>
+            						<div class="slider">
+                						<input id="cheekDepth" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="cheekDepth">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Augengröße:</label>
+            						<div class="slider">
+                						<input id="eyeScale" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="eyeScale">0</output>-->
+        						</div>
+							</div>
+						</div>
+						<div class="wrap-3">
+							<input type="radio" id="tab-3" name="tabs">
+							<label for="tab-3"><div>Rest</div><div class="cross"></div></label>
+							<div class="content">
+								<div class="element">
+								<label>Lippendicke:</label>
+									<div class="slider">
+                						<input id="lipThickness" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="lipThickness">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Kieferbreite:</label>
+            						<div class="slider">
+                						<input id="jawWidth" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="jawWidth">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Kieferform:</label>
+            						<div class="slider">
+                						<input id="jawShape" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="jawShape">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Kinnhöhe:</label>
+            						<div class="slider">
+                						<input id="chinHeight" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="chinHeight">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Kinntiefe:</label>
+            						<div class="slider">
+                						<input id="chinDepth" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="chinDepth">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Kinnbreite:</label>
+            						<div class="slider">
+                						<input id="chinWidth" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="chinWidth">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Kinneinzug:</label>
+            						<div class="slider">
+                						<input id="chinIndent" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="chinIndent">0</output>-->
+        						</div>
+        						<div class="element">
+            						<label>Halsumfang:</label>
+            						<div class="slider">
+                						<input id="neck" type="range" value="0" step="0.1" min="-1" max="1">
+            						</div>
+            						<!--<output id="neck">0</output>-->
+        						</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<div id="content-3">
+					<div v-if="!isSurgery">
+						<h3>Erscheinung</h3>
+            			<div class="element">
+                			<label>Haare:</label>
+                			<list id="hairM" v-if="gender"></list>
+                			<list id="hairF" v-if="!gender"></list>
+            			</div>
+            			<div class="element">
+                			<label>Augebrauen:</label>
+                			<list id="eyebrowsM" v-if="gender"></list>
+                			<list id="eyebrowsF" v-if="!gender"></list>
+            			</div>
+            			<div class="element" v-if="gender">
+                			<label>Baart:</label>
+                			<list id="beard"></list>
+            			</div>
+            			<div class="element">
+                			<label>Haarfarbe:</label>
+                			<list id="hairColor"></list>
+            			</div>
+            			<div class="element">
+                			<label>Augenfarbe:</label>
+                			<list id="eyeColor"></list>
+            			</div>
+        			</div>
+				</div> 
+				<div class="tabs__links">
+					<a href="#content-1" class="button1"><p>Abstammung</p></a> 
+					<a href="#content-2" class="button1"><p>Erscheinung</p></a> 
+					<a href="#content-3" class="button1"><p>Style</p></a>
+				</div>
+			</div>
+		</div>
+		<div @click="save" class="button">Erstellen</div>
+	</div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/rangeslider.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/character.js"></script>
+</body>
+</html>

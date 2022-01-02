@@ -1,0 +1,1106 @@
+* {
+  user-select: none;
+  -webkit-user-select: none;
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  font-weight: 700;
+  font-style: bold;
+  src: local("Roboto"), url("../fonts/Gilroy-Bold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Bold.woff") format("woff");
+}
+
+.weapons_buy {
+  position: absolute;
+  width: 120vh;
+  height: 60.3vh;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  background-image: url(../img/Rectangle.svg);
+  background-color: #1a191b;
+}
+.weapons_craft {
+  height: 50vh;
+  width: 40vh;
+  position: absolute;
+  margin: 8% 0 0 3%;
+  background-image: url(../img/Rectangle.svg);
+  background-color: #1c1c1c;
+  /*height: 500px;
+    width: 440px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -250px;*/
+}
+.weapons_buy .left,
+.weapons_craft .left {
+  display: flex;
+  width: 25vh;
+  margin-bottom: 2vh;
+  /*display: block;
+    float: left;
+    width: 80px;
+    top: 1%;
+    left: -11%;
+    position: absolute;
+    height: 500px;
+    color: white;
+    background-color: #b48025;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;*/
+}
+.weapons_craft .left {
+  background-color: #1c1c1c;
+  width: 30vh;
+  margin-bottom: 1.5vh;
+  background-image: url(../img/Rectangle.svg);
+}
+.weapons_buy .left .btn,
+.weapons_craft .left .btn {
+  border-right: 0.1vh solid #ffb943;
+  text-align: center;
+  padding-right: 2vh;
+  height: 5vh;
+  width: 5vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 4vh;
+  cursor: pointer;
+  /*display: block;
+    text-align: center;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    cursor: pointer;*/
+}
+
+.weapons_buy ul {
+  max-height: 36.1vh;
+  height: 96vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  color: #333333;
+  width: 25%;
+  max-width: 100%;
+  list-style-type: none;
+}
+.ammologoz {
+  display: block;
+  margin-left: 2vh;
+  border-bottom: 0.35vh solid #ff9c3f69;
+}
+.ammologoz p {
+  display: inline-block;
+  font-size: 3vh;
+  font-family: "Gilroy-Bold";
+  color: white;
+  line-height: 6.5vh;
+}
+.ammologoz .star {
+  display: inline-block;
+  width: 2.8vh;
+  height: 2.8vh;
+  align-items: center;
+  background-image: url(../res/weapon/star.svg);
+  background-size: 2.8vh 2.8vh;
+  background-repeat: no-repeat;
+}
+.weapons_buy .weap {
+  /*Эта штука отвечает за надпись под картинкой*/
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  font-family: fantasy;
+  transform: translate(50%, 50%);
+  font-size: 24.6vh;
+  letter-spacing: 0.15em;
+  color: rgba(44, 43, 45, 0.25);
+}
+.weapons_buy .imgWeaps {
+  /*Тут двигаем картинку*/
+  position: absolute;
+  left: 32%;
+  top: 24%;
+  margin: auto;
+  width: 60vh;
+  height: 45vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.weapons_buy .items1 {
+  margin-top: -2.2vh;
+  text-align: right;
+  color: rgb(65, 64, 66);
+  font-size: 1.6vh;
+}
+
+.weapons_buy ul li {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.weapons_buy .list1 div {
+  width: 25vh;
+  height: 4.65vh;
+  line-height: 2.3vh;
+  margin-bottom: 0.85vh;
+  padding: 1.3vh;
+  margin-left: 3.3vh;
+  background: #222123;
+  border-radius: 0.5vh;
+  position: relative;
+  left: 0.2vh;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.6vh;
+  letter-spacing: 0.07em;
+  display: inline-block;
+  color: #fff;
+}
+.weapons_buy .btns .pistol {
+  position: absolute;
+  width: 18.246vh;
+  height: 4.3vh;
+  left: 30%;
+  top: 5%;
+  font-family: sans-serif;
+  font-size: 2.3vh;
+  line-height: 2vh;
+  letter-spacing: 0.08em;
+  color: #2c2b2d;
+}
+.weapons_buy .btns .shot {
+  position: absolute;
+  width: 12.246vh;
+  height: 4.3vh;
+  left: 55vh;
+  top: 5%;
+  font-family: sans-serif;
+  font-size: 2.3vh;
+  line-height: 2vh;
+  letter-spacing: 0.08em;
+  color: #2c2b2d;
+}
+.weapons_buy .btns .smg {
+  position: absolute;
+  width: 14.246vh;
+  height: 4.3vh;
+  left: 78vh;
+  top: 5%;
+  font-family: sans-serif;
+  font-size: 2.3vh;
+  line-height: 2vh;
+  letter-spacing: 0.08em;
+  color: #2c2b2d;
+}
+.weapons_buy .btns .ammos {
+  position: absolute;
+  width: 10.246vh;
+  height: 4.3vh;
+  left: 100vh;
+  top: 5%;
+  font-family: sans-serif;
+  font-size: 2.3vh;
+  line-height: 2vh;
+  letter-spacing: 0.08em;
+  color: #2c2b2d;
+}
+.weapons_buy .btn {
+  /*Кнопка "Купить"*/
+  margin-left: 50%;
+  position: absolute;
+  width: 22vh;
+  height: 5vh;
+  font-family: "Gilroy-Bold";
+  font-weight: bold;
+  font-size: 3vh;
+  text-align: center;
+  line-height: 5vh;
+  letter-spacing: 0.08em;
+  color: #000;
+  background: linear-gradient(
+    157.66deg,
+    #ffb943 10.95%,
+    #ff9e3f 63.71%,
+    #ff9b3f 85.44%
+  );
+  box-shadow: 0 0 1vh #ff9b3f;
+}
+.weapons_buy .btn:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    157.66deg,
+    #ffb943 10.95%,
+    #ff9e3f 63.71%,
+    #ff9b3f 85.44%
+  );
+}
+.weapons_buy .exits {
+  position: fixed;
+  width: 5vh;
+  height: 5vh;
+  left: -7%;
+  top: -10%;
+  font-family: "Gilroy-Bold";
+  font-size: 2.8vh;
+  line-height: 1.7em;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #000;
+  background: linear-gradient(
+    157.66deg,
+    #ffb943 10.95%,
+    #ff9e3f 63.71%,
+    #ff9b3f 85.44%
+  );
+  box-shadow: 0 0 1vh #ff9b3f;
+  border-radius: 0.5vh;
+}
+.weapons_buy .exits:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    157.66deg,
+    #ffb943 10.95%,
+    #ff9e3f 63.71%,
+    #ff9b3f 85.44%
+  );
+}
+.weapons_buy .list1 ul div:hover {
+  background: linear-gradient(
+    157.66deg,
+    #ffb943 10.95%,
+    #ff9e3f 63.71%,
+    #ff9b3f 85.44%
+  );
+  text-shadow: 0 0 0.4vh #d3952ab6;
+}
+
+.weapons_buy .list1 {
+  margin-top: 5vh;
+}
+.weapons_buy .imgCmena {
+  position: absolute;
+  margin-top: -31vh;
+  margin-left: 34vh;
+  background-size: 100%;
+  width: 40.2vh;
+  height: 40vh;
+}
+
+.weapons_buy .btns:hover {
+  color: #ffffff;
+}
+.weapons_buy .btns.active {
+  color: #ffffff;
+}
+.weapons_buy .btns.active:hover {
+  color: #ffffff;
+}
+
+.weapons_buy .left .btn:hover {
+  background-color: #0006;
+}
+.weapons_buy .left .btn.active {
+  background-color: #d4962c;
+}
+.weapons_buy .left .btn.active:hover {
+  background-color: #ffb943;
+}
+.weapons_craft .left .btn:hover {
+  background-color: #0006;
+}
+.weapons_craft .left .btn.active {
+  background-color: #ffb943;
+}
+.weapons_craft .left .btn.active:hover {
+  background-color: #da8f0e;
+}
+/*
+.weapons_buy .left .btn:hover{ 
+background-color: #0006; 
+}
+.weapons_buy .left .btn.active{ 
+background-color: #b63f3f; 
+}
+.weapons_buy .left .btn.active:hover{ 
+background-color: #a13333; 
+}
+.weapons_craft .left .btn:hover{ 
+background-color: #0006; 
+}
+.weapons_craft .left .btn.active{ 
+background-color: #b63f3f; 
+}
+.weapons_craft .left .btn.active:hover{ 
+background-color: #a13333; 
+}
+.weapons_buy .right,
+.weapons_craft .right{
+    float: left;
+    background-color: #7d2b2b;
+    height: 500px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.weapons_craft .right{background-color: #292929}
+.weapons_buy .head,
+.weapons_craft .head{
+    background-image: url('../res/weap/buy.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 357px;
+}
+.weapons_craft .head{
+    background-image: url('../res/weap/craft.png');
+}*/
+.weapons_buy .head h1,
+.weapons_craft .head h1 {
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5vh;
+  padding: 1vh;
+  font-weight: 400;
+}
+.weapons_buy .elements,
+.weapons_craft .elements {
+  display: inline-block;
+  background-color: #1c1c1c;
+  background-image: url(../img/Rectangle.svg);
+  /*background-color: #fff;*/
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 40vh;
+  height: 100%;
+  /* height: 40vh;
+    background-color: #fff;
+    overflow: hidden;
+    overflow-y: scroll;*/
+}
+.weapons_craft .pistol {
+  /*margin-top: 5vh;*/
+  background-image: url("../res/weap/pistol.png");
+  background-size: 4vh;
+}
+.weapons_craft .shot {
+  background-image: url("../res/weap/shot.png");
+  background-size: 4vh;
+}
+.weapons_craft .smg {
+  background-image: url("../res/weap/smg.png");
+}
+
+.weapons_craft .rifles {
+  background-image: url("../res/weap/rifles.png");
+  background-size: 4vh;
+}
+.weapons_craft .knife {
+  background-image: url("../res/weap/knife.png");
+  background-size: 4vh;
+}
+.weapons_craft .ammo {
+  background-image: url("../res/weap/ammo.png");
+  background-size: 4vh;
+}
+.weapons_buy .buttons,
+.weapons_craft .buttons {
+  margin: 0 3vh;
+  border: 0.1vh solid #ffb943;
+  color: #c2c7c9;
+  border-radius: 0.55vh;
+  /* height: 5vh; */
+  position: absolute;
+  top: 87%;
+  /*height: 5vh;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 10px;*/
+}
+.weapons_buy .buttons div,
+.weapons_craft .buttons div {
+  /*padding: 0.85vh;*/
+  font-size: 1.5vh;
+  font-weight: 700;
+  /* width: 10vh; 
+  margin: 0 1vh 0 1vh;*/
+  text-align: center;
+  /*padding: 11px;
+    font-size: 17pt;
+    width: 100px;
+    text-align: center;*/
+}
+/*Рамки уголки менюшек*/
+.ramka {
+  position: absolute;
+  width: 5vh;
+  height: 5vh;
+  border-color: #ffba43;
+  border-style: solid;
+}
+.ramka:nth-child(2) {
+  top: 0;
+  right: 0;
+  border-width: 0.5vh 0.5vh 0 0;
+}
+.ramka2 {
+  position: absolute;
+  width: 5vh;
+  height: 5vh;
+  border-color: #ffba43;
+  border-style: solid;
+}
+.ramka2:nth-child(1) {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 0.5vh 0.5vh;
+}
+/*Конец Рамки уголки менюшек*/
+.weapons_buy .exit,
+.weapons_craft .exit {
+  padding: 0.85vh 2vh 0.85vh 2vh;
+  /*float: left;
+    color: #b63f3f;
+    border-top: 2px solid #b63f3f;
+    border-right: 2px solid #b63f3f;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;*/
+}
+.weapons_buy .exit:hover,
+.weapons_craft .exit:hover {
+  background-color: #ffb943;
+  color: rgb(0, 0, 0);
+  /*background-color: #b63f3f;
+    color:white;*/
+}
+.weapons_buy .block,
+.weapons_craft .block {
+  display: flow-root;
+  padding: 1vh;
+  border-bottom: 0.15vh solid #3c3c3c;
+  /* display: flow-root;
+    padding: 10px;*/
+}
+.weapons_buy .block label,
+.weapons_craft .block label {
+  float: left;
+  /* display: flex; */
+  padding: 0.5vh;
+  margin-right: 1vh;
+  font-size: 1.85vh;
+  color: #ffb943;
+  /*float: left;
+    padding: 5px;
+    font-size: 14pt;*/
+}
+.weapons_buy .block .btn,
+.weapons_craft .block .btn {
+  float: right;
+  font-size: 1.3vh;
+  padding: 0.9vh;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 0.15vh solid #ffb943;
+  border-radius: 0.5vh;
+  cursor: pointer;
+  /*float: right;
+    padding: 5px;
+    color: green;
+    border: 2px solid green;
+    border-radius: 10px;
+    cursor: pointer;*/
+}
+.weapons_buy .block .btn:hover,
+.weapons_craft .block .btn:hover {
+  background-color: ffb943;
+  color: white;
+}
+.weapons_buy .block span,
+.weapons_craft .block span {
+  float: left;
+  border: 0.1vh solid #60c760;
+  font-size: 1.2vh;
+  /* width: 100%; */
+  padding: 0.15vh 0.5vh 0.15vh 0.5vh;
+  background-color: #60c76040;
+  color: #60c760;
+  /*float: left;
+    width: 100%;
+    padding-left: 5px;
+    color: green;*/
+}
+.weapons_buy .slider,
+.weapons_craft .slider {
+  height: 5vh;
+  border-bottom: 0.15vh solid #3c3c3c;
+  text-align: center;
+  margin-top: 1.5vh;
+}
+.weapons_buy .slider label,
+.weapons_craft .slider label {
+  width: 100%;
+  color: antiquewhite;
+}
+.weapons_buy .slider input,
+.weapons_craft .slider input {
+  display: inline;
+  float: left;
+  margin-left: 2vh;
+}
+.weapons_buy .slider output,
+.weapons_craft .slider output {
+  display: inline;
+  font-size: 1.75vh;
+  width: 5vh;
+  float: right;
+  margin-right: 1vh;
+  /* background-color: #59ff2f; */
+  background: linear-gradient(93.74deg, #ffb943 19.93%, #ff9b3f 103.86%);
+  box-shadow: 0 0 1.5vh #ffb943;
+  padding: 0.5vh;
+}
+/*Список писталетикOFF*/
+
+.img_Pistol {
+  background-image: url(../res/weapon/pistol.svg);
+}
+.img_CombatPistol {
+  background-image: url(../res/weapon/combatpistol.svg);
+}
+.img_HeavyPistol {
+  background-image: url(../res/weapon/heavypistol.svg);
+}
+.img_VintagePistol {
+  background-image: url(../res/weapon/vintage.svg);
+}
+.img_BullpupShotgun {
+  background-image: url(../res/weapon/bullpupshotgun.svg);
+}
+.img_CombatPDW {
+  background-image: url(../res/weapon/combatpdw.svg);
+}
+.img_MachinePistol {
+  background-image: url(../res/weapon/machinepistol.svg);
+}
+.img_SNSPistol {
+  background-image: url(../res/weapon/snspistol.svg);
+}
+.img_Knife {
+  background-image: url(../res/weapon/knife.svg);
+}
+.img_Bat {
+  background-image: url(../res/weapon/bat.svg);
+}
+.img_Bottle {
+  background-image: url(../res/weapon/brokebottle.svg);
+}
+.img_Machete {
+  background-image: url(../res/weapon/machete.svg);
+}
+.img_PoolCue {
+  background-image: url(../res/weapon/poolcue.svg);
+}
+.img_Hatchet {
+  background-image: url(../res/weapon/hatchet.svg);
+}
+.img_Crowbar {
+  background-image: url(../res/weapon/crowbar.svg);
+}
+.img_Hammer {
+  background-image: url(../res/weapon/hammer.svg);
+}
+.img_Nightstick {
+  background-image: url(../res/weapon/nightstick.svg);
+}
+.img_SwitchBlade {
+  background-image: url(../res/weapon/switchblade.svg);
+}
+.img_Grenade {
+  background-image: url(../res/weapon/grenade.svg);
+}
+.img_StickyBomb {
+  background-image: url(../res/weapon/stickybomb.svg);
+}
+.img_BZGas {
+  background-image: url(../res/weapon/BZGas.svg);
+}
+.img_Molotov {
+  background-image: url(../res/weapon/molotov.svg);
+}
+.img_Snowball {
+  background-image: url(../res/weapon/snowball.svg);
+}
+.img_Ball {
+  background-image: url(../res/weapon/ball.svg);
+}
+.img_SmokeGrenade {
+  background-image: url(../res/weapon/smokegrenade.svg);
+}
+.img_PipeBomb {
+  background-image: url(../res/weapon/pipebomb.svg);
+}
+
+/* ----------------- Адаптация под писюнские экраны -------------------------- */
+@media screen and (max-height: 600px) and (min-width: 800px) {
+  .weapons_buy {
+    width: 80%;
+    height: 60%;
+  }
+  .weapons_buy .exits {
+    width: 4.5%;
+    height: 8%;
+    font-size: 2.5vh;
+    left: -5.5%;
+    top: -8.5%;
+  }
+  .ammologoz p {
+    font-size: 2.5vh;
+  }
+  .ammologoz .star {
+    width: 1.2vh;
+    height: 1.2vh;
+    background-size: 1.2vh 1.2vh;
+  }
+  .weapons_buy .btns .pistol {
+    width: 18%;
+    height: 5%;
+    font-size: 2.4vh;
+    left: 25%;
+  }
+  .weapons_buy .btns .shot {
+    width: 12%;
+    height: 5%;
+    font-size: 2.4vh;
+    left: 48%;
+  }
+  .weapons_buy .btns .smg {
+    width: 14%;
+    height: 5%;
+    font-size: 2.4vh;
+    left: 64%;
+  }
+  .weapons_buy .btns .ammos {
+    width: 11%;
+    height: 5%;
+    font-size: 2.4vh;
+    left: 82%;
+  }
+  .weapons_buy ul {
+    max-height: 23vh;
+    height: 60vh;
+    width: 35%;
+  }
+  .weapons_buy .list1 div {
+    width: 55%;
+    height: 15%;
+    font-size: 1.5vh;
+    line-height: 1.5vh;
+    padding: 1vh 1.5vh 1vh 1vh;
+    margin-left: 1.5vh;
+  }
+  .weapons_buy .items1 {
+    margin-top: -1.6vh;
+    font-size: 1.5vh;
+  }
+  .weapons_buy .btn {
+    width: 15%;
+    height: 8%;
+    font-size: 2.4vh;
+    line-height: 4.8vh;
+    top: 50vh;
+  }
+  .weapons_buy .weap {
+    font-size: 24vh;
+    transform: translate(37%, 50%);
+  }
+}
+@media screen and (max-height: 768px) and (min-width: 1024px) {
+  .weapons_buy {
+    /*Общий блок*/
+    width: 75%;
+    height: 60%;
+  }
+  .weapons_buy .exits {
+    /*Кнопка выход*/
+    width: 4vh;
+    height: 4vh;
+    left: -6%;
+    top: -9%;
+    font-size: 2.4vh;
+  }
+  .ammologoz p {
+    /*AMMOstarNATION*/
+    font-size: 2.5vh;
+  }
+  .ammologoz .star {
+    width: 1.5vh;
+    height: 1.5vh;
+    background-size: 1.5vh 1.5vh;
+  }
+  .weapons_buy .btns .pistol {
+    /*Сыылка_1*/
+    width: 17%;
+    height: 5%;
+    font-size: 2.1vh;
+    left: 28%;
+  }
+  .weapons_buy .btns .shot {
+    /*Сыылка_2*/
+    width: 11%;
+    height: 5%;
+    font-size: 2.1vh;
+    left: 49%;
+  }
+  .weapons_buy .btns .smg {
+    /*Сыылка_3*/
+    width: 13%;
+    height: 5%;
+    font-size: 2.1vh;
+    left: 63%;
+  }
+  .weapons_buy .btns .ammos {
+    /*Сыылка_4*/
+    width: 10%;
+    height: 5%;
+    font-size: 2.1vh;
+    left: 81%;
+  }
+  .weapons_buy ul {
+    /*Слайдер*/
+    max-height: 29vh;
+    height: 60vh;
+  }
+  .weapons_buy .list1 div {
+    /*Кнопки слево*/
+    width: 90%;
+    height: 15%;
+    font-size: 1.4vh;
+    line-height: 1.4vh;
+    padding: 1.5vh 1.5vh 1vh 1vh;
+    margin-left: 1.5vh;
+  }
+  .weapons_buy .items1 {
+    /*Сыылка_1_цена*/
+    margin-top: -1.6vh;
+    font-size: 1.4vh;
+  }
+  .weapons_buy .btn {
+    /*Кнопка_Купить*/
+    width: 20%;
+    height: 10%;
+    font-size: 2.8vh;
+    line-height: 6vh;
+    top: 50vh;
+  }
+  .weapons_buy .weap {
+    /*Задний фон AMMO*/
+    font-size: 23vh;
+    transform: translate(35%, 50%);
+  }
+}
+@media screen and (max-height: 600px) and (min-width: 1200px) {
+  .weapons_buy {
+    /*Общий блок*/
+    width: 65%;
+    height: 72%;
+  }
+  .weapons_buy .btns .pistol {
+    width: 15%;
+    height: 5%;
+    font-size: 2.4vh;
+    left: 28%;
+  }
+  .weapons_buy .btns .shot {
+    width: 10%;
+    height: 5%;
+    font-size: 2.4vh;
+    left: 47%;
+  }
+  .weapons_buy .btns .smg {
+    width: 11%;
+    height: 5%;
+    font-size: 2.4vh;
+    left: 60%;
+  }
+  .weapons_buy .btns .ammos {
+    width: 9%;
+    height: 5%;
+    font-size: 2.4vh;
+    left: 76%;
+  }
+  .ammologoz p {
+    font-size: 3.5vh;
+    line-height: 7.5vh;
+  }
+  .weapons_buy .list1 div {
+    width: 64%;
+    height: 15%;
+    font-size: 1.7vh;
+  }
+  .weapons_buy .items1 {
+    font-size: 2.3vh;
+  }
+  .weapons_buy .weap {
+    font-size: 31vh;
+  }
+  .weapons_buy .btn {
+    font-size: 3.5vh;
+    top: 60vh;
+  }
+  .ammologoz .star {
+    width: 2.5vh;
+    height: 2.5vh;
+    background-size: 2.5vh 2.5vh;
+  }
+}
+@media screen and (max-height: 1024px) and (min-width: 1280px) {
+  .weapons_buy {
+    /*Общий блок*/
+    width: 75%;
+    height: 60%;
+  }
+  .ammologoz p {
+    /*AMMOstarNATION*/
+    font-size: 2.5vh;
+  }
+  .ammologoz .star {
+    width: 2vh;
+    height: 2vh;
+    background-size: 2vh 2vh;
+  }
+  .weapons_buy .btns .pistol {
+    /*Сыылка_1*/
+    font-size: 2vh;
+    left: 28%;
+  }
+  .weapons_buy .btns .shot {
+    /*Сыылка_2*/
+    font-size: 2vh;
+    left: 48%;
+  }
+  .weapons_buy .btns .smg {
+    /*Сыылка_3*/
+    font-size: 2vh;
+    left: 62%;
+  }
+  .weapons_buy .btns .ammos {
+    /*Сыылка_4*/
+    font-size: 2vh;
+    left: 79%;
+  }
+  .weapons_buy ul {
+    /*Слайдер*/
+    max-height: 40vh;
+    height: 60vh;
+  }
+
+  .weapons_buy .list1 div {
+    /*Кнопки слево*/
+    width: 92%;
+    height: 13%;
+    font-size: 1.5vh;
+    line-height: 1.8vh;
+    padding: 2vh 1vh 1vh 2vh;
+    margin-left: 1.5vh;
+  }
+  .weapons_buy .weap {
+    /*Задний фон AMMO*/
+    font-size: 22vh;
+    transform: translate(38%, 50%);
+  }
+}
+@media screen and (max-height: 900px) and (min-width: 1440px) {
+  .weapons_buy {
+    /*Общий блок*/
+    width: 65%;
+    height: 60%;
+  }
+  .weapons_buy ul {
+    /*Слайдер*/
+    max-height: 36vh;
+    width: 35vh;
+  }
+  .weapons_buy .list1 div {
+    /*Кнопки слево*/
+    width: 70%;
+    height: 13%;
+    font-size: 1.6vh;
+    line-height: 1.5vh;
+  }
+  .weapons_buy .items1 {
+    /*Сыылка_1_цена*/
+    margin-top: -1.6vh;
+    font-size: 1.4vh;
+  }
+  .weapons_buy .weap {
+    /*Задний фон AMMO*/
+    font-size: 25vh;
+    transform: translate(35%, 50%);
+  }
+}
+@media screen and (max-height: 768px) and (min-width: 1366px) {
+  .weapons_buy {
+    /*Общий блок*/
+    width: 60%;
+    height: 60%;
+  }
+  .weapons_buy .exits {
+    /*Кнопка выход*/
+    width: 4vh;
+    height: 4vh;
+    left: -6%;
+    top: -9%;
+    font-size: 2.4vh;
+  }
+  .ammologoz p {
+    /*AMMOstarNATION*/
+    font-size: 2.5vh;
+  }
+  .ammologoz .star {
+    width: 1.5vh;
+    height: 1.5vh;
+    background-size: 1.5vh 1.5vh;
+  }
+  .weapons_buy .btns .pistol {
+    /*Сыылка_1*/
+    width: 16%;
+    height: 4%;
+    font-size: 2.1vh;
+    left: 28%;
+  }
+  .weapons_buy .btns .shot {
+    /*Сыылка_2*/
+    width: 10%;
+    height: 4%;
+    font-size: 2.1vh;
+    left: 49%;
+  }
+  .weapons_buy .btns .smg {
+    /*Сыылка_3*/
+    width: 12%;
+    height: 4%;
+    font-size: 2.1vh;
+    left: 63%;
+  }
+  .weapons_buy .btns .ammos {
+    /*Сыылка_4*/
+    width: 10%;
+    height: 4%;
+    font-size: 2.1vh;
+    left: 81%;
+  }
+  .weapons_buy ul {
+    /*Слайдер*/
+    max-height: 31vh;
+    height: 60vh;
+    width: 32%;
+  }
+  .weapons_buy .list1 div {
+    /*Кнопки слево*/
+    width: 70%;
+    height: 14%;
+    font-size: 1.4vh;
+    line-height: 1.4vh;
+    padding: 1.5vh 1.5vh 1vh 1vh;
+    margin-left: 1.5vh;
+  }
+  .weapons_buy .items1 {
+    /*Сыылка_1_цена*/
+    margin-top: -1.6vh;
+    font-size: 1.7vh;
+  }
+  .weapons_buy .btn {
+    /*Кнопка_Купить*/
+    width: 20%;
+    height: 10%;
+    font-size: 2.8vh;
+    line-height: 6vh;
+    top: 50vh;
+  }
+  .weapons_buy .weap {
+    /*Задний фон AMMO*/
+    font-size: 24vh;
+    transform: translate(40%, 50%);
+  }
+}
+@media screen and (max-height: 1440px) and (min-width: 2560px) {
+  .weapons_buy {
+    /*Общий блок*/
+    width: 60%;
+    height: 60%;
+  }
+  .weapons_buy .exits {
+    /*Кнопка выход*/
+    width: 5vh;
+    height: 5vh;
+    left: -6%;
+    top: -10%;
+    font-size: 3vh;
+  }
+  .ammologoz p {
+    /*AMMOstarNATION*/
+    font-size: 3vh;
+  }
+  .ammologoz .star {
+    width: 2.8vh;
+    height: 2.8vh;
+    background-size: 2.8vh 2.8vh;
+  }
+  .weapons_buy .btns .pistol {
+    /*Сыылка_1*/
+    font-size: 2.1vh;
+    left: 30%;
+  }
+  .weapons_buy .btns .shot {
+    /*Сыылка_2*/
+    font-size: 2.1vh;
+    left: 50%;
+  }
+  .weapons_buy .btns .smg {
+    /*Сыылка_3*/
+    font-size: 2.1vh;
+    left: 64%;
+  }
+  .weapons_buy .btns .ammos {
+    /*Сыылка_4*/
+    font-size: 2.1vh;
+    left: 81%;
+  }
+  .weapons_buy ul {
+    /*Слайдер*/
+    width: 35vh;
+    max-height: 55vh;
+  }
+  .weapons_buy .list1 div {
+    /*Кнопки слево*/
+    width: 75%;
+    height: 9%;
+    font-size: 1.8vh;
+    line-height: 3vh;
+  }
+  .weapons_buy .items1 {
+    /*Сыылка_1_цена*/
+    margin-top: -3vh;
+    font-size: 2vh;
+  }
+  .weapons_buy .btn {
+    /*Кнопка_Купить*/
+    width: 16%;
+    height: 9%;
+    font-size: 3vh;
+    line-height: 5vh;
+    top: 50vh;
+  }
+  .weapons_buy .weap {
+    /*Задний фон AMMO*/
+    font-size: 25vh;
+    transform: translate(40%, 50%);
+  }
+}

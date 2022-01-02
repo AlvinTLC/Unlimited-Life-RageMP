@@ -1,0 +1,106 @@
+﻿.masks{
+    height: 600px;
+    width: 350px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    top: 50%;
+    margin-top: -200px;
+}
+.masks .right{
+    float: right;
+    height: 100%;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+}
+.masks .left{
+    height: 100%;
+    width: 50px;
+    padding-top: 62px;
+    float: left;
+}
+.masks i{
+    font-family: "icons";
+    font-style: normal;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #37474F;
+    border-radius: 5px;
+}
+.masks i:hover{background-color: #263238}
+.masks .list div{
+    width: 150px;
+    padding: 9px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #37474F;
+}
+.masks h1{
+    margin: 0;
+    padding: 15px;
+    font-size: 20pt;
+    background-color: #2f6694;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.masks .left-arrow{
+    float: left;
+}
+.masks .right-arrow{
+    float: right;
+}
+.masks .list{
+    margin-left: 8%;
+    margin-top: 15px;
+    width: 250px;
+}
+.masks .items{
+    height: 200px;
+}
+.masks .btn{
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid;
+    cursor: pointer;
+    margin: 10px;
+}
+.masks .buy{
+    background-color: #43A047;
+    margin-bottom: 10px;
+}
+.masks .exit{
+    background-color: #305c6d;
+}
+.masks .buy:hover{
+    background-color: #2E7D32;
+}
+.masks .exit:hover{
+    background-color: #15a1f3;
+}
+.masks .icon{
+    height: 50px;
+    background-color: #305c6d;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 35px;
+}
+.masks .icon.active{
+    background-color: #4a9caf;
+}
+.masks .icon:hover{
+    background-color: #15a1f3;
+}
+.masks p{
+    color: black;
+}
+.masks p span{
+    color: green;
+    font-size: 16pt;
+}
+.masks .mask{
+    background-image: url('../res/mask.png');
+}

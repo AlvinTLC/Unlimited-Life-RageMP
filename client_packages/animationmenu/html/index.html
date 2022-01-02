@@ -1,0 +1,416 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+
+	<script type="text/javascript" src="js/raphael.min.js"></script>
+	<script type="text/javascript" src="js/raphael.icons.js"></script>
+    <script type="text/javascript" src="js/icons.js"></script>
+	<script type="text/javascript" src="js/wheelnav.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript">
+
+        window.onload = function () {
+
+			//Use advanced constructor for more wheelnav on same div
+			wheel1 = new wheelnav('wheelDiv', null, 600, 600);
+			wheel1.slicePathFunction = slicePath().DonutSlice;
+			wheel1.slicePathCustom = slicePath().DonutSliceCustomization();
+			wheel1.slicePathCustom.minRadiusPercent = 0.3;
+			wheel1.slicePathCustom.maxRadiusPercent = 0.6;
+			wheel1.sliceSelectedPathCustom = wheel1.slicePathCustom;
+			wheel1.sliceInitPathCustom = wheel1.slicePathCustom;
+			wheel1.clickModeRotate = false;
+
+			wheel2 = new wheelnav('wheel2', wheel1.raphael);
+			wheel2.slicePathFunction = slicePath().DonutSlice;
+			wheel2.slicePathCustom = slicePath().DonutSliceCustomization();
+			wheel2.slicePathCustom.minRadiusPercent = 0.6;
+			wheel2.slicePathCustom.maxRadiusPercent = 0.9;
+			wheel2.sliceSelectedPathCustom = wheel2.slicePathCustom;
+			wheel2.sliceInitPathCustom = wheel2.slicePathCustom;
+			wheel2.clickModeRotate = false;
+
+			wheel3 = new wheelnav('wheel3', wheel1.raphael);
+			wheel3.slicePathFunction = slicePath().DonutSlice;
+			wheel3.slicePathCustom = slicePath().DonutSliceCustomization();
+			wheel3.slicePathCustom.minRadiusPercent = 0.6;
+			wheel3.slicePathCustom.maxRadiusPercent = 0.9;
+			wheel3.sliceSelectedPathCustom = wheel2.slicePathCustom;
+			wheel3.sliceInitPathCustom = wheel2.slicePathCustom;
+			wheel3.clickModeRotate = false;
+
+			wheel4 = new wheelnav('wheel4', wheel1.raphael);
+			wheel4.slicePathFunction = slicePath().DonutSlice;
+			wheel4.slicePathCustom = slicePath().DonutSliceCustomization();
+			wheel4.slicePathCustom.minRadiusPercent = 0.6;
+			wheel4.slicePathCustom.maxRadiusPercent = 0.9;
+			wheel4.sliceSelectedPathCustom = wheel2.slicePathCustom;
+			wheel4.sliceInitPathCustom = wheel2.slicePathCustom;
+			wheel4.clickModeRotate = false;
+
+			wheel5 = new wheelnav('wheel5', wheel1.raphael);
+			wheel5.slicePathFunction = slicePath().DonutSlice;
+			wheel5.slicePathCustom = slicePath().DonutSliceCustomization();
+			wheel5.slicePathCustom.minRadiusPercent = 0.6;
+			wheel5.slicePathCustom.maxRadiusPercent = 0.9;
+			wheel5.sliceSelectedPathCustom = wheel2.slicePathCustom;
+			wheel5.sliceInitPathCustom = wheel2.slicePathCustom;
+			wheel5.clickModeRotate = false;
+
+			wheel6 = new wheelnav('wheel6', wheel1.raphael);
+			wheel6.slicePathFunction = slicePath().DonutSlice;
+			wheel6.slicePathCustom = slicePath().DonutSliceCustomization();
+			wheel6.slicePathCustom.minRadiusPercent = 0.6;
+			wheel6.slicePathCustom.maxRadiusPercent = 0.9;
+			wheel6.sliceSelectedPathCustom = wheel2.slicePathCustom;
+			wheel6.sliceInitPathCustom = wheel2.slicePathCustom;
+			wheel6.clickModeRotate = false;
+
+			wheel7 = new wheelnav('wheel7', wheel1.raphael);
+			wheel7.slicePathFunction = slicePath().DonutSlice;
+			wheel7.slicePathCustom = slicePath().DonutSliceCustomization();
+			wheel7.slicePathCustom.minRadiusPercent = 0.6;
+			wheel7.slicePathCustom.maxRadiusPercent = 0.9;
+			wheel7.sliceSelectedPathCustom = wheel2.slicePathCustom;
+			wheel7.sliceInitPathCustom = wheel2.slicePathCustom;
+			wheel7.clickModeRotate = false;
+
+			wheel8 = new wheelnav('wheel8', wheel1.raphael);
+			wheel8.slicePathFunction = slicePath().DonutSlice;
+			wheel8.slicePathCustom = slicePath().DonutSliceCustomization();
+			wheel8.slicePathCustom.minRadiusPercent = 0.6;
+			wheel8.slicePathCustom.maxRadiusPercent = 0.9;
+			wheel8.sliceSelectedPathCustom = wheel2.slicePathCustom;
+			wheel8.sliceInitPathCustom = wheel2.slicePathCustom;
+			wheel8.clickModeRotate = false;
+
+			wheel9 = new wheelnav('wheel9', wheel1.raphael);
+			wheel9.slicePathFunction = slicePath().DonutSlice;
+			wheel9.slicePathCustom = slicePath().DonutSliceCustomization();
+			wheel9.slicePathCustom.minRadiusPercent = 0.6;
+			wheel9.slicePathCustom.maxRadiusPercent = 0.9;
+			wheel9.sliceSelectedPathCustom = wheel2.slicePathCustom;
+			wheel9.sliceInitPathCustom = wheel2.slicePathCustom;
+			wheel9.clickModeRotate = false;
+
+			wheel1.createWheel();
+			wheel2.createWheel();
+			wheel3.createWheel();
+			wheel4.createWheel();
+			wheel5.createWheel();
+			wheel6.createWheel();
+			wheel7.createWheel();
+			wheel8.createWheel();
+			wheel9.createWheel();
+
+
+			hideAll();
+		};
+
+
+		function hideAll() {
+			[wheel2,wheel3,wheel4,wheel5,wheel6,wheel7,wheel8,wheel9].forEach(wheelnow => {
+				var j;
+				var lenght = wheelnow.navItemCount;
+				for (j = 0; j < lenght; j++) {
+					wheelnow.navItems[j].navItem.hide();
+				}
+			});
+		};
+
+		function switchShow(bool){
+			if(bool){
+				hideAll();
+				$("body").show();
+			} else {
+				hideAll();
+				$("body").hide();
+			}
+		}
+
+		function switchWheel(type) {
+			switch (type) {
+				case "sitting":{
+					hideAll();
+					wheel2.navItems[0].navItem.show();
+					wheel2.navItems[1].navItem.show();
+					wheel2.navItems[2].navItem.show();
+					wheel2.navItems[3].navItem.show();
+					wheel2.navItems[4].navItem.show();
+					wheel2.navItems[5].navItem.show();
+					break;
+				};
+				case "laying":{
+					hideAll();
+					wheel3.navItems[0].navItem.show();
+					wheel3.navItems[1].navItem.show();
+					wheel3.navItems[2].navItem.show();
+					wheel3.navItems[3].navItem.show();
+					wheel3.navItems[4].navItem.show();
+					wheel3.navItems[5].navItem.show();
+					break;
+				};
+				case "standing":{
+					hideAll();
+					wheel4.navItems[0].navItem.show();
+					wheel4.navItems[1].navItem.show();
+					wheel4.navItems[2].navItem.show();
+					wheel4.navItems[3].navItem.show();
+					wheel4.navItems[4].navItem.show();
+					wheel4.navItems[5].navItem.show();
+					wheel4.navItems[6].navItem.show();
+					break;
+				};
+				case "dance1":{
+					hideAll();
+					wheel5.navItems[0].navItem.show();
+					wheel5.navItems[1].navItem.show();
+					wheel5.navItems[2].navItem.show();
+					wheel5.navItems[3].navItem.show();
+					wheel5.navItems[4].navItem.show();
+					wheel5.navItems[5].navItem.show();
+					wheel5.navItems[6].navItem.show();
+					wheel5.navItems[7].navItem.show();
+					wheel5.navItems[8].navItem.show();
+					wheel5.navItems[9].navItem.show();
+					wheel5.navItems[10].navItem.show();
+					break;
+				};
+				case "dance2":{
+					hideAll();
+					wheel6.navItems[0].navItem.show();
+					wheel6.navItems[1].navItem.show();
+					wheel6.navItems[2].navItem.show();
+					wheel6.navItems[3].navItem.show();
+					wheel6.navItems[4].navItem.show();
+					wheel6.navItems[5].navItem.show();
+					wheel6.navItems[6].navItem.show();
+					wheel6.navItems[7].navItem.show();
+					wheel6.navItems[8].navItem.show();
+					wheel6.navItems[9].navItem.show();
+					break;
+				};
+				case "sport":{
+					hideAll();
+					wheel7.navItems[0].navItem.show();
+					wheel7.navItems[1].navItem.show();
+					wheel7.navItems[2].navItem.show();
+					wheel7.navItems[3].navItem.show();
+					wheel7.navItems[4].navItem.show();
+					wheel7.navItems[5].navItem.show();
+					wheel7.navItems[6].navItem.show();
+					wheel7.navItems[7].navItem.show();
+					break;
+				};
+				case "jobs":{
+					hideAll();
+					wheel8.navItems[0].navItem.show();
+					wheel8.navItems[1].navItem.show();
+					wheel8.navItems[2].navItem.show();
+					break;
+				};
+				case "different":{
+					hideAll();
+					wheel9.navItems[0].navItem.show();
+					wheel9.navItems[1].navItem.show();
+					wheel9.navItems[2].navItem.show();
+					wheel9.navItems[3].navItem.show();
+					wheel9.navItems[4].navItem.show();
+					wheel9.navItems[5].navItem.show();
+					wheel9.navItems[6].navItem.show();
+					wheel9.navItems[7].navItem.show();
+					wheel9.navItems[8].navItem.show();
+					wheel9.navItems[9].navItem.show();
+					wheel9.navItems[10].navItem.show();
+					wheel9.navItems[11].navItem.show();					
+					wheel9.navItems[12].navItem.show();
+					wheel9.navItems[13].navItem.show();
+					wheel9.navItems[14].navItem.show();
+					wheel9.navItems[15].navItem.show();
+					break;
+				};
+			}
+		}
+		function doAnimation(id){
+			mp.trigger("cAnimations-play",id);
+			mp.trigger("cCloseCef");
+		}
+		function destroy(){
+			mp.trigger("cCloseCef");
+		};
+		function cancel(){
+			mp.trigger("cAnimations-stop");
+			mp.trigger("cCloseCef");
+		};
+
+		function destroyClick(){
+			$("#destroy").click();
+		}
+
+    </script>
+
+</head>
+<body>
+
+	<!-- Main -->
+    <div id='wheelDiv'
+    data-wheelnav data-wheelnav-slicepath='DonutSlice'
+    data-wheelnav-rotateoff data-wheelnav-navangle='72'
+    data-wheelnav-titleheight='30'
+    data-wheelnav-cssmode
+	data-wheelnav-init>
+		<div data-wheelnav-navitemicon='close' onmouseup='destroy();'></div>
+		<div data-wheelnav-navitemicon='no' onmouseup='cancel();'></div>
+		<div data-wheelnav-navitemtext='Sitzen' onmouseup='switchWheel("sitting");'></div>
+		<div data-wheelnav-navitemtext='Liegen' onmouseup='switchWheel("laying");'></div>
+		<div data-wheelnav-navitemtext='Stehen' onmouseup='switchWheel("standing");'></div>
+		<div data-wheelnav-navitemtext='Tänze 1' onmouseup='switchWheel("dance1");'></div>
+		<div data-wheelnav-navitemtext='Tänze 2' onmouseup='switchWheel("dance2");'></div>
+		<div data-wheelnav-navitemtext='Sport' onmouseup='switchWheel("sport");'></div>
+		<div data-wheelnav-navitemtext='Jobs' onmouseup='switchWheel("jobs");'></div>
+		<div data-wheelnav-navitemtext='Sonstiges' onmouseup='switchWheel("different");'></div>
+	</div>
+
+	<!-- Sitzen -->
+	<div id='wheel2'
+    data-wheelnav data-wheelnav-slicepath='DonutSlice'
+    data-wheelnav-rotateoff data-wheelnav-navangle='90'
+    data-wheelnav-titleheight='30'
+    data-wheelnav-cssmode
+	data-wheelnav-init>
+		<div data-wheelnav-navitemtext='Männl.' onmouseup='doAnimation(0);'></div>
+		<div data-wheelnav-navitemtext='Weibl.' onmouseup='doAnimation(1);'></div>
+		<div data-wheelnav-navitemtext='Stuhl 1' onmouseup='doAnimation(2);'></div>
+		<div data-wheelnav-navitemtext='Stuhl 2' onmouseup='doAnimation(3);'></div>
+		<div data-wheelnav-navitemtext='Stuhl, weibl.' onmouseup='doAnimation(4);'></div>
+		<div data-wheelnav-navitemtext='Knien' onmouseup='doAnimation(5);'></div>
+	</div>
+
+	<!-- Liegen -->
+	<div id='wheel3'
+    data-wheelnav data-wheelnav-slicepath='DonutSlice'
+    data-wheelnav-rotateoff data-wheelnav-navangle='90'
+    data-wheelnav-titleheight='30'
+    data-wheelnav-cssmode
+	data-wheelnav-init>
+		<div data-wheelnav-navitemtext='Rücken' onmouseup='doAnimation(6);'></div>
+		<div data-wheelnav-navitemtext='Bauch' onmouseup='doAnimation(7);'></div>
+		<div data-wheelnav-navitemtext='Seitlich' onmouseup='doAnimation(8);'></div>
+		<div data-wheelnav-navitemtext='Betrunken' onmouseup='doAnimation(9);'></div>
+		<div data-wheelnav-navitemtext='Ohnmacht' onmouseup='doAnimation(10);'></div>
+		<div data-wheelnav-navitemtext='Schlafen' onmouseup='doAnimation(11);'></div>
+	</div>
+
+	<!-- Stehen -->
+	<div id='wheel4'
+    data-wheelnav data-wheelnav-slicepath='DonutSlice'
+    data-wheelnav-rotateoff data-wheelnav-navangle='90'
+    data-wheelnav-titleheight='30'
+    data-wheelnav-cssmode
+	data-wheelnav-init>
+		<div data-wheelnav-navitemtext='Verschränken, männl.' onmouseup='doAnimation(12);'></div>
+		<div data-wheelnav-navitemtext='Verschränken, weibl.' onmouseup='doAnimation(13);'></div>
+		<div data-wheelnav-navitemtext='Hände hoch' onmouseup='doAnimation(14);'></div>
+		<div data-wheelnav-navitemtext='Arrogant' onmouseup='doAnimation(15);'></div>
+		<div data-wheelnav-navitemtext='Eingebildet' onmouseup='doAnimation(16);'></div>
+		<div data-wheelnav-navitemtext='Anlehnen' onmouseup='doAnimation(17);'></div>
+		<div data-wheelnav-navitemtext='Security' onmouseup='doAnimation(18);'></div>
+	</div>
+
+	<!-- Tänze 1 -->
+	<div id='wheel5'
+    data-wheelnav data-wheelnav-slicepath='DonutSlice'
+    data-wheelnav-rotateoff data-wheelnav-navangle='90'
+    data-wheelnav-titleheight='30'
+    data-wheelnav-cssmode
+	data-wheelnav-init>
+		<div data-wheelnav-navitemtext='Strip 1' onmouseup='doAnimation(19);'></div>
+		<div data-wheelnav-navitemtext='Strip 2' onmouseup='doAnimation(20);'></div>
+		<div data-wheelnav-navitemtext='Strip 3' onmouseup='doAnimation(21);'></div>
+		<div data-wheelnav-navitemtext='Strip 4' onmouseup='doAnimation(22);'></div>
+		<div data-wheelnav-navitemtext='Strip 5' onmouseup='doAnimation(23);'></div>
+		<div data-wheelnav-navitemtext='Strip 6' onmouseup='doAnimation(24);'></div>
+		<div data-wheelnav-navitemtext='Ghetto' onmouseup='doAnimation(25);'></div>
+		<div data-wheelnav-navitemtext='Tao 1' onmouseup='doAnimation(26);'></div>
+		<div data-wheelnav-navitemtext='Tao 2' onmouseup='doAnimation(27);'></div>
+		<div data-wheelnav-navitemtext='Po wackeln 1' onmouseup='doAnimation(28);'></div>
+		<div data-wheelnav-navitemtext='Po wackeln 2' onmouseup='doAnimation(29);'></div>
+	</div>
+
+	<!-- Tänze 2 -->
+	<div id='wheel6'
+    data-wheelnav data-wheelnav-slicepath='DonutSlice'
+    data-wheelnav-rotateoff data-wheelnav-navangle='90'
+    data-wheelnav-titleheight='30'
+    data-wheelnav-cssmode
+	data-wheelnav-init>
+		<div data-wheelnav-navitemtext='Stepptanz 1' onmouseup='doAnimation(30);'></div>
+		<div data-wheelnav-navitemtext='Zumba 1' onmouseup='doAnimation(31);'></div>
+		<div data-wheelnav-navitemtext='Zumba 2' onmouseup='doAnimation(32);'></div>
+		<div data-wheelnav-navitemtext='Zumba 3' onmouseup='doAnimation(33);'></div>
+		<div data-wheelnav-navitemtext='Zumba 4' onmouseup='doAnimation(34);'></div>
+		<div data-wheelnav-navitemtext='Zumba 5' onmouseup='doAnimation(35);'></div>
+		<div data-wheelnav-navitemtext='Geiles Lied' onmouseup='doAnimation(36);'></div>
+		<div data-wheelnav-navitemtext='Feminin' onmouseup='doAnimation(37);'></div>
+		<div data-wheelnav-navitemtext='Tanzfaul' onmouseup='doAnimation(38);'></div>
+		<div data-wheelnav-navitemtext='Luftgitarre' onmouseup='doAnimation(39);'></div>
+	</div>
+
+	<!-- Sport -->
+	<div id='wheel7'
+    data-wheelnav data-wheelnav-slicepath='DonutSlice'
+    data-wheelnav-rotateoff data-wheelnav-navangle='90'
+    data-wheelnav-titleheight='30'
+    data-wheelnav-cssmode
+	data-wheelnav-init>
+		<div data-wheelnav-navitemtext='Yoga 1' onmouseup='doAnimation(40);'></div>
+		<div data-wheelnav-navitemtext='Yoga 2' onmouseup='doAnimation(41);'></div>
+		<div data-wheelnav-navitemtext='Yoga 3' onmouseup='doAnimation(42);'></div>
+		<div data-wheelnav-navitemtext='Yoga 4' onmouseup='doAnimation(43);'></div>
+		<div data-wheelnav-navitemtext='Liegestütze 1' onmouseup='doAnimation(44);'></div>
+		<div data-wheelnav-navitemtext='Liegestütze 2' onmouseup='doAnimation(45);'></div>
+		<div data-wheelnav-navitemtext='Situps' onmouseup='doAnimation(46);'></div>
+		<div data-wheelnav-navitemtext='Flex' onmouseup='doAnimation(47);'></div>
+	</div>
+
+	<!-- Jobs -->
+	<div id='wheel8'
+    data-wheelnav data-wheelnav-slicepath='DonutSlice'
+    data-wheelnav-rotateoff data-wheelnav-navangle='90'
+    data-wheelnav-titleheight='30'
+    data-wheelnav-cssmode
+	data-wheelnav-init>
+		<div data-wheelnav-navitemtext='Begutachen' onmouseup='doAnimation(48);'></div>
+		<div data-wheelnav-navitemtext='Reparieren' onmouseup='doAnimation(49);'></div>
+		<div data-wheelnav-navitemtext='Putzen' onmouseup='doAnimation(50);'></div>
+	</div>
+
+	<!-- Sonstiges -->
+	<div id='wheel9'
+    data-wheelnav data-wheelnav-slicepath='DonutSlice'
+    data-wheelnav-rotateoff data-wheelnav-navangle='90'
+    data-wheelnav-titleheight='30'
+    data-wheelnav-cssmode
+	data-wheelnav-init>
+		<div data-wheelnav-navitemtext='Bein massieren' onmouseup='doAnimation(51);'></div>
+		<div data-wheelnav-navitemtext='Auf die Knie 1' onmouseup='doAnimation(52);'></div>
+		<div data-wheelnav-navitemtext='Auf die Knie 2' onmouseup='doAnimation(53);'></div>
+		<div data-wheelnav-navitemtext='Pfeifen' onmouseup='doAnimation(54);'></div>
+		<div data-wheelnav-navitemtext='Ironisches Klatschen' onmouseup='doAnimation(55);'></div>
+		<div data-wheelnav-navitemtext='Peace' onmouseup='doAnimation(56);'></div>
+		<div data-wheelnav-navitemtext='F*ck You' onmouseup='doAnimation(57);'></div>
+		<div data-wheelnav-navitemtext='Bob Kelso' onmouseup='doAnimation(58);'></div>
+		<div data-wheelnav-navitemtext='Winken' onmouseup='doAnimation(59);'></div>
+		<div data-wheelnav-navitemtext='Verzweifelt' onmouseup='doAnimation(60);'></div>
+		<div data-wheelnav-navitemtext='Weinen' onmouseup='doAnimation(61);'></div>
+		<div data-wheelnav-navitemtext='Rauchen' onmouseup='doAnimation(62);'></div>
+		<div data-wheelnav-navitemtext='Retriever Sitzen' onmouseup='doAnimation(63);'></div>
+		<div data-wheelnav-navitemtext='Hund Anschlagen' onmouseup='doAnimation(64);'></div>
+		<div data-wheelnav-navitemtext='Hund Bellen' onmouseup='doAnimation(65);'></div>
+		<div data-wheelnav-navitemtext='Hund Schlafen' onmouseup='doAnimation(66);'></div>
+    </div>
+
+</body>
+</html>

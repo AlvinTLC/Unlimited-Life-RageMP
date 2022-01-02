@@ -1,0 +1,307 @@
+﻿.petrol {
+	top:0;
+	left:0;
+}
+
+.petrol .exitE{
+    position: fixed;
+    left: 3%;
+    width: 8.8vh;
+    height: 4.5vh;
+    color: black;
+    font-size: 2vh;
+    text-align: center;
+    line-height: 4vh;
+    top: 4%;
+    bottom: 66.28%;
+    background: linear-gradient(157.66deg, #ffb943 10.95%, #ffb943 85.44%);
+    box-shadow: 0px 0px 1vh #ffb943;
+    border-radius: 0.5vh;
+}
+.petrol .exitE:hover{
+	color: white;
+    text-shadow: 0px 0px 1vh #ffb943;
+    background: linear-gradient(93.74deg, #ffb943 19.93%, #ffb943 103.86%);
+    border: 0.1vh solid #ffb943;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1.5vh rgba(255,99,90,1);
+}
+
+.petrol .textExitE{
+	font-size: 2.8vh;
+    margin-top: 1.5vh;
+    margin-left: 1.5vh;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 1vh rgba(43, 33, 33, 0.5);
+
+}
+
+.petrol .textexits{
+    width: 15vh;
+    color: #FFFFFF;
+    font-size: 2vh;
+    margin-top: -5.5vh;
+    margin-left: 7.7vh;
+}
+
+.petrol .left-panel{
+	position: absolute;
+    left: 51%;
+    top: 19%;
+    background: #1A191B;
+}
+
+.petrol .left-panel .thePriceBg{
+    margin-left: 3.1vh;
+    margin-top: 11vh;
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    width: 20vh;
+    height: 16vh;
+    background: #202021;
+    border-radius: 1.5vh;
+	line-height: 0.5vh;
+    text-align: center;
+}	
+.petrol .left-panel .textPrices{
+    font-size: 1.5vh;
+    font-weight: 100;
+    margin-left: -1.5vh;
+}	
+.petrol .left-panel .pricec{
+	margin-top: -8.2vh;
+    font-size: 2.4vh;
+    margin-left: -7.4vh;
+}		
+.petrol .left-panel .moneypet{
+	width: 3.2vh;
+    position: absolute;
+    margin-top: -4.3vh;
+    margin-left: 1.8vh;
+}		
+	
+.petrol .left-panel .stroke{
+	background: #202021;
+    width: 33vh;
+    height: 0.2vh;
+    margin-top: 2.2vh;
+    margin-left: 3.6vh;
+}	
+
+.petrol .left-panel .input{
+    position: absolute;
+    width: 28vh;
+    height: 3.3vh;
+    margin-left: -14vh;
+    top: 45vh;
+    font-size: 2vh;
+    text-align: center;
+    background: #000000ed;
+    color: white;
+    border-radius: 0.5vh;
+}	
+
+.petrol .left-panel .input:active{
+    width: 28vh;
+    height: 3.3vh;
+    margin-left: -14vh;
+    top: 45vh;
+    font-size: 2vh;
+    text-align: center;
+    background: #000000ed;
+    color: white;
+    border-radius: 0.5vh;
+    box-shadow: 0px 0px 1.5vh rgba(255,99,90,1);
+}		
+.petrol .left-panel .theEndTexts{
+	color: #535353;
+    margin-left: 20.6vh;
+}		
+.petrol .left-panel .pricesTexts{
+	color: white;
+    margin-left: 20.7vh;
+    margin-top: -1.4vh;
+    font-size: 2vh;
+}		
+.petrol .left-panel .bankNal{
+    color: #535353;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1.6vh;
+    margin-left: 6vh;
+    margin-top: 10vh;
+}	
+.petrol .left-panel .btnNal {
+    margin-left: 5.7vh;
+    margin-top: -0.4vh;
+    width: 12.6vh;
+    color: black;
+    font-size: 1.9vh;
+    text-align: center;
+    line-height: 5.3vh;
+    height: 6vh;
+    background: linear-gradient(93.74deg, #ffb943 19.93%, #ffb943 103.86%);
+    border: 0.1vh solid #ffb943;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1.5vh #ffb943;
+    border-radius: 0.5vh;
+    text-shadow: 0px 0px 1vh rgba(43, 33, 33, 0.5);
+}
+.petrol .left-panel .btnGov{
+    margin-left: 21vh;
+    margin-top: -6vh;
+    width: 13.9vh;
+    color: white;
+    font-size: 1.9vh;
+    text-align: center;
+    line-height: 5.3vh;
+    height: 6vh;
+    background: linear-gradient(0deg, #202021, #202021);
+    border: 0.1vh solid #3E3E40;
+    box-sizing: border-box;
+    border-radius: 0.5vh;
+	text-shadow: 0px 0px 1vh rgba(43, 33, 33, 0.5);
+}		
+.petrol .left-panel .btnGov:hover{
+color: white;
+    text-shadow: 0px 0px 1vh rgba(43, 33, 33, 0.5);
+    background: linear-gradient(93.74deg, #ffb943 19.93%, #ffb943 103.86%);
+    border: 0.1vh solid #ffb943;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1.5vh #ffb943;
+}	
+.petrol .left-panel .btnBuys {
+    margin-left: 0vh;
+    margin-top: 10vh;
+    width: 41.4vh;
+    color: black;
+    font-size: 2.2vh;
+    text-align: center;
+    line-height: 5.3vh;
+    height: 6vh;
+    background: linear-gradient(93.74deg, #ffb943 19.93%, #ffb943 103.86%);
+    border: 0.1vh solid #ffb943;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1.5vh #ffb943;
+    text-shadow: 0px 0px 1vh rgba(43, 33, 33, 0.5);
+}
+
+.petrol .left-panel .btnBuys:hover{
+	
+    color: white;
+    text-shadow: 0px 0px 1vh #ffb943;
+    background: linear-gradient(93.74deg, #ffb943 19.93%, #ffb943 103.86%);
+    border: 0.1vh  solid #ffb943;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1.5vh #ffb943;
+}
+
+
+.petrol .right-panel {
+	position: absolute;
+    width: 51.8vh;
+    height: 34.5vh;
+    right: 51%;
+    top: 19%;
+    background: #1A191B;
+}
+
+.petrol .right-panel .imgpet{
+    position: fixed;
+    margin-top: 0.5vh;
+    width: 48vh;
+    height: 25vh;
+}
+.petrol .right-panel .header{
+	color:white;
+	font-size:1.5vh;
+	margin-left: 3vh;
+    margin-top: 3.2vh;
+}
+.petrol .right-panel .fueltanks{
+	font-family: inherit;
+    font-size: 1.7vh;
+    margin-left: 1.9vh;
+    color: #3d3d3e;
+    font-weight: bolder;
+}
+.petrol .right-panel .fueltank{
+	font-family: inherit;
+    font-size: 2.9vh;
+    margin-left: 1.9vh;
+    margin-top: -1.5vh;
+    font-weight: 600;
+    color: white;
+}
+.petrol .right-panel .fuelText{
+	width: 3vh;
+    line-height: 2.4vh;
+    font-weight: 600;
+    font-size: 1.8vh;
+    margin-left: 2.5vh;
+    color: #3d3d3e;
+}
+.petrol .right-panel .priceText{
+	width: 3vh;
+    line-height: 2.4vh;
+    font-weight: 600;
+    font-size: 1.8vh;
+    margin-top: -6.6vh;
+    margin-left: 15vh;
+    color: #3d3d3e;
+}
+.petrol .right-panel .fuels{
+	margin-left: 1.9vh;
+    color: white;
+}
+.petrol .right-panel .btnFull{
+	font-size: 2vh;
+    font-weight: 700;
+    width: 35vh;
+    height: 6.6vh;
+    color: #2B2121;
+    line-height: 6.1vh;
+    text-align: center;
+    text-shadow: 0px 0px 1vh rgba(43, 33, 33, 0.5);
+    margin-left: 5vh;
+    margin-top: 3.3vh;
+    background: linear-gradient(93.74deg, #ffb943 19.93%, #ffb943 103.86%);
+    border: 0.1vh solid #ffb943;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1.5vh #ffb943;
+    border-radius: 0.5vh;
+}
+.petrol .right-panel .btnFull:hover{
+	font-size: 2vh;
+    font-weight: 700;
+    color: white;
+    line-height: 6.1vh;
+    text-align: center;
+    text-shadow: 0px 0px 1vh #ffb943;
+    background: linear-gradient(93.74deg, #ffb943 19.93%, #ffb943 103.86%);
+    border: 0.1vh solid rgba(255,99,90,1);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1.5vh #ffb943;
+}
+
+.bankNal {
+    margin-top: 5vh;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input {outline:none;}
+
+.petrol input::-moz-placeholder {    color: #ffffff;    }
+.petrol input::-webkit-input-placeholder { color: #ffffff; }
+v:-ms-input-placeholder { color: #ffffff; }
+.petrol input::-ms-input-placeholder { color: #ffffff; }
+.petrol input::placeholder { color: #ffffff; } 

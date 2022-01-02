@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/carspawner.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <title>FractionVehcieSpawner - Golem</title>
+</head>
+
+<body>
+  <div id="app" v-if="active" v-cloak>
+    <div class="container">
+      <header>
+        <i class="fa fa-car" aria-hidden="true"></i>
+        <h1>Fahrzeuge</h1>
+        <span>
+          <i @click="closepanel()" class="fa fa-times-circle-o" aria-hidden="true"></i>
+        </span>
+      </header>
+
+      <div class="main pageMembers">
+        <h2>Liste der verfügbaren Fahrzeuge</h2>
+        <div class="items">
+          <table>
+            <tr class="item">
+              <th class="adminItem">🌐</th>
+              <th class="idItem">🔰</th>
+              <th class="nickItem">Modell</th>
+              <th class="numberItem">Kennzeichen</th>
+              <th class="cmdItem">Status</th>
+            </tr>
+            <tr class="item" v-for="(item, index) in vehicles">
+              <td>
+                <i class="fa fa-toggle-on" aria-hidden="true" v-if="item[0]"></i>
+                <i class="fa fa-toggle-off" aria-hidden="true" v-else></i>
+              </td>
+              <td>{{item[1]}}</td>
+              <td>{{item[2]}}</td>
+              <td>{{item[3]}}</td>
+              <td>
+                <span>
+                  <b @click="callback(0, item[3])" v-if="item[0]">🔄</b>
+                  <b @click="callback(1, item[3])" v-else>✅</b>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <footer>
+        <div>
+          <h3>Anzahl: {{vehicles.length}}</h3>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="js/carspawner.js"></script>
+</body>
+
+</html>

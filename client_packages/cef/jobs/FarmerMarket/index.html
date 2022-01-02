@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ULIFE - ErnteVerkäufer</title>
+  <link rel="stylesheet" href="css/market.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+
+<body>
+  <div id="app">
+    <transition name="modal">
+      <div class="container" v-if="active">
+        <header>
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <h1>{{header}}</h1>
+          <span>
+            <i @click="closeMenu()" class="fa fa-times-circle-o" aria-hidden="true"></i>
+          </span>
+        </header>
+        <div class="main" v-if="page == 0">
+          <div class="upblock">
+            <div class="avatar">
+              <img src="images/avatar.png" :alt="header">
+            </div>
+            <div class="info">
+              <h2>
+                <i class="fa fa-info-circle" aria-hidden="true"></i> Informationen
+              </h2>
+              <p>
+                <i class="fa fa-line-chart" aria-hidden="true"></i> Aktueller Kurs: <b>{{curs}}</b>
+              </p>
+              <p>
+                <i class="fa fa-archive" aria-hidden="true"></i> Ernte die du mitträgst: <b>{{hays}}</b>
+              </p>
+              <p>
+                <i class="fa fa-pagelines" aria-hidden="true"></i> Samen in deinen Taschen: <b>{{seedcount}}</b>
+              </p>
+            </div>
+          </div>
+          <div class="description">
+            <p>
+              Hallo! Mein Name ist Melog, nicht Melog, sondern Melog! Ich verkaufe Samen für den Anbau und kann auch etwas von der Ernte kaufen. Komm oft zu mir und wir werden immer schwarze Zahlen schreiben.
+            </p>
+            <p>
+              Beachte das sich die Preise basierend auf die Anzahl der verkauften Ernte ändert. Also nutze die Zeit an dem der Preis für die Ernte hoch ist!
+            </p>
+          </div>
+        </div>
+        <div class="main pageBuys" v-if="page == 1">
+          <h2>Kaufen</h2>
+          <div class="items">
+            <div class="item" v-for="(item, index) in buyitems">
+              <img :src="`../../items/` + item[1] + `.png`" alt="">
+              <p>
+                {{item[2]}} <b>${{item[3] ? item[0] * curs : item[0]}}</b>
+              </p>
+              <input type="number" placeholder="Menge" v-model="buyValue">
+              <a class="btnBuy" @click="buy(item[1])">Kaufen</a>
+            </div>
+          </div>
+        </div>
+        <div class="main pageSells" v-if="page == 2">
+          <h2>Verkaufen</h2>
+          <div class="items">
+            <div class="item" v-for="(item, index) in sellitems">
+              <img :src="`../../items/` + item[1] + `.png`" alt="">
+              <p>
+                {{item[2]}} <b>${{item[3] ? item[0] * curs : item[0]}}</b>
+              </p>
+              <input type="number" placeholder="Menge" v-model="sellValue">
+              <a class="btnBuy" @click="sell(item[1])">Verkaufen</a>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div>
+            <a :class="{btnActive: page == 0}" class="button" @click="changePage(0)">Informationen</a>
+          </div>
+          <div>
+            <a :class="{btnActive: page == 1}" class="button" @click="changePage(1)">Kaufen</a>
+          </div>
+          <div>
+            <a :class="{btnActive: page == 2}" class="button" @click="changePage(2)">Verkaufen</a>
+          </div>
+        </footer>
+      </div>
+    </transition>
+
+    <transition name="fade">
+      <div class="fade" v-if="active"></div>
+    </transition>
+  </div> <!-- //#1KR -->
+  <script src="js/farmer.js"></script>
+</body>
+
+</html>

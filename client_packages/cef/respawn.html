@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>lostcost - Respawn selector</title>
+        <link rel="stylesheet" href="css/respawn.css">
+        <link rel="stylesheet" href="css/fontslogin.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/respawn.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+    
+                $("body").css("display", "none");
+    
+                $("body").fadeIn(2000);
+    
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wraper">
+            <div class="box1">
+                <div class="respawnOnExit">
+                    <!--<img class="logoImages" src="images/logo_onExit.png" alt="logo">-->
+                    <p class="text">Letzter Ort</p>
+                    <!--<hr style="width: 65%; color: #ffffff; margin-top: 3.8%">-->
+                    <p class="textDescription">Du wachst da auf wo du zuletzt warst.</p>
+                    <button onclick="spawn(0)" type="button" class="button">Aufwachen</button>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="respawnFraction">
+                    <!--<img class="logoImages" src="images/logo_onFr.png" alt="logo">-->
+                    <p class="text">Fraktion</p>
+                    <hr style="width: 65%; color: #ffffff; margin-top: 3.8%">
+                    <p class="textDescription">Du wachst bei deiner Fraktion auf und kannst so direkt deinen Tag starten!</p>
+                    <button onclick="spawn(1)" type="button" class="button">Aufwachen</button>
+                </div>
+            </div>
+            <div class="noBox2">
+                <div class="noHome">
+                    <p class="notext">Trete einer,<br /> Fraktion <span>bei um dort aufzuwachen<br /></p>
+                    <!--<img class="lockImg" src="images/lock.png" alt="lock">-->
+                </div>
+            </div>
+            <div class="box3">
+                <div class="respawnHome">
+                    <!--<img class="logoImages" src="images/logo_onHome.png" alt="logo">-->
+                    <p class="text">In deinem Zuhause aufwachen.</p>
+                    <hr style="width: 65%; color: #ffffff; margin-top: 3.8%">
+                    <p class="textDescription">Du wachst in deinem Zuhause auf!</p>
+                    <button onclick="spawn(2)" type="button" class="button">Aufwachen</button>
+                </div>
+            </div>
+            <div class="noBox3">
+                <div class="noHome">
+                    <p class="notext">Kaufe dir eine Immobilie um dort aufzuwachen.</p>
+                    <!--<img class="lockImg" src="images/lock.png" alt="lock">-->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

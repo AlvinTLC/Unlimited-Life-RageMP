@@ -1,0 +1,156 @@
+﻿.fmenu {
+    border: solid 0px #fff;
+    /* border-radius: 25px; */
+    padding: 15px;
+    background-size: cover;
+    position: absolute;
+    width: 930px;
+    left: 50%;
+    top: 44%;
+    margin-left: -424px;
+    margin-top: -275px;
+    background: url(https://i.imgur.com/w5xGj0r.png);
+    background-size: 100%;
+    height: 733px;
+    background-repeat: no-repeat;
+    font-family: 'Uni Neue';
+}
+hr {
+    display: none;
+}
+.info {
+    background: #2c2f337d;
+    border-top-right-radius: 10px;
+}
+    .fmenu .right {
+        float: right;
+        width: 458px;
+        text-align: center;
+        position: relative;
+        right: 17px;
+        top: 19px;
+        height: 650px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .fmenu .left {
+        text-align: left;
+        float: left;
+        width: 404px;
+        height: 650px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background: #2C2F33;
+        left: 17px;
+        position: relative;
+        top: 18px;
+        border-top-left-radius: 18px;
+        border-bottom-left-radius: 10px;
+    }
+.fmenu .right h1 {
+    border-radius: 0;
+}
+    .fmenu h1 {
+        color: white;
+        font-size: 13pt;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 20px 16px;
+        background: #2c2f337d;
+        border-top: 5px solid #2c2f33;
+        padding: 10px 0;
+        border-top-left-radius: 14px;
+    }
+
+    .fmenu .btns {
+        padding: 20px 0;
+    }
+
+    .fmenu .btn {
+        transition: .6s;
+        background: #2C2F33;
+        padding: 7px;
+        font-size: 15px;
+        cursor: pointer;
+        padding: 10px 25px;
+        color: #fff;
+    }
+
+        .fmenu .btn:hover{
+            background-color: #000;
+            color: #ffffff;
+        }
+
+        .fmenu .btn.active {
+            background-color: #fff;
+            color: #2C2F33;
+        }
+
+    .fmenu table {
+        width: 100%;
+        padding: 0;
+        font-size: 11pt;
+        background: #2c2f337d;
+        border-top: 5px solid #2c2f33;
+        padding: 10px 0;
+    }
+
+        .fmenu table th {
+            font-weight: normal;
+            color: #fff;
+            font-size: 14px;
+        }
+
+    .fmenu .info p {
+        color: #fff;
+        display: inline-block;
+        margin: 15px 5px;
+        font-size: 15px;
+    }
+
+    .fmenu .online {
+        color: #000;
+    }
+
+    .fmenu .offline {
+        color: rgb(241, 28, 28) !important;
+    }
+
+    .fmenu .info span {
+        color: #fff;
+    }
+
+    .fmenu .btn-submit {
+        transition: .6s;
+        border-radius: 5px;
+        margin-top: 15px;
+        box-sizing: border-box;
+        display: inline-block;
+        background-color: #2c2f33;
+        padding: 10px;
+        width: 250px;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .fmenu .btn-submit:hover{
+        background-color: rgb(0, 0, 0);
+    }
+
+    .fmenu input {
+        border-radius: 3px;
+        border: none;
+        padding: 10px;
+        font-size: 14px;
+        margin: 10px;
+        display: inline-block;
+        width: 95%;
+        margin: 15px 7px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        border: none;
+        border-width: 0 !important;
+    }

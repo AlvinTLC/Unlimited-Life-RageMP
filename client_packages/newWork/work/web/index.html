@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+
+        }
+
+        #app{
+            display: flex;
+            flex-flow: row wrap;
+            height: 90vh;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        a{
+            text-decoration: none;
+        }
+        .menu:hover{
+            background: #000;
+            transition: all .3s;
+        }
+        .menu{
+            width: 300px;
+            height: 100px;
+            background: #000000c7;
+            color: #fff;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            display: block;
+            font-size: 20px;
+            font-weight: 900;
+            transition: all .3s;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <a href="#" v-if="!work" @click="startWork"  class="menu">
+        Устроится на работу?
+    </a>
+    <a href="#" v-if="work" @click="endWork" class="menu">
+        Уволится с работы?
+    </a>
+    <a href="#" onmouseenter="mp.trigger('menuHover');" onclick="mp.trigger('menuCancel');" class="menu">
+        Пока!
+    </a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            work: false
+        },
+        methods: {
+            startWork(){
+                this.work = true;
+                mp.trigger('WORK:START');
+            },
+            endWork(){
+                this.work = false;
+                mp.trigger('WORK:END');
+            },
+            test(){
+                alert(this.work);
+            }
+        }
+    })
+</script>
+</body>
+</html>

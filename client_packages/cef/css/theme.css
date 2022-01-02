@@ -1,0 +1,77 @@
+*{
+  user-select: none;
+    -webkit-user-select: none;
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  font-weight: 700;
+  font-style: bold;
+  src: local('Roboto'), url('../fonts/Gilroy-Bold.woff2') format('woff2'), url('../fonts/Gilroy-Bold.woff') format('woff');
+}
+
+body {
+    font-family: 'Gilroy-Bold';
+    user-select: none;
+}
+
+.noty_theme__Unlife.noty_bar { /*Это фон, бакграунд*/
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px 50px 50px 15px;
+  background-color: rgba(0, 0, 0, 0.35);
+  padding-right: 20px;
+  margin-top: 10px;
+}
+  .noty_theme__Unlife.noty_bar .noty_body {
+    margin: 2px;
+  }
+  .noty_theme__Unlife.noty_bar .noty_buttons {
+    padding: 0; 
+  }
+
+.noty_theme__Unlife.noty_type__alert .text i,
+.noty_theme__Unlife.noty_type__notification .text i {
+  color: #fff; }
+
+.noty_theme__Unlife.noty_type__warning .text i {
+  color: #ff6a00; }
+
+.noty_theme__Unlife.noty_type__error .text i {
+  color: #e41005; }
+
+.noty_theme__Unlife.noty_type__info .text i,
+.noty_theme__Unlife.noty_type__information .text i {
+  color: #23d400; }
+
+.noty_theme__Unlife.noty_type__success .text i {
+  color: #26a130; }
+
+.textblok { /*А эта штука невидимая, ну типа блок, а в нем нотифи, тут заяПИСЬКА!*/
+  display: flex;
+  width: auto;
+  align-items: center;
+  height: 100%;
+}  
+
+.textblok .text{ /*Это отвечает за текст*/
+  display: flex;
+  align-items: center;
+  font-size: 10pt;
+  color: #fff;
+}
+
+.textblok .text i{ /*Так, это вроде как за иконки отвечает*/
+  text-align: center;
+  color: #ffbb00;
+}
+
+#noty_layout__mapUp{
+  width: 260px;
+}
+#noty_layout__jobSms{
+  width: auto;
+}
+
+/*top-right-bottom-left*/

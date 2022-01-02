@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/chren.css" />
+</head>
+<body style="user-select: none;">
+    <div id="chren" v-show="show">
+        <div class="head">
+            <div class="help"><div class="btn">L Mauszeiger</div><p>Wette platzieren</p></div>
+            <div class="help"><div class="btn">R Mauszeiger</div><p>Wette entfernen</p></div>
+            <div class="help"><div class="btn">A</div><p>Rate Reduzieren</p></div>
+            <div class="help"><div class="btn">D</div><p>Rate Erhöhen </p></div>
+            <div class="help"><div class="btn">J</div>Kamera</div>
+        </div>
+        <div class="bottom">
+            <div class="betinfo">
+                <div style="padding: 1.3vh;">Mindestsatz: {{minbet}}$<br></div>
+                <div style="padding: 1.2vh;">Maximale Rate {{maxbet}}$<br></div>
+            </div>
+            <div class="bet">
+                <div>Aktueller Kurs: {{bet}}$</div>
+            </div>
+			<div class="balance">
+                <div>Ihr Guthaben: {{balance}}$</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/chren.js" type="text/javascript"></script>
+</body>
+</html>

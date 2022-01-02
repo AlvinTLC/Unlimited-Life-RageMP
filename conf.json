@@ -1,0 +1,12 @@
+{
+	"maxplayers" : 1500,
+	"name" : "UnlimitedLife RP OPEN ALPHA | v.1.1", 
+	"gamemode" : "roleplay", 
+	"stream-distance" : 300.0,
+	"language":"de",
+	"announce" : true,
+	"csharp" : "true",
+	"port": 22006,
+	"voice-chat": true,
+	"api-threading-debugging": false
+}

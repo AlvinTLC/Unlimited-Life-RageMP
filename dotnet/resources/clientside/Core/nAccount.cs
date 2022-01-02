@@ -1,0 +1,332 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using GTANetworkAPI;
+using UNL.SDK;
+using ULife.GUI;
+using System.Threading.Tasks;
+using System.Security.Cryptography;
+using Newtonsoft.Json;
+using MySql.Data.MySqlClient;
+
+namespace ULife.Core.nAccount
+{
+    public class Account : AccountData
+    {
+        private static nLog Log = new nLog("Account");
+
+        public async Task<RegisterEvent> Register(Player Player, string login_, string pass_, string email_, string promo_)
+        {
+            try
+            {
+                if (Main.Accounts.ContainsKey(Player)) Main.Accounts.Remove(Player);
+
+                if (Main.SocialClubs.Contains(Player.SocialClubName) || Main.SocialClubs.Contains(Player.GetData<string>("RealSocialClub"))) return RegisterEvent.SocialReg;
+
+                if (login_.Length < 1 || pass_.Length < 1 || email_.Length < 1) return RegisterEvent.DataError;
+                if (Main.Usernames.Contains(login_)) return RegisterEvent.UserReg;
+
+                if (Main.Emails.ContainsKey(email_)) return RegisterEvent.EmailReg;
+
+                Password = GetSha256(pass_);
+                Login = login_;
+                Email = email_;
+                VipLvl = 0;
+                Whitelist = 0;
+                PromoCodes = new List<string>();
+                promo_ = promo_.ToLower();
+                if (!promo_.Equals("ulife"))
+                {
+                    if (string.IsNullOrEmpty(promo_) || !Main.PromoCodes.ContainsKey(promo_))
+                        promo_ = "noref";
+                    else
+                        await MySQL.QueryAsync($"UPDATE promocodes SET count=count+1 WHERE name='{promo_}'");
+                }
+                PromoCodes.Add(promo_);
+
+                Characters = new List<int>() { -1, -1, -2 }; // -1 - empty slot, -2 - non-purchased slot
+
+                HWID = Player.Serial;
+                if (Player.Address.Equals("80.235.53.64")) IP = "31.13.190.88"; //Сменить!
+                else IP = Player.Address;
+                SocialClub = Player.SocialClubName;
+                await MySQL.QueryAsync($"INSERT INTO `accounts` (`login`,`email`,`password`,`hwid`,`ip`,`socialclub`,`ulife`,`viplvl`,`whitelist`,`vipdate`,`promocodes`,`character1`,`character2`,`character3`) " +
+                    $"VALUES ('{Login}','{Email}','{Password}','{HWID}','{IP}','{SocialClub}',0,{VipLvl},{Whitelist},'{MySQL.ConvertTime(VipDate)}','{JsonConvert.SerializeObject(PromoCodes)}',-1,-1,-2)");
+                Main.SocialClubs.Add(SocialClub);
+                Main.Usernames.Add(Login);
+                Main.Emails.Add(Email, Login);
+                Main.Accounts.Add(Player, this);
+
+                MoneySystem.Donations.newNames.Enqueue(Login);
+                LoadSlots(Player);
+                if (!Main.LoggedIn.ContainsKey(login_)) Main.LoggedIn.Add(login_, Player);
+                return RegisterEvent.Registered;
+            }
+            catch (Exception ex)
+            {
+                await Log.WriteAsync(ex.ToString(), nLog.Type.Error);
+                return RegisterEvent.Error;
+            }
+        }
+        public async Task<LoginEvent> LoginIn(Player Player, string login_, string pass_)
+        {
+            try
+            {
+                // На всякий, ибо говнокод
+                login_ = login_.ToLower();
+
+                pass_ = GetSha256(pass_);
+                DataTable result = await MySQL.QueryReadAsync($"SELECT * FROM `accounts` WHERE `login`='{login_}' AND password='{pass_}'");
+                //Если база не вернула таблицу, то отправляем сброс
+                if (result == null || result.Rows.Count == 0) return LoginEvent.Refused;
+                //Иначе, парсим строку
+                DataRow row = result.Rows[0];
+                //Далее делаем разбор и оперируем данными
+                Login = Convert.ToString(row["login"]);
+                Email = Convert.ToString(row["email"]);
+                Password = pass_;
+                //Служебные данные
+                HWID = Player.GetData<string>("RealHWID");
+                if (Player.Address.Equals("80.235.53.64")) IP = "31.13.190.88";
+                else IP = Player.Address;
+                SocialClub = row["socialclub"].ToString();
+                if (Main.SCCheck)
+                {
+                    if (SocialClub != Player.GetData<string>("RealSocialClub")) return LoginEvent.SclubError;
+                }
+
+                ulife = Convert.ToInt32(row["ulife"]);
+                VipLvl = Convert.ToInt32(row["viplvl"]);
+                VipDate = (DateTime)row["vipdate"];
+                Whitelist = Convert.ToInt32(row["whitelist"]);
+                if (Main.WLCheck)
+                {
+                    if (Whitelist != 1) return LoginEvent.WlError;
+                }
+
+                PromoCodes = JsonConvert.DeserializeObject<List<string>>(row["promocodes"].ToString());
+                var char1 = Convert.ToInt32(row["character1"]);
+                var char2 = Convert.ToInt32(row["character2"]);
+                var char3 = Convert.ToInt32(row["character3"]);
+                Characters = new List<int>() { char1, char2, char3 };
+
+                PresentGet = Convert.ToBoolean(row["present"]);
+
+                if (Main.LoggedIn.ContainsKey(login_)) return LoginEvent.Already;
+                Main.LoggedIn.Add(login_, Player);
+
+                Main.Accounts.Add(Player, this);
+
+                return LoginEvent.Authorized;
+            }
+            catch (Exception ex)
+            {
+                await Log.WriteAsync(ex.ToString(), nLog.Type.Error);
+                return LoginEvent.Error;
+            }
+        }
+        public async Task<bool> Save(Player player)
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = "UPDATE `accounts` SET `password`=@pass,`email`=@email,`socialclub`=@sc,`ulife`=@lcsh,`viplvl`=@vipl,`whitelist`=@whitel,`hwid`=@hwid,`ip`=@ip," +
+                    "`vipdate`=@vipd,`character1`=@charf,`character2`=@charn,`character3`=@charm,`present`=@pres WHERE `login`=@login";
+                cmd.Parameters.AddWithValue("@pass", Password);
+                cmd.Parameters.AddWithValue("@email", Email);
+                cmd.Parameters.AddWithValue("@sc", SocialClub);
+                cmd.Parameters.AddWithValue("@lcsh", ulife);
+                cmd.Parameters.AddWithValue("@vipl", VipLvl);
+                cmd.Parameters.AddWithValue("@whitel", Whitelist);
+                cmd.Parameters.AddWithValue("@hwid", HWID);
+                cmd.Parameters.AddWithValue("@ip", IP);
+                cmd.Parameters.AddWithValue("@vipd", MySQL.ConvertTime(VipDate));
+                cmd.Parameters.AddWithValue("@charf", Characters[0]);
+                cmd.Parameters.AddWithValue("@charn", Characters[1]);
+                cmd.Parameters.AddWithValue("@charm", Characters[2]);
+                cmd.Parameters.AddWithValue("@pres", PresentGet);
+                cmd.Parameters.AddWithValue("@login", Login);
+                await MySQL.QueryAsync(cmd);
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                Log.Write("EXCEPTION AT \"Save\":\n" + e.ToString(), nLog.Type.Error);
+                return false;
+            }
+        }
+        public void LoadSlots(Player player)
+        {
+            try
+            {
+                List<object> data = new List<object>();
+                foreach (int uuid in Characters)
+                {
+                    if (uuid > -1)
+                    {
+                        List<object> subData = new List<object>();
+
+                        var ban = Ban.Get2(uuid);
+                        if (ban != null && ban.CheckDate())
+                        {
+                            subData.Add("ban");
+                            subData.Add(ban.Reason);
+                            subData.Add(ban.ByAdmin);
+                            subData.Add($"{ban.Time.ToShortDateString()} {ban.Time.ToShortTimeString()}");
+                            subData.Add($"{ban.Until.ToShortDateString()} {ban.Until.ToShortTimeString()}");
+                        }
+                        else
+                        {
+                            if (Main.PlayerNames.ContainsKey(uuid) && Main.PlayerSlotsInfo.ContainsKey(uuid))
+                            {
+                                string name = Main.PlayerNames[uuid];
+                                string[] split = name.Split('_');
+                                Tuple<int, int, int, long> tuple = Main.PlayerSlotsInfo[uuid];
+
+                                subData.Add(split[0]);
+                                subData.Add(split[1]);
+                                subData.Add(tuple.Item1);
+                                subData.Add(tuple.Item2);
+                                subData.Add(Fractions.Manager.FractionNames[tuple.Item3]);
+                                subData.Add(tuple.Item4);
+                                if (Main.PlayerBankAccs.ContainsKey(name)) subData.Add(MoneySystem.Bank.Get(Main.PlayerBankAccs[name]).Balance);
+                                else subData.Add("ERROR");
+                            }
+                            else
+                            {
+                                if (Main.LoggedIn.ContainsKey(Login)) Main.LoggedIn.Remove(Login);
+                                Notify.Send(player, NotifyType.Error, NotifyPosition.MapUp, $"Autorisierungsfehler, technischen Support kontaktieren", 5000);
+                                return;
+                            }
+                        }
+                        data.Add(subData);
+                    }
+                    else data.Add(uuid);
+                }
+                data.Add(ulife);
+                data.Add(Login);
+                Trigger.ClientEvent(player, "toslots", JsonConvert.SerializeObject(data));
+            }
+            catch (Exception e)
+            {
+                if (Main.LoggedIn.ContainsKey(Login)) Main.LoggedIn.Remove(Login);
+                Notify.Send(player, NotifyType.Error, NotifyPosition.MapUp, "Autorisierungsfehler, technischen Support kontaktieren", 5000);
+                Log.Write("EXCEPTION AT \"LoadSlots\":\n" + e.ToString(), nLog.Type.Error);
+                return;
+            }
+        }
+        public async Task CreateCharacter(Player player, int slot, string firstName, string lastName)
+        {
+            if (Characters[slot - 1] != -1) return;
+            var character = new Character.Character();
+            var result = await character.Create(player, firstName, lastName);
+            if (result == -1) return;
+
+            Characters[slot - 1] = result;
+            await MySQL.QueryAsync($"UPDATE `accounts` SET `character{slot}`={result} WHERE `login`='{Login}'");
+
+            Main.Players[player].Spawn(player);
+        }
+        public async Task DeleteCharacter(Player player, int slot, string firstName_, string lastName_, string password_)
+        {
+            if (Characters[slot - 1] == -1 || Characters[slot - 1] == -2) return;
+
+            var result = await MySQL.QueryReadAsync($"SELECT `firstname`,`lastname`,`biz`,`sim`,`bank` FROM `characters` WHERE uuid={Characters[slot - 1]}");
+            if (result == null || result.Rows.Count == 0) return;
+            Ban ban = Ban.Get2(Characters[slot - 1]);
+            if (ban != null && ban.CheckDate())
+            {
+                Notify.Send(player, NotifyType.Error, NotifyPosition.MapUp, "Es ist nicht möglich, einen Charakter zu löschen, der sich in einem Bann befindet.", 3000);
+                return;
+            }
+            var row = result.Rows[0];
+            var firstName = row["firstname"].ToString();
+            var lastName = row["lastname"].ToString();
+            var biz = JsonConvert.DeserializeObject<List<int>>(row["biz"].ToString());
+            var sim = Convert.ToInt32(row["sim"]);
+            var bank = Convert.ToInt32(row["bank"]);
+            var uuid = Characters[slot - 1];
+
+            if (firstName != firstName_ || lastName != lastName_)
+            {
+                Notify.Send(player, NotifyType.Error, NotifyPosition.MapUp, "Vor- und Nachname stimmen nicht mit dem Steckplatz überein", 3000);
+                return;
+            }
+
+            password_ = GetSha256(password_);
+            if (Password != password_)
+            {
+                Notify.Send(player, NotifyType.Error, NotifyPosition.MapUp, "Falsches Konto-Passwort", 3000);
+                return;
+            }
+
+            foreach (var b in biz)
+                BusinessManager.changeOwner($"{firstName}_{lastName}", "Zustand");
+
+            await MySQL.QueryAsync("DELETE FROM `customization` WHERE uuid=" + uuid);
+
+            nInventory.Items.Remove(uuid);
+            await MySQL.QueryAsync("DELETE FROM `inventory` WHERE uuid=" + uuid);
+
+            MoneySystem.Bank.Remove(bank, $"{firstName}_{lastName}");
+
+            var vehicles = VehicleManager.getAllPlayerVehicles($"{firstName}_{lastName}");
+            foreach (var v in vehicles)
+                VehicleManager.Remove(v);
+
+            await MySQL.QueryAsync("DELETE FROM `characters` WHERE uuid=" + uuid);
+
+            Main.UUIDs.Remove(uuid);
+            Main.PlayerNames.Remove(uuid);
+            Main.PlayerUUIDs.Remove($"{firstName}_{lastName}");
+            Main.PlayerBankAccs.Remove($"{firstName}_{lastName}");
+            Main.SimCards.Remove(sim);
+            Main.PlayerSlotsInfo.Remove(uuid);
+            Customization.CustomPlayerData.Remove(uuid);
+
+            Characters[slot - 1] = -1;
+            await MySQL.QueryAsync($"UPDATE accounts SET character{slot}=-1 WHERE login='{Login}'");
+
+            GameLog.CharacterDelete($"{firstName}_{lastName}", uuid, Login);
+
+            Notify.Send(player, NotifyType.Success, NotifyPosition.MapUp, $"Den Charakter {firstName} {lastName} erfolgreich gelöscht", 3000);
+            NAPI.Task.Run(() => Trigger.ClientEvent(player, "delCharSuccess", slot));
+        }
+        public void changePassword(string newPass)
+        {
+            Password = GetSha256(newPass);
+        }
+        public static string GetSha256(string strData)
+        {
+            var message = Encoding.ASCII.GetBytes(strData);
+            var hashString = new SHA256Managed();
+            var hex = "";
+
+            var hashValue = hashString.ComputeHash(message);
+            foreach (var x in hashValue)
+                hex += string.Format("{0:x2}", x);
+            return hex;
+        }
+    }
+
+    public enum LoginEvent
+    {
+        Already,
+        Authorized,
+        Refused,
+        SclubError,
+        WlError,
+        Error
+    }
+    public enum RegisterEvent
+    {
+        Registered,
+        SocialReg,
+        UserReg,
+        EmailReg,
+        DataError,
+        Error
+    }
+}

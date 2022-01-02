@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		
+        <script src="assets/js/jquery-3.2.1.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <style>
+
+            
+		::-webkit-scrollbar-track {
+		  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+		  border: 1px solid black;
+		  background-color: #cccccc;
+		}
+
+		::-webkit-scrollbar {
+		  width: 12px;
+		  background-color: #f5f5f5;
+		}
+
+
+		::-webkit-scrollbar-thumb {
+		  border-radius: 10px;
+		  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+		  background-color: #28A745;
+		}
+		.vertical-align {
+			display: flex;
+			align-items: center;
+
+		}
+
+		.container {
+			opacity: 0.90;
+		  -webkit-animation-name: appear; 
+		  -webkit-animation-duration: 4s;
+		  animation-name: appear;
+		  animation-duration: 4s;
+			
+		}
+		
+
+		@keyframes appear {
+		  from {opacity: 0.00;}
+		  to {opacity: 0.90;}
+		}
+		</style>
+    </head>
+    <body>
+        <div class="container" style="opacity:0.90; padding-left: 50%;">
+            <div  id="chat" class="card " style="margin-left: 0px; width: 400px ">
+				
+                <div   class="card-body" style="background: linear-gradient(to right, #28282A, #424242);  border-color: #000; padding: 0px;">
+                    <div  class="container-fluid" onload="getAniNames()" style=" ">
+                            
+
+							<center><h1 style="padding-top: 15px">Animationswechsler</h1></center>
+                        <div class="row d-flex justify-content-center" style="" >
+								
+                            
+                                <div class="row-ld-12 d-flex justify-content-center" style="color: #fff; text-align: center; margin:0px 15px 0px 15px;" >
+									
+                                    <div class="col-ld-4" style="padding: 5px 15px 5px 15px; " >
+                                        <div class="row d-flex justify-content-center" >
+										<div class="dropdown" style="margin: 1px; background-color: darkgreen">
+										   <h4 style="">Numpad7:</h4>
+											<span style="font-size: 0.65em;" id="anislotname7">lade...</span>
+                                          <button id="anislot7" class="btn btn-block btn-info dropbtn ">lade...</button>
+                                          <div class="dropdown-content" style="text-align: left;">
+											  	<a class='anilink' href="#" onclick="setAni(7,1,(this.innerHTML))">Sitzen (M&auml;nnl.)</a>
+												<a class='anilink' href="#" onclick="setAni(7,2,(this.innerHTML))">Sitzen (Weibl.)</a>
+												<a class='anilink' href="#" onclick="setAni(7,3,(this.innerHTML))">Sitzen (Stuhl)</a>
+												<a class='anilink' href="#" onclick="setAni(7,4,(this.innerHTML))">Sitzen (Stuhl) 2</a>
+												<a class='anilink' href="#" onclick="setAni(7,5,(this.innerHTML))">Sitzen (Stuhl Weibl.)</a> 
+												<a class='anilink' href="#" onclick="setAni(7,6,(this.innerHTML))">Weinerlich Sitzen</a>    
+												<a class='anilink' href="#" onclick="setAni(7,7,(this.innerHTML))">Auf dem R&uuml;cken liegen</a>  
+												<a class='anilink' href="#" onclick="setAni(7,8,(this.innerHTML))">Auf dem Bauch liegen (Weibl.)</a> 
+												<a class='anilink' href="#" onclick="setAni(7,9,(this.innerHTML))">Auf dem Bauch liegen (M&auml;nnl.)</a>  
+												<a class='anilink' href="#" onclick="setAni(7,10,(this.innerHTML))">Seitlich liegen</a>
+												<a class='anilink' href="#" onclick="setAni(7,11,(this.innerHTML))">Betrunken liegen</a>
+												<a class='anilink' href="#" onclick="setAni(7,12,(this.innerHTML))">Liegen (Ohnmacht)</a>
+												<a class='anilink' href="#" onclick="setAni(7,13,(this.innerHTML))">Schlafen</a>
+												<a class='anilink' href="#" onclick="setAni(7,14,(this.innerHTML))">Arme Verschr&auml;nken (M&auml;nnl.)</a>
+												<a class='anilink' href="#" onclick="setAni(7,15,(this.innerHTML))">Arme Verschr&auml;nken (Weibl.)</a>
+												<a class='anilink' href="#" onclick="setAni(7,16,(this.innerHTML))">Security</a>
+												<a class='anilink' href="#" onclick="setAni(7,17,(this.innerHTML))">Anlehnen</a>
+												<a class='anilink' href="#" onclick="setAni(7,18,(this.innerHTML))">Anlehnen 2</a>
+												<a class='anilink' href="#" onclick="setAni(7,19,(this.innerHTML))">Arrogant</a>
+												<a class='anilink' href="#" onclick="setAni(7,20,(this.innerHTML))">Eingebildet</a>
+												<a class='anilink' href="#" onclick="setAni(7,21,(this.innerHTML))">Depressiv</a>
+												<a class='anilink' href="#" onclick="setAni(7,22,(this.innerHTML))">Salutieren</a>
+												<a class='anilink' href="#" onclick="setAni(7,23,(this.innerHTML))">Knien</a>
+												<a class='anilink' href="#" onclick="setAni(7,24,(this.innerHTML))">Auf die Knie</a>
+												<a class='anilink' href="#" onclick="setAni(7,25,(this.innerHTML))">Auf die Knie 2</a>
+												<a class='anilink' href="#" onclick="setAni(7,26,(this.innerHTML))">Verzweifelt Knien</a>
+												<a class='anilink' href="#" onclick="setAni(7,27,(this.innerHTML))">Gangzeichen 1</a>
+												<a class='anilink' href="#" onclick="setAni(7,28,(this.innerHTML))">Gangzeichen 2</a>
+												<a class='anilink' href="#" onclick="setAni(7,29,(this.innerHTML))">Strip 1</a>
+												<a class='anilink' href="#" onclick="setAni(7,30,(this.innerHTML))">Strip 2</a>
+												<a class='anilink' href="#" onclick="setAni(7,31,(this.innerHTML))">Strip 3</a>
+												<a class='anilink' href="#" onclick="setAni(7,32,(this.innerHTML))">Strip 4</a>
+												<a class='anilink' href="#" onclick="setAni(7,33,(this.innerHTML))">Strip 5</a>
+												<a class='anilink' href="#" onclick="setAni(7,34,(this.innerHTML))">Strip 6</a>
+												<a class='anilink' href="#" onclick="setAni(7,35,(this.innerHTML))">Ghetto</a>
+												<a class='anilink' href="#" onclick="setAni(7,36,(this.innerHTML))">Tao 1</a>
+												<a class='anilink' href="#" onclick="setAni(7,37,(this.innerHTML))">Tao 2</a>
+												<a class='anilink' href="#" onclick="setAni(7,38,(this.innerHTML))">Stepptanz 1</a>
+												<a class='anilink' href="#" onclick="setAni(7,39,(this.innerHTML))">Po wackeln</a>
+												<a class='anilink' href="#" onclick="setAni(7,40,(this.innerHTML))">Po wackeln 2</a>
+												<a class='anilink' href="#" onclick="setAni(7,41,(this.innerHTML))">Zumba 1</a>
+												<a class='anilink' href="#" onclick="setAni(7,42,(this.innerHTML))">Zumba 2</a>
+												<a class='anilink' href="#" onclick="setAni(7,43,(this.innerHTML))">Zumba 3</a>
+												<a class='anilink' href="#" onclick="setAni(7,44,(this.innerHTML))">Zumba 4</a>
+												<a class='anilink' href="#" onclick="setAni(7,45,(this.innerHTML))">Zumba 5</a>
+												<a class='anilink' href="#" onclick="setAni(7,46,(this.innerHTML))">Geiles lied</a>
+												<a class='anilink' href="#" onclick="setAni(7,47,(this.innerHTML))">Feminines Tanzen</a>
+												<a class='anilink' href="#" onclick="setAni(7,48,(this.innerHTML))">Tanzfaul</a>
+												<a class='anilink' href="#" onclick="setAni(7,49,(this.innerHTML))">Luftgitarre</a>
+												<a class='anilink' href="#" onclick="setAni(7,50,(this.innerHTML))">Banging Tunes</a>
+												<a class='anilink' href="#" onclick="setAni(7,51,(this.innerHTML))">Onkel Disco</a>
+												<a class='anilink' href="#" onclick="setAni(7,52,(this.innerHTML))">Der Fisch</a>
+												<a class='anilink' href="#" onclick="setAni(7,53,(this.innerHTML))">Herzrasen</a>
+												<a class='anilink' href="#" onclick="setAni(7,54,(this.innerHTML))">Snap</a>
+												<a class='anilink' href="#" onclick="setAni(7,55,(this.innerHTML))">Raise</a>
+												<a class='anilink' href="#" onclick="setAni(7,56,(this.innerHTML))">Salsa</a>
+												<a class='anilink' href="#" onclick="setAni(7,57,(this.innerHTML))">Cats Cradle</a>
+												<a class='anilink' href="#" onclick="setAni(7,58,(this.innerHTML))">Yoga 1</a>
+												<a class='anilink' href="#" onclick="setAni(7,59,(this.innerHTML))">Yoga 2</a>
+												<a class='anilink' href="#" onclick="setAni(7,60,(this.innerHTML))">Yoga 3</a>
+												<a class='anilink' href="#" onclick="setAni(7,61,(this.innerHTML))">Yoga 4</a>
+												<a class='anilink' href="#" onclick="setAni(7,62,(this.innerHTML))">Yoga 5</a>
+												<a class='anilink' href="#" onclick="setAni(7,63,(this.innerHTML))">Liegest&uuml;tze 1</a>
+												<a class='anilink' href="#" onclick="setAni(7,64,(this.innerHTML))">Liegest&uuml;tze 2</a>
+												<a class='anilink' href="#" onclick="setAni(7,65,(this.innerHTML))">Situps</a>
+												<a class='anilink' href="#" onclick="setAni(7,66,(this.innerHTML))">Flex</a>
+												<a class='anilink' href="#" onclick="setAni(7,67,(this.innerHTML))">Flex 2</a>
+												<a class='anilink' href="#" onclick="setAni(7,68,(this.innerHTML))">Begutachten</a>
+												<a class='anilink' href="#" onclick="setAni(7,69,(this.innerHTML))">Reparieren</a>
+												<a class='anilink' href="#" onclick="setAni(7,70,(this.innerHTML))">Putzen</a>
+												<a class='anilink' href="#" onclick="setAni(7,71,(this.innerHTML))">Pfeifen</a>
+												<a class='anilink' href="#" onclick="setAni(7,72,(this.innerHTML))">Ironisches Klatschen</a>
+												<a class='anilink' href="#" onclick="setAni(7,73,(this.innerHTML))">Peace</a>
+												<a class='anilink' href="#" onclick="setAni(7,74,(this.innerHTML))">2 Bier</a>
+												<a class='anilink' href="#" onclick="setAni(7,75,(this.innerHTML))">Double Peace</a>
+												<a class='anilink' href="#" onclick="setAni(7,76,(this.innerHTML))">Luftk&uuml;ssen</a>
+												<a class='anilink' href="#" onclick="setAni(7,77,(this.innerHTML))">Fuck you</a>
+												<a class='anilink' href="#" onclick="setAni(7,78,(this.innerHTML))">Daumen hoch</a>
+												<a class='anilink' href="#" onclick="setAni(7,79,(this.innerHTML))">Winken</a>
+												<a class='anilink' href="#" onclick="setAni(7,80,(this.innerHTML))">Facepalm</a>
+												<a class='anilink' href="#" onclick="setAni(7,81,(this.innerHTML))">Ausrasten</a>
+												<a class='anilink' href="#" onclick="setAni(7,82,(this.innerHTML))">Pinkeln</a>
+												<a class='anilink' href="#" onclick="setAni(7,83,(this.innerHTML))">Notieren</a>
+
+                                             
+                                          </div>
+                                        </div>	
+										</div>
+                                        
+                                    </div>
+                                    <div class="col-ld-4" style="padding: 5px 15px 5px 15px;" >
+										<div class="row d-flex justify-content-center" >
+										<div class="dropdown" style="margin: 1px; background-color: darkgreen">
+										   <h4 style="">Numpad8:</h4><span style="font-size: 0.65em" id="anislotname8">lade...</span>
+                                          <button  id="anislot8"  class="btn btn-block btn-info dropbtn " >lade...</button>
+                                          <div class="dropdown-content" style="text-align: left;">
+											  	<a  href="#" onclick="setAni(8,1,(this.innerHTML))">Sitzen (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(8,2,(this.innerHTML))">Sitzen (Weibl.)</a>
+												<a  href="#" onclick="setAni(8,3,(this.innerHTML))">Sitzen (Stuhl)</a>
+												<a  href="#" onclick="setAni(8,4,(this.innerHTML))">Sitzen (Stuhl) 2</a>
+												<a  href="#" onclick="setAni(8,5,(this.innerHTML))">Sitzen (Stuhl Weibl.)</a> 
+												<a  href="#" onclick="setAni(8,6,(this.innerHTML))">Weinerlich Sitzen</a>    
+												<a  href="#" onclick="setAni(8,7,(this.innerHTML))">Auf dem R&uuml;cken liegen</a>  
+												<a  href="#" onclick="setAni(8,8,(this.innerHTML))">Auf dem Bauch liegen (Weibl.)</a> 
+												<a  href="#" onclick="setAni(8,9,(this.innerHTML))">Auf dem Bauch liegen (M&auml;nnl.)</a>  
+												<a  href="#" onclick="setAni(8,10,(this.innerHTML))">Seitlich liegen</a>
+												<a  href="#" onclick="setAni(8,11,(this.innerHTML))">Betrunken liegen</a>
+												<a  href="#" onclick="setAni(8,12,(this.innerHTML))">Liegen (Ohnmacht)</a>
+												<a  href="#" onclick="setAni(8,13,(this.innerHTML))">Schlafen</a>
+												<a  href="#" onclick="setAni(8,14,(this.innerHTML))">Arme Verschr&auml;nken (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(8,15,(this.innerHTML))">Arme Verschr&auml;nken (Weibl.)</a>
+												<a  href="#" onclick="setAni(8,16,(this.innerHTML))">Security</a>
+												<a  href="#" onclick="setAni(8,17,(this.innerHTML))">Anlehnen</a>
+												<a  href="#" onclick="setAni(8,18,(this.innerHTML))">Anlehnen 2</a>
+												<a  href="#" onclick="setAni(8,19,(this.innerHTML))">Arrogant</a>
+												<a  href="#" onclick="setAni(8,20,(this.innerHTML))">Eingebildet</a>
+												<a  href="#" onclick="setAni(8,21,(this.innerHTML))">Depressiv</a>
+												<a  href="#" onclick="setAni(8,22,(this.innerHTML))">Salutieren</a>
+												<a  href="#" onclick="setAni(8,23,(this.innerHTML))">Knien</a>
+												<a  href="#" onclick="setAni(8,24,(this.innerHTML))">Auf die Knie</a>
+												<a  href="#" onclick="setAni(8,25,(this.innerHTML))">Auf die Knie 2</a>
+												<a  href="#" onclick="setAni(8,26,(this.innerHTML))">Verzweifelt Knien</a>
+												<a  href="#" onclick="setAni(8,27,(this.innerHTML))">Gangzeichen 1</a>
+												<a  href="#" onclick="setAni(8,28,(this.innerHTML))">Gangzeichen 2</a>
+												<a  href="#" onclick="setAni(8,29,(this.innerHTML))">Strip 1</a>
+												<a  href="#" onclick="setAni(8,30,(this.innerHTML))">Strip 2</a>
+												<a  href="#" onclick="setAni(8,31,(this.innerHTML))">Strip 3</a>
+												<a  href="#" onclick="setAni(8,32,(this.innerHTML))">Strip 4</a>
+												<a  href="#" onclick="setAni(8,33,(this.innerHTML))">Strip 5</a>
+												<a  href="#" onclick="setAni(8,34,(this.innerHTML))">Strip 6</a>
+												<a  href="#" onclick="setAni(8,35,(this.innerHTML))">Ghetto</a>
+												<a  href="#" onclick="setAni(8,36,(this.innerHTML))">Tao 1</a>
+												<a  href="#" onclick="setAni(8,37,(this.innerHTML))">Tao 2</a>
+												<a  href="#" onclick="setAni(8,38,(this.innerHTML))">Stepptanz 1</a>
+												<a  href="#" onclick="setAni(8,39,(this.innerHTML))">Po wackeln</a>
+												<a  href="#" onclick="setAni(8,40,(this.innerHTML))">Po wackeln 2</a>
+												<a  href="#" onclick="setAni(8,41,(this.innerHTML))">Zumba 1</a>
+												<a  href="#" onclick="setAni(8,42,(this.innerHTML))">Zumba 2</a>
+												<a  href="#" onclick="setAni(8,43,(this.innerHTML))">Zumba 3</a>
+												<a  href="#" onclick="setAni(8,44,(this.innerHTML))">Zumba 4</a>
+												<a  href="#" onclick="setAni(8,45,(this.innerHTML))">Zumba 5</a>
+												<a  href="#" onclick="setAni(8,46,(this.innerHTML))">Geiles lied</a>
+												<a  href="#" onclick="setAni(8,47,(this.innerHTML))">Feminines Tanzen</a>
+												<a  href="#" onclick="setAni(8,48,(this.innerHTML))">Tanzfaul</a>
+												<a  href="#" onclick="setAni(8,49,(this.innerHTML))">Luftgitarre</a>
+												<a  href="#" onclick="setAni(8,50,(this.innerHTML))">Banging Tunes</a>
+												<a  href="#" onclick="setAni(8,51,(this.innerHTML))">Onkel Disco</a>
+												<a  href="#" onclick="setAni(8,52,(this.innerHTML))">Der Fisch</a>
+												<a  href="#" onclick="setAni(8,53,(this.innerHTML))">Herzrasen</a>
+												<a  href="#" onclick="setAni(8,54,(this.innerHTML))">Snap</a>
+												<a  href="#" onclick="setAni(8,55,(this.innerHTML))">Raise</a>
+												<a  href="#" onclick="setAni(8,56,(this.innerHTML))">Salsa</a>
+												<a  href="#" onclick="setAni(8,57,(this.innerHTML))">Cats Cradle</a>
+												<a  href="#" onclick="setAni(8,58,(this.innerHTML))">Yoga 1</a>
+												<a  href="#" onclick="setAni(8,59,(this.innerHTML))">Yoga 2</a>
+												<a  href="#" onclick="setAni(8,60,(this.innerHTML))">Yoga 3</a>
+												<a  href="#" onclick="setAni(8,61,(this.innerHTML))">Yoga 4</a>
+												<a  href="#" onclick="setAni(8,62,(this.innerHTML))">Yoga 5</a>
+												<a  href="#" onclick="setAni(8,63,(this.innerHTML))">Liegest&uuml;tze 1</a>
+												<a  href="#" onclick="setAni(8,64,(this.innerHTML))">Liegest&uuml;tze 2</a>
+												<a  href="#" onclick="setAni(8,65,(this.innerHTML))">Situps</a>
+												<a  href="#" onclick="setAni(8,66,(this.innerHTML))">Flex</a>
+												<a  href="#" onclick="setAni(8,67,(this.innerHTML))">Flex 2</a>
+												<a  href="#" onclick="setAni(8,68,(this.innerHTML))">Begutachten</a>
+												<a  href="#" onclick="setAni(8,69,(this.innerHTML))">Reparieren</a>
+												<a  href="#" onclick="setAni(8,70,(this.innerHTML))">Putzen</a>
+												<a  href="#" onclick="setAni(8,71,(this.innerHTML))">Pfeifen</a>
+												<a  href="#" onclick="setAni(8,72,(this.innerHTML))">Ironisches Klatschen</a>
+												<a  href="#" onclick="setAni(8,73,(this.innerHTML))">Peace</a>
+												<a  href="#" onclick="setAni(8,74,(this.innerHTML))">2 Bier</a>
+												<a  href="#" onclick="setAni(8,75,(this.innerHTML))">Double Peace</a>
+												<a  href="#" onclick="setAni(8,76,(this.innerHTML))">Luftk&uuml;ssen</a>
+												<a  href="#" onclick="setAni(8,77,(this.innerHTML))">Fuck you</a>
+												<a  href="#" onclick="setAni(8,78,(this.innerHTML))">Daumen hoch</a>
+												<a  href="#" onclick="setAni(8,79,(this.innerHTML))">Winken</a>
+												<a  href="#" onclick="setAni(8,80,(this.innerHTML))">Facepalm</a>
+												<a  href="#" onclick="setAni(8,81,(this.innerHTML))">Ausrasten</a>
+												<a  href="#" onclick="setAni(8,82,(this.innerHTML))">Pinkeln</a>
+												<a  href="#" onclick="setAni(8,83,(this.innerHTML))">Notieren</a>
+
+                                             
+                                          </div>
+                                        </div>	
+										</div>
+                                    </div>
+                                    <div class="col-ld-4" style="padding: 5px 15px 5px 15px;">
+										<div class="row d-flex justify-content-center" >
+										<div class="dropdown" style="margin: 1px; background-color: darkgreen">
+										   <h4 style="">Numpad9:</h4><span style="font-size: 0.65em" id="anislotname9">lade...</span>
+                                          <button  id="anislot9"  class="btn btn-block btn-info dropbtn " >lade...</button>
+                                          <div class="dropdown-content" style="text-align: left;">
+											  	<a  href="#" onclick="setAni(9,1,(this.innerHTML))">Sitzen (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(9,2,(this.innerHTML))">Sitzen (Weibl.)</a>
+												<a  href="#" onclick="setAni(9,3,(this.innerHTML))">Sitzen (Stuhl)</a>
+												<a  href="#" onclick="setAni(9,4,(this.innerHTML))">Sitzen (Stuhl) 2</a>
+												<a  href="#" onclick="setAni(9,5,(this.innerHTML))">Sitzen (Stuhl Weibl.)</a> 
+												<a  href="#" onclick="setAni(9,6,(this.innerHTML))">Weinerlich Sitzen</a>    
+												<a  href="#" onclick="setAni(9,7,(this.innerHTML))">Auf dem R&uuml;cken liegen</a>  
+												<a  href="#" onclick="setAni(9,8,(this.innerHTML))">Auf dem Bauch liegen (Weibl.)</a> 
+												<a  href="#" onclick="setAni(9,9,(this.innerHTML))">Auf dem Bauch liegen (M&auml;nnl.)</a>  
+												<a  href="#" onclick="setAni(9,10,(this.innerHTML))">Seitlich liegen</a>
+												<a  href="#" onclick="setAni(9,11,(this.innerHTML))">Betrunken liegen</a>
+												<a  href="#" onclick="setAni(9,12,(this.innerHTML))">Liegen (Ohnmacht)</a>
+												<a  href="#" onclick="setAni(9,13,(this.innerHTML))">Schlafen</a>
+												<a  href="#" onclick="setAni(9,14,(this.innerHTML))">Arme Verschr&auml;nken (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(9,15,(this.innerHTML))">Arme Verschr&auml;nken (Weibl.)</a>
+												<a  href="#" onclick="setAni(9,16,(this.innerHTML))">Security</a>
+												<a  href="#" onclick="setAni(9,17,(this.innerHTML))">Anlehnen</a>
+												<a  href="#" onclick="setAni(9,18,(this.innerHTML))">Anlehnen 2</a>
+												<a  href="#" onclick="setAni(9,19,(this.innerHTML))">Arrogant</a>
+												<a  href="#" onclick="setAni(9,20,(this.innerHTML))">Eingebildet</a>
+												<a  href="#" onclick="setAni(9,21,(this.innerHTML))">Depressiv</a>
+												<a  href="#" onclick="setAni(9,22,(this.innerHTML))">Salutieren</a>
+												<a  href="#" onclick="setAni(9,23,(this.innerHTML))">Knien</a>
+												<a  href="#" onclick="setAni(9,24,(this.innerHTML))">Auf die Knie</a>
+												<a  href="#" onclick="setAni(9,25,(this.innerHTML))">Auf die Knie 2</a>
+												<a  href="#" onclick="setAni(9,26,(this.innerHTML))">Verzweifelt Knien</a>
+												<a  href="#" onclick="setAni(9,27,(this.innerHTML))">Gangzeichen 1</a>
+												<a  href="#" onclick="setAni(9,28,(this.innerHTML))">Gangzeichen 2</a>
+												<a  href="#" onclick="setAni(9,29,(this.innerHTML))">Strip 1</a>
+												<a  href="#" onclick="setAni(9,30,(this.innerHTML))">Strip 2</a>
+												<a  href="#" onclick="setAni(9,31,(this.innerHTML))">Strip 3</a>
+												<a  href="#" onclick="setAni(9,32,(this.innerHTML))">Strip 4</a>
+												<a  href="#" onclick="setAni(9,33,(this.innerHTML))">Strip 5</a>
+												<a  href="#" onclick="setAni(9,34,(this.innerHTML))">Strip 6</a>
+												<a  href="#" onclick="setAni(9,35,(this.innerHTML))">Ghetto</a>
+												<a  href="#" onclick="setAni(9,36,(this.innerHTML))">Tao 1</a>
+												<a  href="#" onclick="setAni(9,37,(this.innerHTML))">Tao 2</a>
+												<a  href="#" onclick="setAni(9,38,(this.innerHTML))">Stepptanz 1</a>
+												<a  href="#" onclick="setAni(9,39,(this.innerHTML))">Po wackeln</a>
+												<a  href="#" onclick="setAni(9,40,(this.innerHTML))">Po wackeln 2</a>
+												<a  href="#" onclick="setAni(9,41,(this.innerHTML))">Zumba 1</a>
+												<a  href="#" onclick="setAni(9,42,(this.innerHTML))">Zumba 2</a>
+												<a  href="#" onclick="setAni(9,43,(this.innerHTML))">Zumba 3</a>
+												<a  href="#" onclick="setAni(9,44,(this.innerHTML))">Zumba 4</a>
+												<a  href="#" onclick="setAni(9,45,(this.innerHTML))">Zumba 5</a>
+												<a  href="#" onclick="setAni(9,46,(this.innerHTML))">Geiles lied</a>
+												<a  href="#" onclick="setAni(9,47,(this.innerHTML))">Feminines Tanzen</a>
+												<a  href="#" onclick="setAni(9,48,(this.innerHTML))">Tanzfaul</a>
+												<a  href="#" onclick="setAni(9,49,(this.innerHTML))">Luftgitarre</a>
+												<a  href="#" onclick="setAni(9,50,(this.innerHTML))">Banging Tunes</a>
+												<a  href="#" onclick="setAni(9,51,(this.innerHTML))">Onkel Disco</a>
+												<a  href="#" onclick="setAni(9,52,(this.innerHTML))">Der Fisch</a>
+												<a  href="#" onclick="setAni(9,53,(this.innerHTML))">Herzrasen</a>
+												<a  href="#" onclick="setAni(9,54,(this.innerHTML))">Snap</a>
+												<a  href="#" onclick="setAni(9,55,(this.innerHTML))">Raise</a>
+												<a  href="#" onclick="setAni(9,56,(this.innerHTML))">Salsa</a>
+												<a  href="#" onclick="setAni(9,57,(this.innerHTML))">Cats Cradle</a>
+												<a  href="#" onclick="setAni(9,58,(this.innerHTML))">Yoga 1</a>
+												<a  href="#" onclick="setAni(9,59,(this.innerHTML))">Yoga 2</a>
+												<a  href="#" onclick="setAni(9,60,(this.innerHTML))">Yoga 3</a>
+												<a  href="#" onclick="setAni(9,61,(this.innerHTML))">Yoga 4</a>
+												<a  href="#" onclick="setAni(9,62,(this.innerHTML))">Yoga 5</a>
+												<a  href="#" onclick="setAni(9,63,(this.innerHTML))">Liegest&uuml;tze 1</a>
+												<a  href="#" onclick="setAni(9,64,(this.innerHTML))">Liegest&uuml;tze 2</a>
+												<a  href="#" onclick="setAni(9,65,(this.innerHTML))">Situps</a>
+												<a  href="#" onclick="setAni(9,66,(this.innerHTML))">Flex</a>
+												<a  href="#" onclick="setAni(9,67,(this.innerHTML))">Flex 2</a>
+												<a  href="#" onclick="setAni(9,68,(this.innerHTML))">Begutachten</a>
+												<a  href="#" onclick="setAni(9,69,(this.innerHTML))">Reparieren</a>
+												<a  href="#" onclick="setAni(9,70,(this.innerHTML))">Putzen</a>
+												<a  href="#" onclick="setAni(9,71,(this.innerHTML))">Pfeifen</a>
+												<a  href="#" onclick="setAni(9,72,(this.innerHTML))">Ironisches Klatschen</a>
+												<a  href="#" onclick="setAni(9,73,(this.innerHTML))">Peace</a>
+												<a  href="#" onclick="setAni(9,74,(this.innerHTML))">2 Bier</a>
+												<a  href="#" onclick="setAni(9,75,(this.innerHTML))">Double Peace</a>
+												<a  href="#" onclick="setAni(9,76,(this.innerHTML))">Luftk&uuml;ssen</a>
+												<a  href="#" onclick="setAni(9,77,(this.innerHTML))">Fuck you</a>
+												<a  href="#" onclick="setAni(9,78,(this.innerHTML))">Daumen hoch</a>
+												<a  href="#" onclick="setAni(9,79,(this.innerHTML))">Winken</a>
+												<a  href="#" onclick="setAni(9,80,(this.innerHTML))">Facepalm</a>
+												<a  href="#" onclick="setAni(9,81,(this.innerHTML))">Ausrasten</a>
+												<a  href="#" onclick="setAni(9,82,(this.innerHTML))">Pinkeln</a>
+												<a  href="#" onclick="setAni(9,83,(this.innerHTML))">Notieren</a>
+
+                                             
+                                          </div>
+                                        </div>	
+										</div>
+                                    </div>
+                                 
+                            	</div>
+								<br>
+                                <div class="row-ld-12 d-flex justify-content-center" style="color: #fff; text-align: center; margin:0px 15px 0px 15px;">
+									
+                                    <div class="col-ld-4" style="padding: 5px 15px 5px 15px; " >
+                                        <div class="row d-flex justify-content-center">
+										<div class="dropdown" style="margin: 1px; background-color: darkgreen">
+										   <h4 style="">Numpad4:</h4><span style="font-size: 0.65em" id="anislotname4">lade...</span>
+                                          <button id="anislot4"  class="btn btn-block btn-info dropbtn " >lade...</button>
+                                          <div class="dropdown-content" style="text-align: left;">
+											  	<a  href="#" onclick="setAni(4,1,(this.innerHTML))">Sitzen (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(4,2,(this.innerHTML))">Sitzen (Weibl.)</a>
+												<a  href="#" onclick="setAni(4,3,(this.innerHTML))">Sitzen (Stuhl)</a>
+												<a  href="#" onclick="setAni(4,4,(this.innerHTML))">Sitzen (Stuhl) 2</a>
+												<a  href="#" onclick="setAni(4,5,(this.innerHTML))">Sitzen (Stuhl Weibl.)</a> 
+												<a  href="#" onclick="setAni(4,6,(this.innerHTML))">Weinerlich Sitzen</a>    
+												<a  href="#" onclick="setAni(4,7,(this.innerHTML))">Auf dem R&uuml;cken liegen</a>  
+												<a  href="#" onclick="setAni(4,8,(this.innerHTML))">Auf dem Bauch liegen (Weibl.)</a> 
+												<a  href="#" onclick="setAni(4,9,(this.innerHTML))">Auf dem Bauch liegen (M&auml;nnl.)</a>  
+												<a  href="#" onclick="setAni(4,10,(this.innerHTML))">Seitlich liegen</a>
+												<a  href="#" onclick="setAni(4,11,(this.innerHTML))">Betrunken liegen</a>
+												<a  href="#" onclick="setAni(4,12,(this.innerHTML))">Liegen (Ohnmacht)</a>
+												<a  href="#" onclick="setAni(4,13,(this.innerHTML))">Schlafen</a>
+												<a  href="#" onclick="setAni(4,14,(this.innerHTML))">Arme Verschr&auml;nken (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(4,15,(this.innerHTML))">Arme Verschr&auml;nken (Weibl.)</a>
+												<a  href="#" onclick="setAni(4,16,(this.innerHTML))">Security</a>
+												<a  href="#" onclick="setAni(4,17,(this.innerHTML))">Anlehnen</a>
+												<a  href="#" onclick="setAni(4,18,(this.innerHTML))">Anlehnen 2</a>
+												<a  href="#" onclick="setAni(4,19,(this.innerHTML))">Arrogant</a>
+												<a  href="#" onclick="setAni(4,20,(this.innerHTML))">Eingebildet</a>
+												<a  href="#" onclick="setAni(4,21,(this.innerHTML))">Depressiv</a>
+												<a  href="#" onclick="setAni(4,22,(this.innerHTML))">Salutieren</a>
+												<a  href="#" onclick="setAni(4,23,(this.innerHTML))">Knien</a>
+												<a  href="#" onclick="setAni(4,24,(this.innerHTML))">Auf die Knie</a>
+												<a  href="#" onclick="setAni(4,25,(this.innerHTML))">Auf die Knie 2</a>
+												<a  href="#" onclick="setAni(4,26,(this.innerHTML))">Verzweifelt Knien</a>
+												<a  href="#" onclick="setAni(4,27,(this.innerHTML))">Gangzeichen 1</a>
+												<a  href="#" onclick="setAni(4,28,(this.innerHTML))">Gangzeichen 2</a>
+												<a  href="#" onclick="setAni(4,29,(this.innerHTML))">Strip 1</a>
+												<a  href="#" onclick="setAni(4,30,(this.innerHTML))">Strip 2</a>
+												<a  href="#" onclick="setAni(4,31,(this.innerHTML))">Strip 3</a>
+												<a  href="#" onclick="setAni(4,32,(this.innerHTML))">Strip 4</a>
+												<a  href="#" onclick="setAni(4,33,(this.innerHTML))">Strip 5</a>
+												<a  href="#" onclick="setAni(4,34,(this.innerHTML))">Strip 6</a>
+												<a  href="#" onclick="setAni(4,35,(this.innerHTML))">Ghetto</a>
+												<a  href="#" onclick="setAni(4,36,(this.innerHTML))">Tao 1</a>
+												<a  href="#" onclick="setAni(4,37,(this.innerHTML))">Tao 2</a>
+												<a  href="#" onclick="setAni(4,38,(this.innerHTML))">Stepptanz 1</a>
+												<a  href="#" onclick="setAni(4,39,(this.innerHTML))">Po wackeln</a>
+												<a  href="#" onclick="setAni(4,40,(this.innerHTML))">Po wackeln 2</a>
+												<a  href="#" onclick="setAni(4,41,(this.innerHTML))">Zumba 1</a>
+												<a  href="#" onclick="setAni(4,42,(this.innerHTML))">Zumba 2</a>
+												<a  href="#" onclick="setAni(4,43,(this.innerHTML))">Zumba 3</a>
+												<a  href="#" onclick="setAni(4,44,(this.innerHTML))">Zumba 4</a>
+												<a  href="#" onclick="setAni(4,45,(this.innerHTML))">Zumba 5</a>
+												<a  href="#" onclick="setAni(4,46,(this.innerHTML))">Geiles lied</a>
+												<a  href="#" onclick="setAni(4,47,(this.innerHTML))">Feminines Tanzen</a>
+												<a  href="#" onclick="setAni(4,48,(this.innerHTML))">Tanzfaul</a>
+												<a  href="#" onclick="setAni(4,49,(this.innerHTML))">Luftgitarre</a>
+												<a  href="#" onclick="setAni(4,50,(this.innerHTML))">Banging Tunes</a>
+												<a  href="#" onclick="setAni(4,51,(this.innerHTML))">Onkel Disco</a>
+												<a  href="#" onclick="setAni(4,52,(this.innerHTML))">Der Fisch</a>
+												<a  href="#" onclick="setAni(4,53,(this.innerHTML))">Herzrasen</a>
+												<a  href="#" onclick="setAni(4,54,(this.innerHTML))">Snap</a>
+												<a  href="#" onclick="setAni(4,55,(this.innerHTML))">Raise</a>
+												<a  href="#" onclick="setAni(4,56,(this.innerHTML))">Salsa</a>
+												<a  href="#" onclick="setAni(4,57,(this.innerHTML))">Cats Cradle</a>
+												<a  href="#" onclick="setAni(4,58,(this.innerHTML))">Yoga 1</a>
+												<a  href="#" onclick="setAni(4,59,(this.innerHTML))">Yoga 2</a>
+												<a  href="#" onclick="setAni(4,60,(this.innerHTML))">Yoga 3</a>
+												<a  href="#" onclick="setAni(4,61,(this.innerHTML))">Yoga 4</a>
+												<a  href="#" onclick="setAni(4,62,(this.innerHTML))">Yoga 5</a>
+												<a  href="#" onclick="setAni(4,63,(this.innerHTML))">Liegest&uuml;tze 1</a>
+												<a  href="#" onclick="setAni(4,64,(this.innerHTML))">Liegest&uuml;tze 2</a>
+												<a  href="#" onclick="setAni(4,65,(this.innerHTML))">Situps</a>
+												<a  href="#" onclick="setAni(4,66,(this.innerHTML))">Flex</a>
+												<a  href="#" onclick="setAni(4,67,(this.innerHTML))">Flex 2</a>
+												<a  href="#" onclick="setAni(4,68,(this.innerHTML))">Begutachten</a>
+												<a  href="#" onclick="setAni(4,69,(this.innerHTML))">Reparieren</a>
+												<a  href="#" onclick="setAni(4,70,(this.innerHTML))">Putzen</a>
+												<a  href="#" onclick="setAni(4,71,(this.innerHTML))">Pfeifen</a>
+												<a  href="#" onclick="setAni(4,72,(this.innerHTML))">Ironisches Klatschen</a>
+												<a  href="#" onclick="setAni(4,73,(this.innerHTML))">Peace</a>
+												<a  href="#" onclick="setAni(4,74,(this.innerHTML))">2 Bier</a>
+												<a  href="#" onclick="setAni(4,75,(this.innerHTML))">Double Peace</a>
+												<a  href="#" onclick="setAni(4,76,(this.innerHTML))">Luftk&uuml;ssen</a>
+												<a  href="#" onclick="setAni(4,77,(this.innerHTML))">Fuck you</a>
+												<a  href="#" onclick="setAni(4,78,(this.innerHTML))">Daumen hoch</a>
+												<a  href="#" onclick="setAni(4,79,(this.innerHTML))">Winken</a>
+												<a  href="#" onclick="setAni(4,80,(this.innerHTML))">Facepalm</a>
+												<a  href="#" onclick="setAni(4,81,(this.innerHTML))">Ausrasten</a>
+												<a  href="#" onclick="setAni(4,82,(this.innerHTML))">Pinkeln</a>
+												<a  href="#" onclick="setAni(4,83,(this.innerHTML))">Notieren</a>
+
+                                             
+                                          </div>
+                                        </div>	
+										</div>
+                                        
+                                    </div>
+                                    <div class="col-ld-4" style="padding: 5px 15px 5px 15px; " >
+										<div class="row d-flex justify-content-center">
+										<div class="dropdown" style="margin: 1px; background-color: darkgreen">
+										   <h4 style="">Numpad5:</h4><span style="font-size: 0.65em" id="anislotname5">lade...</span>
+                                          <button id="anislot5"  class="btn btn-block btn-info dropbtn " >lade...</button>
+                                          <div class="dropdown-content" style="text-align: left;">
+											  	<a  href="#" onclick="setAni(5,1,(this.innerHTML))">Sitzen (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(5,2,(this.innerHTML))">Sitzen (Weibl.)</a>
+												<a  href="#" onclick="setAni(5,3,(this.innerHTML))">Sitzen (Stuhl)</a>
+												<a  href="#" onclick="setAni(5,4,(this.innerHTML))">Sitzen (Stuhl) 2</a>
+												<a  href="#" onclick="setAni(5,5,(this.innerHTML))">Sitzen (Stuhl Weibl.)</a> 
+												<a  href="#" onclick="setAni(5,6,(this.innerHTML))">Weinerlich Sitzen</a>    
+												<a  href="#" onclick="setAni(5,7,(this.innerHTML))">Auf dem R&uuml;cken liegen</a>  
+												<a  href="#" onclick="setAni(5,8,(this.innerHTML))">Auf dem Bauch liegen (Weibl.)</a> 
+												<a  href="#" onclick="setAni(5,9,(this.innerHTML))">Auf dem Bauch liegen (M&auml;nnl.)</a>  
+												<a  href="#" onclick="setAni(5,10,(this.innerHTML))">Seitlich liegen</a>
+												<a  href="#" onclick="setAni(5,11,(this.innerHTML))">Betrunken liegen</a>
+												<a  href="#" onclick="setAni(5,12,(this.innerHTML))">Liegen (Ohnmacht)</a>
+												<a  href="#" onclick="setAni(5,13,(this.innerHTML))">Schlafen</a>
+												<a  href="#" onclick="setAni(5,14,(this.innerHTML))">Arme Verschr&auml;nken (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(5,15,(this.innerHTML))">Arme Verschr&auml;nken (Weibl.)</a>
+												<a  href="#" onclick="setAni(5,16,(this.innerHTML))">Security</a>
+												<a  href="#" onclick="setAni(5,17,(this.innerHTML))">Anlehnen</a>
+												<a  href="#" onclick="setAni(5,18,(this.innerHTML))">Anlehnen 2</a>
+												<a  href="#" onclick="setAni(5,19,(this.innerHTML))">Arrogant</a>
+												<a  href="#" onclick="setAni(5,20,(this.innerHTML))">Eingebildet</a>
+												<a  href="#" onclick="setAni(5,21,(this.innerHTML))">Depressiv</a>
+												<a  href="#" onclick="setAni(5,22,(this.innerHTML))">Salutieren</a>
+												<a  href="#" onclick="setAni(5,23,(this.innerHTML))">Knien</a>
+												<a  href="#" onclick="setAni(5,24,(this.innerHTML))">Auf die Knie</a>
+												<a  href="#" onclick="setAni(5,25,(this.innerHTML))">Auf die Knie 2</a>
+												<a  href="#" onclick="setAni(5,26,(this.innerHTML))">Verzweifelt Knien</a>
+												<a  href="#" onclick="setAni(5,27,(this.innerHTML))">Gangzeichen 1</a>
+												<a  href="#" onclick="setAni(5,28,(this.innerHTML))">Gangzeichen 2</a>
+												<a  href="#" onclick="setAni(5,29,(this.innerHTML))">Strip 1</a>
+												<a  href="#" onclick="setAni(5,30,(this.innerHTML))">Strip 2</a>
+												<a  href="#" onclick="setAni(5,31,(this.innerHTML))">Strip 3</a>
+												<a  href="#" onclick="setAni(5,32,(this.innerHTML))">Strip 4</a>
+												<a  href="#" onclick="setAni(5,33,(this.innerHTML))">Strip 5</a>
+												<a  href="#" onclick="setAni(5,34,(this.innerHTML))">Strip 6</a>
+												<a  href="#" onclick="setAni(5,35,(this.innerHTML))">Ghetto</a>
+												<a  href="#" onclick="setAni(5,36,(this.innerHTML))">Tao 1</a>
+												<a  href="#" onclick="setAni(5,37,(this.innerHTML))">Tao 2</a>
+												<a  href="#" onclick="setAni(5,38,(this.innerHTML))">Stepptanz 1</a>
+												<a  href="#" onclick="setAni(5,39,(this.innerHTML))">Po wackeln</a>
+												<a  href="#" onclick="setAni(5,40,(this.innerHTML))">Po wackeln 2</a>
+												<a  href="#" onclick="setAni(5,41,(this.innerHTML))">Zumba 1</a>
+												<a  href="#" onclick="setAni(5,42,(this.innerHTML))">Zumba 2</a>
+												<a  href="#" onclick="setAni(5,43,(this.innerHTML))">Zumba 3</a>
+												<a  href="#" onclick="setAni(5,44,(this.innerHTML))">Zumba 4</a>
+												<a  href="#" onclick="setAni(5,45,(this.innerHTML))">Zumba 5</a>
+												<a  href="#" onclick="setAni(5,46,(this.innerHTML))">Geiles lied</a>
+												<a  href="#" onclick="setAni(5,47,(this.innerHTML))">Feminines Tanzen</a>
+												<a  href="#" onclick="setAni(5,48,(this.innerHTML))">Tanzfaul</a>
+												<a  href="#" onclick="setAni(5,49,(this.innerHTML))">Luftgitarre</a>
+												<a  href="#" onclick="setAni(5,50,(this.innerHTML))">Banging Tunes</a>
+												<a  href="#" onclick="setAni(5,51,(this.innerHTML))">Onkel Disco</a>
+												<a  href="#" onclick="setAni(5,52,(this.innerHTML))">Der Fisch</a>
+												<a  href="#" onclick="setAni(5,53,(this.innerHTML))">Herzrasen</a>
+												<a  href="#" onclick="setAni(5,54,(this.innerHTML))">Snap</a>
+												<a  href="#" onclick="setAni(5,55,(this.innerHTML))">Raise</a>
+												<a  href="#" onclick="setAni(5,56,(this.innerHTML))">Salsa</a>
+												<a  href="#" onclick="setAni(5,57,(this.innerHTML))">Cats Cradle</a>
+												<a  href="#" onclick="setAni(5,58,(this.innerHTML))">Yoga 1</a>
+												<a  href="#" onclick="setAni(5,59,(this.innerHTML))">Yoga 2</a>
+												<a  href="#" onclick="setAni(5,60,(this.innerHTML))">Yoga 3</a>
+												<a  href="#" onclick="setAni(5,61,(this.innerHTML))">Yoga 4</a>
+												<a  href="#" onclick="setAni(5,62,(this.innerHTML))">Yoga 5</a>
+												<a  href="#" onclick="setAni(5,63,(this.innerHTML))">Liegest&uuml;tze 1</a>
+												<a  href="#" onclick="setAni(5,64,(this.innerHTML))">Liegest&uuml;tze 2</a>
+												<a  href="#" onclick="setAni(5,65,(this.innerHTML))">Situps</a>
+												<a  href="#" onclick="setAni(5,66,(this.innerHTML))">Flex</a>
+												<a  href="#" onclick="setAni(5,67,(this.innerHTML))">Flex 2</a>
+												<a  href="#" onclick="setAni(5,68,(this.innerHTML))">Begutachten</a>
+												<a  href="#" onclick="setAni(5,69,(this.innerHTML))">Reparieren</a>
+												<a  href="#" onclick="setAni(5,70,(this.innerHTML))">Putzen</a>
+												<a  href="#" onclick="setAni(5,71,(this.innerHTML))">Pfeifen</a>
+												<a  href="#" onclick="setAni(5,72,(this.innerHTML))">Ironisches Klatschen</a>
+												<a  href="#" onclick="setAni(5,73,(this.innerHTML))">Peace</a>
+												<a  href="#" onclick="setAni(5,74,(this.innerHTML))">2 Bier</a>
+												<a  href="#" onclick="setAni(5,75,(this.innerHTML))">Double Peace</a>
+												<a  href="#" onclick="setAni(5,76,(this.innerHTML))">Luftk&uuml;ssen</a>
+												<a  href="#" onclick="setAni(5,77,(this.innerHTML))">Fuck you</a>
+												<a  href="#" onclick="setAni(5,78,(this.innerHTML))">Daumen hoch</a>
+												<a  href="#" onclick="setAni(5,79,(this.innerHTML))">Winken</a>
+												<a  href="#" onclick="setAni(5,80,(this.innerHTML))">Facepalm</a>
+												<a  href="#" onclick="setAni(5,81,(this.innerHTML))">Ausrasten</a>
+												<a  href="#" onclick="setAni(5,82,(this.innerHTML))">Pinkeln</a>
+												<a  href="#" onclick="setAni(5,83,(this.innerHTML))">Notieren</a>
+
+                                             
+                                          </div>
+                                        </div>	
+										</div>
+                                    </div>
+                                    <div class="col-ld-4" style="padding: 5px 15px 5px 15px; "  class="">
+										<div class="row d-flex justify-content-center">
+										<div class="dropdown" style="margin: 1px; background-color: darkgreen">
+										   <h4 style="">Numpad6:</h4><span style="font-size: 0.65em" id="anislotname6">lade...</span>
+                                          <button id="anislot6" class="btn btn-block btn-info dropbtn " >lade...</button>
+                                          <div class="dropdown-content" style="text-align: left;">
+											  	<a  href="#" onclick="setAni(6,1,(this.innerHTML))">Sitzen (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(6,2,(this.innerHTML))">Sitzen (Weibl.)</a>
+												<a  href="#" onclick="setAni(6,3,(this.innerHTML))">Sitzen (Stuhl)</a>
+												<a  href="#" onclick="setAni(6,4,(this.innerHTML))">Sitzen (Stuhl) 2</a>
+												<a  href="#" onclick="setAni(6,5,(this.innerHTML))">Sitzen (Stuhl Weibl.)</a> 
+												<a  href="#" onclick="setAni(6,6,(this.innerHTML))">Weinerlich Sitzen</a>    
+												<a  href="#" onclick="setAni(6,7,(this.innerHTML))">Auf dem R&uuml;cken liegen</a>  
+												<a  href="#" onclick="setAni(6,8,(this.innerHTML))">Auf dem Bauch liegen (Weibl.)</a> 
+												<a  href="#" onclick="setAni(6,9,(this.innerHTML))">Auf dem Bauch liegen (M&auml;nnl.)</a>  
+												<a  href="#" onclick="setAni(6,10,(this.innerHTML))">Seitlich liegen</a>
+												<a  href="#" onclick="setAni(6,11,(this.innerHTML))">Betrunken liegen</a>
+												<a  href="#" onclick="setAni(6,12,(this.innerHTML))">Liegen (Ohnmacht)</a>
+												<a  href="#" onclick="setAni(6,13,(this.innerHTML))">Schlafen</a>
+												<a  href="#" onclick="setAni(6,14,(this.innerHTML))">Arme Verschr&auml;nken (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(6,15,(this.innerHTML))">Arme Verschr&auml;nken (Weibl.)</a>
+												<a  href="#" onclick="setAni(6,16,(this.innerHTML))">Security</a>
+												<a  href="#" onclick="setAni(6,17,(this.innerHTML))">Anlehnen</a>
+												<a  href="#" onclick="setAni(6,18,(this.innerHTML))">Anlehnen 2</a>
+												<a  href="#" onclick="setAni(6,19,(this.innerHTML))">Arrogant</a>
+												<a  href="#" onclick="setAni(6,20,(this.innerHTML))">Eingebildet</a>
+												<a  href="#" onclick="setAni(6,21,(this.innerHTML))">Depressiv</a>
+												<a  href="#" onclick="setAni(6,22,(this.innerHTML))">Salutieren</a>
+												<a  href="#" onclick="setAni(6,23,(this.innerHTML))">Knien</a>
+												<a  href="#" onclick="setAni(6,24,(this.innerHTML))">Auf die Knie</a>
+												<a  href="#" onclick="setAni(6,25,(this.innerHTML))">Auf die Knie 2</a>
+												<a  href="#" onclick="setAni(6,26,(this.innerHTML))">Verzweifelt Knien</a>
+												<a  href="#" onclick="setAni(6,27,(this.innerHTML))">Gangzeichen 1</a>
+												<a  href="#" onclick="setAni(6,28,(this.innerHTML))">Gangzeichen 2</a>
+												<a  href="#" onclick="setAni(6,29,(this.innerHTML))">Strip 1</a>
+												<a  href="#" onclick="setAni(6,30,(this.innerHTML))">Strip 2</a>
+												<a  href="#" onclick="setAni(6,31,(this.innerHTML))">Strip 3</a>
+												<a  href="#" onclick="setAni(6,32,(this.innerHTML))">Strip 4</a>
+												<a  href="#" onclick="setAni(6,33,(this.innerHTML))">Strip 5</a>
+												<a  href="#" onclick="setAni(6,34,(this.innerHTML))">Strip 6</a>
+												<a  href="#" onclick="setAni(6,35,(this.innerHTML))">Ghetto</a>
+												<a  href="#" onclick="setAni(6,36,(this.innerHTML))">Tao 1</a>
+												<a  href="#" onclick="setAni(6,37,(this.innerHTML))">Tao 2</a>
+												<a  href="#" onclick="setAni(6,38,(this.innerHTML))">Stepptanz 1</a>
+												<a  href="#" onclick="setAni(6,39,(this.innerHTML))">Po wackeln</a>
+												<a  href="#" onclick="setAni(6,40,(this.innerHTML))">Po wackeln 2</a>
+												<a  href="#" onclick="setAni(6,41,(this.innerHTML))">Zumba 1</a>
+												<a  href="#" onclick="setAni(6,42,(this.innerHTML))">Zumba 2</a>
+												<a  href="#" onclick="setAni(6,43,(this.innerHTML))">Zumba 3</a>
+												<a  href="#" onclick="setAni(6,44,(this.innerHTML))">Zumba 4</a>
+												<a  href="#" onclick="setAni(6,45,(this.innerHTML))">Zumba 5</a>
+												<a  href="#" onclick="setAni(6,46,(this.innerHTML))">Geiles lied</a>
+												<a  href="#" onclick="setAni(6,47,(this.innerHTML))">Feminines Tanzen</a>
+												<a  href="#" onclick="setAni(6,48,(this.innerHTML))">Tanzfaul</a>
+												<a  href="#" onclick="setAni(6,49,(this.innerHTML))">Luftgitarre</a>
+												<a  href="#" onclick="setAni(6,50,(this.innerHTML))">Banging Tunes</a>
+												<a  href="#" onclick="setAni(6,51,(this.innerHTML))">Onkel Disco</a>
+												<a  href="#" onclick="setAni(6,52,(this.innerHTML))">Der Fisch</a>
+												<a  href="#" onclick="setAni(6,53,(this.innerHTML))">Herzrasen</a>
+												<a  href="#" onclick="setAni(6,54,(this.innerHTML))">Snap</a>
+												<a  href="#" onclick="setAni(6,55,(this.innerHTML))">Raise</a>
+												<a  href="#" onclick="setAni(6,56,(this.innerHTML))">Salsa</a>
+												<a  href="#" onclick="setAni(6,57,(this.innerHTML))">Cats Cradle</a>
+												<a  href="#" onclick="setAni(6,58,(this.innerHTML))">Yoga 1</a>
+												<a  href="#" onclick="setAni(6,59,(this.innerHTML))">Yoga 2</a>
+												<a  href="#" onclick="setAni(6,60,(this.innerHTML))">Yoga 3</a>
+												<a  href="#" onclick="setAni(6,61,(this.innerHTML))">Yoga 4</a>
+												<a  href="#" onclick="setAni(6,62,(this.innerHTML))">Yoga 5</a>
+												<a  href="#" onclick="setAni(6,63,(this.innerHTML))">Liegest&uuml;tze 1</a>
+												<a  href="#" onclick="setAni(6,64,(this.innerHTML))">Liegest&uuml;tze 2</a>
+												<a  href="#" onclick="setAni(6,65,(this.innerHTML))">Situps</a>
+												<a  href="#" onclick="setAni(6,66,(this.innerHTML))">Flex</a>
+												<a  href="#" onclick="setAni(6,67,(this.innerHTML))">Flex 2</a>
+												<a  href="#" onclick="setAni(6,68,(this.innerHTML))">Begutachten</a>
+												<a  href="#" onclick="setAni(6,69,(this.innerHTML))">Reparieren</a>
+												<a  href="#" onclick="setAni(6,70,(this.innerHTML))">Putzen</a>
+												<a  href="#" onclick="setAni(6,71,(this.innerHTML))">Pfeifen</a>
+												<a  href="#" onclick="setAni(6,72,(this.innerHTML))">Ironisches Klatschen</a>
+												<a  href="#" onclick="setAni(6,73,(this.innerHTML))">Peace</a>
+												<a  href="#" onclick="setAni(6,74,(this.innerHTML))">2 Bier</a>
+												<a  href="#" onclick="setAni(6,75,(this.innerHTML))">Double Peace</a>
+												<a  href="#" onclick="setAni(6,76,(this.innerHTML))">Luftk&uuml;ssen</a>
+												<a  href="#" onclick="setAni(6,77,(this.innerHTML))">Fuck you</a>
+												<a  href="#" onclick="setAni(6,78,(this.innerHTML))">Daumen hoch</a>
+												<a  href="#" onclick="setAni(6,79,(this.innerHTML))">Winken</a>
+												<a  href="#" onclick="setAni(6,80,(this.innerHTML))">Facepalm</a>
+												<a  href="#" onclick="setAni(6,81,(this.innerHTML))">Ausrasten</a>
+												<a  href="#" onclick="setAni(6,82,(this.innerHTML))">Pinkeln</a>
+												<a  href="#" onclick="setAni(6,83,(this.innerHTML))">Notieren</a>
+
+                                             
+                                          </div>
+                                        </div>	
+										</div>
+                                    </div>
+									
+                                </div>
+
+                                <div class="row-ld-12 d-flex justify-content-center" style="color: #fff; text-align: center; margin:0px 15px 0px 15px;">
+                                    
+									<div class="col-ld-4" style="padding: 5px 15px 5px 15px; " >
+                                        <div class="row d-flex justify-content-center" >
+										<div class="dropdown" style="margin: 1px; background-color: darkgreen">
+										   <h4 style="">Numpad1:</h4><span style="font-size: 0.65em" id="anislotname1">lade...</span>
+                                          <button  id="anislot1"  class="btn btn-block btn-info dropbtn " >lade...</button>
+                                          <div class="dropdown-content" style="text-align: left;">
+											  	<a  href="#" onclick="setAni(1,1,(this.innerHTML))">Sitzen (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(1,2,(this.innerHTML))">Sitzen (Weibl.)</a>
+												<a  href="#" onclick="setAni(1,3,(this.innerHTML))">Sitzen (Stuhl)</a>
+												<a  href="#" onclick="setAni(1,4,(this.innerHTML))">Sitzen (Stuhl) 2</a>
+												<a  href="#" onclick="setAni(1,5,(this.innerHTML))">Sitzen (Stuhl Weibl.)</a> 
+												<a  href="#" onclick="setAni(1,6,(this.innerHTML))">Weinerlich Sitzen</a>    
+												<a  href="#" onclick="setAni(1,7,(this.innerHTML))">Auf dem R&uuml;cken liegen</a>  
+												<a  href="#" onclick="setAni(1,8,(this.innerHTML))">Auf dem Bauch liegen (Weibl.)</a> 
+												<a  href="#" onclick="setAni(1,9,(this.innerHTML))">Auf dem Bauch liegen (M&auml;nnl.)</a>  
+												<a  href="#" onclick="setAni(1,10,(this.innerHTML))">Seitlich liegen</a>
+												<a  href="#" onclick="setAni(1,11,(this.innerHTML))">Betrunken liegen</a>
+												<a  href="#" onclick="setAni(1,12,(this.innerHTML))">Liegen (Ohnmacht)</a>
+												<a  href="#" onclick="setAni(1,13,(this.innerHTML))">Schlafen</a>
+												<a  href="#" onclick="setAni(1,14,(this.innerHTML))">Arme Verschr&auml;nken (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(1,15,(this.innerHTML))">Arme Verschr&auml;nken (Weibl.)</a>
+												<a  href="#" onclick="setAni(1,16,(this.innerHTML))">Security</a>
+												<a  href="#" onclick="setAni(1,17,(this.innerHTML))">Anlehnen</a>
+												<a  href="#" onclick="setAni(1,18,(this.innerHTML))">Anlehnen 2</a>
+												<a  href="#" onclick="setAni(1,19,(this.innerHTML))">Arrogant</a>
+												<a  href="#" onclick="setAni(1,20,(this.innerHTML))">Eingebildet</a>
+												<a  href="#" onclick="setAni(1,21,(this.innerHTML))">Depressiv</a>
+												<a  href="#" onclick="setAni(1,22,(this.innerHTML))">Salutieren</a>
+												<a  href="#" onclick="setAni(1,23,(this.innerHTML))">Knien</a>
+												<a  href="#" onclick="setAni(1,24,(this.innerHTML))">Auf die Knie</a>
+												<a  href="#" onclick="setAni(1,25,(this.innerHTML))">Auf die Knie 2</a>
+												<a  href="#" onclick="setAni(1,26,(this.innerHTML))">Verzweifelt Knien</a>
+												<a  href="#" onclick="setAni(1,27,(this.innerHTML))">Gangzeichen 1</a>
+												<a  href="#" onclick="setAni(1,28,(this.innerHTML))">Gangzeichen 2</a>
+												<a  href="#" onclick="setAni(1,29,(this.innerHTML))">Strip 1</a>
+												<a  href="#" onclick="setAni(1,30,(this.innerHTML))">Strip 2</a>
+												<a  href="#" onclick="setAni(1,31,(this.innerHTML))">Strip 3</a>
+												<a  href="#" onclick="setAni(1,32,(this.innerHTML))">Strip 4</a>
+												<a  href="#" onclick="setAni(1,33,(this.innerHTML))">Strip 5</a>
+												<a  href="#" onclick="setAni(1,34,(this.innerHTML))">Strip 6</a>
+												<a  href="#" onclick="setAni(1,35,(this.innerHTML))">Ghetto</a>
+												<a  href="#" onclick="setAni(1,36,(this.innerHTML))">Tao 1</a>
+												<a  href="#" onclick="setAni(1,37,(this.innerHTML))">Tao 2</a>
+												<a  href="#" onclick="setAni(1,38,(this.innerHTML))">Stepptanz 1</a>
+												<a  href="#" onclick="setAni(1,39,(this.innerHTML))">Po wackeln</a>
+												<a  href="#" onclick="setAni(1,40,(this.innerHTML))">Po wackeln 2</a>
+												<a  href="#" onclick="setAni(1,41,(this.innerHTML))">Zumba 1</a>
+												<a  href="#" onclick="setAni(1,42,(this.innerHTML))">Zumba 2</a>
+												<a  href="#" onclick="setAni(1,43,(this.innerHTML))">Zumba 3</a>
+												<a  href="#" onclick="setAni(1,44,(this.innerHTML))">Zumba 4</a>
+												<a  href="#" onclick="setAni(1,45,(this.innerHTML))">Zumba 5</a>
+												<a  href="#" onclick="setAni(1,46,(this.innerHTML))">Geiles lied</a>
+												<a  href="#" onclick="setAni(1,47,(this.innerHTML))">Feminines Tanzen</a>
+												<a  href="#" onclick="setAni(1,48,(this.innerHTML))">Tanzfaul</a>
+												<a  href="#" onclick="setAni(1,49,(this.innerHTML))">Luftgitarre</a>
+												<a  href="#" onclick="setAni(1,50,(this.innerHTML))">Banging Tunes</a>
+												<a  href="#" onclick="setAni(1,51,(this.innerHTML))">Onkel Disco</a>
+												<a  href="#" onclick="setAni(1,52,(this.innerHTML))">Der Fisch</a>
+												<a  href="#" onclick="setAni(1,53,(this.innerHTML))">Herzrasen</a>
+												<a  href="#" onclick="setAni(1,54,(this.innerHTML))">Snap</a>
+												<a  href="#" onclick="setAni(1,55,(this.innerHTML))">Raise</a>
+												<a  href="#" onclick="setAni(1,56,(this.innerHTML))">Salsa</a>
+												<a  href="#" onclick="setAni(1,57,(this.innerHTML))">Cats Cradle</a>
+												<a  href="#" onclick="setAni(1,58,(this.innerHTML))">Yoga 1</a>
+												<a  href="#" onclick="setAni(1,59,(this.innerHTML))">Yoga 2</a>
+												<a  href="#" onclick="setAni(1,60,(this.innerHTML))">Yoga 3</a>
+												<a  href="#" onclick="setAni(1,61,(this.innerHTML))">Yoga 4</a>
+												<a  href="#" onclick="setAni(1,62,(this.innerHTML))">Yoga 5</a>
+												<a  href="#" onclick="setAni(1,63,(this.innerHTML))">Liegest&uuml;tze 1</a>
+												<a  href="#" onclick="setAni(1,64,(this.innerHTML))">Liegest&uuml;tze 2</a>
+												<a  href="#" onclick="setAni(1,65,(this.innerHTML))">Situps</a>
+												<a  href="#" onclick="setAni(1,66,(this.innerHTML))">Flex</a>
+												<a  href="#" onclick="setAni(1,67,(this.innerHTML))">Flex 2</a>
+												<a  href="#" onclick="setAni(1,68,(this.innerHTML))">Begutachten</a>
+												<a  href="#" onclick="setAni(1,69,(this.innerHTML))">Reparieren</a>
+												<a  href="#" onclick="setAni(1,70,(this.innerHTML))">Putzen</a>
+												<a  href="#" onclick="setAni(1,71,(this.innerHTML))">Pfeifen</a>
+												<a  href="#" onclick="setAni(1,72,(this.innerHTML))">Ironisches Klatschen</a>
+												<a  href="#" onclick="setAni(1,73,(this.innerHTML))">Peace</a>
+												<a  href="#" onclick="setAni(1,74,(this.innerHTML))">2 Bier</a>
+												<a  href="#" onclick="setAni(1,75,(this.innerHTML))">Double Peace</a>
+												<a  href="#" onclick="setAni(1,76,(this.innerHTML))">Luftk&uuml;ssen</a>
+												<a  href="#" onclick="setAni(1,77,(this.innerHTML))">Fuck you</a>
+												<a  href="#" onclick="setAni(1,78,(this.innerHTML))">Daumen hoch</a>
+												<a  href="#" onclick="setAni(1,79,(this.innerHTML))">Winken</a>
+												<a  href="#" onclick="setAni(1,80,(this.innerHTML))">Facepalm</a>
+												<a  href="#" onclick="setAni(1,81,(this.innerHTML))">Ausrasten</a>
+												<a  href="#" onclick="setAni(1,82,(this.innerHTML))">Pinkeln</a>
+												<a  href="#" onclick="setAni(1,83,(this.innerHTML))">Notieren</a>
+
+                                             
+                                          </div>
+                                        </div>	
+										</div>
+                                        
+                                    </div>
+                                    <div class="col-ld-4" style="padding: 5px 15px 5px 15px; " >
+										<div class="row d-flex justify-content-center" >
+										<div class="dropdown" style="margin: 1px; background-color: darkgreen">
+										   <h4 style="">Numpad2:</h4><span style="font-size: 0.65em" id="anislotname2">lade...</span>
+                                          <button id="anislot2"  class="btn btn-block btn-info dropbtn " >lade...</button>
+                                          <div class="dropdown-content" style="text-align: left;">
+											  	<a  href="#" onclick="setAni(2,1,(this.innerHTML))">Sitzen (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(2,2,(this.innerHTML))">Sitzen (Weibl.)</a>
+												<a  href="#" onclick="setAni(2,3,(this.innerHTML))">Sitzen (Stuhl)</a>
+												<a  href="#" onclick="setAni(2,4,(this.innerHTML))">Sitzen (Stuhl) 2</a>
+												<a  href="#" onclick="setAni(2,5,(this.innerHTML))">Sitzen (Stuhl Weibl.)</a> 
+												<a  href="#" onclick="setAni(2,6,(this.innerHTML))">Weinerlich Sitzen</a>    
+												<a  href="#" onclick="setAni(2,7,(this.innerHTML))">Auf dem R&uuml;cken liegen</a>  
+												<a  href="#" onclick="setAni(2,8,(this.innerHTML))">Auf dem Bauch liegen (Weibl.)</a> 
+												<a  href="#" onclick="setAni(2,9,(this.innerHTML))">Auf dem Bauch liegen (M&auml;nnl.)</a>  
+												<a  href="#" onclick="setAni(2,10,(this.innerHTML))">Seitlich liegen</a>
+												<a  href="#" onclick="setAni(2,11,(this.innerHTML))">Betrunken liegen</a>
+												<a  href="#" onclick="setAni(2,12,(this.innerHTML))">Liegen (Ohnmacht)</a>
+												<a  href="#" onclick="setAni(2,13,(this.innerHTML))">Schlafen</a>
+												<a  href="#" onclick="setAni(2,14,(this.innerHTML))">Arme Verschr&auml;nken (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(2,15,(this.innerHTML))">Arme Verschr&auml;nken (Weibl.)</a>
+												<a  href="#" onclick="setAni(2,16,(this.innerHTML))">Security</a>
+												<a  href="#" onclick="setAni(2,17,(this.innerHTML))">Anlehnen</a>
+												<a  href="#" onclick="setAni(2,18,(this.innerHTML))">Anlehnen 2</a>
+												<a  href="#" onclick="setAni(2,19,(this.innerHTML))">Arrogant</a>
+												<a  href="#" onclick="setAni(2,20,(this.innerHTML))">Eingebildet</a>
+												<a  href="#" onclick="setAni(2,21,(this.innerHTML))">Depressiv</a>
+												<a  href="#" onclick="setAni(2,22,(this.innerHTML))">Salutieren</a>
+												<a  href="#" onclick="setAni(2,23,(this.innerHTML))">Knien</a>
+												<a  href="#" onclick="setAni(2,24,(this.innerHTML))">Auf die Knie</a>
+												<a  href="#" onclick="setAni(2,25,(this.innerHTML))">Auf die Knie 2</a>
+												<a  href="#" onclick="setAni(2,26,(this.innerHTML))">Verzweifelt Knien</a>
+												<a  href="#" onclick="setAni(2,27,(this.innerHTML))">Gangzeichen 1</a>
+												<a  href="#" onclick="setAni(2,28,(this.innerHTML))">Gangzeichen 2</a>
+												<a  href="#" onclick="setAni(2,29,(this.innerHTML))">Strip 1</a>
+												<a  href="#" onclick="setAni(2,30,(this.innerHTML))">Strip 2</a>
+												<a  href="#" onclick="setAni(2,31,(this.innerHTML))">Strip 3</a>
+												<a  href="#" onclick="setAni(2,32,(this.innerHTML))">Strip 4</a>
+												<a  href="#" onclick="setAni(2,33,(this.innerHTML))">Strip 5</a>
+												<a  href="#" onclick="setAni(2,34,(this.innerHTML))">Strip 6</a>
+												<a  href="#" onclick="setAni(2,35,(this.innerHTML))">Ghetto</a>
+												<a  href="#" onclick="setAni(2,36,(this.innerHTML))">Tao 1</a>
+												<a  href="#" onclick="setAni(2,37,(this.innerHTML))">Tao 2</a>
+												<a  href="#" onclick="setAni(2,38,(this.innerHTML))">Stepptanz 1</a>
+												<a  href="#" onclick="setAni(2,39,(this.innerHTML))">Po wackeln</a>
+												<a  href="#" onclick="setAni(2,40,(this.innerHTML))">Po wackeln 2</a>
+												<a  href="#" onclick="setAni(2,41,(this.innerHTML))">Zumba 1</a>
+												<a  href="#" onclick="setAni(2,42,(this.innerHTML))">Zumba 2</a>
+												<a  href="#" onclick="setAni(2,43,(this.innerHTML))">Zumba 3</a>
+												<a  href="#" onclick="setAni(2,44,(this.innerHTML))">Zumba 4</a>
+												<a  href="#" onclick="setAni(2,45,(this.innerHTML))">Zumba 5</a>
+												<a  href="#" onclick="setAni(2,46,(this.innerHTML))">Geiles lied</a>
+												<a  href="#" onclick="setAni(2,47,(this.innerHTML))">Feminines Tanzen</a>
+												<a  href="#" onclick="setAni(2,48,(this.innerHTML))">Tanzfaul</a>
+												<a  href="#" onclick="setAni(2,49,(this.innerHTML))">Luftgitarre</a>
+												<a  href="#" onclick="setAni(2,50,(this.innerHTML))">Banging Tunes</a>
+												<a  href="#" onclick="setAni(2,51,(this.innerHTML))">Onkel Disco</a>
+												<a  href="#" onclick="setAni(2,52,(this.innerHTML))">Der Fisch</a>
+												<a  href="#" onclick="setAni(2,53,(this.innerHTML))">Herzrasen</a>
+												<a  href="#" onclick="setAni(2,54,(this.innerHTML))">Snap</a>
+												<a  href="#" onclick="setAni(2,55,(this.innerHTML))">Raise</a>
+												<a  href="#" onclick="setAni(2,56,(this.innerHTML))">Salsa</a>
+												<a  href="#" onclick="setAni(2,57,(this.innerHTML))">Cats Cradle</a>
+												<a  href="#" onclick="setAni(2,58,(this.innerHTML))">Yoga 1</a>
+												<a  href="#" onclick="setAni(2,59,(this.innerHTML))">Yoga 2</a>
+												<a  href="#" onclick="setAni(2,60,(this.innerHTML))">Yoga 3</a>
+												<a  href="#" onclick="setAni(2,61,(this.innerHTML))">Yoga 4</a>
+												<a  href="#" onclick="setAni(2,62,(this.innerHTML))">Yoga 5</a>
+												<a  href="#" onclick="setAni(2,63,(this.innerHTML))">Liegest&uuml;tze 1</a>
+												<a  href="#" onclick="setAni(2,64,(this.innerHTML))">Liegest&uuml;tze 2</a>
+												<a  href="#" onclick="setAni(2,65,(this.innerHTML))">Situps</a>
+												<a  href="#" onclick="setAni(2,66,(this.innerHTML))">Flex</a>
+												<a  href="#" onclick="setAni(2,67,(this.innerHTML))">Flex 2</a>
+												<a  href="#" onclick="setAni(2,68,(this.innerHTML))">Begutachten</a>
+												<a  href="#" onclick="setAni(2,69,(this.innerHTML))">Reparieren</a>
+												<a  href="#" onclick="setAni(2,70,(this.innerHTML))">Putzen</a>
+												<a  href="#" onclick="setAni(2,71,(this.innerHTML))">Pfeifen</a>
+												<a  href="#" onclick="setAni(2,72,(this.innerHTML))">Ironisches Klatschen</a>
+												<a  href="#" onclick="setAni(2,73,(this.innerHTML))">Peace</a>
+												<a  href="#" onclick="setAni(2,74,(this.innerHTML))">2 Bier</a>
+												<a  href="#" onclick="setAni(2,75,(this.innerHTML))">Double Peace</a>
+												<a  href="#" onclick="setAni(2,76,(this.innerHTML))">Luftk&uuml;ssen</a>
+												<a  href="#" onclick="setAni(2,77,(this.innerHTML))">Fuck you</a>
+												<a  href="#" onclick="setAni(2,78,(this.innerHTML))">Daumen hoch</a>
+												<a  href="#" onclick="setAni(2,79,(this.innerHTML))">Winken</a>
+												<a  href="#" onclick="setAni(2,80,(this.innerHTML))">Facepalm</a>
+												<a  href="#" onclick="setAni(2,81,(this.innerHTML))">Ausrasten</a>
+												<a  href="#" onclick="setAni(2,82,(this.innerHTML))">Pinkeln</a>
+												<a  href="#" onclick="setAni(2,83,(this.innerHTML))">Notieren</a>
+
+                                             
+                                          </div>
+                                        </div>	
+										</div>
+                                    </div>
+                                    <div class="col-ld-4" style="padding: 5px 15px 5px 15px; "  class="">
+										<div class="row d-flex justify-content-center" >
+										<div class="dropdown" style="margin: 1px; background-color: darkgreen">
+											<h4 style="">Numpad3:</h4><span style="font-size: 0.65em" id="anislotname3">lade...</span>
+											
+                                          <button  id="anislot3"  class="btn btn-block btn-info dropbtn " >lade...</button>
+                                          <div class="dropdown-content" style="text-align: left;">
+											  	<a  href="#" onclick="setAni(3,1,(this.innerHTML))">Sitzen (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(3,2,(this.innerHTML))">Sitzen (Weibl.)</a>
+												<a  href="#" onclick="setAni(3,3,(this.innerHTML))">Sitzen (Stuhl)</a>
+												<a  href="#" onclick="setAni(3,4,(this.innerHTML))">Sitzen (Stuhl) 2</a>
+												<a  href="#" onclick="setAni(3,5,(this.innerHTML))">Sitzen (Stuhl Weibl.)</a> 
+												<a  href="#" onclick="setAni(3,6,(this.innerHTML))">Weinerlich Sitzen</a>    
+												<a  href="#" onclick="setAni(3,7,(this.innerHTML))">Auf dem R&uuml;cken liegen</a>  
+												<a  href="#" onclick="setAni(3,8,(this.innerHTML))">Auf dem Bauch liegen (Weibl.)</a> 
+												<a  href="#" onclick="setAni(3,9,(this.innerHTML))">Auf dem Bauch liegen (M&auml;nnl.)</a>  
+												<a  href="#" onclick="setAni(3,10,(this.innerHTML))">Seitlich liegen</a>
+												<a  href="#" onclick="setAni(3,11,(this.innerHTML))">Betrunken liegen</a>
+												<a  href="#" onclick="setAni(3,12,(this.innerHTML))">Liegen (Ohnmacht)</a>
+												<a  href="#" onclick="setAni(3,13,(this.innerHTML))">Schlafen</a>
+												<a  href="#" onclick="setAni(3,14,(this.innerHTML))">Arme Verschr&auml;nken (M&auml;nnl.)</a>
+												<a  href="#" onclick="setAni(3,15,(this.innerHTML))">Arme Verschr&auml;nken (Weibl.)</a>
+												<a  href="#" onclick="setAni(3,16,(this.innerHTML))">Security</a>
+												<a  href="#" onclick="setAni(3,17,(this.innerHTML))">Anlehnen</a>
+												<a  href="#" onclick="setAni(3,18,(this.innerHTML))">Anlehnen 2</a>
+												<a  href="#" onclick="setAni(3,19,(this.innerHTML))">Arrogant</a>
+												<a  href="#" onclick="setAni(3,20,(this.innerHTML))">Eingebildet</a>
+												<a  href="#" onclick="setAni(3,21,(this.innerHTML))">Depressiv</a>
+												<a  href="#" onclick="setAni(3,22,(this.innerHTML))">Salutieren</a>
+												<a  href="#" onclick="setAni(3,23,(this.innerHTML))">Knien</a>
+												<a  href="#" onclick="setAni(3,24,(this.innerHTML))">Auf die Knie</a>
+												<a  href="#" onclick="setAni(3,25,(this.innerHTML))">Auf die Knie 2</a>
+												<a  href="#" onclick="setAni(3,26,(this.innerHTML))">Verzweifelt Knien</a>
+												<a  href="#" onclick="setAni(3,27,(this.innerHTML))">Gangzeichen 1</a>
+												<a  href="#" onclick="setAni(3,28,(this.innerHTML))">Gangzeichen 2</a>
+												<a  href="#" onclick="setAni(3,29,(this.innerHTML))">Strip 1</a>
+												<a  href="#" onclick="setAni(3,30,(this.innerHTML))">Strip 2</a>
+												<a  href="#" onclick="setAni(3,31,(this.innerHTML))">Strip 3</a>
+												<a  href="#" onclick="setAni(3,32,(this.innerHTML))">Strip 4</a>
+												<a  href="#" onclick="setAni(3,33,(this.innerHTML))">Strip 5</a>
+												<a  href="#" onclick="setAni(3,34,(this.innerHTML))">Strip 6</a>
+												<a  href="#" onclick="setAni(3,35,(this.innerHTML))">Ghetto</a>
+												<a  href="#" onclick="setAni(3,36,(this.innerHTML))">Tao 1</a>
+												<a  href="#" onclick="setAni(3,37,(this.innerHTML))">Tao 2</a>
+												<a  href="#" onclick="setAni(3,38,(this.innerHTML))">Stepptanz 1</a>
+												<a  href="#" onclick="setAni(3,39,(this.innerHTML))">Po wackeln</a>
+												<a  href="#" onclick="setAni(3,40,(this.innerHTML))">Po wackeln 2</a>
+												<a  href="#" onclick="setAni(3,41,(this.innerHTML))">Zumba 1</a>
+												<a  href="#" onclick="setAni(3,42,(this.innerHTML))">Zumba 2</a>
+												<a  href="#" onclick="setAni(3,43,(this.innerHTML))">Zumba 3</a>
+												<a  href="#" onclick="setAni(3,44,(this.innerHTML))">Zumba 4</a>
+												<a  href="#" onclick="setAni(3,45,(this.innerHTML))">Zumba 5</a>
+												<a  href="#" onclick="setAni(3,46,(this.innerHTML))">Geiles lied</a>
+												<a  href="#" onclick="setAni(3,47,(this.innerHTML))">Feminines Tanzen</a>
+												<a  href="#" onclick="setAni(3,48,(this.innerHTML))">Tanzfaul</a>
+												<a  href="#" onclick="setAni(3,49,(this.innerHTML))">Luftgitarre</a>
+												<a  href="#" onclick="setAni(3,50,(this.innerHTML))">Banging Tunes</a>
+												<a  href="#" onclick="setAni(3,51,(this.innerHTML))">Onkel Disco</a>
+												<a  href="#" onclick="setAni(3,52,(this.innerHTML))">Der Fisch</a>
+												<a  href="#" onclick="setAni(3,53,(this.innerHTML))">Herzrasen</a>
+												<a  href="#" onclick="setAni(3,54,(this.innerHTML))">Snap</a>
+												<a  href="#" onclick="setAni(3,55,(this.innerHTML))">Raise</a>
+												<a  href="#" onclick="setAni(3,56,(this.innerHTML))">Salsa</a>
+												<a  href="#" onclick="setAni(3,57,(this.innerHTML))">Cats Cradle</a>
+												<a  href="#" onclick="setAni(3,58,(this.innerHTML))">Yoga 1</a>
+												<a  href="#" onclick="setAni(3,59,(this.innerHTML))">Yoga 2</a>
+												<a  href="#" onclick="setAni(3,60,(this.innerHTML))">Yoga 3</a>
+												<a  href="#" onclick="setAni(3,61,(this.innerHTML))">Yoga 4</a>
+												<a  href="#" onclick="setAni(3,62,(this.innerHTML))">Yoga 5</a>
+												<a  href="#" onclick="setAni(3,63,(this.innerHTML))">Liegest&uuml;tze 1</a>
+												<a  href="#" onclick="setAni(3,64,(this.innerHTML))">Liegest&uuml;tze 2</a>
+												<a  href="#" onclick="setAni(3,65,(this.innerHTML))">Situps</a>
+												<a  href="#" onclick="setAni(3,66,(this.innerHTML))">Flex</a>
+												<a  href="#" onclick="setAni(3,67,(this.innerHTML))">Flex 2</a>
+												<a  href="#" onclick="setAni(3,68,(this.innerHTML))">Begutachten</a>
+												<a  href="#" onclick="setAni(3,69,(this.innerHTML))">Reparieren</a>
+												<a  href="#" onclick="setAni(3,70,(this.innerHTML))">Putzen</a>
+												<a  href="#" onclick="setAni(3,71,(this.innerHTML))">Pfeifen</a>
+												<a  href="#" onclick="setAni(3,72,(this.innerHTML))">Ironisches Klatschen</a>
+												<a  href="#" onclick="setAni(3,73,(this.innerHTML))">Peace</a>
+												<a  href="#" onclick="setAni(3,74,(this.innerHTML))">2 Bier</a>
+												<a  href="#" onclick="setAni(3,75,(this.innerHTML))">Double Peace</a>
+												<a  href="#" onclick="setAni(3,76,(this.innerHTML))">Luftk&uuml;ssen</a>
+												<a  href="#" onclick="setAni(3,77,(this.innerHTML))">Fuck you</a>
+												<a  href="#" onclick="setAni(3,78,(this.innerHTML))">Daumen hoch</a>
+												<a  href="#" onclick="setAni(3,79,(this.innerHTML))">Winken</a>
+												<a  href="#" onclick="setAni(3,80,(this.innerHTML))">Facepalm</a>
+												<a  href="#" onclick="setAni(3,81,(this.innerHTML))">Ausrasten</a>
+												<a  href="#" onclick="setAni(3,82,(this.innerHTML))">Pinkeln</a>
+												<a  href="#" onclick="setAni(3,83,(this.innerHTML))">Notieren</a>
+
+                                             
+                                          </div>
+                                        </div>	
+										</div>
+                                    </div>
+									
+								</div>
+							
+									<div class="row-ld-12 d-flex justify-content-center" style="">
+										<div class="col-md-12" style="">
+											
+												<h2 style="text-align: left; padding-top: 15px">Anleitung:</h2>
+											    <h5 style="text-align: left;"><span style="color: green;">Speichern</span> - einfach die neue Animation ausw&auml;hlen.</h5>
+												<h5 style="text-align: left; padding-bottom: 15px"><span style=" color: orangered;">F2</span> - Fenster schliessen</h5>
+										</div>
+										
+										
+									</div> 
+                                </div>
+								
+                            
+                               
+                                
+                            
+                           </div>
+					</div>
+                        
+                    </div>
+                </div>
+			</div>
+        <script>
+
+        </script>
+        <script src="assets/js/main.js"></script>
+
+        <script type="text/javascript" src="./rage-rpc.min.js">
+		</script>
+        <script type="text/javascript">
+			rpc.register('setSlotAniNames', aninames => {
+				
+				var aniname1 = aninames[0].substring(0, 10);
+				document.getElementById("anislot1").innerHTML = aniname1+"..";
+				document.getElementById("anislotname1").innerHTML = aninames[0];
+				var aniname2 = aninames[1].substring(0, 10);
+				document.getElementById("anislot2").innerHTML = aniname2+"..";
+				document.getElementById("anislotname2").innerHTML = aninames[1];
+				var aniname3 = aninames[2].substring(0, 10);
+				document.getElementById("anislot3").innerHTML = aniname3+"..";
+				document.getElementById("anislotname3").innerHTML = aninames[2];
+				var aniname4 = aninames[3].substring(0, 10);
+				document.getElementById("anislot4").innerHTML = aniname4+"..";
+				document.getElementById("anislotname4").innerHTML = aninames[3];
+				var aniname5 = aninames[4].substring(0, 10);
+				document.getElementById("anislot5").innerHTML = aniname5+"..";
+				document.getElementById("anislotname5").innerHTML = aninames[4];
+				var aniname6 = aninames[5].substring(0, 10);
+				document.getElementById("anislot6").innerHTML = aniname6+"..";
+				document.getElementById("anislotname6").innerHTML = aninames[5];
+				var aniname7 = aninames[6].substring(0, 10);
+				document.getElementById("anislot7").innerHTML = aniname7+"..";
+				document.getElementById("anislotname7").innerHTML = aninames[6];
+				var aniname8 = aninames[7].substring(0, 10);
+				document.getElementById("anislot8").innerHTML = aniname8+"..";
+				document.getElementById("anislotname8").innerHTML = aninames[7];
+				var aniname9 = aninames[8].substring(0, 10);
+				document.getElementById("anislot9").innerHTML = aniname9+"..";
+				document.getElementById("anislotname9").innerHTML = aninames[8];
+    
+            });
+			
+			function setanislot(id,name){
+				document.getElementById("anislot"+id).innerHTML =""+name;
+				return;
+			}
+			
+			function getAniNames(){
+				mp.trigger("getAniNames")
+				return;
+			}
+			
+			function setAni(slotid,listid,aniname){
+				let listidn = listid
+				if(listidn <= 9){
+					listidn = "0"+listidn
+				}
+				var aninamel = aniname.substring(0, 10);
+				document.getElementById("anislot"+slotid).innerHTML = aninamel+"..";
+				document.getElementById("anislotname"+slotid).innerHTML = aniname;
+				
+				switch(slotid){
+					case 1:
+						mp.trigger("setAniSlot1",(aniname));
+						break;
+					case 2:
+						mp.trigger("setAniSlot2",(aniname));
+						break;
+					case 3:
+						mp.trigger("setAniSlot3",(aniname));
+						break;
+					case 4:
+						mp.trigger("setAniSlot4",(aniname));
+						break;
+					case 5:
+						mp.trigger("setAniSlot5",(aniname));
+						break;
+					case 6:
+						mp.trigger("setAniSlot6",(aniname));
+						break;
+					case 7:
+						mp.trigger("setAniSlot7",(aniname));
+						break;
+					case 8:
+						mp.trigger("setAniSlot8",(aniname));
+						break;
+					case 9:
+						mp.trigger("setAniSlot9",(aniname));
+						break;
+				}
+				mp.trigger("getAniNames")
+				return;
+
+			}
+
+    </script>
+    </body>
+</html>

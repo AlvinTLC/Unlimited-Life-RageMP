@@ -1,0 +1,768 @@
+@font-face {
+  font-family: "Gilroy-Bold";
+  font-weight: 700;
+  font-style: bold;
+  src: local("Gilroy-Bold"),
+    url("../fonts/Gilroy-Bold/Gilroy-Bold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Bold/Gilroy-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(../fonts/ProximaNova-Regular.woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(../fonts/ProximaNova-Semibold.woff);
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(../fonts/ProximaNova-Light.woff);
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(../fonts/ProximaNova-Bold.woff);
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(../fonts/ProximaNova-Extrabld.woff);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+::-webkit-scrollbar {
+  width: 0.2vh;
+  display: block;
+  background-color: #b2b3b600;
+  border-radius: 0.2vh;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #0496ec00;
+  border-radius: 0.2vh;
+}
+
+#inv .bgshow {
+  position: absolute;
+  box-shadow: inset 0 0 67vh 58vh rgb(29 27 40 / 60%);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+/*Ссылки на инвентарь и статистику*/
+#inv .btnlink {
+  color: #ffffff6b;
+  position: absolute;
+  justify-content: center;
+  top: 12vh;
+  margin-left: -23vh;
+  display: flex;
+  font-family: Gilroy-Bold;
+  font-size: 3.2vh;
+}
+
+#inv .btnActive {
+  padding-right: 2vh;
+  color: #ffba43;
+  transition: all 0.98s;
+}
+#inv .btn {
+  padding-right: 2vh;
+  color: #ffffff78;
+  transition: all 0.98s;
+}
+#inv .btnActive:hover {
+  color: white;
+  transition: all 0.98s;
+}
+#inv .btn:hover {
+  color: white;
+  transition: all 0.98s;
+}
+#inv .left-panel {
+  position: absolute;
+  bottom: 19vh;
+  left: 22vh;
+  font-family: ProximaNova, sans-serif;
+}
+
+#inv .left-panel .Peds {
+  width: 17vh;
+  opacity: 0.5;
+  position: absolute;
+  top: -54vh;
+  left: 2.1vh;
+}
+
+#inv .left-panel .clothes3 {
+  position: absolute;
+  border: 0.65vh solid #ffffff2b;
+  border-radius: 1.35vh;
+  height: 7vh;
+  padding: 1vh;
+  align-items: center;
+  display: flex;
+  margin-top: -2vh;
+  margin-left: -7vh;
+}
+/*Маска*/
+#inv .left-panel .clothes {
+  margin-top: -54.9vh;
+  margin-left: 16.135vh;
+}
+/*Перчатки*/
+#inv .left-panel .clothes1 {
+  margin-top: -35.91vh;
+  margin-left: 21.12vh;
+}
+/*Штаны*/
+#inv .left-panel .clothes2 {
+  margin-top: -26.41vh;
+  margin-left: -5.83vh;
+}
+/*Ботинки*/
+#inv .left-panel .clothes4 {
+  margin-top: -17vh;
+  margin-left: -5.84vh;
+}
+/*Брюлики*/
+#inv .left-panel .clothes5 {
+  margin-top: -26.4vh;
+  margin-left: 21.125vh;
+}
+/*Футболка*/
+#inv .left-panel .clothes6 {
+  margin-top: -46vh;
+  margin-left: -5.25vh;
+}
+/*Броня*/
+#inv .left-panel .clothes7 {
+  margin-left: 21.13vh;
+  margin-top: -16.9vh;
+}
+/*Куртка*/
+#inv .left-panel .clothes8 {
+  margin-top: -46vh;
+  margin-left: 20.18vh;
+}
+/*Шапка*/
+#inv .left-panel .clothes9 {
+  margin-top: -62vh;
+  margin-left: 6.67vh;
+}
+/*Очки*/
+#inv .left-panel .clothes10 {
+  margin-top: -55vh;
+  margin-left: -2.23vh;
+}
+/*Часы*/
+#inv .left-panel .clothes11 {
+  margin-top: -35.89vh;
+  margin-left: -5.83vh;
+}
+/*Вещи на челике*/
+#inv .left-panel .clothes9,
+#inv .left-panel .clothes,
+#inv .left-panel .clothes10,
+#inv .left-panel .clothes8,
+#inv .left-panel .clothes6,
+#inv .left-panel .clothes1,
+#inv .left-panel .clothes11,
+#inv .left-panel .clothes2,
+#inv .left-panel .clothes5,
+#inv .left-panel .clothes4,
+#inv .left-panel .clothes7 {
+  position: absolute;
+  border: 0.1vh solid #ffffff63;
+  border-radius: 5vh;
+  padding: 1.5vh;
+  align-items: center;
+  display: flex;
+}
+
+#inv .left-panel .clothes img,
+#inv .left-panel .clothes1 img,
+#inv .left-panel .clothes2 img,
+#inv .left-panel .clothes3 img,
+#inv .left-panel .clothes4 img,
+#inv .left-panel .clothes5 img,
+#inv .left-panel .clothes6 img,
+#inv .left-panel .clothes7 img,
+#inv .left-panel .clothes8 img,
+#inv .left-panel .clothes9 img,
+#inv .left-panel .clothes10 img,
+#inv .left-panel .clothes11 img {
+  width: 3vh;
+  opacity: 0.4;
+}
+
+#inv .item-5ma .active {
+  position: absolute;
+}
+#inv .item-5ma .item.active {
+  position: fixed;
+  border-radius: 1vh;
+  z-index: 1;
+  height: 9vh;
+  background-color: #bbbbbbd4;
+  width: 5.3vh;
+  background-position: center;
+  background-size: 3vh 3vh;
+  background-repeat: no-repeat;
+  bottom: 9.9vh;
+  left: 15vh;
+}
+
+#inv .item-4ma .item.active img,
+#inv .item-5ma .item.active img,
+#inv .item-6ma .item.active img,
+#inv .item-7ma .item.active img,
+#inv .item-8ma .item.active img,
+#inv .item-9ma .item.active img,
+#inv .item-11ma .item.active img,
+#inv .item-12ma .item.active img,
+#inv .item-13ma .item.active img,
+#inv .item-14ma .item.active img,
+#inv .item-3ma .item.active img,
+#inv .item-1ma .item.active img {
+  left: 0;
+  display: none;
+}
+#inv .item-5ma .item.active p,
+#inv .item-6ma .item.active p,
+#inv .item-7ma .item.active p,
+#inv .item-8ma .item.active p,
+#inv .item-9ma .item.active p,
+#inv .item-11ma .item.active p,
+#inv .item-12ma .item.active p,
+#inv .item-13ma .item.active p,
+#inv .item-14ma .item.active p,
+#inv .item-4ma .item.active p,
+#inv .item-3ma .item.active p,
+#inv .item-1ma .item.active p {
+  opacity: 0;
+}
+#inv .item-5ma .item.active span,
+#inv .item-6ma .item.active span,
+#inv .item-7ma .item.active span,
+#inv .item-8ma .item.active span,
+#inv .item-9ma .item.active span,
+#inv .item-11ma .item.active span,
+#inv .item-12ma .item.active span,
+#inv .item-13ma .item.active span,
+#inv .item-14ma .item.active span,
+#inv .item-4ma .item.active span,
+#inv .item-3ma .item.active span,
+#inv .item-1ma .item.active span {
+  opacity: 0;
+}
+
+#inv .item-6ma .active,
+#inv .item-7ma .active,
+#inv .item-8ma .active,
+#inv .item-9ma .active,
+#inv .item-11ma .active,
+#inv .item-12ma .active,
+#inv .item-13ma .active,
+#inv .item-14ma .active,
+#inv .item-4ma .active,
+#inv .item-3ma .active,
+#inv .item-1ma .active {
+}
+/*Вещи на челике*/
+#inv .item-1ma .item.active,
+#inv .item-12ma .item.active,
+#inv .item-13ma .item.active,
+#inv .item-11ma .item.active,
+#inv .item-8ma .item.active,
+#inv .item-3ma .item.active,
+#inv .item-14ma .item.active,
+#inv .item-4ma .item.active,
+#inv .item-7ma .item.active,
+#inv .item-6ma .item.active,
+#inv .item-9ma .item.active {
+  position: fixed;
+  border-radius: 5vh;
+  z-index: 1;
+  height: 6.45vh;
+  width: 6.45vh;
+  border-left: 0.3vh solid #ffba43;
+  border-bottom: 0.3vh solid #ffba43;
+  transform: rotate(-45deg);
+  background-position: center;
+  background-size: 5vh 5vh;
+  background-repeat: no-repeat;
+}
+/*Маска*/
+#inv .item-1ma .item.active {
+  bottom: 67.1vh;
+  left: 37.5vh;
+}
+/*Перчатки*/
+#inv .item-3ma .item.active {
+  bottom: 48.1vh;
+  left: 42.5vh;
+}
+/*Штаны*/
+#inv .item-4ma .item.active {
+  bottom: 38.5vh;
+  left: 15.6vh;
+}
+/*Брюлики*/
+#inv .item-7ma .item.active {
+  bottom: 38.5vh;
+  left: 42.5vh;
+}
+/*Ботинки*/
+#inv .item-6ma .item.active {
+  bottom: 29.1vh;
+  left: 15.55vh;
+}
+/*Футболка*/
+#inv .item-8ma .item.active {
+  bottom: 58.1vh;
+  left: 16.1vh;
+}
+/*Броня*/
+#inv .item-9ma .item.active {
+  bottom: 29.1vh;
+  left: 42.5vh;
+}
+/*Куртка*/
+#inv .item-11ma .item.active {
+  bottom: 58.1vh;
+  left: 41.55vh;
+}
+/*Шапка*/
+#inv .item-12ma .item.active {
+  bottom: 74.1vh;
+  left: 28.1vh;
+}
+/*очки*/
+#inv .item-13ma .item.active {
+  bottom: 67.1vh;
+  left: 19.2vh;
+}
+/*Часы*/
+#inv .item-14ma .item.active {
+  bottom: 48.1vh;
+  left: 15.6vh;
+}
+/*Непосредственно область панели инвентаря*/
+#inv .right-panel {
+  position: absolute;
+  bottom: 40vh;
+  height: 32vh;
+  left: 65vh;
+  display: grid;
+  max-width: 40vh;
+  max-height: 37vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  border-radius: 1.5vh;
+  align-content: flex-start;
+  scroll-behavior: smooth;
+  font-family: ProximaNova, sans-serif;
+}
+/*Слово Инвентарь*/
+#inv .right-panel h6 {
+  color: white;
+  font-weight: 100;
+  font-family: "Gilroy-Bold";
+  font-size: 2vh;
+  margin-left: 1%;
+  margin-top: -12%;
+  position: fixed;
+}
+/*#inv .right-panel .items-block {
+		border: 1px solid #ffffff12;
+		width: 6.92vh;
+		height: 7vh;
+		margin-left: 8.5px;
+		margin-bottom: 2vh;
+		border-radius: 1vh;
+	}*/
+#inv .right-panel .item-List {
+  position: relative;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  margin-left: 1vh;
+  height: 3vh;
+  flex-wrap: wrap;
+}
+
+#inv .right-panel .item:hover {
+  border-bottom: solid 0.3vh #ffc400e8;
+  transition: all 0.15s;
+}
+
+#inv .right-panel .item span {
+  float: none;
+  width: auto;
+  /* color: #ffffff00; */
+  /* text-align: right; */
+  /* left: 63%; */
+  border-radius: 0.2vh;
+  top: -0.15vh;
+  position: absolute;
+  display: block;
+  color: chartreuse;
+  font-size: 1.1vh;
+  font-weight: 500;
+  margin: 0;
+  padding: 1vh 0 0 0.25vh;
+  line-height: initial;
+}
+
+#inv .right-panel .item:hover .sub {
+  display: block;
+  color: black;
+  transition: all 0.88s;
+}
+
+#inv .right-panel .item:hover span {
+  display: block;
+  color: black;
+  transition: all 0.88s;
+}
+
+#inv .right-panel .item .names {
+  display: none;
+  transition: all 0.88s;
+}
+
+#inv .right-panel .item:hover .names {
+  font-size: 2.5vh;
+  position: fixed;
+  height: 12vh;
+  color: #ffffff;
+  display: block;
+  width: 36vh;
+  z-index: 99;
+  bottom: 68vh;
+  left: 69vh;
+  font-family: ProximaNova, sans-serif;
+  font-weight: 100;
+  transition: all 0.88s;
+}
+
+#inv .right-panel .names a {
+  font-size: 1.6vh;
+  color: #ffffff94;
+}
+
+#inv .right-panel .names b {
+  position: static;
+  margin-top: -6vh;
+  font-weight: 100;
+  float: right;
+}
+
+#inv .right-panel .item-out {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  margin-left: 1vh;
+  flex-wrap: wrap;
+  right: 0%;
+  max-height: 37vh;
+  width: 37vh;
+  max-width: 37vh;
+  position: fixed;
+  overflow-y: auto;
+  border-left: 0.1vh solid #ffffff33;
+  padding-left: 4vh;
+  overflow-x: hidden;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  scroll-behavior: smooth;
+  font-family: ProximaNova, sans-serif;
+}
+
+#inv .menuStatS {
+  position: relative;
+  margin: 7% 0 0;
+  justify-content: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+#inv .menuStatS .left-block {
+  position: fixed;
+  height: 57vh;
+  left: 33vh;
+  top: 17vh;
+}
+
+#inv .menuStatS .left-block h1 {
+  position: relative;
+  left: -2%;
+  font-size: 2.5vh;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: white;
+  top: 4%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  margin-bottom: 5vh;
+}
+
+#inv .menuStatS .left-block h2 {
+  position: relative;
+  left: -2%;
+  font-size: 2.5vh;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: white;
+  top: 4%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  margin-bottom: 1vh;
+}
+
+#inv .menuStatS li {
+  border-bottom: 0.2vh double;
+  color: rgb(255 255 255 / 5%);
+  list-style: none;
+  margin: 1vh 0 0;
+  width: 36vh;
+}
+
+#inv .menuStatS span {
+  position: relative;
+  display: inline-block;
+  color: #ffffff66;
+  background: rgb(255 255 255 / 0%);
+  text-shadow: 0 0 #ffffff59;
+  font-size: 1.6vh;
+  line-height: 1.5;
+  top: 0.7vh;
+}
+
+#inv .menuStatS span a {
+  padding-left: 0.5vh;
+  color: #ffffff45;
+}
+
+#inv .menuStatS span:last-child {
+  float: right;
+  color: white;
+}
+
+#inv .menuStatS .blockLic {
+  background: #ffffff0d;
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  margin-top: 7%;
+}
+
+#inv .menuStatS .blockLic .row__slot {
+  position: absolute;
+  margin-left: 10%;
+  width: 101%;
+  margin-top: 2vh;
+}
+
+#inv .menuStatS .blockLic .row__slot .truckIco {
+  background-color: #ffffff;
+  padding: 1vh;
+  border-radius: 3vh;
+  width: 8%;
+  margin-left: 3%;
+}
+
+#inv .menuStatS .blockLic .row__slot .truckIcoActive {
+  border: 0.1vh solid#ffffff;
+  opacity: 0.2;
+  padding: 1vh;
+  border-radius: 3vh;
+  width: 8%;
+  margin-left: 3%;
+}
+
+#inv .menuStatS .blockLic .row__slot .carIco {
+  background-color: #ffffff;
+  padding: 1vh;
+  border-radius: 3vh;
+  width: 8%;
+  margin-left: 3%;
+}
+
+#inv .menuStatS .blockLic .row__slot .carIcoActive {
+  border: 0.1vh solid#ffffff;
+  opacity: 0.2;
+  padding: 1vh;
+  border-radius: 3.4vh;
+  width: 8%;
+  margin-left: 3%;
+}
+
+#inv .menuStatS .blockLic .row__slot .planeIco {
+  background-color: #ffffff;
+  padding: 1vh;
+  border-radius: 3vh;
+  width: 8%;
+  margin-left: 3%;
+}
+
+#inv .menuStatS .blockLic .row__slot .planeIcoActive {
+  border: 0.1vh solid#ffffff;
+  opacity: 0.2;
+  padding: 1vh;
+  border-radius: 3vh;
+  width: 8%;
+  margin-left: 3%;
+}
+
+#inv .menuStatS .blockLic .row__slot .motoIco {
+  background-color: #ffffff;
+  padding: 1vh;
+  border-radius: 3vh;
+  width: 8%;
+  margin-left: 3%;
+}
+
+#inv .menuStatS .blockLic .row__slot .motoIcoActive {
+  border: 0.1vh solid#ffffff;
+  opacity: 0.2;
+  padding: 1vh;
+  border-radius: 3vh;
+  width: 8%;
+  margin-left: 3%;
+}
+
+#inv .menuStatS .blockLic .row__slot .lic_circle {
+  margin-left: 0.5vh;
+}
+
+#inv .menuStatS .right-block {
+  position: fixed;
+  height: 57vh;
+  right: 30vh;
+  top: 17vh;
+  opacity: 0.2;
+}
+
+#inv .menuStatS .right-block h1 {
+  position: relative;
+  left: -2%;
+  font-size: 2.5vh;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: white;
+  top: 4%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  margin-bottom: 5vh;
+}
+
+#inv .menuStatS .right-block h2 {
+  position: relative;
+  left: -2%;
+  font-size: 2.5vh;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: white;
+  top: 4%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  margin-bottom: 1vh;
+}
+
+#inv h1 {
+  position: absolute;
+  left: 50%;
+  top: 2%;
+  font-size: 3vh;
+  text-align: center;
+  color: #ffba43;
+  font-family: Gilroy-Bold;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+}
+
+/* Меню для инвентаря */
+.context_menu {
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.55);
+  border-left: 0.2vh solid #ffba43;
+  min-width: 5vh;
+  border-radius: 0.5vh;
+  padding: 0.5vh;
+  width: 13vh;
+  font-family: "Acrom", sans-serif;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+.context_menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 0.5vh 0;
+}
+
+.context_menu li {
+  display: block;
+  margin-bottom: 0;
+  padding: 0.5vh;
+  font-size: 1.4vh;
+  border-radius: 1vh;
+}
+
+.context_menu li:hover {
+  background: #ffba43;
+  color: #fff;
+  border-radius: 0.3vh;
+  cursor: pointer;
+}
+
+.context_menu li:last-child {
+  margin-bottom: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.58s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.item {
+  display: block;
+  width: 6.5vh;
+  height: 6.5vh;
+  background: rgba(34, 33, 35, 0.35);
+  border: 0.2vh solid #424242;
+  box-sizing: border-box;
+  border-radius: 0.5vh;
+  margin: 0.5vh;
+}
+/*---------------------------Тут мы адаптируем по экраны всякие тама жкраны -------------------------------*/

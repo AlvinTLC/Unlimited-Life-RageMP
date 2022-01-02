@@ -1,0 +1,271 @@
+.menu {
+  display: none;
+  position: absolute;
+  width: 154vh;
+  height: 87vh;
+  background-color: rgba(34, 33, 35, 0.95);
+  margin-top: 5vh;
+  margin-left: 12vh;
+}
+.icoexitbt {
+  display: flex;
+  margin: 7px;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #080a14;
+}
+.menu h1 {
+  width: 200px;
+  height: 100px;
+  margin: 0;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 18pt;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  z-index: 9999;
+}
+.grids {
+  display: flex;
+  height: 100%;
+}
+/*Центральная колонка*/
+.menu .elements {
+  padding: 1.5vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 22.5vh;
+  width: 100vh;
+  /* margin-bottom: 5px; */
+  overflow: hidden;
+  overflow-y: scroll;
+  background: rgba(26, 25, 27, 0.7);
+}
+.svgs {
+  width: 8vh;
+  margin: 3vh 3.5vh;
+}
+/*Левая колонка*/
+.menu .elements2 {
+  margin-right: 5vh;
+  padding: 1.5vh;
+  width: 30vh;
+  background: rgba(26, 25, 27, 0.7);
+}
+/*Правая колонка*/
+.menu .elements3 {
+  padding: 1.5vh;
+  margin-left: 5vh;
+  background: rgba(26, 25, 27, 0.7);
+  width: 30vh;
+}
+.menu .block {
+  width: 15vh;
+  height: 21vh;
+  margin: 0.7vh;
+  background: #222123;
+  border-radius: 0.75vh;
+}
+.market {
+  display: block;
+  position: absolute;
+  width: 25vh;
+  height: 7.5vh;
+  margin: 0;
+  border-bottom: 0.15vh solid antiquewhite;
+}
+.menu .block span {
+  font-size: 1.75vh;
+  /* padding: 6vh; */
+  text-align: center;
+  margin: 0;
+  color: #ffb943;
+  text-shadow: 0px 0px 10px rgba(255, 185, 67, 0.5);
+  display: block;
+}
+.menu .left {
+  text-align: center;
+  padding: 0.6vh;
+  margin-top: -2.5vh;
+  font-family: "Gilroy-Bold";
+  font-size: 1.43vh;
+  font-weight: 600;
+  color: antiquewhite;
+}
+.menu .right {
+  width: 10vh;
+  border: 1px solid rgba(113, 113, 113, 0.2);
+  color: white;
+  height: 2vh;
+  border-radius: 0.75vh;
+  /* margin-left: 30px; */
+  margin: 0.65vh 2.5vh;
+  /* margin-top: .65vh; */
+  padding-top: 0.55vh;
+  text-align: center;
+  font-size: 1.15vh;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.menu .right:hover {
+  background-color: #ffba43;
+  color: #121212;
+}
+
+.menu .buttons {
+  position: absolute;
+  width: 18vh;
+  height: 4.5vh;
+  top: 80vh;
+  border: 1px solid #ffb943;
+  box-sizing: border-box;
+  border-radius: 0.7vh;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.6vh;
+  font-family: "Gilroy-Bold";
+}
+.menu .btn {
+  text-align: center;
+  /* display: table-cell; */
+  vertical-align: middle;
+  /* margin: 1.25vh 0; */
+  /* padding: 7px; */
+  /* padding-left: 50px; */
+  /* display: inline-block; */
+  /* border-radius: 8px; */
+  /* width: 40%; */
+  cursor: pointer;
+}
+.menu .btn.big {
+  width: 18vh;
+  height: 4.5vh;
+  top: 80vh;
+  border: 1px solid #ffb943;
+  box-sizing: border-box;
+  border-radius: 0.7vh;
+}
+
+.menu#shop h1,
+.menu#work h1 {
+  /*background-color: #b63f3f;*/
+}
+.menu#shop .exit,
+.menu#work .exit,
+.menu#lspd .exit,
+.menu#army .exit,
+.menu#black .exit {
+  width: 17.8vh;
+  height: 4.5vh;
+  border-radius: 0.5vh;
+}
+.menu#shop .exit:hover,
+.menu#work .exit:hover,
+.menu#gang .exit:hover,
+.menu#fib .exit:hover,
+.menu#lspd .exit:hover,
+.menu#army .exit:hover,
+.menu#black .exit:hover,
+.menu#mafia .exit:hover,
+.menu#gov .exit:hover,
+.menu#fishshop .exit:hover,
+.menu#work .resign:hover {
+  background-color: #ffb943;
+  color: #222123;
+}
+.menu#work .resign {
+  background-color: #2b83b0;
+}
+
+.menu#fib h1 {
+  background-color: #0e1024;
+}
+/*.menu#fib .exit {
+  background-color: #0e1024;
+}
+.menu#fib .right {
+  background-color: #364455;
+}
+.menu#fib .right:hover {
+  background-color: #364455;
+}*/
+
+.menu#lspd h1 {
+  background-color: #214984;
+}
+
+.menu#army h1 {
+  background-color: #2a2b26;
+}
+/*
+.menu#army .right {
+  background-color: #524630;
+}
+.menu#army .right:hover {
+  background-color: #524630;
+}
+
+.menu#black h1 {
+  background-color: #121212;
+}*/
+
+.menu#gang h1 {
+  background-color: #121212;
+}
+
+.menu#gang .exit {
+  width: 18vh;
+  height: 4.5vh;
+  top: 80vh;
+  border: 1px solid #ffb943;
+  box-sizing: border-box;
+  border-radius: 0.7vh;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.6vh;
+  font-family: "Gilroy-Bold";
+}
+.menu#mafia h1 {
+  background-color: #121212;
+}
+/*
+.menu#mafia .exit {
+  background-color: #121212;
+}
+*/
+.menu#gov h1 {
+  background-color: #121212;
+}
+/*
+.menu#gov .exit {
+  background-color: #121212;
+}*/
+
+/*Рыбалка*/ 
+.menu#fishshop h1 {
+  background-color: #121212;
+}
+/*
+.menu#fishshop .exit {
+  background-color: #121212;
+}
+*/
+.menu#arcars h1 { background-color: #f8cd1e; }
+.menu#arcars .exit{ background-color: #f8cd1e; }
+.menu#arcars .exit:hover{ background-color: #f8cd1e; }
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  font-weight: 700;
+  font-style: bold;
+  src: local("Gilroy-Bold"),
+    url("../fonts/Gilroy-Bold/Gilroy-Bold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Bold/Gilroy-Bold.woff") format("woff");
+}

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+h2{
+  color:#000;
+  text-align:center;
+  font-size:2em;
+}
+.warpper{
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tabs2{
+  display: table;
+  width: 101%;
+}
+.tab{
+  font-size: 15px;
+  border-top: 2px solid #1C6EA4;
+  cursor: pointer;
+  padding: 5px 5px;
+  margin:0px 2px;
+  background:#000;
+  display: table-cell;
+  color:#fff;
+  box-shadow: 0 0.5rem 0.8rem #00000080;
+  text-align: center;
+}
+.panels{
+  color: #fffffff6;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 0px 3px 3px;
+  overflow:hidden;
+  padding:20px;
+}
+.panel{
+  display:none;
+  animation: fadein .8s;
+}
+.flex-end{position: absolute;right: 20px;/* width:20px; */}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.panel-title{
+  text-decoration: underline;
+  text-align: center;
+  font-size:1.5em;
+  font-weight:bold;
+}
+.radio{
+  display:none;
+}
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel,
+#t4:checked ~ .panels #t4-panel,
+#t5:checked ~ .panels #t5-panel,
+#t6:checked ~ .panels #t6-panel,
+#t7:checked ~ .panels #t7-panel,
+#t8:checked ~ .panels #t8-panel{
+  display: grid;
+  width: 60%;
+}
+#one:checked ~ .tabs2 #one-tab,
+#two:checked ~ .tabs2 #two-tab,
+#three:checked ~ .tabs2 #three-tab,
+#t4:checked ~ .tabs2 #t4-tab,
+#t5:checked ~ .tabs2 #t5-tab,
+#t6:checked ~ .tabs2 #t6-tab,
+#t7:checked ~ .tabs2 #t7-tab,
+#t8:checked ~ .tabs2 #t8-tab{
+  background:#fffffff6;
+  color:#000;
+}
+.color-yellow {
+	color: #E1ED5D;
+}

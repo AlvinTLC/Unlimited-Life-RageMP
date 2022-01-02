@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>HouseMenu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/HouseMenu.css">
+</head>
+<body style="display:none">
+    <div class="HouseMenuBuy" v-if="active">
+            <div class="ramkaBuy2"></div>
+    		<div class="ramkaBuy"></div>
+        <div class="header">{{header}}</div>
+        <div class="content">
+            <h3>Haus #{{id}} (ID: {{id}})</h3>
+            <p><span>Klasse:</span> {{type}}</p>
+            <p><span>Stellplätze:</span> {{garage}}</p>
+            <p><span>Maximale Bewohner:</span> {{roommates}}</p>
+            <p><span>Verkaufspreis:</span> <price>{{price}} $</price></p>
+            <p></p>
+            <p><span>Eigentümer:</span> {{owner}}</p>
+            <p v-if="locked == false"><span>Türen:</span> Öffnen</p>
+            <p v-else><span>Türen:</span> Geschlossen</p>
+        </div>
+        <div class="footer">
+            <div class="enter" @click="buy(id)">Kaufen</div>
+            <div class="cancel" @click="exit">Zurück</div>
+        </div>
+    </div>
+
+    <div class="HouseMenu" v-if="active">
+            <div class="ramkaBuy2"></div>
+    	    <div class="ramkaBuy"></div>
+        <div class="header">{{header}}</div>
+        <div class="content">
+            <h3>Haus #{{id}} (ID: {{id}})</h3>
+            <p><span>Klasse:</span> {{type}}</p>
+            <p><span>Stellplätze:</span> {{garage}}</p>
+            <p><span>Maximale Bewohner:</span> {{roommates}}</p>
+            <p><span>Verkaufspreis:</span> <price>{{price}} $</price></p>
+            <p></p>
+            <p><span>Eigentümer:</span> {{owner}}</p>
+            <p v-if="locked == false"><span>Türen:</span> Öffnen</p>
+            <p v-else><span>Türen:</span> Geschlossen</p>
+        </div>
+        <div class="footer">
+            <div class="enter" @click="enter(id)">Betreten</div>
+            <div class="cancel" @click="exit">Zurück</div>
+        </div>
+    </div>
+
+    <div class="ExitHouseMenu" v-if="active">
+            <div class="ramkaBuy2"></div>
+    		<div class="ramkaBuy"></div>
+        <div class="header">Haus Menü</div>
+        <div class="footer">
+            <div class="enter" @click="exit">Verlassen</div>
+            <!--<div class="cancel" @click="">Garage</div>-->
+            <div class="cancel" @click="close">Zurück</div>
+        </div>
+    </div>
+
+    <div class="MyyHouseMenu" v-if="active">
+            <div class="ramkaBuy2"></div>
+    		<div class="ramkaBuy"></div>
+        <div class="header">
+            <div @click="infoMm(1)" class="top-buttons active">INFO</div>
+            <div @click="carMm(1)" class="top-buttons">Auto</div>
+            <div @click="furnitureMm(1)" class="top-buttons">MÖBEL</div>
+            <div @click="roommatesMm(1)" class="top-buttons">RATGEBER</div>
+        </div>
+        <div class="content">
+            <div v-if="infoM == 1">
+                <h1>Haus #{{id}} (ID: {{id}})</h1>
+                <p><span class="name">Klasse:</span> <span class="text">{{type}}</span></p>
+                <p><span class="name">Stellplätze:</span> <span class="text">{{garage}}</span></p>
+                <p><span class="name">Maximale Mitbewohner:</span> <span class="text">{{roommates}}</span></p>
+                <p><span class="name">Verkaufspreis:</span> <span class="text"><price>{{price}} $</price></span></p>
+            </div>
+            <div v-if="carM == 1">
+                2
+            </div>
+            <div v-if="furnitureM == 1">
+                <div class="button" @click="">Möbel kaufen</div>
+                <div class="button" @click="">Verwalten der Möbel</div>
+            </div>
+            <div v-if="roommatesM == 1">
+                4
+            </div>
+        </div>
+        <div class="footer">
+            <div class="enter" @click="enter(id)">Einloggen</div>
+            <div class="cancel" @click="exit">Zurück</div>
+        </div>
+    </div>
+
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/dial.js"></script>
+    <script src="js/HouseMenu.js"></script>
+</body>
+</html>

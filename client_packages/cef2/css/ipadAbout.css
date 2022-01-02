@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+.card {
+    bottom: 0;
+    left: 11px;
+    top: 211px;
+    width: 450px;
+    height: 250px;
+    background-color: #fff;
+    background: linear-gradient(#f8f8f8, #fff);
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: absolute;
+    margin: 5px;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+background: linear-gradient(#FF9800, #FF5722);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card.green .additional {
+  background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+
+.card:hover .additional {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.card .additional .user-card {
+  /* padding-top: 22%; */
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.card .additional .user-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0,0,0,0.025);*/
+}
+
+.card .additional .user-card .level,
+.card .additional .user-card .points {
+  margin-top: 20%;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  top: 15%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0,0,0,0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.card .additional .user-card .points {
+  margin-top: 0;
+  top: 85%;
+}
+
+.card .additional .user-card svg {
+  top: 50%;
+}
+
+.card .additional .more-info {
+  width: 300px;
+  float: left;
+  position: absolute;
+  left: 150px;
+  height: 100%;
+}
+
+.card .additional .more-info h1 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.card.green .additional .more-info h1 {
+  color: #224C36;
+}
+
+.card .additional .coords {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card.green .additional .coords {
+  color: #325C46;
+}
+
+.card .additional .coords span + span {
+  float: right;
+}
+
+.card .additional .stats {
+  font-size: 2rem;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  top: auto;
+  color: #fff;
+}
+
+.card.green .additional .stats {
+  color: #325C46;
+}
+
+.card .additional .stats > div {
+  flex: 1;
+  text-align: center;
+}
+
+.card .additional .stats i {
+  display: block;
+}
+
+.card .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card .additional .stats div.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.card .additional .stats div.value.infinity {
+  font-size: 2.5rem;
+}
+
+.card .general {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.card .general .more {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
+}
+
+.card .additional .user-card .ava {
+   border-radius: 80px;
+   margin: 10%;
+   margin-left: 0;
+   width: 150px;
+   height: 120px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.about .icon {
+    background-image: linear-gradient(to bottom, #EC7BFF, #AD00CB);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about {
+    background-image: url(../img/ipad/backgrounds/002.jpg);
+    /* background: #242424; */
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* padding: 50px 80px; */
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .title-row {
+    margin-bottom: 80px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    padding: 0 190px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .title {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms > div {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms > div:first-child {
+    margin-top: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms > div:last-child {
+    margin-bottom: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms .input-group input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    height: 45px;
+    border-radius: 22.5px;
+    background-color: #2B2B2B;
+    outline: none;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 300;
+    color: #ffffff;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms .input-group input::placeholder {
+    color: #ABABAB;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms .buttons {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms .buttons .button {
+    border: 1px solid transparent;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 5px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms .buttons .button:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms .buttons .button:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms .buttons .button.accept {
+    color: #242424;
+    background-color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms .buttons .button.accept:hover {
+    background-color: #F98427;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms .buttons .button.decline {
+    color: #959595;
+    background-color: transparent;
+    border-color: #959595;
+	text-transform: initial;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.about .app .about-forms .forms .buttons .button.decline:hover {
+    color: #242424;
+    background-color: #959595;
+}

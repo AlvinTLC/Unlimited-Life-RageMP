@@ -1,0 +1,6 @@
+﻿<meta>
+  <info name="serverside" type="script"/>
+  <script src="bin/debug/netcoreapp3.1/serverside.dll"/>
+
+  <export class="Customization" function="ApplyCharacter" />
+</meta>

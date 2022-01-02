@@ -1,0 +1,114 @@
+	@media  (max-width: 1300px)  {
+    #infoped {
+		zoom: 70%
+		}
+	}
+	@media (min-width: 1301px) and (max-width: 1400px) {
+		#infoped {zoom: 80%}
+	}
+	@media (min-width: 1401px) and (max-width: 1650px) {
+		#infoped {zoom: 80%}
+	}
+	@media (min-width: 1651px) and (max-width: 2560px) {
+		#infoped {zoom: 100%}
+	}
+
+
+	@font-face {
+		font-family: ProximaNova;
+		src: url(../fonts/ProximaNova-Regular.woff);
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap
+	}
+	@font-face {
+		font-family: ProximaNova;
+		src: url(../fonts/ProximaNova-Semibold.woff);
+		font-weight: 500;
+		font-display: swap
+	}
+
+	@font-face {
+		font-family: ProximaNova;
+		src: url(../fonts/ProximaNova-Light.woff);
+		font-weight: 100;
+		font-display: swap
+	}
+
+	@font-face {
+		font-family: ProximaNova;
+		src: url(../fonts/ProximaNova-Bold.woff);
+		font-weight: 900;
+		font-style: normal;
+		font-display: swap
+	}
+
+	@font-face {
+		font-family: ProximaNova;
+		src: url(../fonts/ProximaNova-Extrabld.woff);
+		font-weight: 700;
+		font-style: normal;
+		font-display: swap
+	}
+
+	.welcome {
+		position: absolute;
+		width: 95%;
+		height: 95%;
+		z-index: 1;
+	}
+
+	.welcome .content {
+		position: absolute;
+		background: rgba(0, 0, 0, 0.6);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 30px;
+	}
+
+	.welcome .content h1 {
+		color: #ffffff;
+		font-weight: normal;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.welcome .content .text {
+		overflow-y: scroll;
+		height: 300px;
+		color: rgba(255, 255, 255, 0.8);
+		font-weight: normal;
+		font-size: 16px;
+	}
+
+	.welcome .content .text::-webkit-scrollbar { width: 5px; height: 5px;}
+	.welcome .content .text::-webkit-scrollbar-track {  background: rgba(255, 255, 255, 0.2); border-radius: 10px;}
+	.welcome .content .text::-webkit-scrollbar-thumb { height: 50px; background: #FFDB1D; border-radius: 3px;}
+
+	.welcome .content .button {
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 5px;
+		padding: 15px 70px;
+		color: rgba(255, 255, 255, 0.6);
+		width: max-content;
+		margin: 0 auto;
+		font-weight: normal;
+		font-size: 16px;
+	}
+
+	.welcome .content .button-active {
+		background: #FFDB1D;
+		border-radius: 5px;
+		width: max-content;
+		margin: 0 auto;
+		padding: 15px 70px;
+		display: none;
+		color: rgba(0, 0, 0, 0.6);
+		border: none;
+		outline: none;
+	}
+
+	.welcome .content .button-active:hover {
+		opacity: 0.95;
+	}

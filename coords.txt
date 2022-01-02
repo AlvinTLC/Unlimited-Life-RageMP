@@ -1,0 +1,2 @@
+﻿Abschlepphof   Coords: new Vector3(409.35944, -1622.8512, 28.171951),    JSON: {"x":409.35944,"y":-1622.8512,"z":28.171951}      
+Abschlepphof   Rotation: new Vector3(0, 0, -126.061745),     JSON: {"x":0.0,"y":0.0,"z":-126.061745}    

@@ -1,0 +1,451 @@
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+@font-face
+  font-family: TTNormsPro-Bold
+  src: url('/cef/fonts/TTNormsPro-Bold.ttf')
+@font-face
+  font-family: TTNormsPro-Medium
+  src: url('/cef/fonts/TTNormsPro-Medium.ttf')
+@font-face
+  font-family: RussoOne-Regular
+  src: url('/cef/fonts/RussoOne-Regular.ttf')
+
+#charCreator__wrapper
+  width: 100vw
+  height: 100vh
+  background-image: url('/cef/img/bg_temp.jpg')
+  background-size: 100% 100%
+  display: flex
+  align-items: center
+
+  & > .window
+    width: 31vw
+    height: 90vh
+    background-color: #1A191B
+    background-image: url('/cef/img/bg_window.png')
+    background-size: 100% 100%
+    margin-left: 10vh
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+
+    & > .bg_angle
+      width: 4vw
+      height: 4vw
+      position: absolute
+
+      &.tr
+        top: 0
+        right: 0
+        transform: rotate(0deg)
+      &.bl
+        bottom: 0
+        left: 0
+        transform: rotate(180deg)
+
+      & > .rect
+        position: absolute
+        box-shadow: 0 0 3px 1px #FFBA43ee
+
+        &:first-child
+          top: 0
+          right: 0
+          width: 100%
+          height: .6vw
+          background-color: #FFBA43
+        &:last-child
+          top: 0
+          right: 0
+          width: .6vw
+          height: 100%
+          background-color: #FFBA43
+
+    & > .content
+      width: 80%
+      height: 90%
+      color: #fff
+      display: flex
+      flex-direction: column
+      justify-content: space-evenly
+
+      & > .header
+        font-family: TTNormsPro-Bold
+        font-size: 1.25vw
+        width: 60%
+      
+      & > .info
+        margin-top: .8vw
+        font-family: TTNormsPro-Medium
+        color: #515151
+        font-size: .73vw
+        margin-bottom: 2vw
+
+      & > .input__block
+        width: 100%
+        height: 4.2vw
+        background-color: #222123
+        position: relative
+        font-family: TTNormsPro-Bold
+        font-size: .94vw
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 8% 0 6%
+        margin-bottom: 1.6vw
+        
+
+        & > .bg_angle
+          width: 2vw
+          height: 2vw
+          position: absolute
+
+          &.tr
+            top: 0
+            right: 0
+            transform: rotate(0deg)
+          &.bl
+            bottom: 0
+            left: 0
+            transform: rotate(180deg)
+
+          & > .rect
+            position: absolute
+
+            &:first-child
+              top: 0
+              right: 0
+              width: 100%
+              height: .3vw
+              background-color: #FFBA43
+            &:last-child
+              top: 0
+              right: 0
+              width: .3vw
+              height: 100%
+              background-color: #FFBA43
+          
+        & > .name
+          color: #FFBA43
+        
+        & > .selector.arrows
+          width: 30%
+          display: flex
+          justify-content: space-between
+          align-items: center
+
+          & > .arrow
+            width: 1vw
+            height: 1vw
+            background-image: url('/cef/img/arrow_inp.svg')
+            background-size: 100% 100%
+            background-position: 50%
+            transition: transform .1s ease-in-out
+
+            &:hover
+              cursor: pointer
+              transform: scale(1.2)
+
+            &.right
+              transform: rotate(180deg)
+              &:hover
+                cursor: pointer
+                transform: rotate(180deg) scale(1.2)
+
+        & > .selector.range
+          width: 40%
+          height: 100%
+          margin-right: 6%
+          position: relative
+          display: flex
+          justify-content: center
+          align-items: center
+
+          & > .text
+            position: absolute
+            font-size: .6vw
+            top: 20%
+            left: 8%
+            width: 10vw
+
+            & > span
+              color: #FFBA43
+
+          & > .ui-slider
+            margin-top: 8%
+            background: #393939
+            height: .4vw
+            border: none
+            border-radius: 100px
+            position: relative
+            width: 90%
+            cursor: pointer
+            &::before, &::after
+              content: ''
+              display: block
+              position: absolute
+              width: 2vw
+              height: .4vw
+              background: #393939
+              border-radius: 100px
+            &::before
+              left: -6%
+            &::after
+              right: -20%
+
+            & > .ui-slider-handle
+              background: #FFBA43
+              border: none
+              outline: none
+              height: 100%
+              margin-top: .3vw
+              width: 30%
+              cursor: pointer
+
+      & > .buttons_block
+        width: 100%
+        height: 4.2vw
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        & > .btn
+          width: 45%
+          height: 100%
+          background: red
+          display: flex
+          justify-content: center
+          align-items: center
+          font-family: TTNormsPro-Bold
+          font-size: .93vw
+          box-shadow: 0px 0px 59px rgba(0, 0, 0, 0.75)
+          cursor: pointer
+
+          &.next
+            color: #161616
+            background-color: #FFBA43
+          &.cancel
+            color: rgba(255, 255, 255, 0.33)
+            background-color: #1A191B
+
+      &.step_1
+        display: flex
+
+      &.step_2
+        display: none
+        height: 90%
+        
+        &::after
+          content: ''
+          display: block
+          width: 3vw
+          height: 3vw
+          background-image: url('/cef/img/bg_hairs.svg')
+          background-size: 100%
+          position: absolute
+          top: 1.4vw
+          right: 1.4vw
+
+        & > .header
+          width: 80%
+
+        & > .input__block
+          & > .selector.range
+            width: 40%
+            height: 100%
+            margin-right: 15%
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+
+            & > .text
+              position: absolute
+              font-size: .6vw
+              left: -15%
+              width: 12vw
+
+            & > .value
+              position: absolute
+              right: -35%
+              top: 43% 
+
+            & > .ui-slider
+              margin-top: 8%
+              background: #393939
+              height: .4vw
+              border: none
+              border-radius: 100px
+              position: relative
+              width: 90%
+              cursor: pointer
+              &::before, &::after
+                display: none
+
+              & > .ui-slider-handle
+                background: #FFBA43
+                border: none
+                outline: none
+                width: 1vw
+                height: 1vw
+                border-radius: 50%
+                cursor: pointer
+                top: -.5vw
+
+        & > .color_picker
+          
+          & > .header
+            font-family: TTNormsPro-Bold
+            font-size: 1.25vw
+            margin-bottom: 1vw
+
+          & > .content
+            width: 21vw
+            height: 24vw
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+
+            & > .row
+              display: flex
+              justify-content: space-between
+              align-items: center
+              width: 100%
+              height: 2vw
+
+              & > div
+                width: 2vw
+                height: 2vw
+                border: 2px solid #373737
+
+                &:hover
+                  cursor: pointer
+                  border-color: #FFB943
+
+                &.selected
+                  border-color: #FFB943
+
+      &.step_3
+        display: none
+        height: 90vh
+
+        & > .header
+          width: 70%
+          margin-bottom: -2vw
+
+        & > .input__block
+          margin-bottom: -1vw
+
+          & > .selector.text
+            width: 50%
+            height: 40%
+            position: relative
+
+            & > .status
+              width: 1vw
+              height: 1vw
+              background-size: 100%
+              top: calc(50% - .5vw)
+              left: .5vw
+              position: absolute
+
+              &.success
+                background-image: url('/cef/img/status_success.svg')
+              &.error
+                background-image: url('/cef/img/status_error.svg')
+
+            & > input
+              width: 100%
+              height: 100%
+              border: 1px solid rgba(196, 196, 196, .15)
+              background: none
+              outline: none
+              padding-left: 20%
+              padding-right: 5%
+              text-align: right
+              color: #fff
+
+          & > .selector.range
+            width: 50%
+            
+            & > .text
+              top: 12%
+              left: -22%
+              width: 14vw
+              text-align: right
+
+        & > #gender
+          width: 100%
+          height: 4.2vw
+          display: flex
+          justify-content: space-between
+          align-items: center
+          font-family: RussoOne-Regular
+          font-size: .93vw
+          color: #fff
+          margin-bottom: 3vw
+
+          & > .select
+            width: 43%
+            height: 100%
+            background: #2E2D2D
+            box-shadow: 0px 0px 59px rgba(0, 0, 0, 0.75)
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+
+            &.male.selected, &.male:hover
+              background: linear-gradient(0deg, #5C6DFF, #5C6DFF), linear-gradient(0deg, #3B37FF, #3B37FF), #3B37FF
+            &.female.selected, &.female:hover
+              background: linear-gradient(0deg, #EC82F5, #EC82F5), linear-gradient(0deg, #FFB943, #FFB943), #FFB943
+      
+      &.step_4
+        display: none
+        
+      & > .input__block
+        & > .selector.range
+          width: 30%
+          height: 100%
+          margin-right: 15%
+          position: relative
+          display: flex
+          justify-content: center
+          align-items: center
+
+          & > .text
+            position: absolute
+            font-size: .6vw
+            left: -15%
+            width: 12vw
+
+          & > .value
+            position: absolute
+            right: -35%
+            top: 43% 
+
+          & > .ui-slider
+            margin-top: 8%
+            background: #393939
+            height: .4vw
+            border: none
+            border-radius: 100px
+            position: relative
+            width: 90%
+            cursor: pointer
+            &::before, &::after
+              display: none
+
+            & > .ui-slider-handle
+              background: #FFBA43
+              border: none
+              outline: none
+              width: 1vw
+              height: 1vw
+              border-radius: 50%
+              cursor: pointer
+              top: -.6vw

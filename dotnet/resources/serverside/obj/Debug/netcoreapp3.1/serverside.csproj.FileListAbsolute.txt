@@ -1,0 +1,93 @@
+H:\Project\dotnet\resources\serverside\bin\Debug\netcoreapp3.1\serverside.deps.json
+H:\Project\dotnet\resources\serverside\bin\Debug\netcoreapp3.1\serverside.dll
+H:\Project\dotnet\resources\serverside\bin\Debug\netcoreapp3.1\serverside.pdb
+H:\Project\dotnet\resources\serverside\bin\Debug\netcoreapp3.1\Bootstrapper.dll
+H:\Project\dotnet\resources\serverside\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+H:\Project\dotnet\resources\serverside\bin\Debug\netcoreapp3.1\Bootstrapper.xml
+H:\Project\dotnet\resources\server\set\netcoreapp3.1\serverside.deps.json
+H:\Project\dotnet\resources\server\set\netcoreapp3.1\serverside.dll
+H:\Project\dotnet\resources\server\set\netcoreapp3.1\serverside.pdb
+H:\Project\dotnet\resources\setting\netcoreapp3.1\serverside.deps.json
+H:\Project\dotnet\resources\setting\netcoreapp3.1\serverside.dll
+H:\Project\dotnet\resources\setting\netcoreapp3.1\serverside.pdb
+H:\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfoInputs.cache
+H:\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfo.cs
+H:\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CoreCompileInputs.cache
+H:\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CopyComplete
+H:\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.dll
+H:\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.pdb
+G:\gta_serv_MP\LCdotnet\dotnet\resources\setting\netcoreapp3.1\serverside.deps.json
+G:\gta_serv_MP\LCdotnet\dotnet\resources\setting\netcoreapp3.1\serverside.dll
+G:\gta_serv_MP\LCdotnet\dotnet\resources\setting\netcoreapp3.1\serverside.pdb
+G:\gta_serv_MP\LCdotnet\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfoInputs.cache
+G:\gta_serv_MP\LCdotnet\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfo.cs
+G:\gta_serv_MP\LCdotnet\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CoreCompileInputs.cache
+G:\gta_serv_MP\LCdotnet\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CopyComplete
+G:\gta_serv_MP\LCdotnet\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.dll
+G:\gta_serv_MP\LCdotnet\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.pdb
+G:\gta_serv_MP\LCdotnet\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csprojAssemblyReference.cache
+C:\Users\Corbie\Desktop\Project\dotnet\resources\setting\netcoreapp3.1\serverside.deps.json
+C:\Users\Corbie\Desktop\Project\dotnet\resources\setting\netcoreapp3.1\serverside.dll
+C:\Users\Corbie\Desktop\Project\dotnet\resources\setting\netcoreapp3.1\serverside.pdb
+C:\Users\Corbie\Desktop\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfoInputs.cache
+C:\Users\Corbie\Desktop\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfo.cs
+C:\Users\Corbie\Desktop\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CoreCompileInputs.cache
+C:\Users\Corbie\Desktop\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CopyComplete
+C:\Users\Corbie\Desktop\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.dll
+C:\Users\Corbie\Desktop\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.pdb
+C:\Users\Corbie\Desktop\Project\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csprojAssemblyReference.cache
+C:\Users\justi\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CoreCompileInputs.cache
+C:\Users\justi\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfoInputs.cache
+C:\Users\justi\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfo.cs
+C:\Users\justi\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.dll
+C:\Users\justi\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.pdb
+C:\Users\justi\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CopyComplete
+C:\Users\justi\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csprojAssemblyReference.cache
+C:\Users\justi\Desktop\Aktueller Server\dotnet\resources\setting\netcoreapp3.1\serverside.deps.json
+C:\Users\justi\Desktop\Aktueller Server\dotnet\resources\setting\netcoreapp3.1\serverside.dll
+C:\Users\justi\Desktop\Aktueller Server\dotnet\resources\setting\netcoreapp3.1\serverside.pdb
+C:\Users\Administrator\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CopyComplete
+C:\Users\Administrator\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.dll
+C:\Users\Administrator\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.pdb
+C:\Users\Administrator\Desktop\Aktueller Server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\Aktueller Server\dotnet\resources\setting\netcoreapp3.1\serverside.deps.json
+C:\Users\Administrator\Desktop\Aktueller Server\dotnet\resources\setting\netcoreapp3.1\serverside.dll
+C:\Users\Administrator\Desktop\Aktueller Server\dotnet\resources\setting\netcoreapp3.1\serverside.pdb
+C:\Users\Administrator\Desktop\Aktueller Server - German\dotnet\resources\setting\netcoreapp3.1\serverside.deps.json
+C:\Users\Administrator\Desktop\Aktueller Server - German\dotnet\resources\setting\netcoreapp3.1\serverside.dll
+C:\Users\Administrator\Desktop\Aktueller Server - German\dotnet\resources\setting\netcoreapp3.1\serverside.pdb
+C:\Users\Administrator\Desktop\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CopyComplete
+C:\Users\Administrator\Desktop\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.dll
+C:\Users\Administrator\Desktop\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.pdb
+C:\Users\Administrator\Desktop\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csprojAssemblyReference.cache
+C:\Program Files\server\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfoInputs.cache
+C:\Program Files\server\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfo.cs
+C:\Program Files\server\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CoreCompileInputs.cache
+C:\Program Files\server\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CopyComplete
+C:\Program Files\server\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.dll
+C:\Program Files\server\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.pdb
+C:\Program Files\server\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csprojAssemblyReference.cache
+C:\Program Files\server\Aktueller Server - German\dotnet\resources\setting\netcoreapp3.1\serverside.deps.json
+C:\Program Files\server\Aktueller Server - German\dotnet\resources\setting\netcoreapp3.1\serverside.dll
+C:\Program Files\server\Aktueller Server - German\dotnet\resources\setting\netcoreapp3.1\serverside.pdb
+C:\Users\Administrator\Desktop\Neuer Ordner (4)\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Neuer Ordner (4)\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Neuer Ordner (4)\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Neuer Ordner (4)\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Neuer Ordner (4)\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.dll
+C:\Users\Administrator\Desktop\Neuer Ordner (4)\Aktueller Server - German\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.pdb
+C:\Users\Administrator\Desktop\server1\server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\server1\server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\server1\server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\server1\server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\server1\server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.dll
+C:\Users\Administrator\Desktop\server1\server\dotnet\resources\serverside\obj\Debug\netcoreapp3.1\serverside.pdb
+C:\Users\Administrator\Desktop\server1\server\dotnet\resources\setting\netcoreapp3.1\serverside.deps.json
+C:\Users\Administrator\Desktop\server1\server\dotnet\resources\setting\netcoreapp3.1\serverside.dll
+C:\Users\Administrator\Desktop\server1\server\dotnet\resources\setting\netcoreapp3.1\serverside.pdb

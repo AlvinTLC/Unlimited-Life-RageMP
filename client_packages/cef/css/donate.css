@@ -1,0 +1,127 @@
+*{
+    user-select: none;
+    -webkit-user-select: none;
+}
+.mainz{
+    display: block;
+    position: absolute;
+    width: 100vh;
+    height: 60vh;
+    left: 40vh;
+    top: 15vh;
+    background-image: url(../img/Rectangle.svg);
+    background-color: #1A191B;
+}
+
+.donate .balance{
+    color: white;
+    font-size: 24pt;
+    display: flex;
+    padding-left: 30px;
+    height: 15%;
+    font-family: 'Gilroy-Bold';
+    border-bottom: 3px solid #ff9c3fa6;
+}
+
+.donate .center{
+    display: flex;
+    vertical-align: middle;
+}
+.donate input{ /*Текст заполнения*/
+    width: 80%;
+    background-color: black;
+    border: 0;
+    color: white;
+    padding: 35px;
+    font-size: 14pt;
+    margin-bottom: 10px;
+}
+.donate .chel{
+    background-image: url(../res/donate/chel.svg);
+}
+.donate .convert{
+    background-image: url(../res/donate/convert.svg);
+}
+.donate .warn{
+    background-image: url(../res/donate/warn.svg);
+}
+.donate .changename{
+    background-image: url(../res/donate/changename.svg);
+}
+.donate .vip{
+    background-image: url(../res/donate/vip.svg);
+    
+}
+.vip, .changename, .warn, .convert, .chel{
+    background-repeat: no-repeat;
+    background-size: 90px 90px;
+    width: 100%;
+    height: 100%;
+}
+.donate .btn{
+    background-color: rgba(49, 49, 49, 0.3);
+    box-shadow: 0px 0px 20px #FF9B3F;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 14pt;
+}
+.donate .msg{
+    background: linear-gradient(157.66deg, #FFB943 10.95%, #FF9E3F 63.71%, #FF9B3F 85.44%);
+    box-shadow: 0px 0px 10px #FF9B3F;
+    border-radius: 5px;
+    color: #000;
+    font-size: 3.7vh;
+    font-family: 'Gilroy-Bold';
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin-left: 16.5%;
+    margin-top: 4.7%;
+}
+.donate .info{
+    width: 80%;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.btn:hover {
+    box-shadow: 0px 0px 30px #FF9B3F;
+}
+
+/*----Крутилка (Анимка)-----*/
+/*
+.btns:hover .flipper {
+    transform: rotateY(180deg);
+   }
+.btns {
+    margin-left: 4%;
+    width: 15.5vh;
+}
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: translate(50% 50%);
+    transition: 1.5s;
+    transform-style: preserve-3d;
+   }
+.front, .back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+}
+.front {
+    z-index: 1;
+   }
+.back {
+    transform: rotateY(180deg);
+}  
+  */

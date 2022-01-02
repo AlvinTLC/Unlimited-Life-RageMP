@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+
+      <link rel="stylesheet" href="main.css">
+      <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+      <script type="text/javascript">
+      </script>
+  </head>
+  <body>
+    <p id="Debug"></p>
+      <div id="tab-container">
+          <div class="tab-wrap">
+              <span class="dot" id="dot">
+                <a style="height: 100%; display: block;" href="javascript:void(0)" onclick="Homebutton()"></a>
+              </span>
+              <div class="tab" id="iframediv">
+                  <iframe id="iframe" name="iframe-" src="https://pc.copnet.li/tablet.php?page=officer" onclick="Iframeaction()"></iframe>
+              </div>
+          </div>
+      </div>
+      <script type="text/javascript">
+        var fullexit = false;
+        function Homebutton() {
+          //var currentiframe = document.getElementById("iframe").src;
+          //document.getElementById("Debug").innerHTML = currentiframe;
+          if (fullexit==true) {
+            browser.destroy();
+            browser = null;
+            mp.gui.cursor.show(false, false);
+            mp.game.ui.displayRadar(true);
+            //document.getElementById("Debug").innerHTML = "Geschlossen";
+          } else {
+            document.getElementById("iframe").src = "https://pc.copnet.li/tablet.php?page=officer";
+            fullexit = true;
+            //document.getElementById("Debug").innerHTML = fullexit;
+          }
+        }
+
+        function Iframeaction() {
+          //document.getElementById("Debug").innerHTML = "Seite geändert";
+          fullexit = false;
+        }
+
+        var myConfObj = {
+          iframeMouseOver : false
+        }
+
+        window.addEventListener('blur',
+          function(){
+            if(myConfObj.iframeMouseOver){
+              Iframeaction();
+            }
+        });
+
+        document.getElementById("iframediv").addEventListener('mouseover',
+          function(){
+            myConfObj.iframeMouseOver = true;
+        });
+        document.getElementById('iframediv').addEventListener('mouseout',
+          function(){
+            myConfObj.iframeMouseOver = false;
+        });
+
+      </script>
+  </body>

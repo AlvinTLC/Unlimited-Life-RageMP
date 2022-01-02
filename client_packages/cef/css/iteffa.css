@@ -1,0 +1,25 @@
+html, body {user-select: none; -moz-user-select: none; -webkit-user-select: none; overflow: hidden;}
+
+* {
+  font-family: 'Lato', Helvetica, sans-serif;
+  color: #fff;
+}
+
+.text-yellow {
+  color: #f8cd1e;
+}
+
+.text-gray {
+  color: #cdcdcd;
+}
+
+.text-green {
+  color: #2e7e00;
+}
+
+.text-red {
+  color: #ff0000;
+}
+
+.decor-green {position: fixed;width: 20vh;height: 15vh;background: #f8cd1e;bottom: -6vh;left: 5.1vh;transform: skew(36deg) rotate(-11deg);}
+.decor-white {position: fixed;width: 24vh;height: 15vh;background: #ffffff;bottom: -5vh;left: -10vh;transform: skew(36deg) rotate(-9deg);}

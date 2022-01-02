@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: local('Gotham Pro Narrow Medium'), local('Gotham-Pro-Narrow-Medium'),
+        url('GothamProNarrow-Medium.woff2') format('woff2'),
+        url('GothamProNarrow-Medium.woff') format('woff'),
+        url('GothamProNarrow-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }

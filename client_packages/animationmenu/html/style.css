@@ -1,0 +1,165 @@
+body {
+    *background: url('https://img.gta5-mods.com/q95/images/relationships-kizacudo/98ed0e-GTA5%202015-06-21%2019-35-38.JPG'); 
+    *background-size: cover;
+    overflow: hidden;
+    user-select: none;
+}
+
+.hidden {
+    display: none; 
+}
+		
+#wheelDiv > svg { 
+    width: 100%; 
+    height: 100%; 
+}
+
+#wheelDiv { 
+    height: 40vw; 
+    width: 40vw; 
+    margin:5vw auto; 
+}
+
+[class|=wheelnav-wheelDiv-slice-basic],
+[class|=wheelnav-wheel2-slice-basic],
+[class|=wheelnav-wheel3-slice-basic],
+[class|=wheelnav-wheel4-slice-basic],
+[class|=wheelnav-wheel5-slice-basic],
+[class|=wheelnav-wheel6-slice-basic],
+[class|=wheelnav-wheel7-slice-basic],
+[class|=wheelnav-wheel8-slice-basic],
+[class|=wheelnav-wheel9-slice-basic] { 
+    fill: rgba(0, 0, 0, 0.8); 
+    stroke: rgb(138, 127, 231); 
+    stroke-width: 0.2vw; 
+}
+
+[class|=wheelnav-wheelDiv-slice-selected] {
+    fill: rgba(138,127,231,0.6);  
+    stroke: rgb(138, 127, 231); 
+    stroke-width: 0.2vw; 
+    cursor: pointer; 
+}
+
+[class|=wheelnav-wheel2-slice-selected],
+[class|=wheelnav-wheel3-slice-selected],
+[class|=wheelnav-wheel4-slice-selected],
+[class|=wheelnav-wheel5-slice-selected],
+[class|=wheelnav-wheel6-slice-selected],
+[class|=wheelnav-wheel7-slice-selected],
+[class|=wheelnav-wheel8-slice-selected],
+[class|=wheelnav-wheel9-slice-selected] { 
+    fill: rgba(0, 0, 0, 0.8);  
+    stroke: rgb(138, 127, 231); 
+    stroke-width: 0.2vw; 
+    cursor: pointer; 
+}
+
+[class|=wheelnav-wheelDiv-slice-hover],
+[class|=wheelnav-wheel2-slice-hover],
+[class|=wheelnav-wheel3-slice-hover],
+[class|=wheelnav-wheel4-slice-hover],
+[class|=wheelnav-wheel5-slice-hover],
+[class|=wheelnav-wheel6-slice-hover],
+[class|=wheelnav-wheel7-slice-hover],
+[class|=wheelnav-wheel8-slice-hover],
+[class|=wheelnav-wheel9-slice-hover] { 
+    fill: rgba(138,127,231,0.6);  
+    stroke: rgb(125, 113, 228); 
+    stroke-width: 0.2vw; 
+    cursor: pointer; 
+}
+
+[class|=wheelnav-wheelDiv-title-basic] { 
+    fill: #fff; 
+    stroke: none; 
+    font-size: 20px !important;
+}
+[class|=wheelnav-wheel2-title-basic],
+[class|=wheelnav-wheel3-title-basic],
+[class|=wheelnav-wheel4-title-basic],
+[class|=wheelnav-wheel5-title-basic],
+[class|=wheelnav-wheel6-title-basic],
+[class|=wheelnav-wheel7-title-basic],
+[class|=wheelnav-wheel8-title-basic],
+[class|=wheelnav-wheel9-title-basic] { 
+    fill: #fff; 
+    stroke: none; 
+    font-size: 10px !important;
+}
+
+[class|=wheelnav-wheelDiv-title-selected] { 
+    fill: #fff; 
+    stroke: none; 
+    cursor: pointer; 
+    font-size: 20px !important;
+}
+[class|=wheelnav-wheel2-title-selected],
+[class|=wheelnav-wheel3-title-selected],
+[class|=wheelnav-wheel4-title-selected],
+[class|=wheelnav-wheel5-title-selected],
+[class|=wheelnav-wheel6-title-selected],
+[class|=wheelnav-wheel7-title-selected],
+[class|=wheelnav-wheel8-title-selected],
+[class|=wheelnav-wheel9-title-selected] { 
+    fill: #fff; 
+    stroke: none; 
+    cursor: pointer; 
+    font-size: 10px !important;
+}
+
+[class|=wheelnav-wheelDiv-title-hover] { 
+    fill: #fff; 
+    stroke: none; 
+    cursor: pointer; 
+    font-size: 20px !important;
+}
+[class|=wheelnav-wheel2-title-hover], 
+[class|=wheelnav-wheel3-title-hover],
+[class|=wheelnav-wheel4-title-hover],
+[class|=wheelnav-wheel5-title-hover],
+[class|=wheelnav-wheel6-title-hover],
+[class|=wheelnav-wheel7-title-hover],
+[class|=wheelnav-wheel8-title-hover],
+[class|=wheelnav-wheel9-title-hover] { 
+    fill: #fff; 
+    stroke: none; 
+    cursor: pointer;
+    font-size: 10px !important;
+}
+
+[class|=wheelnav-wheelDiv-line-basic],
+[class|=wheelnav-wheel2-line-basic],
+[class|=wheelnav-wheel3-line-basic],
+[class|=wheelnav-wheel4-line-basic],
+[class|=wheelnav-wheel5-line-basic],
+[class|=wheelnav-wheel6-line-basic],
+[class|=wheelnav-wheel7-line-basic],
+[class|=wheelnav-wheel8-line-basic],
+[class|=wheelnav-wheel9-line-basic] { 
+    stroke: none; 
+}
+
+[class|=wheelnav-wheelDiv-line-selected]
+[class|=wheelnav-wheel2-line-selected],
+[class|=wheelnav-wheel3-line-selected],
+[class|=wheelnav-wheel4-line-selected],
+[class|=wheelnav-wheel5-line-selected],
+[class|=wheelnav-wheel6-line-selected],
+[class|=wheelnav-wheel7-line-selected],
+[class|=wheelnav-wheel8-line-selected],
+[class|=wheelnav-wheel9-line-selected] { 
+    stroke: none; 
+}
+
+[class|=wheelnav-wheelDiv-line-hover]
+[class|=wheelnav-wheel2-line-hover],
+[class|=wheelnav-wheel3-line-hover],
+[class|=wheelnav-wheel4-line-hover],
+[class|=wheelnav-wheel5-line-hover],
+[class|=wheelnav-wheel6-line-hover],
+[class|=wheelnav-wheel7-line-hover],
+[class|=wheelnav-wheel8-line-hover],
+[class|=wheelnav-wheel9-line-hover] { 
+    stroke: none; 
+}

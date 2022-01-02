@@ -1,0 +1,309 @@
+*{
+    user-select: none;
+    -webkit-user-select: none;
+}
+body {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    font-family: "Ubuntu",sans-serif;
+    margin: 0;
+    height: 100vh
+}
+
+::-webkit-scrollbar {
+    width: 8px
+}
+
+::-webkit-scrollbar-track {
+    background: #555
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ddd
+}
+
+.HouseMenu {
+    max-width: 350px;
+    margin: 0 auto;
+    position: relative;
+    top: 25%;
+    background-image: url(../img/Rectangle.svg);
+    background-color: #1A191B;
+}
+
+    .HouseMenu .header {
+        padding: 15px 10px;
+        font-size: 27px;
+        font-weight: 700;
+        border-bottom: solid 1px #fff;
+        text-align: center;
+    }
+
+    .HouseMenu .content {
+        padding: 0 18px
+    }
+
+        .HouseMenu .content h3 {
+            margin: 25px 0
+        }
+
+        .HouseMenu .content p {
+            margin: 0;
+            padding-bottom: 5px
+        }
+
+            .HouseMenu .content p span {
+                color: #969696
+            }
+
+    .HouseMenu .footer {
+        padding: 15px 10px;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 20px;
+        border-top: solid 1px #fff;
+    }
+
+        .HouseMenu .footer div {
+            display: inline-block;
+            padding: 5px 25px;
+            cursor: pointer;
+            background: #FFBA43;
+            border-radius: 3px;
+            box-shadow: 0 0 15px 3px rgba(255, 186, 67, .35);
+        }
+
+            .HouseMenu .footer div:hover {
+                background: #4c4c4c;
+                color: #ababab;
+            }
+
+.HouseMenuBuy {
+    background-image: url(../img/Rectangle.svg);
+    background-color: #1A191B;
+    max-width: 350px;
+    margin: 0 auto;
+    position: relative;
+    top: 25%;
+    /*border-radius: 10px;*/
+}
+.header{
+    color: #FFBA43;
+}
+.enter, 
+.cancel{
+    color: #312f2f;
+}
+.content {
+    color: #fff;
+}
+.content price{
+    color: rgb(0, 192, 0);
+}
+    .HouseMenuBuy .header {
+        padding: 15px 10px;
+        font-size: 27px;
+        font-weight: 700;
+        border-bottom: solid 1px #fff;
+        text-align: center;
+    }
+
+    .HouseMenuBuy .content {
+        padding: 0 18px
+    }
+
+        .HouseMenuBuy .content h3 {
+            margin: 25px 0
+        }
+
+        .HouseMenuBuy .content p {
+            margin: 0;
+            padding-bottom: 5px
+        }
+
+            .HouseMenuBuy .content p span {
+                color: #969696
+            }
+
+    .HouseMenuBuy .footer {
+        padding: 15px 10px;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 20px;
+        border-top: solid 1px #fff;
+    }
+
+        .HouseMenuBuy .footer div {
+            display: inline-block;
+            padding: 5px 25px;
+            cursor: pointer;
+            background: #FFBA43;
+            box-shadow: 0 0 15px 3px rgba(255, 186, 67, .35);
+            border-radius: 3px;
+        }
+
+            .HouseMenuBuy .footer div:hover {
+                background: #4c4c4c;
+                color: #ababab;
+            }
+
+.ExitHouseMenu {
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto;
+    position: relative;
+    top: 35%;
+    background-image: url(../img/Rectangle.svg);
+    background-color: #1A191B;
+}
+
+    .ExitHouseMenu .header {
+        border-bottom: solid 1px #fff;
+        padding: 15px 10px;
+        font-size: 27px;
+        font-weight: 700;
+    }
+
+    .ExitHouseMenu .footer {
+        padding: 15px 10px;
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+        .ExitHouseMenu .footer div {
+            display: inline-block;
+            padding: 5px 25px;
+            cursor: pointer;
+            background: #FFBA43;
+            box-shadow: 0 0 15px 3px rgba(255, 186, 67, .35);
+            border-radius: 3px;
+        }
+
+            .ExitHouseMenu .footer div:hover {
+                background: #4c4c4c;
+                color: #ababab;
+            }
+
+
+.MyyHouseMenu {
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+    top: 25%;
+    background-image: url(../img/Rectangle.svg);
+    background-color: #1A191B;
+}
+
+    .MyyHouseMenu .header {
+        border-bottom: solid 1px #fff;
+        height: 63px;
+        font-size: 27px;
+        font-weight: 700;
+    }
+
+    .MyyHouseMenu .content {
+        padding: 0 120px;
+    }
+
+        .MyyHouseMenu .content h1 {
+            margin: 0px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .MyyHouseMenu .content p {
+            font-size: 20px;
+            margin: 0;
+            padding-bottom: 5px;
+        }
+
+            .MyyHouseMenu .content p .name {
+                color: #969696
+            }
+
+            .MyyHouseMenu .content p .text {
+                float: right;
+            }
+
+    .MyyHouseMenu .footer {
+        border-top: solid 1px #fff;
+        padding: 15px 10px;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+        .MyyHouseMenu .footer div {
+            display: inline-block;
+            padding: 5px 25px;
+            cursor: pointer;
+            background: #FFBA43;
+            border-radius: 3px;
+        }
+
+            .MyyHouseMenu .footer div:hover {
+                background: #4c4c4c;
+                color: #ababab;
+            }
+
+    .MyyHouseMenu .top-buttons {
+        padding: 20px;
+        font-size: 20px;
+        float: left;
+    }
+
+        .MyyHouseMenu .top-buttons:hover {
+            background: #171717;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+        }
+
+    .MyyHouseMenu .active {
+        background: #171717;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .MyyHouseMenu .button {
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 5px;
+        background: #FFBA43;
+        border-radius: 5px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+        .MyyHouseMenu .button:hover {
+            background: #464646;
+        }
+/*Рамки уголки менюшек*/
+.ramkaBuy {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    border-color: #FFBA43;
+    border-style: solid;
+  }
+  .ramkaBuy:nth-child(2) {
+    top: 0;
+    right: 0;
+    border-width: 5px 5px 0 0;
+  }
+  .ramkaBuy2 {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    border-color: #FFBA43;
+    border-style: solid;
+  }
+  .ramkaBuy2:nth-child(1) {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 5px 5px;
+  }

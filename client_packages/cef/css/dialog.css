@@ -1,0 +1,88 @@
+﻿.dialog p {
+    margin: 0;
+}
+
+.dialog {
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    margin: -200px 0 0 -230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 535px;
+    height: 180px;
+    background-image: url(../img/Rectangle.svg);
+    background-color: #1A191B;
+}
+
+    .dialog .field_ques {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 535px;
+        height: 170px;
+        border-bottom: 2px solid #ffba4369;
+
+    }
+        .dialog .question p {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            padding: 1.5% 7% 0 7%;
+        }
+
+    .dialog .buttons { /*нижняя панель*/
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        width: 350px;
+        height: 100px;
+    }
+
+.dialog button {
+    width: 30%;
+    height: 55%;
+    border-style: none;
+}
+
+    .dialog .yes, 
+    .dialog .no{
+        background-image: linear-gradient(256.86deg, #FFBA43 3.2%, #ffa742 95.93%);
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        box-shadow: 2px 2px 15px #FFBA43;
+    }
+    /*Рамки уголки менюшек*/
+.ramka {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-color: #FFBA43;
+    border-style: solid;
+  }
+  .ramka:nth-child(2) {
+    top: 0;
+    right: 0;
+    border-width: 5px 5px 0 0;
+  }
+  .ramka2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-color: #FFBA43;
+    border-style: solid;
+  }
+  .ramka2:nth-child(1) {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 5px 5px;
+  }

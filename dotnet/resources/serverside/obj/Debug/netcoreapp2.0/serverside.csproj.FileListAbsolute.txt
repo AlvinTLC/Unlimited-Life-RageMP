@@ -1,0 +1,4 @@
+H:\Project\dotnet\resources\serverside\obj\Debug\netcoreapp2.0\serverside.csprojAssemblyReference.cache
+H:\Project\dotnet\resources\serverside\obj\Debug\netcoreapp2.0\serverside.AssemblyInfoInputs.cache
+H:\Project\dotnet\resources\serverside\obj\Debug\netcoreapp2.0\serverside.AssemblyInfo.cs
+H:\Project\dotnet\resources\serverside\obj\Debug\netcoreapp2.0\serverside.csproj.CoreCompileInputs.cache

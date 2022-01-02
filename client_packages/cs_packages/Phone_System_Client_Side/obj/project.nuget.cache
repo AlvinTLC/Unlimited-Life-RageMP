@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+A1M0i0Tl2AlfYezLKsL3vI/MDzUEJQLZXCWkSCeKg5F80ne/B5hCM6inUevVFE9Sva2zX+ILg1REPxhcpM5VQ==",
+  "success": true,
+  "projectFilePath": "D:\\Phone_System\\Phone_System_Client_Side\\Phone_System_Client_Side.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KOPRIVANAC\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

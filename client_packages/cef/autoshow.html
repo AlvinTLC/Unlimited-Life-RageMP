@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <link href="./assets/css/iteffa.css" rel="stylesheet">
+  <link href="./assets/css/autoshow.css" rel="stylesheet">
+  <script src="./assets/js/libraries/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="https://kit.fontawesome.com/c552bfdf6a.js"></script>
+</head>
+<body class="body_hide">
+  <div class="auto_new" v-if="active">
+    <audio id="loading" autoplay loop>
+      <source src="./assets/audio/business.mp3" type="audio/mp3">
+    </audio>
+    <div class="showbgs"></div>
+    <div class="mouse"><img src="./assets/icons/globals/mouse.png" class="mouseicon">Поворот транспорта</div>
+    <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" @click="exit" class="btnexit">Выход</div>
+    <h3>Добро пожаловать в магазин транспорта!</h3>
+    <div class="right-block">
+      <h1>Информация</h1>
+      <p class="autoname"> Транспорт <a class="floats"> {{modelsName[indexM]}} </a></p>
+      <p class="autoprice">
+        Гос.стоимость
+        <a class="floats">
+          {{prices[indexM] | formatThousands}}
+          <i class="fas fa-dollar-sign text-yellow"></i>
+        </a>
+      </p>
+      <div class="wrapper">
+        <div class="rating">
+          <div class="rating-title">
+            Скорость <a>{{speed}} км/ч</a>
+          </div>
+          <div class="rating-item">
+            <div class="rating-item_progress" v-bind:style="{width: speed+'px'}">
+            </div>
+          </div>
+          <div class="rating-title">
+            Управление
+          </div>
+          <div class="rating-item">
+            <div class="rating-item_progress" v-bind:style="{width: ControlW(models[indexM])+'%'}">
+            </div>
+          </div>
+          <div class="rating-title">
+            Торможение
+          </div>
+          <div class="rating-item">
+            <div class="rating-item_progress" v-bind:style="{width: BrakesW(models[indexM])+'%'}">
+            </div>
+          </div>
+          <div class="rating-title">
+            Бак <a>{{getFuel(models[indexM])}} л. </a>
+          </div>
+          <div class="rating-item">
+            <div class="rating-item_progress" v-bind:style="{width: FuelW(models[indexM])+'%'}">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="colors-menu">
+        <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" @click="color(0)" class="colors-menu__item black"></div>
+        <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" @click="color(1)" class="colors-menu__item white"></div>
+        <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" @click="color(2)" class="colors-menu__item red"></div>
+        <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" @click="color(3)" class="colors-menu__item orange"></div>
+        <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" @click="color(4)" class="colors-menu__item yellow"></div>
+        <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" @click="color(5)" class="colors-menu__item green"></div>
+        <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" @click="color(6)" class="colors-menu__item sky"></div>
+      </div>
+      <div class="btnlinks">
+        <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" @click="cars(1)" class="btnbuy">Купить</div>
+        <!--<div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" @click="testdrive" class="btntest">Тест-Драйв</div>-->
+      </div>
+      <div class="left-block">
+        <h1><i class="fas fa-car text-yellow"></i> Транспорт</h1>
+        <div class="listauto">
+          <ul>
+            <li v-for="(value, index) in models" :key="index">
+              <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" v-on:click="auto(index)">
+                <p class="autoname">
+                  {{modelsName[index]}}
+                  <a class="floats">
+                    {{prices[index] | formatThousands}} <i class="fas fa-dollar-sign text-yellow"></i>
+                  </a>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <transition name="fade">
+      <div class="buycar" v-if="car == 1">
+        <div class="showBack"></div>
+        <div class="header">Покупка транспорта</div>
+        <div class="info">Вы подтверджаете что готовы купить транспорт <b style="color:white">{{modelsName[indexM]}}</b> за государственную стоимость
+          <a class="floats">
+            {{prices[indexM] | formatThousands}}
+            <i class="fas fa-dollar-sign text-yellow"></i>
+          </a>.
+          <br><br>
+          <a style="font-size: 16px;">После подтверждения Ваш транспорт будет доставлен в гараж</a>
+        </div>
+        <div class="btn">
+          <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" class="btnYes" @click="buy">Подтвердить</div>
+          <div onclick="new Audio('./assets/audio/mouse-click.mp3').play(); return false;" class="btnNo" @click="cars(0)">Отменить</div>
+        </div>
+      </div>
+    </transition>
+    <div class="decor-green"></div>
+    <div class="decor-white"></div>
+  </div>
+  <script>
+    setTimeout(function() {
+      document.body.classList.add('body_visible');
+    }, 200);
+  </script>
+  <script>
+    var audio = document.querySelector("audio");
+    audio.volume = 0.1;
+  </script>
+  <script>
+    Vue.filter('formatThousands', (x) => {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    })
+  </script>
+  <script src="./assets/js/autoshow.js"></script>
+</body>
+</html>

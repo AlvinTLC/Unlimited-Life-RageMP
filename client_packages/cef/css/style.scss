@@ -1,0 +1,43 @@
+@import url('../fonts/Acrom/stylesheet.css');
+@import url('../fonts/TTNorms/stylesheet.css');
+@import url('../fonts/Montserrat/stylesheet.css');
+@import url('../fonts/Geometria/stylesheet.css');
+@import url('../fonts/Roboto/stylesheet.css');
+@import url('../fonts/Comic/stylesheet.css');
+@import url('../fonts/Gilroy/stylesheet.css');
+@import url('../fonts/GothamPro/stylesheet.css');
+@import 'color.scss';
+
+@function pxtovh($pxsize) {
+	@return $pxsize / (1080 * 0.01)+vh;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	// font-family: "Montserrat",sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+
+	-webkit-appearance: none;
+
+}
+
+ul {
+	list-style: none;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	height: 100%;
+
+
+
+}

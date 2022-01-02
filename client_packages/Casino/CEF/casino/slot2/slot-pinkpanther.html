@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Casino-Automat</title>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/segment14" type="text/css" />
+    <style>
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateY(-50%);
+            }
+
+            100% {
+                transform: translateY(50%);
+            }
+        }
+
+        .container {
+            width: 900px;
+            height: 900px;
+            margin: auto;
+            position: relative;
+            margin-top: 75px;
+            background-image: url("img/slotmachine/slotbg_pinkpanther1.png");
+        }
+
+        #close {
+            position: relative;
+            top: 0px;
+            right: -786px;
+            background-color: rgba(0, 0, 0, 0.8);
+            opacity: 0.6;
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+            #close:hover {
+                opacity: 1;
+                background-color: rgba(147, 34, 16, 0.8);
+            }
+
+        .sButton {
+            display: block;
+            top: 766px;
+            position: absolute;
+            left: 658px;
+            width: 133px;
+            height: 90px;
+            border-radius: 0%;
+            border: none;
+            background: transparent;
+            color: red;
+            font-size: 20px;
+        }
+
+        .maxButton {
+            display: block;
+            top: 766px;
+            position: absolute;
+            left: 111px;
+            width: 133px;
+            height: 90px;
+            border-radius: 0%;
+            border: none;
+            background: transparent;
+            color: red;
+            font-size: 20px;
+        }
+
+        .raiseButton {
+            display: block;
+            top: 766px;
+            position: absolute;
+            left: 265px;
+            width: 133px;
+            height: 90px;
+            border-radius: 0%;
+            border: none;
+            background: transparent;
+            color: red;
+            font-size: 20px;
+        }
+
+        .rollen {
+            border: 2px solid transparent;
+            position: absolute;
+            top: 438px;
+            left: 248px;
+            height: 146px;
+            width: 416px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .gewinn {
+            border: 2px solid transparent;
+            position: absolute;
+            top: 797px;
+            left: 494px;
+            height: 65px;
+            width: 182px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .gewinn p {
+                font-family: 'Segment14Regular';
+                font-weight: normal;
+                font-style: normal;
+                color: red;
+                font-size: 30px;
+                text-align: center;
+            }
+
+        .status {
+            border: 2px solid transparent;
+            position: absolute;
+            top: 752px;
+            left: 494px;
+            height: 65px;
+            width: 182px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .status p {
+                font-family: 'Segment14Regular';
+                font-weight: normal;
+                font-style: normal;
+                color: red;
+                font-size: 30px;
+                text-align: center;
+            }
+
+        .blinking {
+            animation: blink 1s step-start 0s infinite;
+        }
+
+        .rolling {
+            animation: scroll 100ms linear infinite;
+        }
+    </style>
+
+    <script>
+        const images = [
+            "berry.png", //0
+            "party.png", //1
+            "sun.png", //2
+            "kette.png", //3
+            "dart.png",//4
+            "diamond.png",//5
+            "shoes.png",//6
+            "leer.png"];//7
+
+        let limits = {
+            currentBet: 100000,
+            minimumBet: 100000,
+            maximumBet: 250000,
+            interval: 100
+        };
+
+        function maxBet() {
+
+            let anzeigeStatus = document.getElementById("aStatus");
+            let anzeigeGewinn = document.getElementById("aGewinn");
+            limits.currentBet = limits.maximumBet;
+            anzeigeStatus.innerHTML = limits.currentBet;
+            anzeigeGewinn.classList.remove("blinking");
+            anzeigeStatus.classList.remove("blinking");
+
+        }
+
+        function raiseBet() {
+
+            let anzeigeStatus = document.getElementById("aStatus");
+            let anzeigeGewinn = document.getElementById("aGewinn");
+
+            if (limits.currentBet < limits.maximumBet) {
+                limits.currentBet += limits.interval;
+            } else {
+                limits.currentBet = limits.minimumBet;
+            }
+            anzeigeStatus.innerHTML = limits.currentBet;
+            anzeigeGewinn.classList.remove("blinking");
+            anzeigeStatus.classList.remove("blinking");
+
+        }
+
+        function result(daten) {
+			daten = JSON.parse(daten);
+            let startButton = document.getElementById("sButton");
+            let anzeigeGewinn = document.getElementById("aGewinn");
+            let anzeigeStatus = document.getElementById("aStatus");
+            let audioStart = document.getElementById("soundStart");
+            startButton.setAttribute("disabled", "");
+            audioStart.volume = 0.2;
+            audioStart.play();
+            anzeigeStatus.innerHTML = "GOOD";
+            anzeigeGewinn.innerHTML = "LUCK";
+            anzeigeGewinn.classList.add("blinking");
+            anzeigeStatus.classList.add("blinking");
+
+            let rolleA = document.getElementById("rolleA");
+            let rolleB = document.getElementById("rolleB");
+            let rolleC = document.getElementById("rolleC");
+            let audioRun = document.getElementById("soundRun");
+            audioRun.volume = 0.2;
+            let audioPay = document.getElementById("soundPay");
+            audioPay.volume = 0.2;
+            let countA = 0;
+            let countB = 3;
+            let countC = 6;
+            audioRun.play();
+            let intervalA = setInterval(() => {
+                rolleA.classList.add("rolling");
+                setImage(rolleA, countA);
+                if (countA >= 7) {
+                    countA = 0;
+                    return;
+                }
+                countA++;
+            }, 100);
+            let intervalB = setInterval(() => {
+                rolleB.classList.add("rolling");
+                setImage(rolleB, countB);
+                if (countB >= 7) {
+                    countB = 0;
+                    return;
+                }
+                countB++;
+            }, 100);
+            let intervalC = setInterval(() => {
+                rolleC.classList.add("rolling");
+                setImage(rolleC, countC);
+                if (countC >= 7) {
+                    countC = 0;
+                    return;
+                }
+                countC++;
+            }, 100);
+
+            setTimeout(() => {
+                clearInterval(intervalA);
+                rolleA.classList.remove("rolling");
+                setImage(rolleA, daten[0]);
+            }, 3000);
+            setTimeout(() => {
+                clearInterval(intervalB);
+                rolleB.classList.remove("rolling");
+                setImage(rolleB, daten[1]);
+            }, 4000);
+            setTimeout(() => {
+                clearInterval(intervalC);
+                rolleC.classList.remove("rolling");
+                setImage(rolleC, daten[2]);
+                anzeigeGewinn.innerHTML = daten[3];
+                audioRun.pause();
+                audioRun.currentTime = 0;
+                if (daten[3] > 0) {
+                    audioPay.play();
+                    mp.trigger('BrowserManager:Trigger', 'CasinoService:PayoutWin', daten[3]);
+                }
+                anzeigeStatus.innerHTML = limits.currentBet;
+                anzeigeGewinn.classList.remove("blinking");
+                anzeigeStatus.classList.remove("blinking");
+                startButton.removeAttribute("disabled");
+            }, 5000);
+        }
+
+        function setImage(image, index) {
+            image.setAttribute("src", "img/slotmachine/" + images[index]);
+
+        }
+    </script>
+
+    <body>
+        <audio id="soundStart"><source src="slotmachine/slot_start.ogg" type="audio/ogg"></audio>
+        <audio id="soundRun"><source src="slotmachine/slot_run_dia.ogg" type="audio/ogg"></audio>
+        <audio id="soundPay"><source src="slotmachine/slot_pay.ogg" type="audio/ogg"></audio>
+        <div class="container" id="slotmachine" min="10" max="100" inital="10" interval="10">
+            <button class="sButton" id="sButton" onclick="mp.trigger('slotmachineStart', limits.currentBet)"></button>
+            <button class="maxButton" id="maxButton" onclick="maxBet()"></button>
+            <button class="raiseButton" id="raiseButton" onclick="raiseBet()"></button>
+            <div class="gewinn">
+                <p class="blinking" id="aGewinn">0</p>
+            </div>
+            <div class="status">
+                <p class="blinking" id="aStatus">100000</p>
+            </div>
+            <div id="rollen" class="rollen">
+                <img id="rolleA" src="img/slotmachine/berry.png" />
+                <img id="rolleB" src="img/slotmachine/berry.png" />
+                <img id="rolleC" src="img/slotmachine/berry.png" />
+            </div>
+            <div id="close" onclick ="mp.trigger('closeAutomat')">&times;</div>
+        </div>
+    </body>
+</html>

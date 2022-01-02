@@ -1,0 +1,182 @@
+﻿.lift {
+    border:3px solid #3a4a70;
+    background: linear-gradient(15deg, #293452, #a3afcf 70%, #293452);
+    border-radius: 15px;
+    margin-left: -175px;
+    margin-top: -130px;
+    height: 250px;
+    width: 350px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    display: inline-block;
+}
+    .lift h1 {
+        border: 1px solid black;
+        background: linear-gradient(90deg, #2d364d, #1f2d52, #2d364d, #1f2d52, #2d364d);
+        box-shadow: inset 0 0 15px 1px #b3e6fc;
+        border-radius: 5px;
+        text-align: center;
+        padding-top: 30px;
+        margin-left: 25%;
+        margin-top: 13%;
+        color: white;
+        height: 60px;
+        width: 180px;
+    }
+
+    .lift #btn-down {
+        border: 1px solid #484a4a;
+        border-radius: 50%;
+        float: right;
+        margin-right: 5%;
+        margin-top: -18%;
+        height: 50px;
+        width: 50px;
+    }
+
+    .lift #btn-up {
+        border: 1px solid #484a4a;
+        border-radius: 50%;
+        float: right;
+        margin-right: 5%;
+        margin-top: -35%;
+        height: 50px;
+        width: 50px;
+    }
+    .lift #btn-up:hover{
+        border: 1px solid #0d70e0;
+        box-shadow: 0 0 10px #0d70e0;
+    }
+    .lift #btn-up:activ{
+        box-shadow: 0 0 25px #45b811;
+    }
+    .lift #btn-down:hover{
+        border: 1px solid #0d70e0;
+        box-shadow: 0 0 10px #0d70e0;
+    }
+    .lift #btn-down:activ{        
+        box-shadow: 0 0 25px #45b811;
+    }
+    .lift #btn-stop {
+        border: 1px solid black;
+        border-radius: 10%;
+        float: right;
+        margin-right: 23%;
+        margin-top: 2%;
+        height: 20px;
+        width: 60px;
+    }
+
+    .lift #btn-start {
+        border: 1px solid black;
+        border-radius: 10%;
+        float: left;
+        margin-left: 25%;
+        margin-top: 2%;
+        height: 20px;
+        width: 60px;
+    }
+
+    .lift div {
+        cursor: pointer;
+    }
+    .lift a{
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+/*---------------Анимационная стрелка------------*/
+/*--------------Вниз-------------*/
+.arrow-down {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 20px auto 15px auto;
+}
+.arrow-down:before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    animation: arrow-down 3s linear infinite;
+}
+.arrow-down:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;    
+    width: 100%;
+    height: 100%;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    animation: arrow-down 3s linear infinite -1.5s;
+}
+@keyframes arrow-down {
+    0% {
+        opacity: 0;
+        transform: translate(0, -23px) rotate(-45deg);
+    }
+    10%, 90% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;  
+        border-left: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        transform: translate(0, 0) rotate(-45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 3px) rotate(-45deg);
+    }
+}
+/*-------------------Верх----------------------*/
+.arrow-up {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 10px auto 15px auto;
+}
+.arrow-up:before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    animation: arrow-up 3s linear infinite;
+}
+.arrow-up:after{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;    
+    width: 100%;
+    height: 100%;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    animation: arrow-up 3s linear infinite -1.5s;
+}
+@keyframes arrow-up{
+    0% {
+        opacity: 0;
+        transform: translate(0, 25px) rotate(135deg);
+    }
+    10%, 90% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        border-left: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        transform: translate(0, 0) rotate(135deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, -3px) rotate(135deg);
+    }
+}

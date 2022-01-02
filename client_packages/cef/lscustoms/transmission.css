@@ -1,0 +1,7 @@
+.item {
+    background: rgb(255,255,255,0.5) url(images/transmission.png) no-repeat!important;
+}
+
+.item:hover {
+    background: rgba(255,255,255,0.6) url(images/transmission.png) no-repeat!important;
+}

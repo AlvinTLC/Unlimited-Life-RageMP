@@ -1,0 +1,206 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+body {
+    
+    background-image: url("../res/resp.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.wraper {
+    display: flex;
+    min-height: -webkit-fill-available;
+}
+
+.box1, .box2, .box3 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 600px;
+    margin: auto 100px;
+    background-image: url(../img/Rectangle.svg);
+    background-color: #1A191B;
+    /*background: linear-gradient(221.33deg, #1E2124 2.34%, rgba(30, 33, 36, 0.95) 136.48%);*/
+    opacity: 0.98;
+    /*border-radius: 20px;*/
+}
+
+/*.box1 {
+}
+
+.box2 {
+}
+
+.box3 {
+}*/
+
+.respawnOnExit, .respawnFraction, .respawnHome {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    width: 81.75%;
+    height: 85.6%;
+    position: relative;
+}
+
+.text {
+    margin-top: 50%;
+    font-family: "UniNeueBook";
+    font-size: 18px;
+    line-height: 29px;
+    color: #FFFFFF;
+    /*line-height: 5.6vh;
+    text-align: center;*/
+}
+
+.respawnOnExit p span, .respawnFraction p span, .respawnHome p span {
+    font-family: "UniNeueBold";
+}
+
+.logoImages {
+    display: block;
+    width: 27.42%;
+}
+
+.textDescription {
+    font-family: "UniNeueRegular";
+    font-size: 14px;
+    color: #515151;
+    margin-top: 2.5%;
+    /*text-align: center;*/
+}
+
+.button {
+    width: 50%;
+    height: 10%;
+    font-family: "UniNeueRegular";
+    border: 3px solid #FFBA43;
+    box-sizing: border-box;
+    background: linear-gradient(0deg, #FFBA43, #FFBA43), linear-gradient(0deg, #FFBA43, #FFBA43), #FFBA43;
+    box-shadow: 0px 0px 59px rgba(0, 0, 0, 0.75);
+    /*border-radius: 10px;*/
+    font-size: 1vw;
+    font-weight: bold;
+    /*color: #ffffff;*/
+    margin-top: 35px;
+    transition: 0.5s;
+}
+
+    .button:hover {
+        /*box-shadow: 0 19px 50px rgba(29, 97, 173, 0.75);*/
+        background-color: #fda60f;
+    }
+
+.noBox2 {
+    /*display: flex;*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    min-height: 600px;
+    background-image: url(../img/Rectangle.svg);
+    background-color: #1A191B;
+    margin: auto 100px;
+    /*background: linear-gradient(221.33deg, #1E2124 2.34%, rgba(30, 33, 36, 0.95) 136.48%);*/
+    opacity: 0.98;
+    /*border-radius: 20px;*/
+}
+
+.noHome, .noFraction {
+    width: 81.75%;
+    height: 35.18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.notext {
+    font-family: "UniNeueBook";
+    color: #FFBA43;
+    font-size: 1vw;
+    line-height: 3vh;
+    text-align: center;
+    font-weight: bold;
+}
+
+.noBox3 {
+    /*display: flex;*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    min-height: 600px;
+    margin: auto 100px;
+    background-image: url(../img/Rectangle.svg);
+    background-color: #1A191B;
+    /*background: linear-gradient(221.33deg, #1E2124 2.34%, rgba(30, 33, 36, 0.95) 136.48%);*/
+    opacity: 0.98;
+    /*border-radius: 20px;*/
+}
+
+.noText span {
+    font-family: "UniNeueBold";
+}
+
+.lockImg {
+    height: 39.14%;
+    position: absolute;
+    bottom: 0px;
+}
+/*Рамки уголки менюшек*/
+.ramka {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-color: #FFBA43;
+    border-style: solid;
+  }
+  .ramka:nth-child(2) {
+    top: 0;
+    right: 0;
+    border-width: 5px 5px 0 0;
+  }
+  .ramka2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-color: #FFBA43;
+    border-style: solid;
+  }
+  .ramka2:nth-child(1) {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 5px 5px;
+  }
+
+/*Адаптация под микрописюны*/
+@media screen and (max-height: 768px) and (min-width: 1366px) {
+    .box1, .box2, .box3 {
+        width: 85%;
+        height: 450px;
+    }
+    .noBox2 {
+        width: 85%;
+        min-height: 450px;
+    }
+    .noBox3 {
+        width: 85%;
+        min-height: 450px;
+    }
+    .text {
+        margin-top: 50%;
+        font-size: 3vh;
+        line-height: 3.5vh;
+    }
+    .textDescription {
+        font-size: 1.65vh;
+        margin-top: 2.5%;
+    }
+}

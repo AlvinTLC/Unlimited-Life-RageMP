@@ -1,0 +1,250 @@
+.clothes {
+  height: 100%;
+  width: 100%;
+}
+.obwak {
+  height: 48vh;
+  width: 39vh;
+  float: right;
+  margin-right: 3vh;
+  /* position: absolute; */
+  /*text-align: center;*/
+  color: white;
+  /* top: 50%; */
+  margin-top: 8vh;
+}
+.obwak .logoname {
+  display: flex;
+  width: 32vh;
+  background: #1a191b;
+  float: right;
+  margin-bottom: 2vh;
+}
+
+.obwak h2 {
+  padding: 1vh;
+}
+
+.obwak .logsname {
+  width: 4vh;
+  padding: 1vh;
+  margin-left: 1.5vh;
+}
+
+.obwak .right {
+  float: right;
+  height: 100%;
+  width: 32vh;
+  /* overflow: hidden; */
+  background: #1a191b;
+}
+.obwak .left {
+  padding: 0.7vh 0.3vh 0.3vh 0.3vh;
+  background: #1a191b;
+  /* height: 100%; */
+  margin-top: 10.2vh;
+  width: 5.5vh;
+}
+.obwak i {
+  font-family: "icons";
+  font-style: normal;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #222123;
+  border-radius: 5px;
+}
+.obwak i:hover {
+  background-color: #ffba43;
+}
+.obwak .list div {
+  width: 3vh;
+  padding: 1vh;
+  border-radius: 5px;
+  display: inline-block;
+  /*background-color: #37474f;*/
+}
+.obwak h1 {
+  margin: 0;
+  margin-bottom: 3vh;
+  /* padding: 0; */
+  font-size: 20pt;
+  /*width: 34vh;*/
+  background-color: #328cb7;
+}
+.obwak .left-arrow {
+  /*float: left;*/
+}
+.obwak .right-arrow {
+  /*float: right;*/
+}
+.obwak .list {
+  margin-top: 2vh;
+  text-align: center;
+}
+.obwak .items {
+  height: 200px;
+}
+.clothes .btn {
+  padding: 1vh;
+  border-radius: 5px;
+  /* border: 2px solid; */
+  cursor: pointer;
+  text-align: center;
+  font-size: 2.5vh;
+  font-weight: 700;
+  margin: 10px;
+}
+.clothes .buy {
+  width: 12vh;
+  height: 5vh;
+  margin: 71vh 0 0 120vh;
+  background: linear-gradient(121.57deg, #ffb943 13.56%, #ff9b3f 80.22%);
+  box-shadow: 0px 0px 20px rgba(255, 185, 67, 0.8);
+  border-radius: 5px;
+}
+.clothes .exit {
+  margin-left: 4vh;
+  margin-top: 4vh;
+  background: linear-gradient(157.66deg, #ffb943 10.95%, #ff9b3f 85.44%);
+  box-shadow: 0px 0px 10px rgba(255, 155, 63, 0.7);
+  border-radius: 5px;
+  width: 4vh;
+  height: 4vh;
+}
+.clothes .buy:hover {
+  background-color: #e0970e;
+}
+.clothes .exit:hover {
+  background-color: #e0970e;
+}
+.obwak .icon {
+  height: 4.5vh;
+  /* background-color: #1a191b; */
+  /* border-top-left-radius: 15px; */
+  /* border-bottom-left-radius: 15px; */
+  margin-bottom: 0.45vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 3.2vh;
+}
+.obwak .icon.active,
+.obwak .icon:hover {
+  margin: 0 0.45vh 0.45vh 0.45vh;
+  height: 4.5vh;
+  border-radius: 0.5vh;
+  background-color: #ffb943;
+}
+.obwak .listclothes {
+  margin: 1vh;
+  overflow-y: scroll;
+  height: 40vh;
+  /* width: 100%; */
+  list-style-type: none;
+  overflow-x: hidden;
+}
+.obwak .listclothes .clothesPrice b {
+  color: #43a047;
+}
+.obwak .clothes__block {
+  border-radius: 0.5vh;
+  display: flex;
+  /*padding: 3vh;*/
+  background: #222123;
+  width: 100%;
+  margin-bottom: 0.75vh;
+}
+.obwak .clothes__block .hovers {
+  display: none;
+}
+.obwak .clothes__block.active .hovers,
+.obwak .clothes__block:hover .hovers {
+  display: block;
+  width: 1vh;
+  height: 3vh;
+  margin: 1vh 0 0 0.35vh;
+  border-radius: 0.35vh;
+  background: linear-gradient(180deg, #ff9b3f 0%, #ffb943 100%);
+  box-shadow: 0px 0px 10px rgba(255, 155, 63, 0.75);
+}
+.obwak .clothes__block.active .clothesName,
+.obwak .clothes__block:hover .clothesName {
+  padding: 0.5vh 0 0.5vh 0.1vh;
+}
+.obwak .clothesName {
+  width: 100%;
+  padding: 0.5vh 0 0.5vh 1vh;
+  height: 2vh;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ff9b3f;
+  text-shadow: 0px 0px 4px rgba(255, 155, 63, 0.5);
+}
+.select__colors {
+  margin: 3vh;
+  background: #1a191b;
+  /* display: block; */
+  width: 26vh;
+  height: 9.5vh;
+  border-radius: 0.5vh;
+}
+.obwak .clothesPrice {
+  width: 45%;
+  padding: 0.5vh 1vh;
+  height: 2vh;
+  color: #ff9b3f;
+  text-align: right;
+}
+.obwak .styleblock {
+  display: flex;
+  margin: 1.5vh 0 0 2vh;
+  width: 20vh;
+}
+.obwak .stylesblock {
+  width: 6vh;
+}
+.obwak p {
+  margin: 1vh;
+  color: rgb(255, 255, 255);
+}
+.obwak p span {
+  color: green;
+  font-size: 16pt;
+}
+.obwak .hat {
+  background-image: url("../res/clothes/hats.svg");
+}
+.obwak .jacket {
+  background-image: url("../res/clothes/blazer.svg");
+}
+.obwak .shirt {
+  background-image: url("../res/clothes/shirt.svg");
+}
+.obwak .pants {
+  background-image: url("../res/clothes/trousers.svg");
+}
+.obwak .shoe {
+  background-image: url("../res/clothes/grooves.svg");
+}
+.obwak .gloves {
+  background-image: url("../res/clothes/gloves.svg");
+}
+.obwak .watches {
+  background-image: url("../res/clothes/wristwatch.svg");
+}
+.obwak .glasses {
+  background-image: url("../res/clothes/sunglasses.svg");
+}
+.obwak .jewerly {
+  background-image: url("../res/clothes/necklace.svg");
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  font-weight: 700;
+  font-style: bold;
+  src: local("Gilroy-Bold"),
+    url("../fonts/Gilroy-Bold/Gilroy-Bold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Bold/Gilroy-Bold.woff") format("woff");
+}

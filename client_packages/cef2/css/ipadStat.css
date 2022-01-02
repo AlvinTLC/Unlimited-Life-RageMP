@@ -1,0 +1,3697 @@
+@font-face {
+    font-family: "Ikono Mini F 1";
+
+    src: local("Ikono Mini F 1"), local("Ikono Mini F 1"), url(../fonts/IkonoMiniF1-1.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Ikono Mini L 5";
+
+    src: local("Ikono Mini L 5"), local("Ikono Mini L 5"), url(../fonts/IkonoMiniL5-5.otf) format("opentype");
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+}
+
+.animated {
+    animation-delay: 500ms;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.ipad-wrapper {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    /* display: flex; */
+    overflow: hidden;
+    user-select: none;
+}
+
+.ipad-wrapper .ipad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container {
+    position: relative;
+    min-width: 1070.66px;
+    width: 1070.66px;
+    min-height: 755px;
+    height: 755px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 46px;
+    padding-bottom: 46px;
+    padding-right: 94px;
+    padding-left: 94px;
+}
+
+.ipad-wrapper .ipad .container .screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.ipad-wrapper .ipad .container .screen .preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .preloader .logo-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.ipad-wrapper .ipad .container .screen .preloader .logo-wrapper .logo {
+    min-height: 112.5px;
+    height: 112.5px;
+    min-width: 100px;
+    width: 100px;
+}
+
+.ipad-wrapper .ipad .container .screen .preloader .logo-wrapper .logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .preloader .logo-wrapper .title {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.ipad-wrapper .ipad .container .screen .preloader .logo-wrapper .title .icon {
+    text-transform: uppercase;
+    font-size: 55px;
+    line-height: 1;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .preloader .logo-wrapper .title .games {
+    text-transform: uppercase;
+    margin-top: 2.5px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 900;
+    line-height: 1;
+    background: -webkit-linear-gradient(#FEB333, #F98427);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 30px;
+    height: 30px;
+    padding: 8px;
+    z-index: 99;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar > div {
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar > div:first-child {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar > div:last-child {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper > * {
+    margin: 0 2.5px;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper > *:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper > *:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular {
+    min-width: 26px;
+    width: 26px;
+    min-height: 4.5px;
+    height: 4.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular svg {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular svg path {
+    fill: transparent;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="1"] svg path:nth-child(1) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="2"] svg path:nth-child(1) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="2"] svg path:nth-child(2) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="3"] svg path:nth-child(1) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="3"] svg path:nth-child(2) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="3"] svg path:nth-child(3) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="4"] svg path:nth-child(1) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="4"] svg path:nth-child(2) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="4"] svg path:nth-child(3) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="4"] svg path:nth-child(4) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="5"] svg path:nth-child(1) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="5"] svg path:nth-child(2) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="5"] svg path:nth-child(3) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="5"] svg path:nth-child(4) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .cellular[data-value="5"] svg path:nth-child(5) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .wifi {
+    min-width: 15px;
+    width: 15px;
+    min-height: 10.5px;
+    height: 10.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .wifi svg {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .wifi svg path {
+    fill: transparent;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .wifi[data-value="1"] svg path:nth-child(1) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .wifi[data-value="2"] svg path:nth-child(1) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .wifi[data-value="2"] svg path:nth-child(2) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .wifi[data-value="3"] svg path:nth-child(1) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .wifi[data-value="3"] svg path:nth-child(2) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .network-wrapper .wifi[data-value="3"] svg path:nth-child(3) {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .time {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .percent {
+    font-size: 12px;
+    line-height: 1;
+    margin-right: 5px;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery {
+    min-width: 30px;
+    width: 30px;
+    min-height: 11px;
+    height: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery svg {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery svg path {
+    fill: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="1"] svg path.indicator {
+    transform: scaleX(0.01);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="2"] svg path.indicator {
+    transform: scaleX(0.02);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="3"] svg path.indicator {
+    transform: scaleX(0.03);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="4"] svg path.indicator {
+    transform: scaleX(0.04);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="5"] svg path.indicator {
+    transform: scaleX(0.05);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="6"] svg path.indicator {
+    transform: scaleX(0.06);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="7"] svg path.indicator {
+    transform: scaleX(0.07);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="8"] svg path.indicator {
+    transform: scaleX(0.08);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="9"] svg path.indicator {
+    transform: scaleX(0.09);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="10"] svg path.indicator {
+    transform: scaleX(0.1);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="11"] svg path.indicator {
+    transform: scaleX(0.11);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="12"] svg path.indicator {
+    transform: scaleX(0.12);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="13"] svg path.indicator {
+    transform: scaleX(0.13);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="14"] svg path.indicator {
+    transform: scaleX(0.14);
+    fill: red;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="15"] svg path.indicator {
+    transform: scaleX(0.15);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="16"] svg path.indicator {
+    transform: scaleX(0.16);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="17"] svg path.indicator {
+    transform: scaleX(0.17);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="18"] svg path.indicator {
+    transform: scaleX(0.18);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="19"] svg path.indicator {
+    transform: scaleX(0.19);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="20"] svg path.indicator {
+    transform: scaleX(0.2);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="21"] svg path.indicator {
+    transform: scaleX(0.21);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="22"] svg path.indicator {
+    transform: scaleX(0.22);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="23"] svg path.indicator {
+    transform: scaleX(0.23);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="24"] svg path.indicator {
+    transform: scaleX(0.24);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="25"] svg path.indicator {
+    transform: scaleX(0.25);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="26"] svg path.indicator {
+    transform: scaleX(0.26);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="27"] svg path.indicator {
+    transform: scaleX(0.27);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="28"] svg path.indicator {
+    transform: scaleX(0.28);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="29"] svg path.indicator {
+    transform: scaleX(0.29);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="30"] svg path.indicator {
+    transform: scaleX(0.3);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="31"] svg path.indicator {
+    transform: scaleX(0.31);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="32"] svg path.indicator {
+    transform: scaleX(0.32);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="33"] svg path.indicator {
+    transform: scaleX(0.33);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="34"] svg path.indicator {
+    transform: scaleX(0.34);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="35"] svg path.indicator {
+    transform: scaleX(0.35);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="36"] svg path.indicator {
+    transform: scaleX(0.36);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="37"] svg path.indicator {
+    transform: scaleX(0.37);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="38"] svg path.indicator {
+    transform: scaleX(0.38);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="39"] svg path.indicator {
+    transform: scaleX(0.39);
+    fill: orange;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="40"] svg path.indicator {
+    transform: scaleX(0.4);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="41"] svg path.indicator {
+    transform: scaleX(0.41);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="42"] svg path.indicator {
+    transform: scaleX(0.42);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="43"] svg path.indicator {
+    transform: scaleX(0.43);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="44"] svg path.indicator {
+    transform: scaleX(0.44);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="45"] svg path.indicator {
+    transform: scaleX(0.45);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="46"] svg path.indicator {
+    transform: scaleX(0.46);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="47"] svg path.indicator {
+    transform: scaleX(0.47);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="48"] svg path.indicator {
+    transform: scaleX(0.48);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="49"] svg path.indicator {
+    transform: scaleX(0.49);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="50"] svg path.indicator {
+    transform: scaleX(0.5);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="51"] svg path.indicator {
+    transform: scaleX(0.51);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="52"] svg path.indicator {
+    transform: scaleX(0.52);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="53"] svg path.indicator {
+    transform: scaleX(0.53);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="54"] svg path.indicator {
+    transform: scaleX(0.54);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="55"] svg path.indicator {
+    transform: scaleX(0.55);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="56"] svg path.indicator {
+    transform: scaleX(0.56);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="57"] svg path.indicator {
+    transform: scaleX(0.57);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="58"] svg path.indicator {
+    transform: scaleX(0.58);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="59"] svg path.indicator {
+    transform: scaleX(0.59);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="60"] svg path.indicator {
+    transform: scaleX(0.6);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="61"] svg path.indicator {
+    transform: scaleX(0.61);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="62"] svg path.indicator {
+    transform: scaleX(0.62);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="63"] svg path.indicator {
+    transform: scaleX(0.63);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="64"] svg path.indicator {
+    transform: scaleX(0.64);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="65"] svg path.indicator {
+    transform: scaleX(0.65);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="66"] svg path.indicator {
+    transform: scaleX(0.66);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="67"] svg path.indicator {
+    transform: scaleX(0.67);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="68"] svg path.indicator {
+    transform: scaleX(0.68);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="69"] svg path.indicator {
+    transform: scaleX(0.69);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="70"] svg path.indicator {
+    transform: scaleX(0.7);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="71"] svg path.indicator {
+    transform: scaleX(0.71);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="72"] svg path.indicator {
+    transform: scaleX(0.72);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="73"] svg path.indicator {
+    transform: scaleX(0.73);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="74"] svg path.indicator {
+    transform: scaleX(0.74);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="75"] svg path.indicator {
+    transform: scaleX(0.75);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="76"] svg path.indicator {
+    transform: scaleX(0.76);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="77"] svg path.indicator {
+    transform: scaleX(0.77);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="78"] svg path.indicator {
+    transform: scaleX(0.78);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="79"] svg path.indicator {
+    transform: scaleX(0.79);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="80"] svg path.indicator {
+    transform: scaleX(0.8);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="81"] svg path.indicator {
+    transform: scaleX(0.81);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="82"] svg path.indicator {
+    transform: scaleX(0.82);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="83"] svg path.indicator {
+    transform: scaleX(0.83);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="84"] svg path.indicator {
+    transform: scaleX(0.84);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="85"] svg path.indicator {
+    transform: scaleX(0.85);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="86"] svg path.indicator {
+    transform: scaleX(0.86);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="87"] svg path.indicator {
+    transform: scaleX(0.87);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="88"] svg path.indicator {
+    transform: scaleX(0.88);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="89"] svg path.indicator {
+    transform: scaleX(0.89);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="90"] svg path.indicator {
+    transform: scaleX(0.9);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="91"] svg path.indicator {
+    transform: scaleX(0.91);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="92"] svg path.indicator {
+    transform: scaleX(0.92);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="93"] svg path.indicator {
+    transform: scaleX(0.93);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="94"] svg path.indicator {
+    transform: scaleX(0.94);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="95"] svg path.indicator {
+    transform: scaleX(0.95);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="96"] svg path.indicator {
+    transform: scaleX(0.96);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="97"] svg path.indicator {
+    transform: scaleX(0.97);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="98"] svg path.indicator {
+    transform: scaleX(0.98);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="99"] svg path.indicator {
+    transform: scaleX(0.99);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery[data-value="100"] svg path.indicator {
+    transform: scaleX(1);
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar .battery-wrapper .battery.charging svg path.indicator {
+    fill: lightgreen;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="1"] svg path:nth-child(1) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="2"] svg path:nth-child(1) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="2"] svg path:nth-child(2) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="3"] svg path:nth-child(1) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="3"] svg path:nth-child(2) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="3"] svg path:nth-child(3) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="4"] svg path:nth-child(1) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="4"] svg path:nth-child(2) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="4"] svg path:nth-child(3) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="4"] svg path:nth-child(4) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="5"] svg path:nth-child(1) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="5"] svg path:nth-child(2) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="5"] svg path:nth-child(3) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="5"] svg path:nth-child(4) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .cellular[data-value="5"] svg path:nth-child(5) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .wifi[data-value="1"] svg path:nth-child(1) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .wifi[data-value="2"] svg path:nth-child(1) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .wifi[data-value="2"] svg path:nth-child(2) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .wifi[data-value="3"] svg path:nth-child(1) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .wifi[data-value="3"] svg path:nth-child(2) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .network-wrapper .wifi[data-value="3"] svg path:nth-child(3) {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .time {
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .battery-wrapper .percent {
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .status-bar.black .battery-wrapper .battery svg path {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .control-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 50px;
+    height: 50px;
+    z-index: 99;
+}
+
+.ipad-wrapper .ipad .container .screen .control-bar .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container .screen .control-bar .controls > * {
+    margin: 0 50px;
+    min-width: 40px;
+    width: 40px;
+    min-height: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.ipad-wrapper .ipad .container .screen .control-bar .controls > *:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .control-bar .controls > *:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .control-bar .controls .back-wrapper .back {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .control-bar .controls .back-wrapper .back g path:last-child {
+    fill: #ffffff;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .control-bar .controls .home-wrapper .home {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .control-bar .controls .home-wrapper .home g {
+    stroke: #ffffff;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .control-bar.black .controls .back-wrapper .back g path:last-child {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .control-bar.black .controls .home-wrapper g {
+    stroke: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .ikono {
+    line-height: 1;
+    display: inline-block;
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.alert {
+    font-family: 'Ikono Mini F 1';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.alert::before {
+    content: '\E2B3';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.question {
+    font-family: 'Ikono Mini L 5';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.question::before {
+    content: '\E0A8';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.phone {
+    font-family: 'Ikono Mini F 1';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.phone::before {
+    content: '\E106';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.edit {
+    font-family: 'Ikono Mini L 5';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.edit::before {
+    content: '\E069';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.right {
+    font-family: 'Ikono Mini L 5';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.right::before {
+    content: '\E012';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.left {
+    font-family: 'Ikono Mini L 5';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.left::before {
+    content: '\E013';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.trash {
+    font-family: 'Ikono Mini L 5';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.trash::before {
+    content: '\E062';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.plus {
+    font-family: 'Ikono Mini L 5';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.plus::before {
+    content: '\E03F';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.search {
+    font-family: 'Ikono Mini L 5';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.search::before {
+    content: '\E000';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.send {
+    font-family: 'Ikono Mini F 1';
+}
+
+.ipad-wrapper .ipad .container .screen .ikono.send::before {
+    content: '\E01C';
+}
+
+.ipad-wrapper .ipad .container .screen input, .ipad-wrapper .ipad .container .screen button, .ipad-wrapper .ipad .container .screen textarea {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+	.ipad-wrapper .ipad .container .screen .app-wrapper {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		padding: 30px 0 0 0;
+		position: relative;
+		/* background: url(../img/ipad/screen.png); */
+		background-position: center center;
+		background-size: contain;
+	}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .title-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .title-row .title {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 30px 50px;
+    border-bottom: 1px solid #707070;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .item {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .item:first-child {
+    justify-content: flex-start;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .item:last-child {
+    justify-content: flex-end;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .control > .ikono {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+    margin-right: 8px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .control:hover {
+    color: #959595;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .control.button-view {
+    color: #242424;
+    height: 40px;
+    padding: 0 20px;
+    background-color: #FEB333;
+    border-radius: 20px;
+    white-space: pre;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .control.button-view .ikono {
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .control.button-view:hover {
+    background-color: #F98427;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .title {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .contact {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .contact .photo {
+    min-width: 60px;
+    width: 60px;
+    min-height: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #2e2e2e;
+    margin-right: 10px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .contact .photo img {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .contact .photo img.logo {
+    height: 30px;
+    width: 25px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .contact .name {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app > .header .contact-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+    min-width: 45px;
+    width: 45px;
+    min-height: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: rotate(235deg);
+    cursor: pointer;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app .workspace {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app .workspace .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 50px;
+    margin-top: 30px;
+    min-height: fit-content;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app .workspace .search-bar .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 30px;
+    color: rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+    padding: 0 30px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app .workspace .search-bar .input-group input {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex: 1 1 auto;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app .workspace .search-bar .input-group .icon {
+    margin-left: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app .workspace .list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app .workspace .list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app .workspace .list::-webkit-scrollbar-track {
+    border-radius: 2.5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app .workspace .list::-webkit-scrollbar-thumb {
+    border-radius: 2.5px;
+    background-color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app .workspace .list .item {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.15s linear;
+    cursor: pointer;
+	min-height: fit-content;
+	text-transform: initial;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper .app .workspace .list .item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -25px -50px;
+    padding: 50px 100px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    margin: 25px 50px;
+    cursor: pointer;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app .icon {
+    min-width: 90px;
+    width: 90px;
+    min-height: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(36, 36, 36, 0.25);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app .name {
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.phone .icon {
+    background-image: linear-gradient(to bottom, #91FC8A, #00DD35);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.messages .icon {
+    background-image: linear-gradient(to bottom, #91FC8A, #00DD35);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.taxi .icon {
+    background-image: linear-gradient(to bottom, #FFD372, #FFA700);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.character .icon {
+    background-image: linear-gradient(to bottom, #EC7BFF, #AD00CB);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.property .icon {
+    background-color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.settings .icon {
+    background-image: linear-gradient(to bottom, #E8E2F0, #8A8E92);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.help .icon {
+    background-image: linear-gradient(to bottom, #8EBEFF, #004ECB);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.bank .icon {
+    background-image: linear-gradient(to bottom, #FFA780, #CB3700);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.job .icon {
+    background-image: linear-gradient(to bottom, #FF8888, #CB0008);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.fractions .icon {
+    background-image: linear-gradient(to bottom, #515BCC, #000C6A);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.store .icon {
+    background-image: linear-gradient(to bottom, #9372FF, #74009F);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.homescreen .app .apps .app.spawn .icon {
+	background-image: linear-gradient(to bottom, #00d4ff, #094879);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.taxi {
+    background: url(../img/ipad/backgrounds/taxi.svg);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.taxi .app {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.taxi .app .title-row {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    justify-content: flex-end;
+    padding: 0 80px;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.taxi .app .title-row .title {
+    text-align: right;
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.taxi .app .icon-wrapper {
+    margin-bottom: 20px;
+    min-width: 120px;
+    width: 120px;
+    min-height: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.taxi .app .icon-wrapper .icon {
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid #242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.taxi .app .icon-wrapper .icon img {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.taxi .app .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 45px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #242424;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.taxi .app .button:hover {
+    background-color: transparent;
+    border-color: #242424;
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character {
+    background: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 50px 80px 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper > div {
+    margin: 0 20px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper > div:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper > div:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .photo {
+    background-color: #404040;
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 190px;
+    width: 190px;
+    min-height: 270px;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .photo img {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .photo img.logo {
+    height: 240px;
+    width: 172px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 6px 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row:first-child {
+    margin-top: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row:last-child {
+    margin-bottom: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row > div {
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row .name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #666666;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row .value {
+    font-size: 18px;
+    font-weight: 500;
+    color: #e9e9e9;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row .value.light {
+    font-weight: 300;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row .value.bold {
+    font-weight: 700;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row .value.colored {
+    color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row .value .progress-bar {
+    width: 135px;
+    font-size: 11px;
+    text-align: center;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #404040;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row .value .progress-bar .progress {
+    height: 100%;
+    background-color: #5d5d5d;
+    display: flex;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.character .app .info-wrapper .info .row .value .progress-bar span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property {
+    background: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 50px 80px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper {
+    display: flex;
+    width: 100%;
+    max-height: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    max-height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    max-height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column .title {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column .title .icon-wrapper {
+    margin-bottom: 35px;
+    min-width: 85px;
+    width: 85px;
+    min-height: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column .title .icon-wrapper .icon {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #FEB333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column .title .name {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column .items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    list-style: none;
+    margin: 0 -15px;
+    padding: 0 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    max-height: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column .items::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column .items::-webkit-scrollbar-track {
+    border-radius: 2.5px;
+    background-color: transparent;
+    border: 1px solid #959595;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column .items::-webkit-scrollbar-thumb {
+    border-radius: 2.5px;
+    background-color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column .items .item {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #919191;
+    margin: 7.5px 0;
+	text-transform: initial;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column .items .item:first-child {
+    margin-top: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.property .app .prop-wrapper .prop .column .items .item:last-child {
+    margin-bottom: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings {
+    background: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 50px 80px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .title-row {
+    margin-bottom: 80px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    padding: 0 190px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .title {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms > div {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms > div:first-child {
+    margin-top: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms > div:last-child {
+    margin-bottom: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms .input-group input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    height: 45px;
+    border-radius: 22.5px;
+    background-color: #2B2B2B;
+    outline: none;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 300;
+    color: #ffffff;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms .input-group input::placeholder {
+    color: #ABABAB;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms .buttons {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms .buttons .button {
+    border: 1px solid transparent;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 5px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms .buttons .button:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms .buttons .button:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms .buttons .button.accept {
+    color: #242424;
+    background-color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms .buttons .button.accept:hover {
+    background-color: #F98427;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms .buttons .button.decline {
+    color: #959595;
+    background-color: transparent;
+    border-color: #959595;
+	text-transform: initial;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.settings .app .settings-forms .forms .buttons .button.decline:hover {
+    color: #242424;
+    background-color: #959595;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report {
+    background: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    /* padding: 50px 80px; */
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-columns {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0 100px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-columns .column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 40px;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-columns .column:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-columns .column:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-columns .column .title {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-columns .column .title .icon {
+    min-width: 85px;
+    width: 85px;
+    min-height: 85px;
+    height: 85px;
+    border-radius: 10px;
+    border: 2px solid #FEB333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #FEB333;
+    margin-bottom: 35px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-columns .column .title .name {
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-columns .column .description {
+    margin-top: 20px;
+    max-height: 85px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #5B5B5B;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-columns .column .buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-columns .column .buttons .button {
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    padding: 0 20px;
+    font-weight: 500;
+    line-height: 1;
+    color: #242424;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #FEB333;
+    cursor: pointer;
+	text-transform: initial;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-columns .column .buttons .button:hover {
+    background-color: #F98427;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .header {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .header .title {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .header .icon {
+    min-width: 45px;
+    width: 45px;
+    min-height: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #feb333;
+    color: #feb333;
+    font-size: 15px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #ffffff;
+    transition: 0.15s linear;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.03);
+    font-family: 'Montserrat', sans-serif;
+    resize: none;
+    height: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body textarea::-webkit-scrollbar-track {
+    border-radius: 2.5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body textarea::-webkit-scrollbar-thumb {
+    border-radius: 2.5px;
+    background-color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body .buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 7.5px 30px;
+    background-color: #414141;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body .buttons .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 7.5px 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body .buttons .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: transparent;
+    transition: 0.15s linear;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body .buttons .button.accept {
+    background-color: #feb333;
+    border-color: #feb333;
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body .buttons .button.accept:hover {
+    background-color: #F98427;
+    border-color: #F98427;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body .buttons .button.decline {
+    border-color: #959595;
+    color: #959595;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.report .app .report-form .body .buttons .button.decline:hover {
+    color: #242424;
+    background-color: #959595;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call {
+    background: linear-gradient(to right top, #242424, #000000);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app {
+    align-items: flex-start;
+    padding: 80px 200px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    width: 200px;
+    min-height: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #2e2e2e;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .photo img {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .photo img.logo {
+    height: 100px;
+    width: 90px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .name {
+    font-size: 25px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .status {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .buttons {
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .buttons .row {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .buttons .row:first-child {
+	margin-top: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .buttons .row:last-child {
+	margin-bottom: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .buttons .button {
+	min-width: 65px;
+	width: 65px;
+	min-height: 65px;
+	height: 65px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: #EF5350;
+	border-radius: 50%;
+	overflow: hidden;
+	color: #1B1B1B;
+	font-size: 30px;
+	transform: rotate(115deg);
+	cursor: pointer;
+	transition: 0.15s linear;
+	border: none;
+	outline: none;
+	margin: 0 20px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .buttons .button:first-child {
+	margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .buttons .button:last-child {
+	margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .buttons .button.accept {
+	background-color: #4AFF29;
+	transform: rotate(0);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper .buttons .button.accept:active {
+	background-color: #41DB25;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.call .app .call-wrapper.call-end {
+    opacity: 0.5;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages {
+    background: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app > div {
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .trash-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: 12px;
+    text-align: center;
+    color: #F47200;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    width: 80px;
+    min-height: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #2E2E2E;
+    margin-right: 15px;
+    flex: 0 0 auto;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .photo img {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .photo img.logo {
+    height: 40px;
+    width: 35px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .basic-info {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-right: 25px;
+    flex: 1 0 auto;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .basic-info .name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .basic-info .short-message {
+    margin-top: 2px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 300;
+    max-width: 400px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .datetime {
+    display: flex;
+    flex: 0 0 auto;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .button-icon {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #959595;
+    background-color: transparent;
+    color: #959595;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .action-button > * {
+    margin: 0 4px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .action-button > *:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .action-button > *:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .action-button > .ikono {
+    font-size: 13px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .action-button:hover {
+    background-color: #959595;
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .action-button.new {
+    background-color: #FEB333;
+    color: #242424;
+    border-color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .list .item .chat .action-button.new:hover {
+    background-color: #F98427;
+    border-color: #F98427;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 50px;
+    margin-top: 30px;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper::-webkit-scrollbar-track {
+    border-radius: 2.5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 2.5px;
+    background-color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    max-height: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat > * {
+    margin: 7.5px 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat > *:first-child {
+    margin-top: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat > *:last-child {
+    margin-bottom: 15px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat .timestamp {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    min-height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 0 15px;
+    width: fit-content;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat .message-wrapper {
+    min-height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat .message-wrapper .message {
+    max-width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat .message-wrapper .message .text {
+    flex: 1 1 auto;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat .message-wrapper .message .datetime {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.4);
+    margin-left: 10px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat .message-wrapper.my {
+    justify-content: flex-end;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat .message-wrapper.my .message {
+    background: linear-gradient(to right, #FFCA00, #F47200);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat .message-wrapper.my .message .text {
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace > .chat-wrapper .chat .message-wrapper.my .message .datetime {
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .send-bar {
+    width: 100%;
+    padding: 8px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #414141;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .send-bar .input-group {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 60px;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 0 30px;
+    width: 100%;
+    background-color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .send-bar .input-group input {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex: 1 1 auto;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .send-bar .input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.messages .app .workspace .send-bar .input-group .icon {
+    margin-left: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    padding: 0 16px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone {
+    background: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app > div {
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace {
+    flex: 1 1 auto;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 10px 0;
+	min-height: fit-content;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .trash-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: 12px;
+    text-align: center;
+    color: #F47200;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .photo {
+    min-width: 80px;
+    width: 80px;
+    min-height: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #2E2E2E;
+    margin-right: 15px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .photo img {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .photo img.logo {
+    height: 40px;
+    width: 35px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .basic-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1 1 auto;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .basic-info .name {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .basic-info .number {
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .datetime {
+    margin-left: 15px;
+    font-size: 20px;
+    line-height: 1;
+    white-space: nowrap;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    color: #242424;
+    padding: 0 20px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #FEB333;
+    transition: 0.15s linear;
+    cursor: pointer;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .action-button > * {
+    margin: 0 4px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .action-button > *:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .action-button > *:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .action-button .ikono {
+    font-size: 15px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .list .item .contact .action-button:hover {
+    background-color: #F98427;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 280px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .input-row {
+    width: 100%;
+    display: flex;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .input-row .input-group {
+    display: flex;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .input-row .input-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 015px;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 300;
+    white-space: nowrap;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: transparent;
+    height: 70px;
+    border-bottom: 1px solid #707070;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .input-row .input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .input-row .input-group input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .input-row .input-group input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .keypad {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 15px -10px -7.5px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .keypad .key {
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    margin: 7.5px 10px;
+    min-width: 65px;
+    width: 65px;
+    min-height: 65px;
+    height: 65px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .keypad .key:active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .keypad .key.invisible {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .keypad .key.phone {
+    background-color: #4AFF29;
+    border-color: #4AFF29;
+    font-size: 30px;
+    transform: rotate(235deg);
+    color: #1B1B1B;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .keypad .key.phone:active {
+    background-color: #41DB25;
+    border-color: #41DB25;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .buttons .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #feb333;
+    color: #242424;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .buttons .button .ikono {
+    font-size: 15px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .buttons .button > * {
+    margin: 0 4px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .buttons .button > *:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .buttons .button > *:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer .buttons .button:hover {
+    background-color: #F98427;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .workspace .dialer.contact .input-row .input-group input {
+    font-size: 25px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .app-control-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .app-control-bar .bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .app-control-bar .bars .bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #414141;
+    margin: 0 1px;
+    min-height: 65px;
+    height: 65px;
+    cursor: pointer;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .app-control-bar .bars .bar:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .app-control-bar .bars .bar:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .app-control-bar .bars .bar .icon {
+    min-width: 37px;
+    width: 37px;
+    min-height: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .app-control-bar .bars .bar .icon svg {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .app-control-bar .bars .bar .icon svg path {
+    fill: #272727;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.phone .app .app-control-bar .bars .bar.active .icon svg path {
+    fill: url(#contactBarGrad);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions {
+    background: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .accent {
+    color: #feb333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .buttons .row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+	.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .buttons .button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		height: 40px;
+		padding: 0 20px;
+		border-radius: 20px;
+		font-size: 16px;
+		line-height: 1;
+		font-weight: 500;
+		border: 1px solid transparent;
+		background-color: transparent;
+		cursor: pointer;
+		transition: 0.15s linear;
+		margin: 0 5px;
+		outline: none;
+		text-transform: initial;
+		width: 100%;
+	}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .buttons .button:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .buttons .button:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .buttons .button.accept {
+    background-color: #feb333;
+    border-color: #feb333;
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .buttons .button.accept:hover {
+    background-color: #F98427;
+    border-color: #F98427;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .buttons .button.decline {
+    border-color: #959595;
+    color: #959595;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .buttons .button.decline:hover {
+    background-color: #959595;
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .pattern {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 230px;
+    height: 210px;
+    background-image: url("../img/ipad/fractions_app/bell.svg");
+    background-size: contain;
+    background-position: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .pattern.p-1 {
+    left: calc(-230px / 2);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .pattern.p-2 {
+    right: calc(-230px / 2);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 50px 80px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav .item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #2F2F2F;
+    margin: 0 17.5px;
+    cursor: pointer;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav .item:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav .item:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav .item .icon {
+    min-width: 60px;
+    width: 60px;
+    min-height: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav .item .icon svg {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav .item .icon svg path {
+    fill: #feb333;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav .item .name {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav .item:hover {
+    background-color: #feb333;
+    border-color: #feb333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav .item:hover .icon svg path {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav .item:hover .name {
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .nav.money .item {
+    width: 220px;
+    height: 220px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .fraction-name {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 100%;
+    width: calc(100% + 80px * 2);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper > * {
+    height: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .members-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .members-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .members-list::-webkit-scrollbar-track {
+    border-radius: 2.5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .members-list::-webkit-scrollbar-thumb {
+    border-radius: 2.5px;
+    background-color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .members-list .member {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 30px 25px 80px;
+    cursor: pointer;
+    transition: 0.15s linear;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .members-list .member:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .members-list .member.header {
+    position: sticky;
+    top: 0;
+    cursor: default;
+    background-color: #414141;
+    z-index: 1;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .members-list .member .name {
+    min-width: 300px;
+    width: 300px;
+    margin-right: 20px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+	text-transform: initial;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .members-list .member .rank {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 800;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .members-list .member.active {
+    background-color: #feb333;
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls {
+    min-width: 310px;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 2px solid #2f2f2f;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid #2f2f2f;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row:last-child {
+    border-bottom: none;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row .item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 40px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.15s linear;
+    border-right: 2px solid #2f2f2f;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row .item:last-child {
+    border-right: none;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row .item .icon {
+    min-width: 50px;
+    width: 50px;
+    min-height: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row .item .icon svg {
+    height: 100%;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row .item .icon svg path {
+    fill: #feb333;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row .item.center {
+    justify-content: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row .item:hover {
+    background-color: #feb333;
+    color: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row .item:hover .icon svg path {
+    fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row .item.unusable {
+    justify-content: center;
+    cursor: default;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row .item.unusable:hover {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .members-wrapper .controls .row .item.unusable:hover .icon svg path {
+    fill: #feb333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .notification-form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 315px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .notification-form .input-group {
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .notification-form .input-group textarea {
+    resize: none;
+    border-radius: 12px;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.03);
+    min-height: 300px;
+    height: 300px;
+    max-height: 300px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #fff;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .notification-form .input-group textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .notification-form .input-group textarea::-webkit-scrollbar-track {
+    border-radius: 2.5px;
+    background-color: #505050;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .notification-form .input-group textarea::-webkit-scrollbar-thumb {
+    border-radius: 2.5px;
+    background-color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .notification-form .input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .app .notification-form .buttons {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #242424;
+    z-index: 50;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-width: 300px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group:first-child {
+    margin-top: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group:last-child {
+    margin-bottom: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group input, .ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group textarea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 300;
+    color: #fff;
+    -webkit-appearance: none;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group input::placeholder, .ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group input::-webkit-inner-spin-button, .ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group input::-webkit-outer-spin-button, .ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group textarea::-webkit-inner-spin-button, .ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group textarea::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group input::-webkit-scrollbar, .ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group input::-webkit-scrollbar-track, .ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group textarea::-webkit-scrollbar-track {
+    border-radius: 2.5px;
+    background-color: #505050;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group input::-webkit-scrollbar-thumb, .ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group textarea::-webkit-scrollbar-thumb {
+    border-radius: 2.5px;
+    background-color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .input-group textarea {
+    align-items: flex-start;
+    resize: none;
+    padding: 12px 20px;
+    min-height: 100px;
+    height: 100px;
+    max-height: 100px;
+    border-radius: 12px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.fractions .modal .form .buttons {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn {
+	background: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	padding: 50px 80px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	text-align: center;
+	border-radius: 10px;
+	border: 2px solid #2F2F2F;
+	margin: 0 17.5px;
+	cursor: pointer;
+	transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item:first-child {
+	margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item:last-child {
+	margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item .icon {
+	min-width: 60px;
+	width: 60px;
+	min-height: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item .icon svg {
+	height: 100%;
+	width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item .icon svg path {
+	fill: #feb333;
+	transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item .name {
+	margin-top: 20px;
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 600;
+	transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item:hover, .ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item.active {
+	background-color: #feb333;
+	border-color: #feb333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item:hover .icon svg path, .ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item.active .icon svg path {
+	fill: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item:hover .name, .ipad-wrapper .ipad .container .screen .app-wrapper.spawn .app .nav .item.active .name {
+	color: #242424;
+}
+.home-wrapper{
+    border-radius: 24px;
+    margin-left: 490px;
+    /* background-color: beige; */
+    position: fixed;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.hovicon.effect-8 {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
+  -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
+  transition: transform ease-out 0.1s, background 0.2s;
+}
+.hovicon.effect-8:after {
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: -1;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.hovicon.effect-8:hover {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-transform: scale(0.93);
+  -moz-transform: scale(0.93);
+  -ms-transform: scale(0.93);
+  transform: scale(0.93);
+  color: #fff;
+}
+.hovicon.effect-8:hover i {
+  color: #fff;
+}
+.hovicon.effect-8:hover:after {
+  -webkit-animation: sonarEffect 1.3s ease-out 75ms;
+  -moz-animation: sonarEffect 1.3s ease-out 75ms;
+  animation: sonarEffect 1.3s ease-out 75ms;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store {
+    background: #242424;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* padding: 50px 80px; */
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .title-row {
+    /* margin-bottom: 80px; */
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    padding: 0 190px;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .title {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms > div {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms > div:first-child {
+    margin-top: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms > div:last-child {
+    margin-bottom: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms .input-group input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    height: 45px;
+    border-radius: 22.5px;
+    background-color: #2B2B2B;
+    outline: none;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 300;
+    color: #ffffff;
+    width: 100%;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms .input-group input::placeholder {
+    color: #ABABAB;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms .buttons {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms .buttons .button {
+    border: 1px solid transparent;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 5px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.15s linear;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms .buttons .button:first-child {
+    margin-left: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms .buttons .button:last-child {
+    margin-right: 0;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms .buttons .button.accept {
+    color: #242424;
+    background-color: #FEB333;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms .buttons .button.accept:hover {
+    background-color: #F98427;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms .buttons .button.decline {
+    color: #959595;
+    background-color: transparent;
+    border-color: #959595;
+	text-transform: initial;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .store-forms .forms .buttons .button.decline:hover {
+    color: #242424;
+    background-color: #959595;
+}
+
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .ul{
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+}
+.ipad-wrapper .ipad .container .screen .app-wrapper.store .app .li{
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+    padding: 8px;
+}

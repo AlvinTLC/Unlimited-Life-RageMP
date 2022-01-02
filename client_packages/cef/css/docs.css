@@ -1,0 +1,133 @@
+.license{
+    position: absolute;
+    background: rgba(64, 86, 107, .9); /*фон документа*/
+    background-image: url(../res/lc_gerbls.svg);
+    background-repeat: no-repeat, repeat-x;
+    width: 580px; /*ширина документа*/
+    height: 325px; /*высота документа*/
+    left: 50%; /*выравнивание слево документа*/
+    top: 50%; /*выравнивание по высоте документа*/
+    margin: -250px 0 0 -350px;
+    display: inline-block;
+    border-radius: 15px;
+    border: 3px solid #000;
+    font-size: 20px; /*общий шрифт*/
+}
+.licpas p{
+    text-indent: .5em;
+    border-bottom: 3px solid rgba(235, 170, 7, 0.9);
+    margin: 0;
+    color:#4c639c;
+    background: rgba(104, 178, 247, 0.9);
+    border-radius: 12px 12px 0 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.licname{
+    margin-top: 15px;
+    display: inline-block;
+    width: 45%;
+    float: right;
+    margin-right: 25px;
+}
+.licinfo{
+    margin-top: 15px;
+    display: inline-block;
+    margin-left: 24%;
+    width: 25%;
+
+}
+.licname p{
+    border: 1px dashed #000;
+    border-radius: 5px;
+    padding: 2px 7px 2px 7px;
+    color: #9fcbfc;
+}
+.licinfo p{
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding: 3px 7px 3px 7px;
+    text-align: right;
+}
+.license #firstname{
+    margin-top: 20px;
+}
+.license #lastname{
+    margin-bottom: 16px;
+    text-align: left;
+}
+.license #date{
+    margin-bottom: 12px;
+}
+.license #gender{
+    margin-bottom: 20px;
+}
+.license #lics{
+    font-size: 14pt;
+}
+span {
+    color:#FFB943;
+}
+/*------------------------------------ ПАСПОРТ ------------------------------*/
+.pasname{ /*Правая сторона*/
+    display: inline-block;
+    margin-top: 25px;
+    width: 40%;
+    float: right;
+    margin-right: 14px;
+}
+.pasinfo{ /*Левая сторона*/
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 30%;
+    width: 26%;
+}
+.pasname p{ /*Правая сторона*/
+    border: 1px dashed #000;
+    border-radius: 5px;
+    padding: 2px 7px 2px 7px;
+    color: #fff;
+}
+.pasinfo p{ /*Левая сторона*/
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding: 2px 7px 4px 7px;
+    text-align: right;
+}
+.passport{
+    background: rgba(64, 86, 107, .9); /*цвет фона паспорта*/
+    background-image: url(../res/lc_gerbls.svg);
+    background-repeat: no-repeat, repeat-x;
+    position: absolute;
+    display: inline-block;
+    border-radius: 15px;
+    border:3px solid black;
+    width: 580px;/*Ширина паспорта*/
+    height: 350px;/*Высота паспорта*/
+    left: 50%;
+    top: 50%;
+    margin: -250px 0 0 -250px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.passport p{
+    margin: 0 0 5px 0;
+
+}
+.passport #exit,
+.license #exit {
+    float: right;
+    width: 30px;
+    height: 30px;
+    background-color: #5198b9;
+    border-radius: 20px;
+    cursor: pointer;
+    background-image: url('../res/exit.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    margin-top: -35px;
+}
+.passport #exit{
+    margin: 3px 3px 0 0;
+}

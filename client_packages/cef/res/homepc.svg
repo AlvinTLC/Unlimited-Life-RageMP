@@ -1,0 +1,14 @@
+<svg fill-opacity="0" width="28" height="26" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="25" width="27" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <image stroke="null" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAB7QAAAe0BDNry2gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQDSURBVHic7ZvNSxVRGMZ/r1oIJUbkxqKUdGFIH4tcVAtrWUEtgsCgDyKtP6BF+0iojaUQuAjauAqCQugDq0VEJEEhVIsQgwqSiqLIUuq0mDN1HMd7zh3vnTN154V3ce+8zznP+9yZZ84Z5opSikqOKt8EfEcugG8CviMXwDcB31Hja2IR2Qxs0B+fKqVGi8CuA9YXKJkCRpRSX62DKaVSTaAJuA2oSN4GmhzwLcCvGHw0rzvxSbn5bcBkAdKTwFbLGHsdmlfAhAun1DxARI4AI0BDgbIG4I6IHEyHVQomKCJVInIOuAQsdoAsBi6LSK+ISHnZUd5LAKgDruN2ysblVWDJP3kJiEgT8ADYvYBh9gL3RWRVKTjFRVkEEJFtwCOg3VJ6Q2eh2AiMikhHKbjNiTKc9keAH9hP0T6gWmefQ/0UsJ8SXwKlbLwKOOdAbBo4FoM/po/Z8HczJwDuZvce6DRwi4BFxudOXZPUNNMXgGBlN+ZA6Bmw1sCtAO7pXGF8v1bXZl8A7Cu7MG8A9QauHRg3jo8D7cbxeo3JrgDAYdzM7jxQbeD2AF9i6r4Ae4y6ao3NlgAUZ3bdEewpCm9kfgGnIphu3Myx/ALgbnYfgO0GrhYYKoL8EFBr4LfrMf0JgLvZPQdaDFwjwaKo2F/wEdBojNOix05fAJKbXQfwJkHzYb4BOhKaY2kEILnZdRGs3pI2H+YU0JXAHKeBA4kFIDC7sw4TzQA9EVxvCRqPZi9QZczTo+e24c4AUpQAJDe7OuBaGZoP8xpQl8Ac52yr5xWA5GbX7IhbaI4BzQnM8QmwuqAAuJvdTWabXSelW8O7ZHRPUa852XDvgC2xAuBudheYbXY9JFuoLDSnme091ZqbDfcdOGTgijK74wawBhjw0Hg0B4Aag9dx3MzxrO6dQYfij8AOY5LlBE94fTcf5giw3OC3Q3O24QYBXluKXgCtxuBtwMsMNB3Nl0CbwbNVcy+EeQ3BZmO+glvAMmPQncDnDDQ7X34Gdhp8l+ke5qvvDgvjnsn1M9vsTgI/M9CkLX8CJyPm2B9T1/fnLqCLhvWBGeBE5PZ4MQONFZsXIz2c4K85Doc/rllQCxwFNsQsjiYy0FCxOWczBGwiuOT/bLUlvBcWChGZANZYC7MVr5RSTbaiin9BIhfANwHfUfECpPmO0Edgl2PtMMFyu+yRpgAzSqmHLoUiMlNuMmFU/CWQC+CbgO/IBfBNwHfkAvgm4DtyAXwT8B25AI519qcm2Qsnzq4C3F8AEV/hxNlVgD7gU3IuQLpn0ScCztZw2g0qpR6LyEpgH8ErL0nC/veVv3EaWJpwnrfAFaXUN5dip4ei/3PkdwHfBHxHLoBvAr6j4gX4DcS2OS/PnlFLAAAAAElFTkSuQmCC" id="svg_1" height="26.54733" width="27.01887" y=".5" x=".7"/>
+ </g>
+</svg>

@@ -1,0 +1,214 @@
+﻿<html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/chat.css">
+<link rel="stylesheet" type="text/css" href="css/style.min.css">
+<link rel="stylesheet" href="css/hud/style.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="fonts/notify.css">
+<link rel="stylesheet" href="css/noty.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<title>Hud</title>
+<body>
+<div id="safezone">
+		<div id="chat" class="chat">
+			<ul id="chat_messages"></ul>
+		</div>
+	<div class="inGameHud" v-if="show">
+		<div class="logoBlock">
+			<img src="./images/hud/logo.png" alt="" class="logo" >
+			<div class="serverStatic">
+				<div class="serverId">
+					ID: {{id}}
+				</div>
+				<div class="usersCount">
+					<img src="./images/hud/users_icon.png" alt="" >
+					<div class="count">
+						{{online}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bonus">
+				<div class="bonus-bar" v-if="!bonusblock">
+					<i @click="showbonus()" class="fa fa-gift" aria-hidden="false"></i>
+				</div>
+				
+				<div class="bonus-block" v-else>
+					<header>
+						<span>Du erhältst einen Bonus in:</span>
+						<i @click="showbonus()" aria-hidden="false" class="fa fa-times"></i>
+					</header>
+					<div class="main">
+						<p>
+							{{lastbonus}}
+						</p>
+					</div>
+				</div>
+		</div>
+		<div class="speedContainer" v-if="inVeh">
+			<div class="speedBox">
+				<!--Скорость-->
+				<svg class="bg_speed" viewBox="0 0 114 212" fill="none" :data-value="speed" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M106.098 204.617C51.5662 204.617 7.35938 160.41 7.35938 105.878C7.35938 51.3465 51.5662 7.13965 106.098 7.13965"
+						stroke="#282626" stroke-opacity="0.5" stroke-width="14" stroke-linecap="round" />
+					<linearGradient id="linear-gradient">
+						<stop offset="0%" stop-color="#FFBA43" />
+						<stop offset="100%" stop-color="#FF9B3F" />
+					</linearGradient>
+					<path class="meter" stroke="url(#linear-gradient)"
+						d="M106.098 204.617C51.5662 204.617 7.35938 160.41 7.35938 105.878C7.35938 51.3465 51.5662 7.13965 106.098 7.13965"
+						stroke-opacity="1" stroke-width="14" stroke-dasharray="315" style="stroke-dashoffset: 316.445;"
+						stroke-linecap="round" /> <!--316.445-->
+				</svg>
+				<!--Бензобак-->
+				<svg class="fuel_bg" viewBox="0 0 113 113" fill="none" :data-value="fuel" xmlns="http://www.w3.org/2000/svg">
+					<path 
+						d="M105.714 105.532C105.714 51.1915 61.6625 7.13965 7.32175 7.13965" stroke="#282626"
+						stroke-opacity="0.5" stroke-width="14" stroke-linecap="round" />
+					<linearGradient id="linear-gradient">
+						<stop offset="0%" stop-color="#FFBA43" />
+						<stop offset="100%" stop-color="#FF9B3F" />
+					</linearGradient>
+					<path class="meter" stroke="url(#linear-gradient)"
+						d="M105.714 105.532C105.714 51.1915 61.6625 7.13965 7.32175 7.13965" stroke-opacity="1"
+						stroke-width="14" style="stroke-dasharray: 155;" style="stroke-dashoffset: 155;" stroke-linecap="round" />
+				</svg>
+			</div>
+			<div class="speedContent">
+				<div class="speed">
+					{{speed}}
+				</div>
+				<div class="speed_metric">
+					km/h
+				</div>
+			</div>
+			<div class="fuel_block">
+				<img src="./images/hud/fuel.png" alt=""> {{fuel}} l.
+			</div>
+			<div class="panel">
+				<img src="./images/hud/arrow.png" alt="" class="arrow active left">
+				<img src="./images/hud/arrow.png" alt="" class="arrow right">
+				<img src="./images/hud/engine.png" alt="" class="engine " :class="{'active': engine == true}">
+				<img src="./images/hud/key.png" alt="" class="key " :class="{'active': doors == true}">
+			</div>
+	
+		</div>
+		<div class="other_block">
+			<div class="line_info">
+				<img src="./images/hud/money.svg" alt=""> ${{money}}
+			</div>
+			<div class="line_info">
+				<img src="./images/hud/bank.png" alt=""> ${{bank}}
+			</div>
+			<div class="line_info">
+				<img src="./images/hud/map.png" alt=""> {{crossingRoad}}
+			</div>
+			<div class="line_info mb">
+				<img src="./images/hud/clock.png" alt=""> {{time}} <span>{{date}}</span>
+			</div>
+			<div class="progress">
+				<div class="icon"><img src="./images/hud/eat.png" alt=""></div>
+				<div class="progress_bar">
+					<div class="value" :style="{ width: eat + '%'}"></div> <!--Тут растет ХУЙ, ой, голод!-->
+				</div>
+			</div>
+			<div class="progress reverse">
+				<div class="icon"><img src="./images/hud/watter.png" alt=""></div>
+				<div class="progress_bar">
+					<div class="value" :style="{ width: water + '%'}"></div><!--Тут растет жажда!-->
+				</div>
+			</div>
+		</div>
+		<div class="helpNoty" v-if="isHelp">
+			<div class="globIcon">
+				<img src="./images/hud/headphones.png" alt="">
+			</div>
+			<div class="info">
+				<div class="title">{{helpTitle}}</div>
+				<div class="desc">{{helpText}}</div>
+			</div>
+			<img src="./images/hud/info.png" alt="" class="icon">
+		</div>
+		<!--Нотифай-->
+		<div class="notifyList">
+			
+		</div>
+		<!--Конец Нотифай-->
+		<div class="help_action" v-if="pressact">
+			<div class="btn">E</div>
+			Interagieren
+		</div>
+		<div class="microblock" :style="{'active': mic == true}"><img src="./images/hud/micro.png" alt=""></div>
+		<div class="buttonsList" v-if="show">
+			<div class="button_block">
+				<div class="text">
+					Öffnen/Schließen. Fahrzeug
+				</div>
+				<div class="button">L</div>
+			</div>
+			<div class="button_block">
+				<div class="text">
+					Motor ein- ausschalten
+				</div>
+				<div class="button">B</div>
+			</div>
+			<div class="button_block">
+				<div class="text">
+					Cursor
+				</div>
+				<div class="button">F2</div>
+			</div>
+			<div class="button_block">
+				<div class="text">
+					Telefon
+				</div>
+				<div class="button">↑</div>
+			</div>
+			<div class="button_block">
+				<div class="text">
+					Chat
+				</div>
+				<div class="button">T</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function hidehud(toggle) {
+		if (toggle) {
+			HUD.show = false;
+			logotype.show = false;
+		} else {
+			HUD.show = true;
+			logotype.show = true;
+		}
+	}
+	function hidehelp(toggle) {
+		if (toggle) {
+			$('.buttonsList').hide();
+		} else {
+			$('.buttonsList').show();
+		}
+	}
+</script>
+<script>
+	function updateSafeZoneSize(screenWidht, screenHeight, safeZoneSize) {
+		
+		var savezoneDiv = document.getElementById("safezone");
+		safeZoneSize = (((1.0 - safeZoneSize) * 0.5) * 100.0);
+
+		savezoneDiv.style.right = savezoneDiv.style.left = ((screenWidht / 100) * safeZoneSize) + "px";
+		savezoneDiv.style.top = savezoneDiv.style.bottom = ((screenHeight / 100) * safeZoneSize) + "px";
+		return true;
+	}
+</script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/hudGlobal/index.js"></script>
+	<script src="js/chat.js"></script>
+	<script src="js/noty.min.js"></script>
+	<script src="js/notify.js"></script>
+	</body>
+</html>

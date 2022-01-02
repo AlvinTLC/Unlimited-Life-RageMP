@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ULIFE - Bauernjob</title>
+  <link rel="stylesheet" href="css/farmer.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+
+<body>
+  <div id="app">
+    <transition name="modal">
+      <div class="container" v-if="active">
+        <header>
+          <i class="fa fa-leaf" aria-hidden="true"></i>
+          <h1>{{header}}</h1>
+          <span>
+            <i @click="closeMenu()" class="fa fa-times-circle-o" aria-hidden="true"></i>
+          </span>
+        </header>
+        <div class="main">
+          <div class="upblock">
+            <div class="avatar">
+              <img src="images/jobs/farmer/avatar.png" :alt="header">
+            </div>
+            <div class="info">
+              <h2>
+                <i class="fa fa-info-circle" aria-hidden="true"></i> Informationen
+              </h2>
+              <p>
+                <i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Aktuelle Erfahrung: <b>{{level}}</b>
+              </p>
+              <p>
+                <i class="fa fa-line-chart" aria-hidden="true"></i> Fehlende Erfahrung: <b>{{exp}}</b>
+              </p>
+              <p>
+                <i class="fa fa-archive" aria-hidden="true"></i> Geerntet: <b>{{allpoints}}</b>
+              </p>
+              <p>
+                <i class="fa fa-users" aria-hidden="true"></i> Arbeitende Bauern: <b>{{farmerscount}}</b>
+              </p>
+              <p>
+                <i class="fa fa-pagelines" aria-hidden="true"></i> Saatgut in deiner Tasche: <b>{{seedcount}}</b>
+              </p>
+            </div>
+          </div>
+          <div class="description">
+            <p>
+              In diesem Job bauen Sie Ernte mit ihren vom Bauernmarkt gekauften Samen an und können die Ernte später zum aktuellen Preis im Bauernmarkt wieder verkaufen.
+            </p>
+          </div>
+        </div>
+        <footer>
+          <a class="button" v-if="!onWork" @click="workState()">Arbeiten</a>
+          <a class="button btnFinish" @click="workState()" v-else>Arbeit beenden</a>
+        </footer>
+      </div>
+    </transition>
+
+    <transition name="fade">
+      <div class="fade" v-if="active"></div>
+    </transition>
+  </div> <!-- //#1KR -->
+  <script src="js/farmer.js"></script>
+</body>
+
+</html>

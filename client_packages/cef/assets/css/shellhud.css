@@ -1,0 +1,337 @@
+/*
+* IT Studio "iTeffa"
+* url: www.iteffa.com
+* CSS файл Стилизации
+*/
+
+.inGameHud {
+  width: 100%;
+  height: 100%;
+}
+
+#effect {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#safezone {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.inGameHud .logobox {
+  position: absolute;
+  font-family: Uni Neue;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  font-size: 10.5pt;
+}
+
+.inGameHud .wallet {
+  position: absolute;
+  font-family: Uni Neue;
+  top: 16px;
+  right: 15px;
+  font-size: 10.5pt;
+  text-align: right;
+}
+
+.inGameHud .wallet p {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+/* IT Studio "iTeffa" - Bind Помощь */
+.inGameHud .help {
+  position: absolute;
+  text-align: center;
+  left: 20px;
+  font-family: Uni Neue;
+  font-size: 10px;
+  width: 148px;
+  color: #ffffff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.inGameHud .help p {
+  font-size: 7pt;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  border-radius: 3px;
+  margin-top: 5px;
+  background: #1e1e1e80;
+  padding: 5px 20px;
+  color: #ffffff;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0);
+}
+
+.inGameHud .help span {
+  font-size: 7pt;
+  font-weight: 600;
+  float: left;
+  text-align: center;
+  background: rgb(255, 255, 255, 0.9);
+  position: relative;
+  left: -22px;
+  top: -5px;
+  width: 14px;
+  border-radius: 3px;
+  padding: 6px 6px;
+  color: #1e1e1e;
+  text-shadow: 0px 0px 0px rgba(145, 145, 145);
+}
+
+/* IT Studio "iTeffa" - Voice Chat */
+.inGameHud .microhud {
+  font-size: 22pt;
+  padding: 0 20px 0 0;
+}
+
+.inGameHud .microhud .activate {
+  color: #047a14
+}
+
+.inGameHud .microhud .offline {
+  color: #ff0000
+}
+
+/* IT Studio "iTeffa" - Локализация */
+.inGameHud .locationhud {
+  position: absolute;
+  font-family: Uni Neue;
+  padding: 10px 20px;
+  right: 15px;
+  font-size: 13pt;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.4);   
+  bottom: 2px;
+  height: 45px;
+  text-align: center;
+  margin: 0;
+  border-radius: 3px;
+}
+
+/* IT Studio "iTeffa" - Спидометр транспорта */
+.inGameHud .speedometer {
+  position: absolute;
+  font-family: Uni Neue;
+  padding: 10px 20px; 
+  transform: translateY(0, -40%);
+  font-size: 13pt;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.4);   
+  left: 40%; bottom: 2px;
+  height: 45px; color: #ffffff;
+  text-align: center;
+  width: 330px; height: 45px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.inGameHud .speedometers {display: flex;}
+.inGameHud .speedometer #speed
+{
+    width: 40px;
+    font-weight: 500;
+    margin-left: 12px;
+    margin-top: -1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.inGameHud .speedometer #speed {font-size: 23px;margin-bottom: -2px; }
+.inGameHud .speedometer #speedtxt {font-size: 14px;}
+.inGameHud .speedometer .doors  {width: 24px; height: 24px; margin-left: 24px; margin-top: 10px;}
+.inGameHud .speedometer .carsecs {width: 32px; height: 32px; margin-left: 24px; margin-top: 10px;}
+.inGameHud .speedometer .engines {width: 24px; height: 24px; margin-left: 24px; margin-top: 10px;}
+.inGameHud .speedometer .petrols {width: 24px; height: 24px; margin-left: 24px; margin-top: 10px; display: flex;}
+.inGameHud .petrolblock {display: flex; justify-content: center;align-items: center; font-weight: 500;}
+.inGameHud #petrolit {font-size: 21.15px;}
+.inGameHud #jsliters {font-size: 21.15px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* IT Studio "iTeffa" - Ежедневный подарок */
+.inGameHud .bonus {
+  position: absolute;
+  top: 180px;
+  right: 5px;
+}
+
+.inGameHud .bonus-bar {
+  background: #18191D;
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: gray;
+  font-size: 1.5em;
+}
+
+.inGameHud .bonus-block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 240px;
+  height: auto;
+  background-color: #18191D;
+  color: #fff;
+}
+
+.inGameHud .bonus-block section {
+  flex: 40%;
+  width: 100%;
+  background-color: #1D2027;
+  padding: 7px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inGameHud .bonus-block section .fa-times {
+  color: #ab2b2b;
+}
+
+.inGameHud .personid {
+  position: absolute;
+  top: 120px;
+  right: 1px;
+  width: 160px;
+  color:#fff
+}
+
+/* IT Studio "iTeffa" - Система пищеварения */
+.inGameHud .health {position: absolute; font-weight: 600; font-family: Uni Neue; font-size: 13pt; left: 16%; bottom: 2px;}
+.inGameHud .moods,.inGameHud .water,.inGameHud .eat {padding: 0 14px 0 0;}
+
+/* IT Studio "iTeffa" - Ниже будет переделываться! */
+.noty_theme__fivestar.noty_bar {margin: 4px 0;overflow: hidden;position: relative;background-color: rgba(0, 0, 0, 0.6);box-shadow: rgba(0, 0, 0, 0.6) 0 0 10px 0;}
+.noty_theme__fivestar.noty_bar .noty_body {padding: 1.25em;font-size: 12pt;}
+.noty_theme__fivestar.noty_bar .noty_buttons {padding: 0 10px 0.5em 10px;}
+.noty_theme__fivestar.noty_type__alert, .noty_theme__fivestar.noty_type__notification {border-radius: 10px;margin-bottom: 15px;}
+.noty_theme__fivestar.noty_type__alert .text i, .noty_theme__fivestar.noty_type__notification .text i {color: #ffffff;margin-top: -6%;font-size: 2.4vh;margin-left: 0%;font-weight: 500;font-style: inherit;letter-spacing: 0.03em;}
+.noty_theme__fivestar.noty_type__warning {border-radius: 10px;margin-bottom: 15px;}
+.noty_theme__fivestar.noty_type__warning .text i {color: #ffffff;margin-top: -6%;font-size: 2.4vh;margin-left: 0%;font-weight: 500;font-style: inherit;letter-spacing: 0.03em;}
+.noty_theme__fivestar.noty_type__error {border-radius: 10px;margin-bottom: 15px;}
+.noty_theme__fivestar.noty_type__error .text i {color: #ffffff;margin-top: -6%;font-size: 2.4vh;margin-left: 0%;font-weight: 500;font-style: inherit;letter-spacing: 0.03em;}
+.noty_theme__fivestar.noty_type__info, .noty_theme__fivestar.noty_type__information {border-radius: 10px;margin-bottom: 15px;}
+.noty_theme__fivestar.noty_type__info .text i, .noty_theme__fivestar.noty_type__information .text i {color: #ffffff;margin-top: -6%;font-size: 2.4vh;margin-left: 0%;font-weight: 500;font-style: inherit;letter-spacing: 0.03em;}
+.noty_theme__fivestar.noty_type__success {border-radius: 10px;margin-bottom: 15px;}
+.noty_theme__fivestar.noty_type__success .text i {color: #ffffff;margin-top: -6%;font-size: 2.4vh;margin-left: 0%;font-weight: 500;font-style: inherit;letter-spacing: 0.03em;}
+.text {line-height: 1.2em;font-size: 13pt;margin-top: 6%;margin-left: 15%;color: #ffffffe0;font-weight: 100;}
+.noty_theme__fivestar img {position: absolute;width: 7%;margin-top: -0.5%;margin-left: -10%;}
+.text i {float: left;font-size: 34pt;margin-right: 30px;}
+.noty_progressbar {display: none; }
+.noty_has_timeout.noty_has_progressbar .noty_progressbar {display: block;position: absolute;left: 0;bottom: 0;height: 3px;width: 100%;background-color: #646464;opacity: 0.2;filter: alpha(opacity=10); }
+.noty_bar {-webkit-transform: translate(0, 0) translateZ(0) scale(1, 1);-ms-transform: translate(0, 0) scale(1, 1);transform: translate(0, 0) scale(1, 1);-webkit-font-smoothing: subpixel-antialiased;overflow: hidden; }
+.noty_effects_open {opacity: 0;-webkit-transform: translate(50%);-ms-transform: translate(50%);transform: translate(50%);-webkit-animation: noty_anim_in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);animation: noty_anim_in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);-webkit-animation-fill-mode: forwards;animation-fill-mode: forwards; }
+.noty_effects_close {-webkit-animation: noty_anim_out 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);animation: noty_anim_out 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);-webkit-animation-fill-mode: forwards;animation-fill-mode: forwards; }
+.noty_fix_effects_height {-webkit-animation: noty_anim_height 75ms ease-out;animation: noty_anim_height 75ms ease-out; }
+.noty_close_with_click {cursor: pointer; }
+.noty_close_button {position: absolute;top: 2px;right: 2px;font-weight: bold;width: 20px;height: 20px;text-align: center;line-height: 20px;background-color: rgba(0, 0, 0, 0.05);border-radius: 2px;cursor: pointer;-webkit-transition: all .2s ease-out;transition: all .2s ease-out; }
+.noty_close_button:hover {background-color: rgba(0, 0, 0, 0.1);}
+.noty_modal {position: fixed;width: 100%;height: 100%;background-color: #000;opacity: .3;left: 0;top: 0; }
+.noty_modal.noty_modal_open {opacity: 0;-webkit-animation: noty_modal_in .3s ease-out;animation: noty_modal_in .3s ease-out; }
+.noty_modal.noty_modal_close {-webkit-animation: noty_modal_out .3s ease-out;animation: noty_modal_out .3s ease-out;-webkit-animation-fill-mode: forwards;animation-fill-mode: forwards; }
+.noty_layout_mixin, #noty_layout__top, #noty_layout__topLeft, #noty_layout__topCenter, #noty_layout__topRight, #noty_layout__bottom, #noty_layout__bottomLeft, #noty_layout__bottomCenter, #noty_layout__bottomRight, #noty_layout__center, #noty_layout__centerLeft, #noty_layout__centerRight {position: fixed;margin: 0;padding: 0;-webkit-transform: translateZ(0) scale(1, 1);transform: translateZ(0) scale(1, 1);-webkit-backface-visibility: hidden;backface-visibility: hidden;-webkit-font-smoothing: subpixel-antialiased;filter: blur(0); -webkit-filter: blur(0); width: 325px; }
+
+#noty_layout__top {top: 0;left: 5%;width: 325px;}
+#noty_layout__topLeft {top: 20px;left: 20px;width: 325px;}
+#noty_layout__topCenter {top: 5%;left: 50%;width: 325px;-webkit-transform: translate(-webkit-calc(-50% - .5px)) translateZ(0) scale(1, 1);transform: translate(calc(-50% - .5px)) translateZ(0) scale(1, 1); }
+#noty_layout__topRight {top: 20px;right: 20px;width: 325px; }
+#noty_layout__bottom {bottom: 0;left: 5%;width: 325px; }
+#noty_layout__bottomLeft {bottom: 20px;left: 20px;width: 325px; }
+#noty_layout__bottomCenter {bottom: 5%;left: 50%;width: 325px;-webkit-transform: translate(-webkit-calc(-50% - .5px)) translateZ(0) scale(1, 1);transform: translate(calc(-50% - .5px)) translateZ(0) scale(1, 1); }
+#noty_layout__bottomRight {bottom: 20px;right: 20px;width: 325px; }
+#noty_layout__center {top: 50%;left: 50%;width: 325px;-webkit-transform: translate(-webkit-calc(-50% - .5px), -webkit-calc(-50% - .5px)) translateZ(0) scale(1, 1);transform: translate(calc(-50% - .5px), calc(-50% - .5px)) translateZ(0) scale(1, 1); }
+#noty_layout__centerLeft {top: 50%;left: 20px;width: 325px;-webkit-transform: translate(0, -webkit-calc(-50% - .5px)) translateZ(0) scale(1, 1);transform: translate(0, calc(-50% - .5px)) translateZ(0) scale(1, 1); }
+#noty_layout__centerRight {top: 50%;right: 20px;width: 325px;-webkit-transform: translate(0, -webkit-calc(-50% - .5px)) translateZ(0) scale(1, 1);transform: translate(0, calc(-50% - .5px)) translateZ(0) scale(1, 1); }
+#noty_layout__bottomCenter, #noty_layout__topCenter {width: 56vh;}
+#noty_layout__topLeft, #noty_layout__topRight, #noty_layout__bottomLeft, #noty_layout__bottomRight, #noty_layout__centerLeft, #noty_layout__centerRight, #noty_layout__center {width: 450px;}
+
+#chat {position: absolute;width: 100%;height: 100%;display: block;z-index: 0;color: white;color: rgb(255, 255, 255);line-height: 24px;font-weight: bold;font-family: Arial, sans-serif;font-size: 16px;letter-spacing: 0.4px;margin-left: 10px;user-select: none;}
+#chat ul#chat_messages {height: 160px;padding: 0 0.5vh 0 0.5vh;width: 40%;min-height: 2vh;font-size: 1.4vh;word-wrap: break-word;font-family: Arial, sans-serif;text-shadow: 0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black;overflow-y: scroll;}
+#chat ul#chat_messages > li {list-style-type: none;}
+#chat input#chat_msg {color: white;background: rgba(0,0,0,0.5);outline: none;border: none;border-radius: 15px;font-family: Arial, sans-serif;font-size: 15px;line-height: 20px;width: 25vw;padding: 5px 5px 5px 15px;}
+#chat_channels li {float: left;border: 1px solid black;list-style-type: none;padding: 5px 15px;margin: 5px 5px 0px 0px;text-transform: uppercase;font-size: 13px;text-shadow: none;}
+#chat_channels li#active {color: rgb(165,69,165);}
+
+@-webkit-keyframes noty_modal_in {100% {opacity: .3;}}
+@keyframes noty_modal_in {100% {opacity: .3;}}
+@-webkit-keyframes noty_modal_out {100% {opacity: 0;}}
+@keyframes noty_modal_out {100% {opacity: 0;}}
+@keyframes noty_modal_out {100% {opacity: 0;}}
+@-webkit-keyframes noty_anim_in {100% {-webkit-transform: translate(0);transform: translate(0);opacity: 1;}}
+@keyframes noty_anim_in { 100% {-webkit-transform: translate(0);transform: translate(0);opacity: 1;}}
+@-webkit-keyframes noty_anim_out {100% {-webkit-transform: translate(50%);transform: translate(50%);opacity: 0;}}
+@keyframes noty_anim_out {100% {-webkit-transform: translate(50%);transform: translate(50%);opacity: 0;}}
+@-webkit-keyframes noty_anim_height {100% {height: 0;}}
+@keyframes noty_anim_height {100% {height: 0;}}
+
+::-webkit-scrollbar {width: 0px;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 6px rgba(0,0,0,0.3);border-radius: 10px;}
+::-webkit-scrollbar-thumb {border-radius: 10px; box-shadow: inset 0 0 6px rgba(0,0,0,0.5);}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none;}
+
+@media (min-width: 1601px) and (max-width: 2560px) {
+    .iTeffa .inGameHud .adaptivhud {zoom: 100%}
+}
+
+@media (min-width: 1401px) and (max-width: 1600px) {
+    .iTeffa .inGameHud .adaptivhud {zoom: 84%}
+}
+
+@media (min-width: 1301px) and (max-width: 1400px) {
+    .iTeffa .inGameHud .adaptivhud {zoom: 84%}
+}
+
+@media (min-width: 1024px) and (max-width: 1300px)  {
+    .iTeffa .inGameHud .adaptivhud {zoom: 70%}
+}
+
+@media screen and (min-height: 1080px) {
+    #chat {font-size: 18px !important;}
+}

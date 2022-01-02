@@ -1,0 +1,244 @@
+:root {
+  --input-color: #99A3BA;
+  --input-border: #CDD9ED;
+  --input-background: #fff;
+  --input-placeholder: #CBD1DC;
+  --input-border-focus: #275EFE;
+  --group-color: var(--input-color);
+  --group-border: var(--input-border);
+  --group-background: #EEF4FF;
+  --group-color-focus: #fff;
+  --group-border-focus: var(--input-border-focus);
+  --group-background-focus: #678EFE;
+}
+.form-field {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  color: var(--input-color);
+  border: 1px solid var(--input-border);
+  background: var(--input-background);
+  transition: border 0.3s ease;
+}
+.form-field::placeholder {
+  color: var(--input-placeholder);
+}
+.form-field:focus {
+  outline: none;
+  border-color: var(--input-border-focus);
+}
+.form-group {
+  margin-top: -75px;
+  margin-left: 170px;
+  position: absolute;
+  display: flex;
+  width: 275px;
+  height: 75px;
+}
+.form-group > span, .form-group .form-field {
+  white-space: nowrap;
+  display: block;
+}
+.form-group > span:not(:first-child):not(:last-child), .form-group .form-field:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.form-group > span:first-child, .form-group .form-field:first-child {
+  border-radius: 20px 0 0 5px;
+}
+.form-group > span:last-child, .form-group .form-field:last-child {
+  border-radius: 0 5px 20px 0;
+}
+.form-group > span:not(:first-child), .form-group .form-field:not(:first-child) {
+  margin-left: -1px;
+}
+.form-group .form-field {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.form-group > span {
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--group-color);
+  background: var(--group-background);
+  border: 1px solid var(--group-border);
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+.form-group:focus-within > span {
+  color: var(--group-color-focus);
+  background: var(--group-background-focus);
+  border-color: var(--group-border-focus);
+}
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+.form-group2 {
+  margin-top: -75px;
+  right: 5px;
+  position: absolute;
+  display: flex;
+  width: 286px;
+  height: 75px;
+}
+.form-group2 > span, .form-group2 .form-field {
+  white-space: nowrap;
+  display: block;
+}
+.form-group2 > span:not(:first-child):not(:last-child), .form-group2 .form-field:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.form-group2 > span:first-child, .form-group2 .form-field:first-child {
+  border-radius: 20px 0 0 5px;
+}
+.form-group2 > span:last-child, .form-group2 .form-field:last-child {
+  border-radius: 0 5px 20px 0;
+}
+.form-group2 > span:not(:first-child), .form-group2 .form-field:not(:first-child) {
+  margin-left: -1px;
+}
+.form-group2 .form-field {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.form-group2 > span {
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--group-color);
+  background: var(--group-background);
+  border: 1px solid var(--group-border);
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+.form-group2:focus-within > span {
+  color: var(--group-color-focus);
+  background: var(--group-background-focus);
+  border-color: var(--group-border-focus);
+}
+
+.form-group3 {
+  margin-top: -75px;
+  margin-left: 170px;
+  position: absolute;
+  display: flex;
+  width: 348px;
+  height: 75px;
+}
+.form-group3 > span, .form-group3 .form-field {
+  white-space: nowrap;
+  display: block;
+}
+.form-group3 > span:not(:first-child):not(:last-child), .form-group3 .form-field:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.form-group3 > span:first-child, .form-group3 .form-field:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.form-group3 > span:last-child, .form-group3 .form-field:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.form-group3 > span:not(:first-child), .form-group3 .form-field:not(:first-child) {
+  margin-left: -1px;
+}
+.form-group3 .form-field {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.form-group3 > span {
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--group-color);
+  background: var(--group-background);
+  border: 1px solid var(--group-border);
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+.form-group3:focus-within > span {
+  color: var(--group-color-focus);
+  background: var(--group-background-focus);
+  border-color: var(--group-border-focus);
+}
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+.form-group4 {
+  margin-top: -75px;
+  right: 5px;
+  position: absolute;
+  display: flex;
+  width: 348px;
+  height: 75px;
+}
+.form-group4 > span, .form-group4 .form-field {
+  white-space: nowrap;
+  display: block;
+}
+.form-group4 > span:not(:first-child):not(:last-child), .form-group4 .form-field:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.form-group4 > span:first-child, .form-group4 .form-field:first-child {
+  border-radius: 10px 0px 0px 10px;
+}
+.form-group4 > span:last-child, .form-group4 .form-field:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.form-group4 > span:not(:first-child), .form-group4 .form-field:not(:first-child) {
+  margin-left: -1px;
+}
+.form-group4 .form-field {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.form-group4 > span {
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--group-color);
+  background: var(--group-background);
+  border: 1px solid var(--group-border);
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+.form-group4:focus-within > span {
+  color: var(--group-color-focus);
+  background: var(--group-background-focus);
+  border-color: var(--group-border-focus);
+}

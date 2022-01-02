@@ -1,0 +1,113 @@
+.Miner {
+    box-shadow: 0 0px 50px rgb(0 0 0 / 30%);
+    border-left: 5px solid #fbb80499;
+    position: absolute;
+    width: 770px;
+    height: 400px;
+    background-color: #545454;
+    left: 50%;
+    margin-left: -385px;
+    top: 50%;
+    margin-top: -275px;
+    max-height: 550px;
+    overflow: hidden;
+}
+
+    .Miner .header {
+        height: 70px;
+        width: 100%;
+        color: white;
+        border-radius: 0px 5px 0px 0px;
+        font-weight: 900;
+        background: #000000;
+        font-size: 20px;
+        margin: 0px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .Miner .content {
+        padding: 5px;
+        margin: 10px;
+        color: white;
+    }
+
+        .Miner .content p {
+            margin: 0;
+            margin-bottom: 8px;
+        }
+
+    .Miner .buttons {
+        padding: 5px;
+    }
+
+    .Miner .block {
+        height: 250px;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    .Miner .header i {
+        padding: 15px;
+        float: right;
+        font-family: icons;
+        font-size: 16pt;
+        margin: 10px;
+        cursor: pointer;
+        font-style: normal;
+    }
+
+    .Miner .header h1 {
+        padding: 15px;
+        margin: 0px;
+        width: 100%;
+        float: left;
+    }
+
+    .Miner .left {
+        float: left;
+    }
+
+    .Miner .right {
+        float: right;
+        width: 310px;
+    }
+
+    .Miner .imgblock {
+        box-shadow: 0 0 10px rgb(0 0 0 / 11%);
+        float: left;
+    }
+
+    .Miner img {
+        width: 100%;
+        width: 400px;
+    }
+
+    .Miner .enterMiner {
+        cursor: pointer;
+        margin-top: 5px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 11%);
+        background: #3a3a3ab8;
+        font-size: 27px;
+        font-weight: 900;
+        text-align: center;
+        width: 100%;
+        border-radius: 5px;
+        padding-top: 3px;
+        padding-bottom: 4px;
+    }
+
+        .Miner .enterMiner:hover {
+            box-shadow: 0 0 10px rgb(0 0 0 / 24%);
+            background: #292828;
+        }
+
+    .Miner .info {
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    .Miner .price {
+        color: #ffbe0e;
+        font-size: 30px;
+        font-weight: 900;
+    }

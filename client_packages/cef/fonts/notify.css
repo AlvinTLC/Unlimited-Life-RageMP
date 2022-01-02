@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("./notify.eot");
+  src: url("./notify.eot?#iefix") format("embedded-opentype"),
+       url("./notify.woff") format("woff"),
+       url("./notify.ttf") format("truetype"),
+       url("./notify.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./notify.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+font-style: normal;
+}
+/*Серый круглешок внутри которого обосраный значек какого-то предупреждения :)*/
+i{
+  display: inline-flex;
+  min-width: 32px;
+  min-height: 32px;
+  float: left;
+  align-items: center;
+  border-radius: 16px;
+  background-color: #282626;
+  margin: 5px;
+}
+.flaticon-close:before { 
+  content: url(../res/stop.svg); 
+  align-items: center;
+  margin: auto;
+  filter: drop-shadow(0px 0px 15px rgba(185, 53, 54, 0.75));
+}
+
+.flaticon-signs:before { 
+  content: url(../res/swags.svg); /*Воскл.знак*/
+  align-items: center;
+  margin: auto;
+  filter: drop-shadow(0px 0px 20px rgba(255, 196, 0, 0.5));
+}
+.flaticon-interface:before { 
+  content: url(../res/sings.svg); /*Галка*/
+  align-items: center;
+  margin: auto;
+  filter: drop-shadow(0px 0px 20px rgba(53, 185, 74, 0.5));
+}
+.flaticon-danger:before { 
+  content: url(../res/bell.svg); /*Предупреждение*/
+  align-items: center;
+  margin: auto;
+  filter: drop-shadow(0px 0px 20px rgba(255, 0, 43, 0.5));
+}

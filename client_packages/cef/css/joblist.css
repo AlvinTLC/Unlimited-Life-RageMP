@@ -1,0 +1,258 @@
+.joblist {
+    color:#fff;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Black.ttf');
+    src: local('../fonts/Gilroy Bold'), local('Gilroy-Bold'),
+        url('Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
+        url('../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@media  (max-width: 1300px)  {
+    .joblist .adaptive {zoom: 80%}
+}
+@media (min-width: 1301px) and (max-width: 1400px) {
+    .joblist .adaptive {zoom: 80%}
+}
+@media (min-width: 1401px) and (max-width: 1650px) {
+    .joblist .adaptive {zoom: 100%}
+}
+@media (min-width: 1651px) and (max-width: 2560px) {
+    .joblist .adaptive {zoom: 100%}
+}
+
+.joblist .boxtop {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.joblist .box {
+    width: 1035.3px;
+    height: auto;
+   /* background: rgba(94, 140, 173, 0.75);*/
+    /*border-radius: 7px;*/
+    position: absolute;
+    clip-path: polygon(0 0, 0 100%, 100% 95%, 100% 5%, 0 0);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.joblist .header {
+    width: 50px;
+    height: 50px;
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+    background: linear-gradient(157.66deg, #FFB943 10.95%, #FF9B3F 85.44%);
+    box-shadow: 0px 0px 10px rgba(255, 155, 63, 0.7);
+    border-radius: 5px;
+    display: flex;
+}
+.joblist .workbox {
+   /* width: 100%;
+    height: 600px;*/
+    padding-top: 51px;
+    display: flex;
+    margin-left: 71.46px;
+    margin-right: 41px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.joblist .boxes2column {
+    margin-left: 10px;
+}
+.joblist .arrow {
+    width: 22px;
+    height: 22px;
+    margin-top: 10px;
+    margin-left: 14px;
+    cursor: pointer;
+    color: #2B2121;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(43, 33, 33, 0.5);
+}
+
+.joblist .arrow:hover {
+    transform: scale(1.1);
+    -webkit-transition: all 1s ease;
+}
+.joblist .txtheader {
+    font-size: 18px;
+    line-height: normal;
+    margin-left: 131px;
+}
+.joblist .workboxes {
+    position:relative;
+    width: 277.87px;
+    height: 178.63px;
+    clip-path: polygon(0 0, 0 100%, 100% 93%, 100% 5%);
+    margin-bottom: 51.37px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-left: 42.13px;
+}
+.joblist .block {
+    opacity: 0.3;
+    position: absolute;
+}
+.joblist .blocktxt {
+    opacity: 0.3;
+}
+.joblist .electro {
+    background-image: url(../images/joblist/work.png);
+    background-repeat: no-repeat;
+    /*border-radius: 5px;*/
+    margin-left: 0;
+}
+.joblist .taxi {
+    background-image: url(../images/joblist/work.png);
+    background-repeat: no-repeat;
+    /*border-radius: 5px;*/
+    margin: 0 42.13px 0 0;
+}
+.joblist .gazon {
+    background-image: url(../images/joblist/work.png);
+    background-repeat: no-repeat;
+    /*border-radius: 5px;*/
+    margin: 0;
+}
+.joblist .inkos {
+    background-image: url(../images/joblist/work.png);
+    background-repeat: no-repeat;
+    /*border-radius: 5px;*/
+    margin: 0;
+}
+.joblist .inkoslvl {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    margin-top: 15px;
+    opacity:0;
+
+}
+.joblist .workboxes:hover .inkoslvl{
+    opacity:1;
+    transition: 1s;
+}
+.joblist .textlvl {
+    font-size: 12px;
+    position: absolute;
+    width: 56px;
+    height: 22px;
+    margin-left: 16px;
+    margin-top: 7px;
+}
+.joblist .textlvl2 {
+    font-size: 14px;
+    position: absolute;
+    color: rgb(255, 123, 0);
+    width: 56px;
+    height: 22px;
+    margin-left: 33px;
+    margin-top: 2px;
+}
+.joblist .inkoslvl:hover {
+    display:block;
+}
+.joblist .pochta {
+    background-image: url(../images/joblist/work.png);
+    background-repeat: no-repeat;
+    /*border-radius: 5px;*/
+    margin: 0 42.13px 51.37px 0;
+}
+.joblist .bus {
+    background-image: url(../images/joblist/work.png);
+    background-repeat: no-repeat;
+    /*border-radius: 5px;*/
+    margin: 0;
+}
+.joblist .truck {
+    background-image: url(../images/joblist/work.png);
+    background-repeat: no-repeat;
+    /*border-radius: 5px;*/
+    margin: 0 42.13px 51.37px 0;
+}
+.joblist .mechanic {
+    background-image: url(../images/joblist/work.png);
+    background-repeat: no-repeat;
+    /*border-radius: 5px;*/
+    margin: 0 42.13px 51.37px 0;
+}
+.joblist .textboxwork {
+    /*display: inline-block;*/
+    font-size: 15px;
+    margin-left: 80px;
+    margin-top: 65px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.joblist .workimg {
+    /*margin-left: 10px;*/
+    /*margin-top: -4px;*/
+    /*position: absolute;*/
+    padding-right: 5px;
+}
+.jobstatus {
+    display: flex;
+    width: 120px;
+    margin-top: 14.15px;
+    margin-left: -15px;
+}
+.joblist .worktextopen {
+    /*display: flex;*/
+    font-size: 12px;
+   /* margin-left: 183px;
+    margin-top: -31px;*/
+}
+.joblist .worktoptxt{
+    /*display: block;*/
+    height: 25px;
+    margin-top: -7px;
+    margin-left: 100px;
+}
+.joblist .buttongetsettled {
+    width: 120.31px;
+    height: 37.58px;
+    background:  linear-gradient(97.66deg, #FFBA43 13.52%, #FF9B3F 99.34%);
+    margin: 0 auto;
+    /*border-radius: 3px;*/
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transform: translateY(300%);
+}
+.joblist .buttongetsettledred {
+    width: 120.31px;
+    height: 37.58px;
+    background:  linear-gradient(97.66deg, #FFBA43 13.52%, #FF9B3F 99.34%);
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transform: translateY(300%);
+}
+.joblist .buttongetsettled:hover {
+    background: #FFBA43;
+}
+.joblist .buttongetsettledred:hover {
+    background: #FF9B3F;
+}
+.joblist .buttongetsettledred:focus {
+    outline: none;
+}
+.joblist .buttongetsettledred:active {
+    background: #ff7c01;
+}
+.joblist .buttongetsettled:focus {
+    outline: none;
+}
+.joblist .buttongetsettled:active {
+    background: #ffa200;
+}
+.joblist .buttontxtgetsettled {
+    font-size: 15px;
+}
